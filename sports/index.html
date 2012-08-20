@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+
+	<title>HHS - Sports</title>
+	
+	<link rel="stylesheet" href="../css/header.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../css/footer.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../css/all.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css.css" type="text/css" media="screen">
+
+	<script src="../js/jquery-1.8.0.min.js"></script>
+	<script src="../js/jquery.masonry.min.js" type="text/javascript"></script>
+	<script src="jq.sportsbox.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+		$(function() {
+			$(".box").masonry({
+				itemSelector : ".sport",
+				columnWidth : 200,
+				gutterWidth : 20,
+				isAnimated : true,
+				isFitWidth : true,
+			});	
+		});
+	</script>
+
+</head>
+
+<body>
+
+	<div class="content">
+		<!--!Header-->	
+		<!--#include virtual="../header.shtml"-->
+		
+		<div id="horz_holder">
+		
+			<div id="sportsbox">
+				<ul><li id="fall">Fall</li><li id="winter">Winter</li><li id="spring">Spring</li>
+				</ul>
+				
+				<div id="fallbox" class="box">
+					<div class="sport">Cross Country</div>
+					<div class="sport">Football</div>
+					<div class="sport">Boys Soccer</div>
+					<div class="sport">Girls Soccer</div>
+					<div class="sport">Field Hockey</div>
+					<div class="sport">Volleyball</div>
+				</div>
+				
+				<div id="winterbox" class="box">
+					<div class="sport">Girls Basketball</div>
+					<div class="sport">Boys Basketball</div>
+					<div class="sport">Wrestling</div>
+					<div class="sport">Winter Track</div>
+					<div class="sport">Bowling</div>
+				</div>
+				
+				<div id="springbox" class="box">
+					<div class="sport">Boys Lacrosse</div>
+					<div class="sport">Girls Lacrosse</div>
+					<div class="sport">Baseball</div>
+					<div class="sport">Softball</div>
+					<div class="sport">Track & Field</div>
+				</div>
+				
+				
+			</div><!-- end "sportsbox" -->
+		
+		</div><!-- end "horz_holder" -->
+		
+		
+		
+	
+		<div class="footer_spacer"></div>
+	</div>
+	
+	<!--!Footer-->
+	<div class="footer">
+	
+		<!--#include virtual="../footer.shtml"-->
+		
+		<span id="edited_by">Last edited by ________ on _________.</span>
+
+	</div><!-- end "footer" -->
+
+</body>
+
+</html>

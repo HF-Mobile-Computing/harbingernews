@@ -1,0 +1,323 @@
+/*
+ * Harborfields High School's Frontpage CSS Stylesheet
+ * Written by Alex LaFroscia
+ * July, 2012
+ 
+ * Last updated August 16, 2012
+
+*/
+
+
+/* Smaller Screen CSS */
+@media screen and (max-width: 639px),
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+	
+	#container_box {
+		width: 240px !important;
+	}
+	
+	#important_stuff {
+		width: 400px !important;
+	}
+	
+	#announcements_wrap {
+		float: none !important;
+		margin-left: 12.5px;
+	}
+	
+	#important_wrap {
+		margin-bottom: 12px;
+		float: none !important;
+		margin-left: 12.5px;
+	}
+	
+	#forward_button {
+		margin-left: 224px !important;
+	}
+	
+	#news_title_container {
+		right: 5px !important;
+	}
+}
+
+body {
+	margin: 0;
+	background-image:url(background.png);
+	width: 100%;
+	overflow-x: hidden;
+}
+
+li#home {
+	background-color: #629b63 !important;
+}
+
+a.fancy {
+	color: black;
+}
+
+.fancybox-inner {
+    -webkit-overflow-scrolling: touch !important;
+    overflow: scroll !important;
+  }
+
+/*-------------*/
+
+#news {
+	padding: 0px;
+	width: 100%;
+	height: 435px;
+	background: #5b5b5b;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	margin-bottom: 20px;
+	overflow-x: hidden;
+}
+
+#news_title_container {
+	position: relative;
+	top: 8px;
+	right: 250px;
+	width: 250px;
+	margin: 0 auto;
+}
+
+#news_title {
+	color: white;
+	font-size: 1.7em;
+	display: inline-block;
+	top: -9px;
+	left: 5px;
+	position: relative;
+	font-family: monospace;
+}
+		
+
+img#talk_bubble {
+	height: 25px;
+	width: 25px;
+}
+
+#container_box {
+	width: 720px;
+	height: 375px;
+	margin: 0 auto;
+	margin-top: 0px;
+}
+
+#outerbox {
+	width: inherit;
+	height: inherit;
+	overflow-x: hidden;
+}
+
+#innerbox {
+	height: inherit;
+	width: 2100px;
+}
+
+.article h3 {
+	padding-top: 10px;
+	padding-bottom: 7px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.article img {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	border: 2px solid grey;
+	box-shadow: 0px 1px 7px 2px black;
+}
+
+.article p {
+	padding-top: 0;
+	margin-top: 11px;
+}
+
+.article {
+	text-align: center;
+	background: #d9d9d9;
+	width: 200px;
+	border: 1px solid black;
+	border-radius: 7px;
+	height: 350px;
+	box-shadow: 0px 2px 17px #232323;
+	behavior: url(/~alex/Harbinger2/pie/PIE.htc);
+	display: inline;
+	float: left;
+	margin-right: 20px;
+	margin-left: 18px;
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+#back_button {
+	position: absolute;
+	margin-top: 165px;
+	margin-left: -21px;
+	display: none;
+}
+
+#forward_button {
+	position: absolute;
+	margin-top: 165px;
+	margin-left: 704px;
+}
+
+/*-------*/
+
+#important_stuff {
+	margin: 0 auto;
+	width: 800px;
+	display: block;
+}
+
+#announcements_wrap {
+	position: relative;
+	display: block;
+	float: left;
+}
+
+#announcements {
+	position: relative;
+	width: 350px;
+	background: #fff;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid rgba(0, 0, 0, 0.150);
+	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+}
+
+#announcements h2 {
+	margin-top: 0;
+	margin-bottom: 2px;
+	padding-top: 10;
+	text-align: center;
+	color: black;
+}
+
+#announcements:before {
+	z-index: -1;
+	position: absolute;
+	top: -2px;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.150);
+	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	-o-transform: rotate(2deg);
+	-ms-transform: rotate(2deg);
+	transform: rotate(2deg)
+}
+
+/*#announcemets:after {
+	z-index: -2;
+	position: absolute;
+	top: -2px;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.150);
+	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+	-webkit-transform: rotate(359deg);
+	-moz-transform: rotate(359deg);
+	-o-transform: rotate(359deg);
+	-ms-transform: rotate(359deg);
+	transform: rotate(359deg)
+}*/
+
+.chunk {
+	margin-left: 0px;
+}
+
+.chunk h4 {
+	margin-top: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	text-align: center;
+	font-style: italic;
+}
+
+.chunk h4 a {
+	color: #272727;
+}
+		
+#important_wrap {
+	position: relative;
+	float: right;
+}
+
+#important {
+	background: rgba(235, 230, 146, 1.0);
+	position: relative;
+	width: 350px;
+	padding: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.150);
+	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+}
+
+#important:before {
+	z-index: -1;
+	position: absolute;
+	top: -2px;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: rgba(235, 230, 146, 1.0);
+
+	border: 1px solid rgba(0, 0, 0, 0.150);
+	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+	-webkit-transform: rotate(1deg);
+	-moz-transform: rotate(1deg);
+	-o-transform: rotate(1deg);
+	-ms-transform: rotate(1deg);
+	transform: rotate(1deg)
+}
+
+#important:after {
+	z-index: -2;
+	position: absolute;
+	top: -2px;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: rgba(235, 230, 146, 1.0);
+
+	border: 1px solid rgba(0, 0, 0, 0.150);
+	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+	-webkit-transform: rotate(359deg);
+	-moz-transform: rotate(359deg);
+	-o-transform: rotate(359deg);
+	-ms-transform: rotate(359deg);
+	transform: rotate(359deg)
+}
+
+#important h2 {
+	margin-top: 0;
+	padding-top: 10px;
+	text-align: center;
+}

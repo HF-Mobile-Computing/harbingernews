@@ -1,0 +1,54 @@
+h3.footer {
+	padding-top: 0px;
+}
+
+.footer {
+	border-top: 4px solid #629b63;
+	color: white;
+}
+
+.important_links {
+	float: left;
+	border-left: #629b63 solid 2px;
+	margin-top: 10px;
+	padding-left: 10px;
+}
+
+#title {
+	font-size: 1.25em;
+	margin-bottom: 5px;
+	padding: 0;
+	display: block;
+}
+
+.contact {
+	margin-top: 10px;
+	padding-left: 10px;
+	border-left: #629b63 solid 2px;
+	margin-right: 5%;
+	display: inline-block;
+	float: right;
+}
+
+#twitter-follow-button {
+	margin-bottom: 5px;
+}
+
+#edited_by {
+	float: right;
+	margin-right: 10%;
+	margin-top: 45px;
+	display: block;
+	clear: both;
+}
+
+.facebook {
+	margin-top: 5px;
+	display: block;
+	background: #e8e8e8;
+	border-radius: 4px;
+}
+
+#abt_chrome {
+	width: 400px;
+}
