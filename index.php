@@ -11,11 +11,13 @@
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css/jquery.tweet.css" type="text/css">
 	<link rel="stylesheet" href="css.css" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css">
 	
 	<script src="js/jquery-1.8.0.min.js"></script>
 	<script src="js/jquery.fancybox.pack.js"></script>
 	<script src="js/jquery.news_stories.js"></script>
 	<script src="js/jquery.tweet.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	
 	<script type="text/javascript">
 		// Fancybox
