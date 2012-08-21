@@ -8,13 +8,16 @@
 	<link rel="stylesheet" href="../css/header.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="../css/footer.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="../css/all.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../css/jquery.fancybox.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css.css" type="text/css" media="screen">
 
 	<script src="../js/jquery-1.8.0.min.js"></script>
 	<script src="../js/jquery.masonry.min.js" type="text/javascript"></script>
+	<script src="../js/jquery.fancybox.pack.js" type="text/javascript"></script>
 	<script src="jq.sportsbox.js" type="text/javascript"></script>
 	
 	<script type="text/javascript">
+		// Masonry
 		$(function() {
 			$(".box").masonry({
 				itemSelector : ".sport",
@@ -23,6 +26,14 @@
 				isAnimated : true,
 				isFitWidth : true,
 			});	
+		});
+		
+		// Fancybox
+		$(function() {
+			$(".fancy").fancybox({
+				'hideOnContentClick' : false,
+				'openEffect' : 'fade',
+			});
 		});
 	</script>
 
@@ -41,28 +52,28 @@
 				</ul>
 				
 				<div id="fallbox" class="box">
-					<div class="sport">Cross Country</div>
-					<div class="sport">Football</div>
-					<div class="sport">Boys Soccer</div>
-					<div class="sport">Girls Soccer</div>
-					<div class="sport">Field Hockey</div>
-					<div class="sport">Volleyball</div>
+					<a href="football/popup.html" class="fancy fancybox.iframe"><div class="sport">Football</div></a>
+					<a href="cross_country/popup.html" class="fancy fancybox.iframe"><div class="sport">Cross Country</div></a>
+					<a href="boys_soccer/popup.html" class="fancy fancybox.iframe"><div class="sport">Boys Soccer</div></a>
+					<a href="girls_soccer/popup.html" class="fancy fancybox.iframe"><div class="sport">Girls Soccer</div></a>
+					<a href="field_hockey/popup.html" class="fancy fancybox.iframe"><div class="sport">Field Hockey</div></a>
+					<a href="volleyball/popup.html" class="fancy fancybox.iframe"><div class="sport">Volleyball</div></a>
 				</div>
 				
 				<div id="winterbox" class="box">
-					<div class="sport">Girls Basketball</div>
-					<div class="sport">Boys Basketball</div>
-					<div class="sport">Wrestling</div>
-					<div class="sport">Winter Track</div>
-					<div class="sport">Bowling</div>
+					<a href="girls_basketball/popup.html" class="fancy fancybox.iframe"><div class="sport">Girls Basketball</div></a>
+					<a href="boys_basketball/popup.html" class="fancy fancybox.iframe"><div class="sport">Boys Basketball</div></a>
+					<a href="wrestling/popup.html" class="fancy fancybox.iframe"><div class="sport">Wrestling</div></a>
+					<a href="winter_track/popup.html" class="fancy fancybox.iframe"><div class="sport">Winter Track</div></a>
+					<a href="bowling/popup.html" class="fancy fancybox.iframe"><div class="sport">Bowling</div></a>
 				</div>
 				
 				<div id="springbox" class="box">
-					<div class="sport">Boys Lacrosse</div>
-					<div class="sport">Girls Lacrosse</div>
-					<div class="sport">Baseball</div>
-					<div class="sport">Softball</div>
-					<div class="sport">Track & Field</div>
+					<a href="boys_lax/popup.html" class="fancy fancybox.iframe"><div class="sport">Boys Lacrosse</div></a>
+					<a href="girls_lax/popup.html" class="fancy fancybox.iframe"><div class="sport">Girls Lacrosse</div></a>
+					<a href="baseball/popup.html" class="fancy fancybox.iframe"><div class="sport">Baseball</div></a>
+					<a href="softball/popup.html" class="fancy fancybox.iframe"><div class="sport">Softball</div></a>
+					<a href="track/popup.html" class="fancy fancybox.iframe"><div class="sport">Track & Field</div></a>
 				</div>
 				
 				
