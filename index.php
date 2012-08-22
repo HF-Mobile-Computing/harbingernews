@@ -56,6 +56,9 @@
 
 	<style type="text/css">
 
+		li#home {
+			background-color: #629b63 !important;
+		}
 		
 	</style>
 
