@@ -45,6 +45,8 @@ body {
 	background-image:url(background.png);
 	width: 100%;
 	overflow-x: hidden;
+	-webkit-user-select: none;
+
 }
 
 li#home {

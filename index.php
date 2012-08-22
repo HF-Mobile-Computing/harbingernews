@@ -41,7 +41,7 @@
 		});
 		
 		$(function() {
-			$('#important').swipeleft(function() {
+			$('#important').swipeLeft(function() {
 				$('#important').css('display', 'none');
 			});
 		});
