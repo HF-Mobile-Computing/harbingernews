@@ -5,6 +5,8 @@
 
 	<title>Harborfields High School</title>
 	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<link rel="stylesheet" href="css/header.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/footer.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/all.css" type="text/css" media="screen">
@@ -42,7 +44,6 @@
 	            loading_text: "loading tweets..."
 	        });
 	    });
-
 	</script>
 	
 	<?php
@@ -144,6 +145,7 @@
 		</div> <!-- end "news" -->
 		
 		<!-- !Important Stuff -->
+		
 		<div id="important_stuff">
 			<div id="announcements_wrap">
 				<div id="announcements">
@@ -163,9 +165,9 @@
 							echo '</div>' . "\r\n";
 						}
 					?>
-
+		
 					<div id="sp_results">
-
+		
 						<!-- As long as the feed has data to work with... -->
 						<?php if ($success): ?>
 							<!-- Let's begin looping through each individual news item in the feed. -->
@@ -198,11 +200,28 @@
 						<li>There are very important things going on right now.</li>
 						<li>It's too bad that it's summer right now, and in reality, there are no things going on.</li>
 					</ul>
-
+		
 				</div>
 			</div><!-- end "important wrap" -->
+			
 			<div style="clear:both"></div>
 		</div><!-- end "important stuff" -->
+		
+		<div class="row">
+		
+			<div class="span5 offset1">
+			
+				<h2>Test</h2>
+			
+			</div>
+			
+			<div class="span5">
+			
+				<h2>test</h2>
+			
+			</div>
+		
+		</div>
 		
 		<div class="tweet">
 		
