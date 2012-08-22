@@ -117,3 +117,22 @@ a {
 	float: right;
 	width: 300px;
 }
+
+#installgcf {
+	width: 100%;
+	height: 35px;
+	background: yellow;
+	display: none;
+	text-align: center;
+}
+
+#installgcf img {
+	padding-top: 2px;
+}
+
+#installgcf h2 {
+	display: inline;
+	position: relative;
+	bottom: 7px;
+	left: 10px;
+}

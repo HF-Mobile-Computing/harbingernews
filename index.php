@@ -5,6 +5,8 @@
 
 	<title>Harborfields High School</title>
 	
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	
 	<link rel="stylesheet" href="css/header.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/footer.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/all.css" type="text/css" media="screen">
@@ -14,6 +16,7 @@
 	<script src="js/jquery-1.8.0.min.js"></script>
 	<script src="js/jquery.fancybox.pack.js"></script>
 	<script src="js/jquery.news_stories.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
 	
 	<script type="text/javascript">
 		// Fancybox
