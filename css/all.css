@@ -28,19 +28,19 @@ html, body {
 	height: 100%;
 }
 
-.content {
+#content {
 	min-height: 100%;
 	height: 100%;
 	height: auto !important;
 	margin-bottom: -200px;
 }
 
-.footer_spacer {
+#footer_spacer {
 	height: 200px;
 	clear: both;
 }
 
-.footer {
+#footer {
 	height: 200px;
 	background: rgb(70,104,67);
 	clear: both;

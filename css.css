@@ -7,29 +7,15 @@
 
 */
 
+/* Phones to Tablets */
+@media screen and (max-width: 767px) {
 
-/* Smaller Screen CSS */
-@media screen and (max-width: 639px),
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-	
+	a {
+		text-decoration: none;
+	}
+
 	#container_box {
 		width: 240px !important;
-	}
-	
-	#important_stuff {
-		width: 400px !important;
-	}
-	
-	#announcements_wrap {
-		float: none !important;
-		margin-left: 12.5px;
-	}
-	
-	#important_wrap {
-		margin-bottom: 12px;
-		float: none !important;
-		margin-left: 12.5px;
 	}
 	
 	#forward_button {
@@ -39,10 +25,19 @@ only screen and (min-device-pixel-ratio : 1.5) {
 	#news_title_container {
 		right: 5px !important;
 	}
+	
+	#announcements {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	
+	#important {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
 }
 
 body {
-	margin: 0;
 	background-image:url(background.png);
 	width: 100%;
 	overflow-x: hidden;
@@ -117,6 +112,8 @@ img#talk_bubble {
 }
 
 .article h3 {
+	font-size: large !important;
+	line-height: normal !important;
 	padding-top: 10px;
 	padding-bottom: 7px;
 	margin-top: 0px;
@@ -135,6 +132,7 @@ img#talk_bubble {
 .article p {
 	padding-top: 0;
 	margin-top: 11px;
+	line-height: normal !important;
 }
 
 .article {
@@ -169,21 +167,8 @@ img#talk_bubble {
 
 /*-------*/
 
-#important_stuff {
-	margin: 0 auto;
-	width: 800px;
-	display: block;
-}
-
-#announcements_wrap {
-	position: relative;
-	display: block;
-	float: left;
-}
-
 #announcements {
 	position: relative;
-	width: 350px;
 	background: #fff;
 	padding: 10px;
 	margin-bottom: 15px;
@@ -199,6 +184,7 @@ img#talk_bubble {
 	padding-top: 10;
 	text-align: center;
 	color: black;
+	font-size: x-large;
 }
 
 #announcements:before {
@@ -257,16 +243,10 @@ img#talk_bubble {
 .chunk h4 a {
 	color: #272727;
 }
-		
-#important_wrap {
-	position: relative;
-	float: right;
-}
 
 #important {
 	background: rgba(235, 230, 146, 1.0);
 	position: relative;
-	width: 350px;
 	padding: 10px;
 	border: 1px solid rgba(0, 0, 0, 0.150);
 	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
@@ -317,7 +297,13 @@ img#talk_bubble {
 }
 
 #important h2 {
+	font-size: x-large;
 	margin-top: 0;
-	padding-top: 10px;
+	padding-top: px;
 	text-align: center;
+}
+
+#important_stuff {
+	margin-bottom: 20px;
+	background: red;
 }

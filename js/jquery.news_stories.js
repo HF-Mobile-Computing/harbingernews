@@ -23,7 +23,7 @@ $(function() {
 
 		
 	f.click(function() {
-		if($(window).width() <= 640) {
+		if($(window).width() <= 767) {
 			n.animate({marginLeft: '-=240px'}, 100);
 			if ( i === 1 ) {
 				b.fadeIn('fast');
@@ -32,7 +32,7 @@ $(function() {
 			if ( i === p ) {
 				f.fadeOut('fast');
 			}
-		} else if($(window).width() > 640) {
+		} else if($(window).width() > 767) {
 			n.animate({marginLeft: '-=720px'}, 'fast');
 			if ( i === 1 ) {
 				b.fadeIn('fast');
@@ -45,7 +45,7 @@ $(function() {
 	});
 	
 	b.click(function() {
-		if($(window).width() <= 640) {
+		if($(window).width() <= 767) {
 			n.animate({marginLeft: '+=240px'}, 100);
 			if ( i === p) {
 				f.fadeIn('fast');
@@ -54,7 +54,7 @@ $(function() {
 			if ( i === 1) {
 				b.fadeOut('fast');
 			}
-		} else if($(window).width() > 640) {
+		} else if($(window).width() > 767) {
 			n.animate({marginLeft: '+=720px'}, 'fast');
 			if ( i === m) {
 				f.fadeIn('fast');
