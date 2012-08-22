@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -9,14 +9,12 @@
 	<link rel="stylesheet" href="css/footer.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/all.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
-	<link rel="stylesheet" href="css/jquery.tweet.css" type="text/css">
 	<link rel="stylesheet" href="css.css" type="text/css">
 	
 	<script src="js/jquery-1.8.0.min.js"></script>
 	<script src="js/jquery.fancybox.pack.js"></script>
 	<script src="js/jquery.news_stories.js"></script>
-	<script src="js/jquery.tweet.js"></script>
-	
+		
 	<script type="text/javascript">
 		// Fancybox
 		$(function() {
@@ -25,21 +23,6 @@
 				'openEffect' : 'fade',
 			});
 		});
-		// Tweet!
-		jQuery(function($){
-	        $(".tweet").tweet({
-	            username: "HFHarbingerNews",
-	            join_text: "auto",
-	            avatar_size: 32,
-	            count: 4,
-	            auto_join_text_default: "we said,", 
-	            auto_join_text_ed: "we",
-	            auto_join_text_ing: "we were",
-	            auto_join_text_reply: "we replied to",
-	            auto_join_text_url: "we were checking out",
-	            loading_text: "loading tweets..."
-	        });
-	    });
 
 	</script>
 	
@@ -201,11 +184,6 @@
 			</div><!-- end "important wrap" -->
 			<div style="clear:both"></div>
 		</div><!-- end "important stuff" -->
-		
-		<div class="tweet">
-		
-		</div>
-		
 		
 	<!-- !Footer Spacer -->
 		<div class="footer_spacer"></div>

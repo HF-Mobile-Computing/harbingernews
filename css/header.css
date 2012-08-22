@@ -94,6 +94,7 @@ a {
 
 .nav_buttons li:hover {
 	background-color: #629b63;
+	behavior: url(/~alex/Harbinger2/pie/PIE.htc);
 }
 
 .music_button {
