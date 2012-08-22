@@ -108,7 +108,7 @@ img#talk_bubble {
 #outerbox {
 	width: inherit;
 	height: inherit;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 #innerbox {
@@ -145,13 +145,13 @@ img#talk_bubble {
 	border-radius: 7px;
 	height: 350px;
 	box-shadow: 0px 2px 17px #232323;
-	behavior: url(/~alex/Harbinger2/pie/PIE.htc);
 	display: inline;
 	float: left;
 	margin-right: 20px;
 	margin-left: 18px;
 	margin-top: 10px;
 	overflow: hidden;
+	/*behavior: url(/~alex/Harbinger2/pie/PIE.htc);*/
 }
 
 #back_button {
