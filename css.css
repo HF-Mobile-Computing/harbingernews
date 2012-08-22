@@ -63,6 +63,7 @@ a.fancy {
 /*-------------*/
 
 #news {
+	z-index: -1;
 	padding: 0px;
 	width: 100%;
 	height: 435px;
@@ -102,6 +103,7 @@ img#talk_bubble {
 	height: 375px;
 	margin: 0 auto;
 	margin-top: 0px;
+	overflow-x: hidden;
 }
 
 #outerbox {
@@ -141,7 +143,7 @@ img#talk_bubble {
 
 .article {
 	text-align: center;
-	background: #d9d9d9;
+	background-color: #d9d9d9;
 	width: 200px;
 	border: 1px solid black;
 	border-radius: 7px;
@@ -154,6 +156,7 @@ img#talk_bubble {
 	margin-left: 18px;
 	margin-top: 10px;
 	overflow: hidden;
+	z-index: 2;
 }
 
 #back_button {
@@ -309,7 +312,6 @@ img#talk_bubble {
 
 #important_stuff {
 	margin-bottom: 20px;
-	background: red;
 }
 
 #news_title_row {

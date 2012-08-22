@@ -5,10 +5,18 @@
 
 	<title>The Harbinger Online</title>
 	
+	<!-- enable webapp on iPhone -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-icon" href="img/Apple-Icon.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="img/Apple-Icon-Retina.png" />
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
 
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css.css" type="text/css">
 	<link rel="stylesheet" href="css/all.css" type="text/css">
 	<link rel="stylesheet" href="css/footer.css" type="text/css">
@@ -16,13 +24,18 @@
 	<script src="js/jquery-1.8.0.min.js"></script>
 	<script src="js/bootstrap.js" type="text/javascript"></script>
 	<script src="js/jquery.news_stories.js" type="text/javascript"></script>
+	<script src="js/jquery.fancybox.pack.js" type="text/javascript"></script>
 	
 	<script type="text/javascript">
 	
-		// Collapsable Navbar
-		/*$(function() {
-			$('.nav-collapse').collapse()
-		});*/
+		$(function() {
+			$('.fancy').fancybox({
+				'hideOnContentClick' : false,
+				'openEffect' : 'fade',
+			});
+		});
+
+		
 	
 	</script>
 	
@@ -97,13 +110,13 @@
 				<div id="outerbox">
 					<div id="innerbox">
 					
-						<div id="manning" class="article">
+						<a class="fancy fancybox.iframe" href="harbinger/2012/september/manning.html"><div id="manning" class="article">
 							
 							<h3>Meet Dr. Manning</h3>
 							
 							<img src="stories/Meet%20Dr.%20Manning/manning.jpg" alt="manning" width="170" height="230" />
 							
-							<a data-toggle="modal" href="#important" ><p>Click here to learn more and read our interview with HF's new principal!</p></a>
+							<p>Click here to learn more and read our interview with HF's new principal!</p></a>
 							
 						</div> <!-- end "manning" --> 
 						
