@@ -1,17 +1,16 @@
-h3.footer {
+h3#footer {
 	padding-top: 0px;
 }
 
-.footer {
+#footer {
 	border-top: 4px solid #629b63;
 	color: white;
 }
 
 .important_links {
-	float: left;
 	border-left: #629b63 solid 2px;
 	margin-top: 10px;
-	padding-left: 10px;
+	padding-left: 5px;
 }
 
 #title {
@@ -23,23 +22,12 @@ h3.footer {
 
 .contact {
 	margin-top: 10px;
-	padding-left: 10px;
 	border-left: #629b63 solid 2px;
-	margin-right: 5%;
-	display: inline-block;
-	float: right;
+	padding-left: 5px;
 }
 
 #twitter-follow-button {
 	margin-bottom: 5px;
-}
-
-#edited_by {
-	float: right;
-	margin-right: 10%;
-	margin-top: 45px;
-	display: block;
-	clear: both;
 }
 
 .facebook {
@@ -47,8 +35,18 @@ h3.footer {
 	display: block;
 	background: #e8e8e8;
 	border-radius: 4px;
+	min-width: 225px;
 }
 
 #abt_chrome {
 	width: 400px;
+}
+
+#footer_holder {
+	margin-top: 20px;
+}
+
+#edited_by {
+	margin-top: 11px;
+	padding-left: 6px;
 }

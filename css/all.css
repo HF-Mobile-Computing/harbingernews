@@ -41,7 +41,7 @@ html, body {
 }
 
 #footer {
-	height: 200px;
+	min-height: 200px;
 	background: rgb(70,104,67);
 	clear: both;
 }

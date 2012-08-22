@@ -20,9 +20,9 @@
 	<script type="text/javascript">
 	
 		// Collapsable Navbar
-		$(function() {
+		/*$(function() {
 			$('.nav-collapse').collapse()
-		});
+		});*/
 	
 	</script>
 	
@@ -87,7 +87,7 @@
 		<div id="news">
 			
 			<div class="row">
-				<div class="span4 offset2">Harborfields News</div>
+				<div class="span10 offset2" id="news_title_row"><h2 id="news_title">Harborfields News</h2></div>
 			</div>
 				
 			<div id="container_box">
@@ -97,15 +97,15 @@
 				<div id="outerbox">
 					<div id="innerbox">
 					
-						<a class="fancy fancybox.iframe" href="harbinger/2012/september/manning.html"><div id="manning" class="article">
+						<div id="manning" class="article">
 							
 							<h3>Meet Dr. Manning</h3>
 							
 							<img src="stories/Meet%20Dr.%20Manning/manning.jpg" alt="manning" width="170" height="230" />
 							
-							<p>Click here to learn more and read our interview with HF's new principal!</p>
+							<a data-toggle="modal" href="#important" ><p>Click here to learn more and read our interview with HF's new principal!</p></a>
 							
-						</div></a> <!-- end "manning" --> 
+						</div> <!-- end "manning" --> 
 						
 						<div class="article">
 							
@@ -201,8 +201,11 @@
 	
 		<!--#include file="footer.shtml" -->
 		
-		<span id="edited_by">Last edited by Alex LaFroscia on August 2, 2012.</span>
-	
+		<div class="container" id="edited_by">
+			<div class="span6 offset6">
+				<span id="edited_by">Last edited by Alex LaFroscia on August 22, 2012.</span>
+			</div>
+		</div>
 	</div> <!-- end "footer" -->
 
 </body>

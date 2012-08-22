@@ -35,6 +35,10 @@
 		margin-left: 5px;
 		margin-right: 5px;
 	}
+	
+	#news_title {
+		padding-left: 20px;
+	}
 }
 
 body {
@@ -306,4 +310,8 @@ img#talk_bubble {
 #important_stuff {
 	margin-bottom: 20px;
 	background: red;
+}
+
+#news_title_row {
+	height: 35px;
 }
