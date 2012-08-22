@@ -10,7 +10,7 @@
 	<link rel="apple-touch-icon" href="img/Apple-Icon.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="img/Apple-Icon-Retina.png" />
 	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 
 
@@ -25,16 +25,26 @@
 	<script src="js/bootstrap.js" type="text/javascript"></script>
 	<script src="js/jquery.news_stories.js" type="text/javascript"></script>
 	<script src="js/jquery.fancybox.pack.js" type="text/javascript"></script>
+	<script src="js/jquery.mobile-1.2.0-alpha.1.min.js" type="text/javascript"></script>
 	
 	<script type="text/javascript">
 	
+		// Disable jquery mobile loading message
+		$.mobile.loadingMessage = false;
+	
+		// Fancybox
 		$(function() {
 			$('.fancy').fancybox({
 				'hideOnContentClick' : false,
 				'openEffect' : 'fade',
 			});
 		});
-
+		
+		$(function() {
+			$('#important').swipeleft(function() {
+				$('#important').css('display', 'none');
+			});
+		});
 		
 	
 	</script>
