@@ -213,10 +213,10 @@ img#talk_bubble {
 	-moz-transform: rotate(2deg);
 	-o-transform: rotate(2deg);
 	-ms-transform: rotate(2deg);
-	transform: rotate(2deg)
+	transform: rotate(2deg);
 }
 
-/*#announcemets:after {
+#announcemets:after {
 	z-index: -2;
 	position: absolute;
 	top: -2px;
@@ -233,8 +233,8 @@ img#talk_bubble {
 	-moz-transform: rotate(359deg);
 	-o-transform: rotate(359deg);
 	-ms-transform: rotate(359deg);
-	transform: rotate(359deg)
-}*/
+	transform: rotate(359deg);
+}
 
 .chunk {
 	margin-left: 0px;
