@@ -1,39 +1,24 @@
-<div class="header"> <!-- !Header -->
-	
-	<a href="/~alex/Harbinger2/index.php"><h1 id="title">The Harbinger Online</h1></a>
-	
-	<div id="nav">
-		<ul class="nav_buttons">
-			<li id="home"><a href="/~alex/Harbinger2/">Home</a></li>
-			<li id="sports"><a href="/~alex/Harbinger2/sports/">Sports</a></li>
-			<li id="arts"><a href="/~alex/Harbinger2/arts/">Arts</a></li>
-			<li id="clubs"><a href="/~alex/Harbinger2/clubs/">Clubs</a></li>
-		</ul>
+<div class="navbar navbar-static-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="#">The Harbinger Online</a>
+			<div class="nav-collapse">
+				<ul class="nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Sports</a></li>
+					<li><a href="#">Clubs</a></li>
+					<li><a href="#">Arts</a></li>
+				</ul>
+				<form style="float:right;" class="navbar-search pull-left hidden-phone hidden-tablet">
+					<input type="text" class="search-query" placeholder="Search">
+				</form>
+			</div>
+		</div>
 	</div>
-	
-	<div class="music_button"><img src="/~alex/Harbinger2/images/music.png" alt="music" width="20" height="29" /></div>
-		
-</div> <!-- end "header" -->
-
-<div class="music_box">
-	
-	<span class="soon_note">This is a feature that we're working on! Someday, this may house a music player for original content by Harborfields musicians.</span>
-
-	<script type="text/javascript">
-		$(function() {
-			$('.music_button').click(function() {
-				console.log("music button pressed");
-				if( $('div.music_box').is(':visible') ) {
-					$('div.music_box').animate({marginTop: "-65px"}, 250, function() {
-						$('div.music_box').css("display", "none");
-					});
-				} else {
-					$('div.music_box').animate({marginTop: "-2px"}, 250);
-					$('div.music_box').css("display", "block");
-				}
-			});
-		});
-	
-	</script>
-	
 </div>

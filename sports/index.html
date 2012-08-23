@@ -1,20 +1,25 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 
 <head>
 
 	<title>HHS - Sports</title>
 	
-	<link rel="stylesheet" href="../css/header.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="../css/footer.css" type="text/css" media="screen">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	
 	<link rel="stylesheet" href="../css/all.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="../css/jquery.fancybox.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="/~alex/Harbinger2/css/bootstrap-responsive.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="/~alex/Harbinger2/css/bootstrap.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../css/footer.css" type="text/css" media="screen">
+
 
 	<script src="../js/jquery-1.8.0.min.js"></script>
 	<script src="../js/jquery.masonry.min.js" type="text/javascript"></script>
 	<script src="../js/jquery.fancybox.pack.js" type="text/javascript"></script>
 	<script src="jq.sportsbox.js" type="text/javascript"></script>
+	<script src="../js/bootstrap.min.js" type="text/javascript"></script>
 	
 	<script type="text/javascript">
 		// Masonry
@@ -36,6 +41,15 @@
 			});
 		});
 	</script>
+	
+	<style type="text/css">
+	
+		.btn-navbar {
+			display: block;
+		}
+	
+	
+	</style>
 
 </head>
 
@@ -85,16 +99,19 @@
 		
 		
 	
-		<div class="footer_spacer"></div>
+		<div id="footer_spacer"></div>
 	</div>
 	
 	<!--!Footer-->
-	<div class="footer">
+	<div id="footer">
 	
 		<!--#include virtual="../footer.shtml"-->
 		
-		<span id="edited_by">Last edited by ________ on _________.</span>
-
+		<div class="container" id="edited_by">
+			<div class="span6 offset6">
+				<span id="edited_by">Last edited by Alex LaFroscia on August 22, 2012.</span>
+			</div>
+		</div>
 	</div><!-- end "footer" -->
 
 </body>

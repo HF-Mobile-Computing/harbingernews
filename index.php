@@ -82,31 +82,9 @@
 <body>
 	
 	<div id="content">
-		<div class="navbar navbar-static-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<a type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-					<a class="brand" href="#">The Harbinger Online</a>
-					<div class="nav-collapse">
-						<ul class="nav">
-							<li class="active"><a href="#">Home</a></li>
-							<li><a href="#">News</a></li>
-							<li><a href="#">Sports</a></li>
-							<li><a href="#">Clubs</a></li>
-							<li><a href="#">Arts</a></li>
-						</ul>
-						<form style="float:right;" class="navbar-search pull-left hidden-phone hidden-tablet">
-							<input type="text" class="search-query" placeholder="Search">
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
 		
+		<!--#include virtual="/~alex/Harbinger2/header.shtml"-->
+				
 		<div id="news">
 			
 			<div class="row">
