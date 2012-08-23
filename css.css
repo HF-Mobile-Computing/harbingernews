@@ -48,9 +48,6 @@ body {
 	overflow-x: hidden;
 }
 
-li#home {
-	background-color: #629b63 !important;
-}
 
 a.fancy {
 	color: black;
@@ -77,8 +74,8 @@ a.fancy {
 #news_title_container {
 	position: relative;
 	top: 8px;
-	right: 250px;
-	width: 250px;
+	right: 100px;
+	width: 400px;
 	margin: 0 auto;
 }
 
@@ -108,7 +105,7 @@ img#talk_bubble {
 #outerbox {
 	width: inherit;
 	height: inherit;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 #innerbox {
@@ -143,15 +140,18 @@ img#talk_bubble {
 	width: 200px;
 	border: 1px solid black;
 	border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
 	height: 350px;
 	box-shadow: 0px 2px 17px #232323;
-	behavior: url(/~alex/Harbinger2/pie/PIE.htc);
+	-webkit-box-shadow: 0px 2px 17px #232323;
 	display: inline;
 	float: left;
 	margin-right: 20px;
 	margin-left: 18px;
 	margin-top: 10px;
 	overflow: hidden;
+	/*behavior: url(/~alex/Harbinger2/pie/PIE.htc);*/
 }
 
 #back_button {
