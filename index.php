@@ -107,22 +107,52 @@
 						</div></a> <!-- end "manning" --> 
 						
 						<div class="article">
+						
+							<div class="empty_article">
+							
+								<a href="#"><h2>Your article could appear here!</h2></a>
+							
+							</div>
 							
 						</div>
 						
 						<div class="article">
 						
-						</div>
-						
-						<div class="article">
-						
-						</div>
-						
-						<div class="article">
+							<div class="empty_article">
+							
+								<a href="#"><h2>Your article could appear here!</h2></a>
+							
+							</div>
 						
 						</div>
 						
 						<div class="article">
+						
+							<div class="empty_article">
+							
+								<a href="#"><h2>Your article could appear here!</h2></a>
+							
+							</div>
+						
+						</div>
+						
+						<div class="article">
+						
+							<div class="empty_article">
+							
+								<a href="#"><h2>Your article could appear here!</h2></a>
+							
+							</div>
+						
+						</div>
+						
+						<div class="article">
+						
+							<div class="empty_article">
+							
+								<a href="#"><h2>Your article could appear here!</h2></a>
+							
+							</div>
 						
 						</div>
 						

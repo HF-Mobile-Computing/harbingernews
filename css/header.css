@@ -1,29 +1,3 @@
-/* Smaller Screen CSS */
-@media screen and (max-width: 640px) {
-	
-	#nav {
-		display: none !important;
-	}
-	
-	.music_button {
-		display: none !important;
-	}		
-}
-
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-	
-	#nav {
-		display: none !important;
-	}
-	
-	.music_button {
-		display: none !important;
-	}
-	
-}
-
 a {
 	color: white;
 	text-decoration: none;

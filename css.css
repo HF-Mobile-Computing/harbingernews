@@ -154,6 +154,29 @@ img#talk_bubble {
 	/*behavior: url(/~alex/Harbinger2/pie/PIE.htc);*/
 }
 
+.empty_article {
+	display: block;
+	height: 260px;
+	width: 130px;
+	margin: 0 auto;
+	margin-top: 22px;
+	border-radius: 12px;
+	border: 4px dashed #787878;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 40px;
+}
+
+.empty_article h2 {
+	display: inline;
+	color: #787878;
+}
+
+.empty_article h2:hover {
+	text-decoration: underline;
+}
+
 #back_button {
 	position: absolute;
 	margin-top: 165px;
