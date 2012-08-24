@@ -213,9 +213,8 @@
 					<h2>Important Reminders</h2>
 					
 					<ul>
-						<li>This is a very important reminder.</li>
-						<li>There are very important things going on right now.</li>
-						<li>It's too bad that it's summer right now, and in reality, there are no things going on.</li>
+						<li>This is only a rough copy of the "final" site. There is a major re-vamping that is already underway which will include a mobile version. Things may looks a little rough around the edges right now, but over time that'll get cleaned up.</li>
+						<li>There are no other reminders at this time.</li>
 					</ul>
 
 				</div>
