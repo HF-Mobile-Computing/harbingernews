@@ -1,45 +1,67 @@
+<!DOCTYPE html>
 <html>
 
 <head>
 
-	<title></title>
+	<title>The Harbinger Online</title>
 	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-
-	<link rel="stylesheet" href="/~alex/Harbinger2/css/all.css" type="text/css">
-	<link rel="stylesheet" href="/~alex/Harbinger2/css/header.css" type="text/css">
-	<link rel="stylesheet" href="/~alex/Harbinger2/css/footer.css" type="text/css">
+	<!-- enable webapp on iPhone -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-icon" href="img/Apple-Icon.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="img/Apple-Icon-Retina.png" />
 	
-	<style type="text/css">
-
-		body {
-			margin: 0;
-			background-image:url(/~alex/Harbinger2/Background.png);
-		}
-
-	</style>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
+	<link rel="stylesheet" href="css.css" type="text/css">
+	<link rel="stylesheet" href="css/all.css" type="text/css">
+	<link rel="stylesheet" href="css/footer.css" type="text/css">
+	
+	<script src="js/jquery-1.8.0.min.js"></script>
+	<script src="js/bootstrap.js" type="text/javascript"></script>
+	<script src="js/jquery.news_stories.js" type="text/javascript"></script>
+	<script src="js/jquery.fancybox.pack.js" type="text/javascript"></script>
+	<script src="js/jquery.mobile-1.2.0-alpha.1.min.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+	
+		// Disable jquery mobile loading message
+		$.mobile.loadingMessage = false;
+	
+		// Fancybox
+		$(function() {
+			$('.fancy').fancybox({
+				'hideOnContentClick' : false,
+				'openEffect' : 'fade',
+			});
+		});
+	
+	</script>
+	
 </head>
 
 <body>
-
-	<div class="content">
 	
-		<!--#include virtual="/~alex/Harbinger2/header.shtml"-->
-	
-	
-	<div class="footer_spacer"></div>
-	
-	</div>
-	
-	<div class="footer">
-	
-		<!--#include virtual="/~alex/Harbinger2/footer.shtml" -->
+	<!--#include virtual="/~alex/Harbinger2/header.shtml"-->
+				
 		
-		<span id="edited_by">Last edited by Alex LaFroscia on July 18, 2012.</span>
-
-	</div>
-
+		
+		
+		
+		
+	<div id="footer">
+	
+		<!--#include file="footer.shtml" -->
+		
+		<div class="container" id="edited_by">
+			<div class="span6 offset6">
+				<span id="edited_by">Last edited by Alex LaFroscia on August 22, 2012.</span>
+			</div>
+		</div>
+	</div> <!-- end "footer" -->
 
 </body>
 

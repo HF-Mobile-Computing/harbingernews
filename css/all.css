@@ -32,7 +32,7 @@ html, body {
 	min-height: 100%;
 	height: 100%;
 	height: auto !important;
-	margin-bottom: -200px;
+	margin-bottom: -200px !important;
 }
 
 #footer_spacer {
@@ -41,7 +41,10 @@ html, body {
 }
 
 #footer {
+	width: 100%;
 	min-height: 200px;
 	background: rgb(70,104,67);
 	clear: both;
+	position: absolute;
+	bottom: 0;
 }
