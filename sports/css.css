@@ -46,10 +46,30 @@ li#sports {
 }
 
 .sport {
+	color: black;
 	margin-bottom: 20px;
-	background: blue;
+	background: #d9d9d9;
 	width: 200px;
 	height: 150px;
+}
+
+.sport h3 {
+	position: relative;
+	top: 120px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.sport img {
+	position: absolute;
+	left: 25px;
+	top: 12px;
+}
+
+#sportsbox p {
+	text-align: center;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 #winterbox {
