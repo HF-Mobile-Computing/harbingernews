@@ -7,12 +7,6 @@ li#sports {
 	background-color: #629b63 !important;
 }
 
-#horz_holder {
-	width: 100%;
-	background: #5b5b5b;
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
-}
 
 #sportsbox {
 	max-width: 720px;
@@ -58,4 +52,11 @@ li#sports {
 
 #springbox {
 	display: none;
+}
+
+#grey_background {
+	background-color: #5b5b5b;
+	width: 100%;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 }
