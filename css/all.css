@@ -34,11 +34,6 @@ html, body {
 	margin-bottom: -200px;
 }
 
-#footer_spacer {
-	height: 200px;
-	clear: both;
-}
-
 #footer {
 	width: 100%;
 	min-height: 200px;

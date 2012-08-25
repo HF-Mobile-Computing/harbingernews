@@ -25,7 +25,6 @@
 	<script src="js/bootstrap.js" type="text/javascript"></script>
 	<script src="js/jquery.news_stories.js" type="text/javascript"></script>
 	<script src="js/jquery.fancybox.pack.js" type="text/javascript"></script>
-	<script src="js/jquery.mobile-1.2.0-alpha.1.min.js" type="text/javascript"></script>
 	
 	<script type="text/javascript">
 	
