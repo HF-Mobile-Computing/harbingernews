@@ -104,9 +104,9 @@
 							
 							<img src="stories/Meet%20Dr.%20Manning/manning.jpg" alt="manning" width="170" height="230" />
 							
-							<p>Click here to learn more and read our interview with HF's new principal!</p></a>
+							<p>Click here to learn more and read our interview with HF's new principal!</p>
 							
-						</div> <!-- end "manning" --> 
+						</div></a> <!-- end "manning" --> 
 						
 						<div class="article">
 							
@@ -163,7 +163,7 @@
 								<?php foreach($feed->get_items(0, 1) as $item): ?>
 									<div class="chunk">			
 										<!-- Display the item's primary content. -->
-										<h4><?php if ($item->get_permalink()) echo '<a href="' . $item->get_permalink() . '">'; echo $item->get_title(); if ($item->get_permalink()) echo '</a>'; ?>&nbsp;<span class="footnote"></h4>
+										<h4><?php if ($item->get_permalink()) echo '<a href="' . $item->get_permalink() . '">'; echo $item->get_title(); if ($item->get_permalink()) echo '</a>'; ?>&nbsp;<span class="footnote"></span></h4>
 										<?php echo $item->get_content(); ?>
 									</div><!-- end "chunk" -->
 				
@@ -192,7 +192,7 @@
 				
 			</div><!-- end "row" -->
 			
-		</div><!-- end "important_center" -->
+		</div><!-- end "container" -->
 		
 		<div id="footer_spacer"></div>
 		
@@ -205,8 +205,8 @@
 		<div class="container" id="edited_by">
 			<div class="span6 offset6">
 				<span id="edited_by">Last edited by Alex LaFroscia on August 22, 2012.</span>
-			</div>
-		</div>
+			</div><!-- end "span6" -->
+		</div><!-- end "edited_by" -->
 	</div> <!-- end "footer" -->
 
 </body>
