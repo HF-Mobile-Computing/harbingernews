@@ -196,6 +196,7 @@ img#talk_bubble {
 	margin: 0 auto;
 	width: 800px;
 	display: block;
+	margin-bottom: 10px;
 }
 
 #announcements_wrap {
