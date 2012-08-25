@@ -5,7 +5,7 @@
 		<ul>
 			<li>About This Site</li>
 			<li>The Harbinger Team</li>
-			<li>Get Involved</li>
+			<a href="/~alex/Harbinger2/pages/getinvolved.html"><li>Get Involved</li></a>
 		</ul>
 	
 	</div> <!-- end "important" -->
