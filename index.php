@@ -110,7 +110,7 @@
 						
 							<div class="empty_article">
 							
-								<a href="#"><h2>Your article could appear here!</h2></a>
+								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
 							
 							</div>
 							
@@ -120,7 +120,7 @@
 						
 							<div class="empty_article">
 							
-								<a href="#"><h2>Your article could appear here!</h2></a>
+								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
 							
 							</div>
 						
@@ -130,7 +130,7 @@
 						
 							<div class="empty_article">
 							
-								<a href="#"><h2>Your article could appear here!</h2></a>
+								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
 							
 							</div>
 						
@@ -140,7 +140,7 @@
 						
 							<div class="empty_article">
 							
-								<a href="#"><h2>Your article could appear here!</h2></a>
+								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
 							
 							</div>
 						
@@ -150,7 +150,7 @@
 						
 							<div class="empty_article">
 							
-								<a href="#"><h2>Your article could appear here!</h2></a>
+								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
 							
 							</div>
 						
