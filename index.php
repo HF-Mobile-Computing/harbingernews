@@ -37,24 +37,7 @@
 	include_once('autoloader.php');
 	include_once('idn/idna_convert.class.php');
 	$feed = new SimplePie();
-	/* if (isset($_GET['js']))
-	{
-		SimplePie_Misc::output_javascript();
-		die();
-	} */
 	$feed->set_feed_url('http://hfannouncements.blogspot.com/feeds/posts/default');
-	/*if (!empty($_GET['input']))
-	{
-		$feed->set_input_encoding($_GET['input']);
-	}
-	if (!empty($_GET['orderbydate']) && $_GET['orderbydate'] == 'false')
-	{
-		$feed->enable_order_by_date(false);
-	}
-	if (!empty($_GET['force']) && $_GET['force'] == 'true')
-	{
-		$feed->force_feed(true);
-	} */
 	$success = $feed->init();
 	$feed->handle_content_type();
 	?>
