@@ -13,9 +13,6 @@
 					<li id="nav_sports"><a href="/~alex/Harbinger2/sports/">Sports</a></li>
 					<li id="nav_clubs"><a href="/~alex/Harbinger2/clubs">Clubs</a></li>
 				</ul>
-				<form style="float:right;" class="navbar-search pull-left hidden-phone hidden-tablet">
-					<input type="text" class="search-query" placeholder="Search">
-				</form>
 			</div>
 		</div>
 	</div>
