@@ -30,6 +30,17 @@ h3#footer {
 	margin-bottom: 5px;
 }
 
+<<<<<<< HEAD
+=======
+#edited_by {
+	float: right;
+	margin-right: 10%;
+	margin-top: 40px;
+	display: block;
+	clear: both;
+}
+
+>>>>>>> master
 .facebook {
 	margin-top: 5px;
 	display: block;
@@ -42,6 +53,7 @@ h3#footer {
 	width: 400px;
 }
 
+<<<<<<< HEAD
 #footer_holder {
 	margin-top: 10px;
 }
@@ -49,4 +61,12 @@ h3#footer {
 #edited_by {
 	margin-top: 11px;
 	padding-left: 6px;
+=======
+#title a {
+	text-decoration: none;
+}
+
+#title a:hover {
+	text-decoration: underline !important;
+>>>>>>> master
 }

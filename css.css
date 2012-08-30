@@ -49,9 +49,6 @@ body {
 
 }
 
-li#home {
-	background-color: #629b63 !important;
-}
 
 a.fancy {
 	color: black;
@@ -79,8 +76,8 @@ a.fancy {
 #news_title_container {
 	position: relative;
 	top: 8px;
-	right: 250px;
-	width: 250px;
+	right: 100px;
+	width: 400px;
 	margin: 0 auto;
 }
 
@@ -111,7 +108,7 @@ img#talk_bubble {
 #outerbox {
 	width: inherit;
 	height: inherit;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 #innerbox {
@@ -149,9 +146,11 @@ img#talk_bubble {
 	width: 200px;
 	border: 1px solid black;
 	border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
 	height: 350px;
 	box-shadow: 0px 2px 17px #232323;
-	behavior: url(/~alex/Harbinger2/pie/PIE.htc);
+	-webkit-box-shadow: 0px 2px 17px #232323;
 	display: inline;
 	float: left;
 	margin-right: 20px;
@@ -159,6 +158,30 @@ img#talk_bubble {
 	margin-top: 10px;
 	overflow: hidden;
 	z-index: 2;
+	/*behavior: url(/~alex/Harbinger2/pie/PIE.htc);*/
+}
+
+.empty_article {
+	display: block;
+	height: 260px;
+	width: 130px;
+	margin: 0 auto;
+	margin-top: 22px;
+	border-radius: 12px;
+	border: 4px dashed #787878;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 40px;
+}
+
+.empty_article h2 {
+	display: inline;
+	color: #787878;
+}
+
+.empty_article h2:hover {
+	text-decoration: underline;
 }
 
 #back_button {
@@ -175,6 +198,19 @@ img#talk_bubble {
 }
 
 /*-------*/
+
+#important_stuff {
+	margin: 0 auto;
+	width: 800px;
+	display: block;
+	margin-bottom: 10px;
+}
+
+#announcements_wrap {
+	position: relative;
+	display: block;
+	float: left;
+}
 
 #announcements {
 	position: relative;
@@ -254,13 +290,14 @@ img#talk_bubble {
 }
 
 #important {
-	background: rgba(235, 230, 146, 1.0);
+	background: #EBE692;
 	position: relative;
 	padding: 10px;
 	border: 1px solid rgba(0, 0, 0, 0.150);
 	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
 	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
 	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+	margin-bottom: 10px;
 }
 
 #important:before {
@@ -271,8 +308,7 @@ img#talk_bubble {
 	content: '';
 	width: 100%;
 	height: 100%;
-	background: rgba(235, 230, 146, 1.0);
-
+	background: #EBE692;
 	border: 1px solid rgba(0, 0, 0, 0.150);
 	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
 	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
@@ -292,8 +328,7 @@ img#talk_bubble {
 	content: '';
 	width: 100%;
 	height: 100%;
-	background: rgba(235, 230, 146, 1.0);
-
+	background: #EBE692;
 	border: 1px solid rgba(0, 0, 0, 0.150);
 	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
 	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);

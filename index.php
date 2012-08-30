@@ -16,6 +16,9 @@
 
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css">
+	<link rel="stylesheet" href="css/header.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/footer.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/all.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css.css" type="text/css">
 	<link rel="stylesheet" href="css/all.css" type="text/css">
@@ -25,7 +28,9 @@
 	<script src="js/bootstrap.js" type="text/javascript"></script>
 	<script src="js/jquery.news_stories.js" type="text/javascript"></script>
 	<script src="js/jquery.fancybox.pack.js" type="text/javascript"></script>
-	
+
+	<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+
 	<script type="text/javascript">
 	
 		// Disable jquery mobile loading message
@@ -38,14 +43,6 @@
 				'openEffect' : 'fade',
 			});
 		});
-		
-		$(function() {
-			$('#important').swipeLeft(function() {
-				$('#important').css('display', 'none');
-			});
-		});
-		
-	
 	</script>
 	
 	<?php
@@ -92,22 +89,52 @@
 						</div></a> <!-- end "manning" --> 
 						
 						<div class="article">
+						
+							<div class="empty_article">
+							
+								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
+							
+							</div>
 							
 						</div>
 						
 						<div class="article">
 						
-						</div>
-						
-						<div class="article">
-						
-						</div>
-						
-						<div class="article">
+							<div class="empty_article">
+							
+								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
+							
+							</div>
 						
 						</div>
 						
 						<div class="article">
+						
+							<div class="empty_article">
+							
+								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
+							
+							</div>
+						
+						</div>
+						
+						<div class="article">
+						
+							<div class="empty_article">
+							
+								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
+							
+							</div>
+						
+						</div>
+						
+						<div class="article">
+						
+							<div class="empty_article">
+							
+								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
+							
+							</div>
 						
 						</div>
 						
