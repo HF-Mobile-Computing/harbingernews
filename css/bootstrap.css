@@ -39,10 +39,6 @@ html {
       -ms-text-size-adjust: 100%;
 }
 
-a {
-	color: #478f56;
-}
-
 a:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
