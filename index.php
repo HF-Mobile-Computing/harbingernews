@@ -148,7 +148,7 @@
 			<div class="row">
 				<div class="span6">
 					<div id="announcements">
-						<a href="http://hfannouncements.blogspot.com/"><h2>Today's Announcements</h2></a>
+						<a href="http://hfannouncements.blogspot.com/"><h2><i class="icon-bullhorn"></i>Today's Announcements</h2></a>
 						
 						<?php
 							// Check to see if there are more than zero errors (i.e. if there are any errors at all)
