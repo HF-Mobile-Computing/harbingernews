@@ -191,7 +191,7 @@
 						<h2>Important Reminders</h2>
 						
 						<ul>
-							<li>This is a very important reminder.</li>
+							<li>This is a <a href="#">very important</a> reminder.</li>
 							<li>There are very important things going on right now.</li>
 							<li>It's too bad that it's summer right now, and in reality, there are no things going on.</li>
 						</ul>
@@ -207,6 +207,8 @@
 		<div id="footer_spacer"></div>
 		
 	</div><!-- end "content"-->
+	
+	<a href="#">This is a test.</a>
 	
 	<div id="footer">
 	
