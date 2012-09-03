@@ -148,7 +148,7 @@
 			<div class="row">
 				<div class="span6">
 					<div id="announcements">
-						<a href="http://hfannouncements.blogspot.com/"><h2><i class="icon-bullhorn"></i>Today's Announcements</h2></a>
+						<a href="http://hfannouncements.blogspot.com/"><h2>Today's Announcements</h2></a>
 						
 						<?php
 							// Check to see if there are more than zero errors (i.e. if there are any errors at all)
@@ -191,7 +191,7 @@
 						<h2>Important Reminders</h2>
 						
 						<ul>
-							<li>This is a <a href="#">very important</a> reminder.</li>
+							<li>This is a very important reminder.</li>
 							<li>There are very important things going on right now.</li>
 							<li>It's too bad that it's summer right now, and in reality, there are no things going on.</li>
 						</ul>
