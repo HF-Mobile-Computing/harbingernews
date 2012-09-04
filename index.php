@@ -13,9 +13,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-	<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css">
 	<link rel="stylesheet" href="css/header.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/footer.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/all.css" type="text/css" media="screen">
@@ -23,6 +20,8 @@
 	<link rel="stylesheet" href="css.css" type="text/css">
 	<link rel="stylesheet" href="css/all.css" type="text/css">
 	<link rel="stylesheet" href="css/footer.css" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css">
 	
 	<script src="js/jquery-1.8.0.min.js"></script>
 	<script src="js/bootstrap.js" type="text/javascript"></script>
@@ -32,10 +31,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
 
 	<script type="text/javascript">
-	
-		// Disable jquery mobile loading message
-		$.mobile.loadingMessage = false;
-	
+		
 		// Fancybox
 		$(function() {
 			$('.fancy').fancybox({
@@ -62,7 +58,24 @@
 <body>
 	
 	<div id="content">
+	
+		<!--[if lte IE 8]>
+			<script type="text/javascript">
+				$(function() {
+					if(window.externalHost) {
+						console.log("Thanks for installing Google Chrome Frame!");
+					} else {
+						$('#installgcf').css('display' , 'block');
+					}
+				});
+			</script>
+		<![endif]-->
 		
+		<div id="installgcf">
+			<img src="/~alex/Harbinger2/images/chrome_icon.png" alt="chrome_icon" width="30" height="30" />
+			<a href="http://www.google.com/chromeframe/"><h2>Make your experience better - Download Google Chrome Frame!</h2></a>
+		</div>
+
 		<!--#include virtual="/~alex/Harbinger2/header.shtml"-->
 				
 		<div id="news">
@@ -216,7 +229,7 @@
 		
 		<div class="container" id="edited_by">
 			<div class="span6 offset6">
-				<span id="edited_by">Last edited by Alex LaFroscia on August 22, 2012.</span>
+				<span>Last edited by Alex LaFroscia on August 22, 2012.</span>
 			</div><!-- end "span6" -->
 		</div><!-- end "edited_by" -->
 	</div> <!-- end "footer" -->
