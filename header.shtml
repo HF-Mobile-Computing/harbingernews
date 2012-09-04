@@ -27,11 +27,11 @@
 		</ul>
 	</div>
 	
-	<div class="music_button"><img src="/~alex/Harbinger2/images/music.png" alt="music" width="20" height="29" /></div>
+	<!-- <div class="music_button"><img src="/~alex/Harbinger2/images/music.png" alt="music" width="20" height="29" /></div> -->
 		
 </div> <!-- end "header" -->
 
-<div class="music_box">
+<!-- <div class="music_box">
 	
 	<span class="soon_note">This is a feature that we're working on! Someday, this may house a music player for original content by Harborfields musicians.</span>
 
@@ -52,4 +52,4 @@
 	
 	</script>
 	
-</div>
+</div> -->
