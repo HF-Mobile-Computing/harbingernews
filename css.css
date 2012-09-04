@@ -169,9 +169,8 @@ img#talk_bubble {
 
 #important_stuff {
 	margin: 0 auto;
-	width: 800px;
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 #announcements_wrap {
@@ -313,10 +312,6 @@ img#talk_bubble {
 	margin-top: 0;
 	padding-top: px;
 	text-align: center;
-}
-
-#important_stuff {
-	margin-bottom: 20px;
 }
 
 #news_title_row {

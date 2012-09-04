@@ -58,18 +58,6 @@
 <body>
 	
 	<div id="content">
-	
-		<!--[if lte IE 8]>
-			<script type="text/javascript">
-				$(function() {
-					if(window.externalHost) {
-						console.log("Thanks for installing Google Chrome Frame!");
-					} else {
-						$('#installgcf').css('display' , 'block');
-					}
-				});
-			</script>
-		<![endif]-->
 		
 		<div id="installgcf">
 			<img src="/~alex/Harbinger2/images/chrome_icon.png" alt="chrome_icon" width="30" height="30" />
@@ -221,16 +209,16 @@
 		
 	</div><!-- end "content"-->
 	
-	<a href="#">This is a test.</a>
-	
 	<div id="footer">
 	
 		<!--#include file="footer.shtml" -->
 		
 		<div class="container" id="edited_by">
-			<div class="span6 offset6">
-				<span>Last edited by Alex LaFroscia on August 22, 2012.</span>
-			</div><!-- end "span6" -->
+
+				<div class="span6 offset6">
+					<span>Last edited by Alex LaFroscia on August 22, 2012.</span>
+				</div><!-- end "span6" -->
+
 		</div><!-- end "edited_by" -->
 	</div> <!-- end "footer" -->
 
