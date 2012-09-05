@@ -99,15 +99,14 @@ li#clubs {
 	text-align: center;		
 }
 
-#label {
+.label {
 	display: block;
 	margin-top: 17px;
 	clear: both;
 }
 
 
-#keywords {
-	color: white;
+.keywords {
 	display: none;
 }
 
