@@ -9,6 +9,40 @@
 
 /* Phones to Tablets */
 
+@media screen and (max-width: 767px) {
+
+	a {
+		text-decoration: none;
+	}
+
+	#container_box {
+		width: 240px !important;
+	}
+	
+	#forward_button {
+		margin-left: 224px !important;
+	}
+	
+	#news_title_container {
+		right: 5px !important;
+	}
+	
+	#announcements {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	
+	#important {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	
+	#news_title {
+		padding-left: 20px;
+	}
+}
+
+
 body {
 	background-image:url(background.png);
 	width: 100%;

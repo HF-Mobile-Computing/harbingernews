@@ -215,7 +215,7 @@
 		
 		<div class="container">
 			<div class="pull-right" style="margin-top: 20px;">
-					This page was last updated by Alex LaFroscia on September 2, 2012.
+					This page was last updated by Alex LaFroscia on September 5, 2012.
 			</div>
 		</div>
 		
