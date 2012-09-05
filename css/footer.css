@@ -58,6 +58,8 @@ h3#footer {
 #edited_by {
 	margin-top: 11px;
 	padding-left: 6px;
+	background: rgb(70,104,67);
+}
 
 #title a {
 	text-decoration: none;

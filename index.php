@@ -64,7 +64,7 @@
 			<a href="http://www.google.com/chromeframe/"><h2>Make your experience better - Download Google Chrome Frame!</h2></a>
 		</div>
 
-		<!--#include virtual="/~alex/Harbinger2/header.shtml"-->
+		<!--#include virtual="/header.shtml"-->
 				
 		<div id="news">
 			
@@ -211,15 +211,14 @@
 	
 	<div id="footer">
 	
-		<!--#include file="footer.shtml" -->
+		<!--#include virtual="/footer.shtml" -->
 		
-		<div class="container" id="edited_by">
-
-				<div class="span6 offset6">
-					<span>Last edited by Alex LaFroscia on August 22, 2012.</span>
-				</div><!-- end "span6" -->
-
-		</div><!-- end "edited_by" -->
+		<div class="container">
+			<div class="pull-right" style="margin-top: 20px;">
+					This page was last updated by Alex LaFroscia on September 2, 2012.
+			</div>
+		</div>
+		
 	</div> <!-- end "footer" -->
 
 </body>
