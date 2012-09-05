@@ -10,7 +10,7 @@
 			<div class="nav-collapse">
 				<ul class="nav">
 					<li id="nav_home" class="active"><a href="/">Home</a></li>
-					<li id="nav_sports"><a href="sports/">Sports</a></li>
+					<li id="nav_sports"><a href="/sports">Sports</a></li>
 					<li id="nav_clubs"><a href="/clubs">Clubs</a></li>
 				</ul>
 			</div>

@@ -52,6 +52,18 @@
 	$success = $feed->init();
 	$feed->handle_content_type();
 	?>
+	
+	<!--[if lte IE 8]>
+		<script type="text/javascript">
+			$(function() {
+				if(window.externalHost) {
+					console.log("Thanks for installing Google Chrome Frame!");
+				} else {
+					$('#installgcf').css('display' , 'block');
+				}
+			});
+		</script>
+	<![endif]-->
 
 </head>
 
@@ -60,7 +72,7 @@
 	<div id="content">
 		
 		<div id="installgcf">
-			<img src="/~alex/Harbinger2/images/chrome_icon.png" alt="chrome_icon" width="30" height="30" />
+			<img src="/images/chrome_icon.png" alt="chrome_icon" width="30" height="30" />
 			<a href="http://www.google.com/chromeframe/"><h2>Make your experience better - Download Google Chrome Frame!</h2></a>
 		</div>
 

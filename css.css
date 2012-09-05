@@ -9,7 +9,7 @@
 
 /* Phones to Tablets */
 
-@media screen and (max-width: 767px) {
+@media (max-width: 768px) {
 
 	a {
 		text-decoration: none;
@@ -41,7 +41,6 @@
 		padding-left: 20px;
 	}
 }
-
 
 body {
 	background-image:url(background.png);
