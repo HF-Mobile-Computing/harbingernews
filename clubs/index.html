@@ -3,19 +3,19 @@
 
 <head>
 
-	<title></title>
+	<title>Clubs</title>
 	
-	<link rel="stylesheet" href="/~alex/Harbinger2/css/bootstrap.css" type="text/css">
-	<link rel="stylesheet" href="/~alex/Harbinger2/css/bootstrap-responsive.css" type="text/css">
-	<link rel="stylesheet" href="../css/all.css" type="text/css">
-	<link rel="stylesheet" href="/~alex/Harbinger2/css/header.css" type="text/css">
-	<link rel="stylesheet" href="/~alex/Harbinger2/css/footer.css" type="text/css">
-	<link rel="stylesheet" href="/~alex/Harbinger2/css/jquery.fancybox.css" type="text/css">
+	<link rel="stylesheet" href="/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="/css/bootstrap-responsive.css" type="text/css">
+	<link rel="stylesheet" href="/css/all.css" type="text/css">
+	<link rel="stylesheet" href="/css/header.css" type="text/css">
+	<link rel="stylesheet" href="/css/footer.css" type="text/css">
+	<link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css.css" type="text/css">
 	
-	<script src="../js/jquery-1.8.0.min.js"></script>
-	<script src="../js/jquery.fancybox.pack.js" type="text/javascript"></script>
-	<script src="/~alex/Harbinger2/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/js/jquery-1.8.0.min.js"></script>
+	<script src="/js/jquery.fancybox.pack.js" type="text/javascript"></script>
+	<script src="/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
 	
@@ -45,29 +45,36 @@
 		    });
 		});
 		    
-		</script>
-		
-		<script>
-			$(function(){
-				$('.fancy').fancybox({
-					openEffect: 'elastic',
-					
-				});
-			});		
-		</script>
-		
-		<script type="text/javascript">
-		
-			$(function(){
-				$('.text-input').focus(function() {
-					console.log('focus activated');
-					$('.text-input').animate({width: '700px'}, 'fast');
-				});
-				$('.text-input').focusout(function() {
-					$('.text-input').animate({width: '400px'}, 'fast');
-				});
+	</script>
+	
+	<script>
+		$(function(){
+			$('.fancy').fancybox({
+				openEffect: 'elastic',
+				
 			});
-		</script>
+		});		
+	</script>
+	
+	<script type="text/javascript">
+		$(function(){
+			$('.text-input').focus(function() {
+				console.log('focus activated');
+				$('.text-input').animate({width: '700px'}, 'fast');
+			});
+			$('.text-input').focusout(function() {
+				$('.text-input').animate({width: '400px'}, 'fast');
+			});
+		});
+	</script>
+	
+	<style type="text/css">
+	
+		.span4 {
+			background: #e71919;
+		}
+	
+	</style>
 
 </head>
 
@@ -75,7 +82,7 @@
 
 	<div class="content">
 	
-		<!--#include virtual="/~alex/Harbinger2/header.shtml"-->
+		<!--#include virtual="/header.shtml"-->
 
 		<div class="container" id="box_holder">
 			
@@ -203,13 +210,13 @@
 			</div><!-- end "row" -->
 					
 			<div class="row">
-				<a href="Interact/mini.html" class="fancy fancybox.iframe"><div class="spn4">
+				<a href="Interact/mini.html" class="fancy fancybox.iframe"><div class="span4">
 				
 					<span id="label">Interact Club</span>
 					
 				</div></a>
 				
-				<a href="Italian%20Club/mini.html" class="fancy fancybox.iframe"><div class="spn4">
+				<a href="Italian%20Club/mini.html" class="fancy fancybox.iframe"><div class="span4">
 				
 					<span id="label">Italian Club</span>
 					
@@ -325,7 +332,7 @@
 	
 	<div id="footer">
 	
-		<!--#include virtual="/~alex/Harbinger2/footer.shtml" -->
+		<!--#include virtual="/footer.shtml" -->
 		
 		<div class="container" id="edited_by">
 			<div class="span6 offset6">
