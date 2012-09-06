@@ -38,6 +38,8 @@
 				'hideOnContentClick' : false,
 				'openEffect' : 'fade',
 			});
+			// Set the Home tab to 'active'
+			$('#nav_home').addClass('active');
 		});
 	</script>
 	
