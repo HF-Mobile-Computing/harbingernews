@@ -3,347 +3,65 @@
 
 <head>
 
-	<title>Clubs</title>
+	<title>Template</title>
+	
+	<!-- enable webapp on iPhone -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-icon" href="img/Apple-Icon.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="img/Apple-Icon-Retina.png" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 	
 	<link rel="stylesheet" href="/css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="/css/bootstrap-responsive.css" type="text/css">
-	<link rel="stylesheet" href="/css/all.css" type="text/css">
-	<link rel="stylesheet" href="/css/header.css" type="text/css">
-	<link rel="stylesheet" href="/css/footer.css" type="text/css">
 	<link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css">
-	<link rel="stylesheet" href="css.css" type="text/css">
+	<link rel="stylesheet" href="/css/all.css" type="text/css">
+	<link rel="stylesheet" href="/css/footer.css" type="text/css">
 	
 	<script src="/js/jquery-1.8.0.min.js"></script>
+	<script src="/js/bootstrap.js" type="text/javascript"></script>
 	<script src="/js/jquery.fancybox.pack.js" type="text/javascript"></script>
-	<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-
-	<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
-	
+		
 	<script type="text/javascript">
-	
-		// todo: add in default text
-		// http://www.dailycoding.com/Posts/default_text_fields_using_simple_jquery_trick.aspx
-	
-		$(document).ready(function(){
-		    $("#filter").keyup(function(){
-		 
-		        // Retrieve the input field text and reset the count to zero
-		        var filter = $(this).val(), count = 0;
-		 
-		        // Loop through the comment list
-		        $(".box_holder div").each(function(){
-		 
-		            // If the list item does not contain the text phrase fade it out
-		            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-		                $(this).fadeOut();
-		 
-		            // Show the list item if the phrase matches and increase the count by 1
-		            } else {
-		                $(this).show();
-		            }
-		        });
-		    });
-		});
-		    
-	</script>
-	
-	<script>
-		$(function(){
+			
+		// Fancybox
+		$(function() {
 			$('.fancy').fancybox({
-				openEffect: 'elastic',
-				
-			});
-		});		
-	</script>
-	
-	<script type="text/javascript">
-		$(function(){
-			$('.text-input').focus(function() {
-				console.log('focus activated');
-				$('.text-input').animate({width: '700px'}, 'fast');
-			});
-			$('.text-input').focusout(function() {
-				$('.text-input').animate({width: '400px'}, 'fast');
+				'hideOnContentClick' : false,
+				'openEffect' : 'fade',
 			});
 		});
+	
 	</script>
 	
 	<style type="text/css">
 	
-		.span4 {
-			background: #e71919;
-			border: inset 1px solid black;
-		}
-	
+		
+			
 	</style>
-
+	
 </head>
 
 <body>
 
-	<div class="content">
+	<div id="content">
 	
 		<!--#include virtual="/header.shtml"-->
-
-		<div class="container" id="box_holder">
-			
-			<div class="row">
-				<a href="Academic%20Team/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Academic Club</span>
-				
-				</div></a>
-				
-				<a href="Art%20Club/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Art Club</span>
-					
-				</div></a>
-				
-				<a href="Athletes%20Helping%20Athletes/mini.html" class="fancy fancybox.iframe"><div class="span4">
-									
-					<span class="label">Athletes Helping Athletes</span>
-					
-				</div></a>
-			</div><!-- end "row"-->
-
-			<div class="row">
-				<a href="Best%20Buddies/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Best Buddies</span>
-					
-				</div></a>
-				
-				<a href="Caribbean%20Club/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Caribbean Club</span>
-					
-				</div></a>
-				
-				<a href="Community%20Outreach%20Club/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Community Outreach Club</span>
-					
-				</div></a>
-			</div><!-- end "row"-->
-
-			<div class="row">
-				<a href="Council%20for%20Multicultural%20Unity/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Council for Multicultural Unity</span>
-					
-				</div></a>
-				
-				<a href="DECA/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">DECA</span>
-					
-				</div></a>
-				
-				<a href="Engineering%20and%20Science%20Club/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Engineering and Science Club</span>
-					
-				</div></a>
-			</div><!-- end "row"-->
-					
-			<div class="row">
-				<a href="Environmental%20Club/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Environmental Club</span>
-					
-				</div></a>
-				
-				<a href="Forensics%20Club/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Forensics Club</span>
-					
-				</div></a>
-				
-				<a href="French%20Club/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">French Club</span>
-					
-				</div></a>
-			</div><!-- end "row" -->
-					
-			<div class="row">
-				<a href="Future%20Educators%20Club/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Future Educators Club</span>
-					
-				</div></a>
-				
-				<a href="GSA/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Gay/Straight Alliance</span>
-					
-					<span class="keywords">gsa</span>
-					
-				</div></a>
-				
-				<a href="Global%20Justice/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Global Justice</span>
-					
-					<span class="keywords">community service</span>
-				
-				</div></a>
-			</div><!-- end "row" -->
-					
-			<div class="row">
-				<a href="Habitat/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Habitat for Humanity</span>
-					
-				</div></a>
-				
-				<a href="Harbinger/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Harbinger</span>
-					
-				</div></a>
-				
-				<a href="HTco/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">HTco</span>
-					
-				</div></a>
-			</div><!-- end "row" -->
-					
-			<div class="row">
-				<a href="Interact/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Interact Club</span>
-					
-				</div></a>
-				
-				<a href="Italian%20Club/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Italian Club</span>
-					
-				</div></a>
-				
-				<a href="Jazz%20Band/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Jazz Band</span>
-					
-				</div></a>
-			</div><!-- end "row" -->
-					
-			<div class="row">
-				<a href="Zephyr/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Literary Magazine - <i>Zephyr</i></span>
-					
-				</div></a>
-				
-				<a href="Mathletes/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Mathletes</span>
-					
-				</div></a>
-				
-				<a href="Mock%20Trial/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Mock Trial</span>
-					
-				</div></a>
-			</div><!-- end "row" -->
-					
-			<div class="row">
-				<a href="Model%20UN/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Model UN</span>
-					
-				</div></a>
-				
-				<a href="Music%20Appreciation/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Music Appreciation</span>
-					
-				</div></a>
-				
-				<a href="NAHS/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">National Art Honor Society</span>
-					
-				</div></a>
-			</div><!-- end "row" -->
-					
-			<div class="row">
-				<a href="NHS/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">National Honor Society</span>
-					
-				</div></a>
-				
-				<a href="Playfest/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Playfest</span>
-					
-				</div></a>
-				
-				<a href="SADD/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">SADD</span>
-					
-					<span class="keywords">students against destructive decisions</span>
-					
-				</div></a>
-			</div><!-- end "row" -->
-				
-			<div class="row">
-				<a href="SHOC/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">SHOC</span>
-					
-					<span class="keywords">students helping our community service</span>
-				
-				</div></a>
-				
-				<a href="Spanish%20Club/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Spanish Club</span>
-					
-				</div></a>
-				
-				<a href="Student%20Gov/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Student Government</span>
-					
-				</div></a>
-			</div><!-- end "row" -->
-					
-			<div class="row">
-				<a href="Technology%20Club/mini.html" class="fancy fancybox.iframe"><div class="span4">
-				
-					<span class="label">Technology Club</span>
-					
-				</div></a>
-			</div><!-- end "row" -->
-					
-			<p><em>Note:</em> I know that these photos don't match their respective clubs.  I know they're random.  Trust me.  I'll replace them with ones of our clubs as soon as I have them. Thanks.</p>
-				
-			
-		</div><!-- end "box_holder" -->
 		
-		<div id="footer_holder"></div>
-				
-	</div> <!-- end "content" -->
 	
+	</div>
+			
 	<div id="footer">
 	
 		<!--#include virtual="/footer.shtml" -->
 		
 		<div class="container">
 			<div class="pull-right" style="margin-top: 20px;">
-					This page was last updated by Alex LaFroscia on September 2, 2012.
+					This page was last updated by Alex LaFroscia on September 5, 2012.
 			</div>
 		</div>
-		
-	</div><!-- end "footer" -->
-
+	</div> <!-- end "footer" -->
 
 </body>
 

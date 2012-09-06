@@ -28,6 +28,10 @@ html, body {
 	height: 100%;
 }
 
+body {
+	background-image: url(/background.png) !important;
+}
+
 #content {
 	min-height: 100%;
 	margin-bottom: -200px;
