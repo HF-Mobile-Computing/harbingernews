@@ -1,0 +1,51 @@
+/*
+
+all.css
+Created by Alex LaFroscia
+June 13, 2012
+
+Last Updated: June 13, 2012
+
+------------------------------------
+
+This is the CSS file for all of the
+attributes that will probably be used
+on most or all of the pages.  This
+does *not* include any CSS regarding
+the headers or footer.  However, it
+does containt the CSS for properly
+sizing and formatting the footer at the
+bottom of the page.
+
+------------------------------------
+
+
+*/
+
+
+/* ----  Footer at Bottom ---- */
+html, body {
+	height: 100%;
+}
+
+body {
+	background-image: url(/background.png) !important;
+}
+
+#content {
+	min-height: 100%;
+	margin-bottom: -200px;
+	clear: both;
+}
+
+#footer_spacer {
+	height: 200px;
+	clear: both;
+}
+
+#footer {
+	width: 100%;
+	min-height: 200px;
+	background: rgb(70,104,67);
+	clear: both;
+}

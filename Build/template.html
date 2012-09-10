@@ -1,0 +1,73 @@
+<!DOCTYPE html SYSTEM>
+<html>
+
+<head>
+
+	<title>Template</title>
+	
+	<!-- enable webapp on iPhone -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link href="img/Apple-Icon.png" rel="apple-touch-icon" />
+	<link sizes="114x114" href="img/Apple-Icon-Retina.png" rel="apple-touch-icon" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	
+	<link type="text/css" href="/css/bootstrap.css" rel="stylesheet" />
+	<link type="text/css" href="/css/bootstrap-responsive.css" rel="stylesheet" />
+	<link type="text/css" href="/css/jquery.fancybox.css" rel="stylesheet" />
+	<link type="text/css" href="/css/all.css" rel="stylesheet" />
+	<link type="text/css" href="/css/footer.css" rel="stylesheet" />
+	
+	<script src="/js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.js"></script>
+	<script type="text/javascript" src="/js/jquery.fancybox.pack.js"></script>
+		
+	<script type="text/javascript">
+			
+		// Fancybox
+		$(function() {
+			$('.fancy').fancybox({
+				'hideOnContentClick' : false,
+				'openEffect' : 'fade',
+			});
+		});
+	
+	</script>
+	
+	<style type="text/css">
+	
+		#test {
+			background: red;
+			display: block;
+			height: 100px;
+		}
+			
+	</style>
+	
+</head>
+
+<body>
+
+	<div id="content">
+	
+		<!--#include virtual="/header.shtml"-->
+		
+		<div id="test"> <p>test</p></div>
+	
+	</div>
+			
+	<div id="footer">
+	
+		<!--#include virtual="/footer.shtml" -->
+		
+		<div class="container">
+			<div style="margin-top: 20px;" class="pull-right">
+					This page was last updated by Alex LaFroscia on September 5, 2012.
+			</div>
+		</div>
+	</div> <!-- end "footer" -->
+
+</body>
+
+</html>
