@@ -13,13 +13,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-	<link rel="stylesheet" href="css/header.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/footer.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/all.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css.css" type="text/css">
 	<link rel="stylesheet" href="css/all.css" type="text/css">
-	<link rel="stylesheet" href="css/footer.css" type="text/css">
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css">
 	
