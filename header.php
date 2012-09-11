@@ -6,12 +6,12 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
-			<a class="brand" href="/">The Harbinger Online</a>
+			<a class="brand" href="/index.php">The Harbinger Online</a>
 			<div class="nav-collapse">
 				<ul class="nav">
-					<li id="nav_home"><a href="/">Home</a></li>
-					<li id="nav_sports"><a href="/sports">Sports</a></li>
-					<li id="nav_clubs"><a href="/clubs">Clubs</a></li>
+					<li id="nav_home"><a href="/index.php">Home</a></li>
+					<li id="nav_sports"><a href="/sports/index.php">Sports</a></li>
+					<li id="nav_clubs"><a href="/clubs/index.php">Clubs</a></li>
 				</ul>
 			</div>
 		</div>
