@@ -7,7 +7,7 @@
 	
 	<script src="/js/jquery-1.8.0.min.js"></script>
 
-	<link rel="stylesheet" href="/~alex/Harbinger2/css/all.css" type="text/css">
+	<link rel="stylesheet" href="/css/all.css" type="text/css">
 	
 	<style type="text/css">
 
@@ -28,7 +28,7 @@
 
 	<div class="content">
 	
-		<!--#include virtual="/~alex/Harbinger2/header.shtml"-->
+		<?php include($_SERVER['DOCUMENT_ROOT'].'/header.php') ?>
 		
 		This is a test.
 	
