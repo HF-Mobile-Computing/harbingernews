@@ -221,7 +221,7 @@
 	
 	<div id="footer">
 	
-		<!--#include virtual="/footer.shtml" -->
+		<?php include 'footer.php'; ?>
 		
 		<div class="container">
 			<div class="pull-right" style="margin-top: 20px;">
