@@ -74,7 +74,7 @@
 			<a href="http://www.google.com/chromeframe/"><h2>Make your experience better - Download Google Chrome Frame!</h2></a>
 		</div>
 
-		<!--#include virtual="/header.shtml"-->
+		<?php include 'header.php'; ?>
 				
 		<div id="news">
 			
