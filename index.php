@@ -74,7 +74,7 @@
 			<a href="http://www.google.com/chromeframe/"><h2>Make your experience better - Download Google Chrome Frame!</h2></a>
 		</div>
 
-		<?php include('header.shtml') ?>
+		<?php include('tools/header.shtml') ?>
 				
 		<div id="news">
 			
@@ -221,7 +221,7 @@
 	
 	<div id="footer">
 	
-		<?php include('footer.shtml') ?>
+		<?php include('tools/footer.shtml') ?>
 		
 		<div class="container">
 			<div class="pull-right" style="margin-top: 20px;">
