@@ -39,7 +39,7 @@
 		});
 	</script>
 	
-	<?php
+	<!-- <?php
 	$starttime = explode(' ', microtime());
 	$starttime = $starttime[1] + $starttime[0];
 	include_once('autoloader.php');
@@ -49,7 +49,7 @@
 	$feed->enable_cache(false);
 	$success = $feed->init();
 	$feed->handle_content_type();
-	?>
+	?> -->
 	
 	<!--[if lte IE 8]>
 		<script type="text/javascript">
@@ -74,7 +74,7 @@
 			<a href="http://www.google.com/chromeframe/"><h2>Make your experience better - Download Google Chrome Frame!</h2></a>
 		</div>
 
-		<?php include 'header.php'; ?>
+		<!-- <?php include($_SERVER['DOCUMENT_ROOT'].'/header.php') ?> -->
 				
 		<div id="news">
 			
@@ -221,7 +221,7 @@
 	
 	<div id="footer">
 	
-		<?php include 'footer.php'; ?>
+		<!-- <?php include($_SERVER['DOCUMENT_ROOT'].'/footer.php') ?> -->
 		
 		<div class="container">
 			<div class="pull-right" style="margin-top: 20px;">
