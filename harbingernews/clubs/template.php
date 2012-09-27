@@ -29,17 +29,17 @@ Last editted September, 2012
 	<!-- Below are links to the stylesheets.  These are what give the page its color,
 		shape, and layout.  You can include these value within this document, which
 		we will do, although we also pull in information from other documents. -->
-	<link rel="stylesheet" href="/css/bootstrap.css" type="text/css">
-	<link rel="stylesheet" href="/css/bootstrap-responsive.css" type="text/css">
-	<link rel="stylesheet" href="/css/all.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/bootstrap-responsive.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/all.css" type="text/css">
 	
 	<!-- Below are links to Javascript files.  These are what allow the page to have
 		animations and such, as well as other things that I won't explain (if you're
 		interested, use Google).  DO NOT remove the line below.  You're welcome to
 		add more Javascript if you know what you're doing, but would not suggest
 		trying anything if you're unfamiliar with the language. -->
-	<script type="text/javascript" src="../js/jquery-1.8.0.min.js"></script>
-	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/harbingernews/js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="/harbingernews/js/bootstrap.min.js"></script>
 	
 	<!-- Below is the CSS that's included on the page.  These are the values that
 		we'll be editting to change things about this page. -->
@@ -124,8 +124,7 @@ Last editted September, 2012
 </head>
 <body>
 
-	<?php include($_SERVER['DOCUMENT_ROOT'].'/header.php') ?>
-	
+	<!--#include virtual="/harbingernews/tools/header.shtml"-->
 	<div id="content" class="container">
 	
 		<div id="page_title">
@@ -211,7 +210,13 @@ Last editted September, 2012
 	</div><!-- end "content" -->
 	
 	<div id="footer">
-		<?php include($_SERVER['DOCUMENT_ROOT'].'/footer.php') ?>
+		<!--#include virtual="/harbingernews/tools/footer.shtml"-->
+		
+		<div class="container">
+			<div class="pull-right" style="margin-top: 20px;">
+					This page was last updated by Alex LaFroscia on September 10, 2012.
+			</div>
+		</div>
 	
 	</div>
 	
