@@ -1,0 +1,19 @@
+<div class="navbar navbar-static-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="/harbingernews/">The Harbinger Online</a>
+			<div class="nav-collapse">
+				<ul class="nav">
+					<li id="nav_home"><a href="/harbingernews/">Home</a></li>
+					<li id="nav_sports"><a href="/harbingernews/sports/index.html">Sports</a></li>
+					<li id="nav_clubs"><a href="/harbingernews/clubs/index.html">Clubs</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
