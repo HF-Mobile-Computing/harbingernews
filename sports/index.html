@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>HHS - Sports</title>
+	
+	<link rel="stylesheet" href="../css/header.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../css/footer.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../css/all.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../css/jquery.fancybox.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css.css" type="text/css" media="screen">
+
+	<script src="../js/jquery-1.8.0.min.js"></script>
+	<script src="../js/jquery.masonry.min.js" type="text/javascript"></script>
+	<script src="../js/jquery.fancybox.pack.js" type="text/javascript"></script>
+	<script src="jq.sportsbox.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+		// Masonry
+		$(function() {
+			$(".box").masonry({
+				itemSelector : ".sport",
+				columnWidth : 200,
+				gutterWidth : 20,
+				isAnimated : true,
+				isFitWidth : true,
+			});	
+		});
+		
+		// Fancybox
+		$(function() {
+			$(".fancy").fancybox({
+				'hideOnContentClick' : false,
+				'openEffect' : 'fade',
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+
+	<div class="content">
+		<!--!Header-->	
+		<!--#include virtual="../header.shtml"-->
+		
+		<div id="horz_holder">
+		
+			<div id="sportsbox">
+				<ul><li id="fall">Fall</li><li id="winter">Winter</li><li id="spring">Spring</li>
+				</ul>
+				
+				<div id="fallbox" class="box">
+					<a href="football/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Football</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+					<a href="cross_country/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Cross Country</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+					<a href="boys_soccer/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Boys Soccer</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+					<a href="girls_soccer/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Girls Soccer</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+					<a href="field_hockey/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Field Hockey</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+					<a href="volleyball/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Volleyball</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+					<a href="gymn/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Gymnastics</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+				</div>
+				
+				<div id="winterbox" class="box">
+					<a href="girls_basketball/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Girls Basketball</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+					<a href="boys_basketball/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Boys Basketball</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+					<a href="wrestling/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Wrestling</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+					<a href="winter_track/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Winter Track</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+					<a href="bowling/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Bowling</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+				</div>
+				
+				<div id="springbox" class="box">
+					<a href="boys_lax/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Boys Lacrosse</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+					<a href="girls_lax/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Girls Lacrosse</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+					<a href="baseball/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Baseball</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+					<a href="softball/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Softball</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+					<a href="track/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Track & Field</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+					<a href="golf/popup.html" class="fancy fancybox.iframe"><div class="sport"><h3>Golf</h3><img src="http://lorempixel.com/150/100/sports" /></div></a>
+				</div>
+				
+				<p><em>Note:</em> I know that these photos don't match their respective sports.  I know they're random.  Trust me.  I'll replace them with ones of our athletes as soon as I have them. Thanks.</p>
+				
+			</div><!-- end "sportsbox" -->
+		
+		</div><!-- end "horz_holder" -->
+		
+		
+		
+	
+		<div class="footer_spacer"></div>
+	</div>
+	
+	<!--!Footer-->
+	<div class="footer">
+	
+		<!--#include virtual="../footer.shtml"-->
+		
+		<span id="edited_by">Last edited by ________ on _________.</span>
+
+	</div><!-- end "footer" -->
+
+</body>
+
+</html>

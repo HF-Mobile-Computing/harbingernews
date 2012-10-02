@@ -232,7 +232,7 @@ img#talk_bubble {
 	font-size: x-large;
 }
 
-#announcements:before {
+#announcements:before, #announcements > .before {
 	z-index: -1;
 	position: absolute;
 	top: -2px;
