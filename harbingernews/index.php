@@ -47,7 +47,7 @@
 	include_once('autoloader.php');
 	include_once('idn/idna_convert.class.php');
 	$feed = new SimplePie();
-	$feed->set_feed_url('http://hfannouncements.blogspot.com/feeds/posts/default');
+	$feed->set_feed_url('http://hf-announcements.blogspot.com/feeds/posts/default');
 	$feed->enable_cache(false);
 	$success = $feed->init();
 	$feed->handle_content_type();
