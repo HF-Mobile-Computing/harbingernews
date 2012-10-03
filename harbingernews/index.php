@@ -142,9 +142,9 @@
 		
 		<div class="container" id="important_stuff">
 			<div class="row">
-				<div class="span6">
+				<div class="span8">
 					<div id="announcements">
-						<a href="http://hfannouncements.blogspot.com/"><h2>Today's Announcements</h2></a>
+						<a href="http://hf-announcements.blogspot.com/"><h2>Today's Announcements</h2></a>
 						
 						<?php
 							// Check to see if there are more than zero errors (i.e. if there are any errors at all)
@@ -182,7 +182,7 @@
 					</div><!-- end "announcements"-->
 				</div><!-- end "span6" -->
 				
-				<div class="span6">
+				<div class="span4">
 					<div id="important">
 						<h2>Important Reminders</h2>
 						
