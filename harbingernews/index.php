@@ -150,7 +150,6 @@
 				<div class="span8">
 					<div id="announcements">
 						<a href="http://hf-announcements.blogspot.com/"><h2>Today's Announcements</h2></a>
-						
 						<?php
 							if ($feed->error())
 							{
@@ -159,23 +158,14 @@
 								echo '</div>' . "\r\n";
 							}
 						?>
-			
 						<div id="sp_results">
-			
-							<!-- As long as the feed has data to work with... -->
 							<?php if ($success): ?>
-								<!-- Let's begin looping through each individual news item in the feed. -->
 								<?php foreach($feed->get_items(0, 1) as $item): ?>
 									<div class="chunk">			
-										<!-- Display the item's primary content. -->
 										<h4><?php if ($item->get_permalink()) echo '<a href="' . $item->get_permalink() . '">'; echo $item->get_title(); if ($item->get_permalink()) echo '</a>'; ?>&nbsp;<span class="footnote"></span></h4>
 										<?php echo $item->get_content(); ?>
 									</div><!-- end "chunk" -->
-				
-								<!-- Stop looping through each item once we've gone through all of them. -->
 								<?php endforeach; ?>
-				
-							<!-- From here on, we're no longer using data from the feed. -->
 							<?php endif; ?>
 						</div><!-- end "sp_results"-->
 					</div><!-- end "announcements"-->
@@ -184,47 +174,28 @@
 				<div class="span4">
 					<div id="important">
 						<h2>Important Reminders</h2>
-						
 						<?php
-							// Check to see if there are more than zero errors (i.e. if there are any errors at all)
 							if ($feed->error())
 							{
-								// If so, start a <div> element with a classname so we can style it.
 								echo '<div class="sp_errors">' . "\r\n";
-				
-									// ... and display it.
 									echo '<p>' . htmlspecialchars($feed->error()) . "</p>\r\n";
-				
-								// Close the <div> element we opened.
 								echo '</div>' . "\r\n";
 							}
 						?>
-			
 						<div id="sp_results">
-			
-							<!-- As long as the feed has data to work with... -->
 							<?php if ($success2): ?>
-								<!-- Let's begin looping through each individual news item in the feed. -->
 								<?php foreach($feed2->get_items(0, 1) as $item): ?>
 									<div class="chunk">			
-										<!-- Display the item's primary content. -->
 										<h4><?php if ($item->get_permalink()) echo '<a href="' . $item->get_permalink() . '">'; echo $item->get_title(); if ($item->get_permalink()) echo '</a>'; ?>&nbsp;<span class="footnote"></span></h4>
 										<?php echo $item->get_content(); ?>
 									</div><!-- end "chunk" -->
-				
-								<!-- Stop looping through each item once we've gone through all of them. -->
 								<?php endforeach; ?>
-				
-							<!-- From here on, we're no longer using data from the feed. -->
 							<?php endif; ?>
 						</div><!-- end "sp_results"-->
 			
 					</div><!-- end "important"-->
 				</div><!-- end "span6" -->
-		
-				
 			</div><!-- end "row" -->
-			
 		</div><!-- end "container" -->
 		
 		<div id="footer_spacer"></div>
