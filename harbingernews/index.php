@@ -173,7 +173,7 @@
 				
 				<div class="span4">
 					<div id="important">
-						<h2>Important Reminders</h2>
+						<h2 style="margin-bottom: 0px;">Important Reminders</h2>
 						<?php
 							if ($feed->error())
 							{
@@ -186,7 +186,6 @@
 							<?php if ($success2): ?>
 								<?php foreach($feed2->get_items(0, 1) as $item): ?>
 									<div class="chunk">			
-										<h4><?php if ($item->get_permalink()) echo '<a href="' . $item->get_permalink() . '">'; echo $item->get_title(); if ($item->get_permalink()) echo '</a>'; ?>&nbsp;<span class="footnote"></span></h4>
 										<?php echo $item->get_content(); ?>
 									</div><!-- end "chunk" -->
 								<?php endforeach; ?>
@@ -194,6 +193,9 @@
 						</div><!-- end "sp_results"-->
 			
 					</div><!-- end "important"-->
+					<div id="upcoming">
+					
+					</div>
 				</div><!-- end "span6" -->
 			</div><!-- end "row" -->
 		</div><!-- end "container" -->
