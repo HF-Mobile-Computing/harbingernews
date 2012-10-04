@@ -52,10 +52,15 @@
 	$success = $feed->init();
 	$feed->handle_content_type();
 	$feed2 = new SimplePie();
-	$feed2->set_feed_url('http://hfannouncements.blogspot.com/feeds/posts/default');
+	$feed2->set_feed_url('http://hfrecent.blogspot.com/feeds/posts/default');
 	$feed2->enable_cache(false);
 	$success2 = $feed2->init();
 	$feed2->handle_content_type();
+	$feed3 = new SimplePie();
+	$feed3->set_feed_url('http://hfupcoming.blogspot.com/feeds/posts/default');
+	$feed3->enable_cache(false);
+	$success3 = $feed3->init();
+	$feed3->handle_content_type();
 	?>
 
 </head>
@@ -173,9 +178,9 @@
 				
 				<div class="span4">
 					<div id="important">
-						<h2 style="margin-bottom: 0px;">Important Reminders</h2>
+						<h2 style="margin-bottom: 0px;">Recent Events</h2>
 						<?php
-							if ($feed->error())
+							if ($feed2->error())
 							{
 								echo '<div class="sp_errors">' . "\r\n";
 									echo '<p>' . htmlspecialchars($feed->error()) . "</p>\r\n";
@@ -194,7 +199,24 @@
 			
 					</div><!-- end "important"-->
 					<div id="upcoming">
-					
+						<h2 style="margin-bottom: 0px;">Upcoming Events</h2>
+						<?php
+							if ($feed3->error())
+							{
+								echo '<div class="sp_errors">' . "\r\n";
+									echo '<p>' . htmlspecialchars($feed3->error()) . "</p>\r\n";
+								echo '</div>' . "\r\n";
+							}
+						?>
+						<div id="sp_results">
+							<?php if ($success3): ?>
+								<?php foreach($feed3->get_items(0, 1) as $item): ?>
+									<div class="chunk">			
+										<?php echo $item->get_content(); ?>
+									</div><!-- end "chunk" -->
+								<?php endforeach; ?>
+							<?php endif; ?>
+						</div><!-- end "sp_results"-->
 					</div>
 				</div><!-- end "span6" -->
 			</div><!-- end "row" -->
