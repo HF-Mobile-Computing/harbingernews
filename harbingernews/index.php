@@ -84,25 +84,22 @@
 				<div id="outerbox">
 					<div id="innerbox">
 					
-						<a href="harbinger/2012/september/manning-full.html" style="color: black;"><div id="manning" class="article">
+						<a href="stories/2012/october/wots1.html" style="color: black;"><div class="article">
+						
+							<h3>Check out "The Word on the Street!"</h3>
+							
+						</div></a>
+					
+						<a href="stories/2012/september/manning-full.html" style="color: black;"><div id="manning" class="article">
 							
 							<h3>Meet Dr. Manning</h3>
 							
-							<img src="stories/Meet%20Dr.%20Manning/manning.jpg" alt="manning" width="170" height="230" />
+							<img src="stories/2012/september/manning.jpg" alt="manning" width="170" height="230" />
 							
 							<p>Click here to learn more and read our interview with HF's new principal!</p>
 							
 						</div></a> <!-- end "manning" --> 
 						
-						<div class="article">
-						
-							<div class="empty_article">
-							
-								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
-							
-							</div>
-							
-						</div>
 						
 						<div class="article">
 						
