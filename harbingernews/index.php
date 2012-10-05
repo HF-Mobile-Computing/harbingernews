@@ -73,8 +73,10 @@
 				
 		<div id="news">
 			
-			<div class="row">
-				<div class="span10 offset2" id="news_title_row"><h2 id="news_title">Harborfields News</h2></div>
+			<div class="container">
+				<div class="row">
+					<div class="offset1 span11" id="news_title_row"><h2 id="news_title">Harborfields News</h2></div>
+				</div>
 			</div>
 				
 			<div id="container_box">
