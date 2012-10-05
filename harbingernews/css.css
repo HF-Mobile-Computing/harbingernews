@@ -143,6 +143,21 @@ img#talk_bubble {
 
 .article {
 	text-align: center;
+	background-image:url(/harbingernews/img/Article.png);
+	width: 240px;
+	height: 390px;
+	display: inline;
+	float: left;
+	margin-right: 10px;
+	margin-left: 8px;
+	margin-top: 10px;
+	overflow: hidden;
+	z-index: 2;
+	/*behavior: url(/~alex/Harbinger2/pie/PIE.htc);*/
+}
+
+/* .article {
+	text-align: center;
 	background-color: #d9d9d9;
 	width: 200px;
 	border: 1px solid black;
@@ -159,8 +174,9 @@ img#talk_bubble {
 	margin-top: 10px;
 	overflow: hidden;
 	z-index: 2;
-	/*behavior: url(/~alex/Harbinger2/pie/PIE.htc);*/
-}
+	/*behavior: url(/~alex/Harbinger2/pie/PIE.htc);
+} */
+
 
 .empty_article {
 	display: block;
