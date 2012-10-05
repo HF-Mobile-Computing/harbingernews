@@ -84,7 +84,7 @@
 				<div id="outerbox">
 					<div id="innerbox">
 					
-						<a class="fancy fancybox.iframe" href="harbinger/2012/september/manning.html"><div id="manning" class="article">
+						<a href="harbinger/2012/september/manning-full.html" style="color: black;"><div id="manning" class="article">
 							
 							<h3>Meet Dr. Manning</h3>
 							
