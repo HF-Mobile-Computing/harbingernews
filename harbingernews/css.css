@@ -139,6 +139,8 @@ img#talk_bubble {
 	padding-top: 0;
 	margin-top: 11px;
 	line-height: normal !important;
+	padding-right: 5px;
+	padding-left: 5px;
 }
 
 .article {

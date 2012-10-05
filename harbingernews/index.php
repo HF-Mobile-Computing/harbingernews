@@ -90,6 +90,8 @@
 						
 							<h3>Check out "The Word on the Street!"</h3>
 							
+							<img src="stories/2012/october/wots.png" width="90%" style="margin-top: 15px;" />
+							<p style="padding-top: 10px;">Take a look as what's up at HF and listen to what your classmates have been saying!</p>
 						</div></a>
 					
 						<a href="stories/2012/september/manning-full.html" style="color: black;"><div id="manning" class="article">
