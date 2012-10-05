@@ -51,6 +51,16 @@
 	$feed->enable_cache(false);
 	$success = $feed->init();
 	$feed->handle_content_type();
+	$feed2 = new SimplePie();
+	$feed2->set_feed_url('http://hfrecent.blogspot.com/feeds/posts/default');
+	$feed2->enable_cache(false);
+	$success2 = $feed2->init();
+	$feed2->handle_content_type();
+	$feed3 = new SimplePie();
+	$feed3->set_feed_url('http://hfupcoming.blogspot.com/feeds/posts/default');
+	$feed3->enable_cache(false);
+	$success3 = $feed3->init();
+	$feed3->handle_content_type();
 	?>
 
 </head>
@@ -142,62 +152,74 @@
 		
 		<div class="container" id="important_stuff">
 			<div class="row">
-				<div class="span6">
+				<div class="span8">
 					<div id="announcements">
-						<a href="http://hfannouncements.blogspot.com/"><h2>Today's Announcements</h2></a>
-						
+						<a href="http://hf-announcements.blogspot.com/"><h2>Today's Announcements</h2></a>
 						<?php
-							// Check to see if there are more than zero errors (i.e. if there are any errors at all)
 							if ($feed->error())
 							{
-								// If so, start a <div> element with a classname so we can style it.
 								echo '<div class="sp_errors">' . "\r\n";
-				
-									// ... and display it.
 									echo '<p>' . htmlspecialchars($feed->error()) . "</p>\r\n";
-				
-								// Close the <div> element we opened.
 								echo '</div>' . "\r\n";
 							}
 						?>
-			
 						<div id="sp_results">
-			
-							<!-- As long as the feed has data to work with... -->
 							<?php if ($success): ?>
-								<!-- Let's begin looping through each individual news item in the feed. -->
 								<?php foreach($feed->get_items(0, 1) as $item): ?>
 									<div class="chunk">			
-										<!-- Display the item's primary content. -->
 										<h4><?php if ($item->get_permalink()) echo '<a href="' . $item->get_permalink() . '">'; echo $item->get_title(); if ($item->get_permalink()) echo '</a>'; ?>&nbsp;<span class="footnote"></span></h4>
 										<?php echo $item->get_content(); ?>
 									</div><!-- end "chunk" -->
-				
-								<!-- Stop looping through each item once we've gone through all of them. -->
 								<?php endforeach; ?>
-				
-							<!-- From here on, we're no longer using data from the feed. -->
 							<?php endif; ?>
 						</div><!-- end "sp_results"-->
 					</div><!-- end "announcements"-->
 				</div><!-- end "span6" -->
 				
-				<div class="span6">
+				<div class="span4">
 					<div id="important">
-						<h2>Important Reminders</h2>
-						
-						<ul>
-							<li>This is a very important reminder.</li>
-							<li>There are very important things going on right now.</li>
-							<li>It's too bad that it's summer right now, and in reality, there are no things going on.</li>
-						</ul>
+						<h2 style="margin-bottom: 0px;">Recent Events</h2>
+						<?php
+							if ($feed2->error())
+							{
+								echo '<div class="sp_errors">' . "\r\n";
+									echo '<p>' . htmlspecialchars($feed->error()) . "</p>\r\n";
+								echo '</div>' . "\r\n";
+							}
+						?>
+						<div id="sp_results">
+							<?php if ($success2): ?>
+								<?php foreach($feed2->get_items(0, 1) as $item): ?>
+									<div class="chunk">			
+										<?php echo $item->get_content(); ?>
+									</div><!-- end "chunk" -->
+								<?php endforeach; ?>
+							<?php endif; ?>
+						</div><!-- end "sp_results"-->
 			
 					</div><!-- end "important"-->
+					<div id="upcoming">
+						<h2 style="margin-bottom: 0px;">Upcoming Events</h2>
+						<?php
+							if ($feed3->error())
+							{
+								echo '<div class="sp_errors">' . "\r\n";
+									echo '<p>' . htmlspecialchars($feed3->error()) . "</p>\r\n";
+								echo '</div>' . "\r\n";
+							}
+						?>
+						<div id="sp_results">
+							<?php if ($success3): ?>
+								<?php foreach($feed3->get_items(0, 1) as $item): ?>
+									<div class="chunk">			
+										<?php echo $item->get_content(); ?>
+									</div><!-- end "chunk" -->
+								<?php endforeach; ?>
+							<?php endif; ?>
+						</div><!-- end "sp_results"-->
+					</div>
 				</div><!-- end "span6" -->
-		
-				
 			</div><!-- end "row" -->
-			
 		</div><!-- end "container" -->
 		
 		<div id="footer_spacer"></div>
