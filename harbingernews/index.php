@@ -47,7 +47,7 @@
 	include_once('autoloader.php');
 	include_once('idn/idna_convert.class.php');
 	$feed = new SimplePie();
-	$feed->set_feed_url('http://hf-announcements.blogspot.com/feeds/posts/default');
+	$feed->set_feed_url('https://sites.google.com/site/harborfieldshs/home/posts.xml');
 	$feed->enable_cache(false);
 	$success = $feed->init();
 	$feed->handle_content_type();
@@ -155,7 +155,7 @@
 			<div class="row">
 				<div class="span8">
 					<div id="announcements">
-						<a href="http://hf-announcements.blogspot.com/"><h2>Today's Announcements</h2></a>
+						<!--<a href="http://hf-announcements.blogspot.com/"><h2>Today's Announcements</h2></a>-->
 						<?php
 							if ($feed->error())
 							{
@@ -168,16 +168,13 @@
 							<?php if ($success): ?>
 								<?php foreach($feed->get_items(0, 1) as $item): ?>
 									<div class="chunk">			
-										<h4><?php if ($item->get_permalink()) echo '<a href="' . $item->get_permalink() . '">'; echo $item->get_title(); if ($item->get_permalink()) echo '</a>'; ?>&nbsp;<span class="footnote"></span></h4>
+										<h4><?php if ($item->get_permalink()) echo '<a href="' . $item->get_permalink() . '">'; echo $item->get_title();if ($item->get_permalink()) echo '</a>'; ?>&nbsp;<span class="footnote"></span></h4>
 										<?php echo $item->get_content(); ?>
 									</div><!-- end "chunk" -->
 								<?php endforeach; ?>
 							<?php endif; ?>
 						</div><!-- end "sp_results"-->
 					</div><!-- end "announcements"-->
-				</div><!-- end "span6" -->
-				
-				<div class="span4">
 					<div id="important">
 						<h2 style="margin-bottom: 0px;">Recent Events</h2>
 						<?php
@@ -199,6 +196,10 @@
 						</div><!-- end "sp_results"-->
 			
 					</div><!-- end "important"-->
+
+				</div><!-- end "span6" -->
+				
+				<div class="span4">
 					<div id="upcoming">
 						<h2 style="margin-bottom: 0px;">Upcoming Events</h2>
 						<?php
