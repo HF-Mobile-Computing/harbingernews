@@ -1,0 +1,343 @@
+/*
+ * Harborfields High School's Frontpage CSS Stylesheet
+ * Written by Alex LaFroscia
+ * July, 2012
+ 
+ * Last updated August 16, 2012
+
+*/
+/* Phones to Tablets */
+@media (max-width: 768px) {
+  a {
+    text-decoration: none; }
+
+  #container_box {
+    width: 240px !important; }
+
+  #forward_button {
+    margin-left: 224px !important; }
+
+  #news_title_container {
+    right: 5px !important; }
+
+  #announcements {
+    margin-left: 5px;
+    margin-right: 5px; }
+
+  #important {
+    margin-left: 5px;
+    margin-right: 5px; }
+
+  #news_title {
+    padding-left: 20px; } }
+body {
+  background-image: url(background.png);
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-user-select: none; }
+
+a.fancy {
+  color: black; }
+
+.fancybox-inner {
+  -webkit-overflow-scrolling: touch !important;
+  overflow: scroll !important; }
+
+/*-------------*/
+#news {
+  z-index: -1;
+  padding: 0px;
+  width: 100%;
+  height: 435px;
+  background: #5e5e5e;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  overflow-x: hidden; }
+
+#news_title_container {
+  position: relative;
+  top: 8px;
+  right: 100px;
+  width: 400px;
+  margin: 0 auto; }
+
+#news_title {
+  color: white;
+  font-size: 1.7em;
+  display: inline-block;
+  top: -9px;
+  left: 5px;
+  position: relative;
+  font-family: monospace; }
+
+img#talk_bubble {
+  height: 25px;
+  width: 25px; }
+
+#container_box {
+  width: 720px;
+  height: 375px;
+  margin: 0 auto;
+  margin-top: 0px;
+  overflow-x: hidden; }
+
+#outerbox {
+  width: inherit;
+  height: inherit;
+  overflow: hidden; }
+
+#innerbox {
+  height: inherit;
+  width: 2100px; }
+
+.article {
+  text-align: center;
+  background-color: #d9d9d9;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  height: 350px;
+  box-shadow: 0px 2px 17px #232323;
+  -webkit-box-shadow: 0px 2px 17px #232323;
+  display: inline;
+  float: left;
+  margin-right: 20px;
+  margin-left: 18px;
+  margin-top: 10px;
+  overflow: hidden;
+  z-index: 2;
+  /*behavior: url(/~alex/Harbinger2/pie/PIE.htc);*/ }
+  .article p {
+    padding-top: 0;
+    margin-top: 11px;
+    line-height: normal !important;
+    padding-right: 5px;
+    padding-left: 5px; }
+  .article img {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 2px solid grey;
+    box-shadow: 0px 1px 7px 2px black; }
+  .article h3 {
+    font-size: large !important;
+    line-height: normal !important;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+
+.empty_article {
+  display: block;
+  height: 260px;
+  width: 130px;
+  margin: 0 auto;
+  margin-top: 22px;
+  border-radius: 12px;
+  border: 4px dashed #787878;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 40px; }
+  .empty_article h2 {
+    display: inline;
+    color: #787878; }
+    .empty_article h2:hover {
+      text-decoration: underline; }
+
+#back_button {
+  position: absolute;
+  margin-top: 165px;
+  margin-left: -21px;
+  display: none; }
+
+#forward_button {
+  position: absolute;
+  margin-top: 165px;
+  margin-left: 704px; }
+
+/*-------*/
+#important_stuff {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px; }
+
+#announcements_wrap {
+  position: relative;
+  display: block;
+  float: left; }
+
+#announcements {
+  position: relative;
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18); }
+  #announcements h2 {
+    margin-top: 0;
+    margin-bottom: 2px;
+    padding-top: 10;
+    text-align: center;
+    color: black;
+    font-size: x-large; }
+  #announcements:after {
+    z-index: -2;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg); }
+
+#announcements:before, #announcements > .before {
+  z-index: -1;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg); }
+
+.chunk {
+  margin-left: 0px; }
+  .chunk h4 {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+    font-style: italic; }
+    .chunk h4 a {
+      color: #272727; }
+
+#important {
+  background: #EBE692;
+  position: relative;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+  margin-bottom: 10px; }
+  #important:before {
+    z-index: -1;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #EBE692;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    transform: rotate(1deg); }
+  #important:after {
+    z-index: -2;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #EBE692;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg); }
+  #important h2 {
+    font-size: x-large;
+    margin-top: 0;
+    padding-top: px;
+    text-align: center; }
+
+#news_title_row {
+  height: 35px; }
+
+#upcoming {
+  background: #bababa;
+  position: relative;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+  margin-bottom: 10px; }
+  #upcoming:before {
+    z-index: -1;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #bababa;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+    -webkit-transform: rotate(0.5deg);
+    -moz-transform: rotate(0.5deg);
+    -o-transform: rotate(0.5deg);
+    -ms-transform: rotate(0.5deg);
+    transform: rotate(0.5deg); }
+  #upcoming:after {
+    z-index: -2;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #bababa;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
+    -webkit-transform: rotate(359.5deg);
+    -moz-transform: rotate(359.5deg);
+    -o-transform: rotate(359.5deg);
+    -ms-transform: rotate(359.5deg);
+    transform: rotate(359.5deg); }
+  #upcoming h2 {
+    font-size: x-large;
+    margin-top: 0;
+    padding-top: px;
+    text-align: center; }

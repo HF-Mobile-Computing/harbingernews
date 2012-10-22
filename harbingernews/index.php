@@ -16,7 +16,7 @@
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 	
 	<link rel="stylesheet" href="/harbingernews/css/jquery.fancybox.css" type="text/css">
-	<link rel="stylesheet" href="/harbingernews/css.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/homepage.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/all.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap-responsive.css" type="text/css">
