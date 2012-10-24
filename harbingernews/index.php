@@ -47,7 +47,7 @@
 	include_once('autoloader.php');
 	include_once('idn/idna_convert.class.php');
 	$feed = new SimplePie();
-	$feed->set_feed_url('https://sites.google.com/site/harborfieldshs/home/posts.xml');
+	$feed->set_feed_url('http://sites.google.com/site/harborfieldshs/home/posts.xml');
 	$feed->enable_cache(false);
 	$success = $feed->init();
 	$feed->handle_content_type();
