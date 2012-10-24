@@ -87,7 +87,6 @@
 			<div class="row">
 				<div class="span8">
 					<div id="announcements">
-						<!--<a href="http://hf-announcements.blogspot.com/"><h2>Today's Announcements</h2></a>-->
 						<?php
 							if ($feed->error())
 							{

@@ -187,43 +187,6 @@ img#talk_bubble {
     text-align: center;
     color: black;
     font-size: x-large; }
-  #announcements:after {
-    z-index: -2;
-    position: absolute;
-    top: -2px;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-    -webkit-transform: rotate(359deg);
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -ms-transform: rotate(359deg);
-    transform: rotate(359deg); }
-
-#announcements:before, #announcements > .before {
-  z-index: -1;
-  position: absolute;
-  top: -2px;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-  -webkit-transform: rotate(2deg);
-  -moz-transform: rotate(2deg);
-  -o-transform: rotate(2deg);
-  -ms-transform: rotate(2deg);
-  transform: rotate(2deg); }
 
 .chunk {
   margin-left: 0px; }
@@ -246,42 +209,6 @@ img#talk_bubble {
   -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
   margin-bottom: 10px; }
-  #important:before {
-    z-index: -1;
-    position: absolute;
-    top: -2px;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: #EBE692;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-    -webkit-transform: rotate(1deg);
-    -moz-transform: rotate(1deg);
-    -o-transform: rotate(1deg);
-    -ms-transform: rotate(1deg);
-    transform: rotate(1deg); }
-  #important:after {
-    z-index: -2;
-    position: absolute;
-    top: -2px;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: #EBE692;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-    -webkit-transform: rotate(359deg);
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -ms-transform: rotate(359deg);
-    transform: rotate(359deg); }
   #important h2 {
     font-size: x-large;
     margin-top: 0;
@@ -300,42 +227,6 @@ img#talk_bubble {
   -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
   margin-bottom: 10px; }
-  #upcoming:before {
-    z-index: -1;
-    position: absolute;
-    top: -2px;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: #bababa;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-    -webkit-transform: rotate(0.5deg);
-    -moz-transform: rotate(0.5deg);
-    -o-transform: rotate(0.5deg);
-    -ms-transform: rotate(0.5deg);
-    transform: rotate(0.5deg); }
-  #upcoming:after {
-    z-index: -2;
-    position: absolute;
-    top: -2px;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: #bababa;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
-    -webkit-transform: rotate(359.5deg);
-    -moz-transform: rotate(359.5deg);
-    -o-transform: rotate(359.5deg);
-    -ms-transform: rotate(359.5deg);
-    transform: rotate(359.5deg); }
   #upcoming h2 {
     font-size: x-large;
     margin-top: 0;
