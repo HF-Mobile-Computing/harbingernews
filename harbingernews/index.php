@@ -122,19 +122,19 @@
 							<div id="outerbox">
 								<div id="innerbox">
 								
-									<a href="stories/2012/october/wots1.html" style="color: black;"><div class="article">
+									<a href="news/2012/october/wots1.html" style="color: black;"><div class="article">
 									
 										<h3>Check out "The Word on the Street!"</h3>
 										
-										<img src="stories/2012/october/wots.png" width="90%" style="margin-top: 15px;" />
+										<img src="news/2012/october/wots.png" width="90%" style="margin-top: 15px;" />
 										<p style="padding-top: 10px;">Take a look as what's up at HF and listen to what your classmates have been saying!</p>
 									</div></a>
 								
-									<a href="stories/2012/september/manning-full.html" style="color: black;"><div id="manning" class="article">
+									<a href="mews/2012/september/manning-full.html" style="color: black;"><div id="manning" class="article">
 										
 										<h3>Meet Dr. Manning</h3>
 										
-										<img src="stories/2012/september/manning.jpg" alt="manning" width="170" height="230" />
+										<img src="news/2012/september/manning.jpg" alt="manning" width="170" height="230" />
 										
 										<p>Click here to learn more and read our interview with HF's new principal!</p>
 										
