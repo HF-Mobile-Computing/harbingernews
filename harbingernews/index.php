@@ -174,10 +174,13 @@
 			</div> <!-- end "container_box" -->
 		</div> <!-- end "news" -->
 		
-		<div class="container" id="important_stuff">
+		<div class="container">
 			<div class="row well">
 				<a target="_top" href="http://longisland.newsday.com/long_island_school_closings/?id=857">Harborfields High School</a> - <script type="text/javascript" src="http://longisland.newsday.com/long_island_school_closings/js/embedText.php?id=857"></script>
 			</div>
+		</div>
+		
+		<div class="container" id="important_stuff">
 			<div class="row">
 				<div class="span8">
 					<div id="announcements">
