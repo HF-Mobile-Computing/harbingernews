@@ -1,0 +1,42 @@
+body {
+  background-color: #f3f3f3 !important; }
+
+#center {
+  background-color: white;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-top: 5px; }
+
+.sport {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: block;
+  width: 98%;
+  height: 170px;
+  background-color: red; }
+  .sport h2 {
+    margin-top: 0px;
+    margin-left: 20px;
+    padding-top: 0px;
+    color: white;
+    text-shadow: 2px 2px 2px black; }
+
+#baseball {
+  background-image: url("/harbingernews/sports/baseball/background-tile.png");
+  background-position: center; }
+
+#seasonsswitcher {
+  position: relative;
+  padding-top: 2px; }
+
+.affix {
+  position: fixed !important;
+  top: 0px;
+  background-color: white; }
+
+.nav-tabs a {
+  color: #416847; }
+  .nav-tabs a:hover {
+    background-color: #dddddd !important;
+    color: #629b63;
+    text-shadow: 1px 1px 3px white; }

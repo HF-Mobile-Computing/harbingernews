@@ -1,0 +1,79 @@
+$darkGreen: #416847;
+$lightGreen: #629b63;
+
+body {
+	background: {
+		color: #f3f3f3 !important;
+	}
+}
+
+#center {
+	background: {
+		color: white;
+	}
+	margin: {
+		top: 12px;
+		bottom: 12px;
+	}
+	padding: {
+		top: 5px;
+	}
+}
+
+.sport {
+	margin: 0 auto;
+	margin: {
+		bottom: 10px;
+	}
+	display: block;
+	width: 98%;
+	// max-width = 852px
+	height: 170px;
+	background: {
+		color: red;
+	}
+	h2 {
+		margin: {
+			top: 0px;
+			left: 20px;
+		}
+		padding: {
+			top: 0px;
+		}
+		color: white;
+		text-shadow: 2px 2px 2px black;
+	}
+}
+
+#baseball {
+	background: {
+		image: url('/harbingernews/sports/baseball/background-tile.png');
+		position: center;
+	}
+}
+
+#seasonsswitcher {
+	position: relative;
+	padding-top: 2px;
+}
+
+.affix {
+	position: fixed !important;
+	top: 0px;
+	background: {
+		color: white;
+	}
+}
+
+.nav-tabs{
+	a {
+		color: $darkGreen;
+		&:hover {
+			background: {
+				color: #dddddd !important;
+			}
+			color: $lightGreen;
+			text-shadow: 1px 1px 3px white;
+		}
+	}
+}
