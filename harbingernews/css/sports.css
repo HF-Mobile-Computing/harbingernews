@@ -47,10 +47,11 @@ body {
   top: 10px;
   margin: 0 auto;
   width: 70%;
-  height: 170px;
+  height: 120px;
   display: none; }
   .inner .holder h3 {
-    color: white;
+    font-size: 2.1em;
+    color: #4ac362;
     text-shadow: 2px 2px 2px black; }
 
 .tint {
@@ -59,10 +60,6 @@ body {
 .visible {
   display: block !important; }
 
-/*.faded_text {
-	color: rgba(255,255,255,0.70) !important;
-	text-shadow: 2px 2px 2px rgba(227,227,227,0.50) !important;
-}*/
 .span4 .well {
   margin-right: 15px;
   text-align: center; }

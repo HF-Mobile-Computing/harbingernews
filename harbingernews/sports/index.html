@@ -38,18 +38,16 @@
 		});
 		
 		$(function(){
-			if($(window).width() >= 767) {
-				$time = 150;
-				$(".sport").hover( function() {
-					$(this).find(".inner").addClass("tint", $time);
-					$(this).find(".holder").fadeIn($time);
-					$(this).find("h2").addClass("faded_text", $time);
-				}, function() {
-					$(this).find('.inner').removeClass("tint", $time);
-					$(this).find('.holder').fadeOut($time);
-					$(this).find('h2').removeClass("faded_text", $time);
-				});
-			}
+			$time = 150;
+			$(".sport").hover( function() {
+				$(this).find(".inner").addClass("tint", $time);
+				$(this).find(".holder").fadeIn($time);
+				$(this).find("h2").addClass("faded_text", $time);
+			}, function() {
+				$(this).find('.inner').removeClass("tint", $time);
+				$(this).find('.holder').fadeOut($time);
+				$(this).find('h2').removeClass("faded_text", $time);
+			});
 		});
 	
 	</script>
@@ -115,9 +113,17 @@
 								</div>
 							</div>
 							<div class="sport" id="gold">
-							
-								<h2>Golf</h2>
-							
+								<div class="inner">
+									<h2>Golf</h2>
+									<div class="holder">
+										<div class="pull-left">
+											<h3>Varsity</h3>
+										</div>
+										<div class="pull-right">
+											<h3>Junior Varsity</h3>
+										</div>
+									</div>
+								</div>
 							</div>
 						
 						</div><!-- end "fall" -->
@@ -141,12 +147,25 @@
 						</div><!-- end "winter" -->
 					
 						<div class="tab-pane" id="spring">
+							<div class="sport">
+								<div class="inner">
+									<h2>Football</h2>
+									<div class="holder">
+										<div class="pull-left">
+											<h3>Varsity</h3>
+										</div>
+										<div class="pull-right">
+											<h3>Junior Varisty</h3>
+										</div>
+									</div>
+								</div>
+							</div>
 							
 						</div><!-- end "spring" -->
 					
 					</div><!-- end "tab-content" -->
 				</div><!-- end "span9" -->
-				<div class="span4">
+				<div class="span4 hidden-phone">
 				
 					<div class="well">
 						<h3>Recent Events</h3>
