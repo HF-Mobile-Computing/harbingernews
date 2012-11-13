@@ -1,6 +1,18 @@
 $darkGreen: #416847;
 $lightGreen: #629b63;
 
+// CSS for the mobile layout
+@media all and (max-width: 767px) {
+	.sport {
+		float: none !important;
+		margin: 0 auto !important;
+		margin: {
+			bottom: 10px !important;
+		}
+		width: 97% !important;
+	}
+}
+
 body {
 	background: {
 		color: #f3f3f3 !important;
