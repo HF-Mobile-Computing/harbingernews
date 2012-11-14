@@ -1,3 +1,7 @@
+// Adds in the sport tile backgrounds, which are in a separate file for organization's sake
+@import "sportstiles";
+
+// Variables
 $darkGreen: #416847;
 $lightGreen: #629b63;
 
@@ -11,8 +15,12 @@ $lightGreen: #629b63;
 		}
 		width: 97% !important;
 	}
+	#seasonsswitcher {
+		width: 100% !important;
+	}
 }
 
+// Main CSS
 body {
 	background: {
 		color: #f3f3f3 !important;
@@ -62,13 +70,6 @@ body {
 			text-decoration: none;
 			color: #0a8420;
 		}
-	}
-}
-
-#baseball {
-	background: {
-		image: url('/harbingernews/sports/baseball/background-tile.png');
-		position: center;
 	}
 }
 
@@ -156,7 +157,7 @@ body {
 }
 
 .tint {
-	background-color: rgba(255,255,255,0.6);
+	background-color: rgba(255,255,255,0.7);
 }
 
 .visible {

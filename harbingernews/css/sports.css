@@ -1,9 +1,92 @@
+#baseball {
+  background-image: url("/harbingernews/sports/baseball/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#bbasketball {
+  background-image: url("/harbingernews/sports/basketball/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#bowling {
+  background-image: url("/harbingernews/sports/bowling/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#crosscountry {
+  background-image: url("/harbingernews/sports/track/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#gbasketball {
+  background-image: url("/harbingernews/sports/basketball/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#fieldhockey {
+  background-image: url("/harbingernews/sports/field_hockey/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#golf {
+  background-image: url("/harbingernews/sports/golf/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#gymnastics {
+  background-image: url("/harbingernews/sports/gymnastics/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#football {
+  background-image: url("/harbingernews/sports/football/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#softball {
+  background-image: url("/harbingernews/sports/softball/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#bswimming {
+  background-image: url("/harbingernews/sports/swimming/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#gswimming {
+  background-image: url("/harbingernews/sports/swimming/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#btennis {
+  background-image: url("/harbingernews/sports/tennis/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#gtennis {
+  background-image: url("/harbingernews/sports/tennis/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#track {
+  background-image: url("/harbingernews/sports/track/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#volleyball {
+  background-image: url("/harbingernews/sports/volleyball/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
 @media all and (max-width: 767px) {
   .sport {
     float: none !important;
     margin: 0 auto !important;
     margin-bottom: 10px !important;
-    width: 97% !important; } }
+    width: 97% !important; }
+
+  #seasonsswitcher {
+    width: 100% !important; } }
 body {
   background-color: #f3f3f3 !important; }
 
@@ -31,10 +114,6 @@ body {
   .sport a:hover {
     text-decoration: none;
     color: #0a8420; }
-
-#baseball {
-  background-image: url("/harbingernews/sports/baseball/background-tile.png");
-  background-position: center; }
 
 #seasonsswitcher {
   position: relative;
@@ -81,7 +160,7 @@ body {
     text-shadow: 2px 2px 2px black; }
 
 .tint {
-  background-color: rgba(255, 255, 255, 0.6); }
+  background-color: rgba(255, 255, 255, 0.7); }
 
 .visible {
   display: block !important; }
