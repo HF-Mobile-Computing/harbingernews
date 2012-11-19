@@ -109,12 +109,22 @@
 				<div id="outerbox">
 					<div id="innerbox">
 					
+						<a href="stories/2012/november/wots1.html" style="color: black;"><div class="article">
+							
+							<h3>Check out November's "Word on the Street!"</h3>
+							
+							<img src="stories/2012/october/wots.png" width="90%" style="margin-top: 15px;" />
+							<p style="padding-top: 10px">Come see what the school is saying this month!</p>
+						
+						
+						</div></a>
+					
 						<a href="stories/2012/october/wots1.html" style="color: black;"><div class="article">
 						
 							<h3>Check out "The Word on the Street!"</h3>
 							
 							<img src="stories/2012/october/wots.png" width="90%" style="margin-top: 15px;" />
-							<p style="padding-top: 10px;">Take a look as what's up at HF and listen to what your classmates have been saying!</p>
+							<p style="padding-top: 10px;">Take a look at what's up at HF and listen to what your classmates have been saying!</p>
 						</div></a>
 					
 						<a href="stories/2012/september/manning-full.html" style="color: black;"><div id="manning" class="article">
@@ -126,17 +136,6 @@
 							<p>Click here to learn more and read our interview with HF's new principal!</p>
 							
 						</div></a> <!-- end "manning" --> 
-						
-						
-						<div class="article">
-						
-							<div class="empty_article">
-							
-								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
-							
-							</div>
-						
-						</div>
 						
 						<div class="article">
 						
