@@ -53,37 +53,28 @@
 		<!--#include virtual="/harbingernews/tools/header.shtml"-->
 		  
 			<div class="container" id="center">
-				<div class="row">
+				<div class="row-fluid">
 					<div class="span12" id="title">
 						<h1>Test</h1>
 					</div>
 				</div>
-				<div class="row">
-					<div class="span8 hidden-phone">
-						<div id="about">
-							<h3>About the Team</h3>
-						</div>
-						<div id="photos">
-							<h3>Photos</h3>
-							<div class="row-fluid">
-								<div class="span4 photo">
-								
-								</div>
-								<div class="span4 photo">
-								
-								</div>
-								<div class="span4 photo">
-								
-								</div>
-							</div>
-						</div>
+				
+				<ul class="nav nav-tabs limited-width">
+					<li class="active"><a href="#info">About</a></li>
+					<li><a href="#photos">Photos</a></li>
+					<li class="disabled"><a href="#">Videos</a></li>
+					<li class="pull-right"><a href="#">Schedule</a></li>
+				</ul>
+		  
+				<div class="tab-content">
+					<div class="tab-pane active" id="info">
+						Test.
 					</div>
-					<div class="span4" id="schedule">
-						<h3>Schedule</h3>
+					<div class="tab-pane" id="photos">
+						test.
 					</div>
 				</div>
-		  
-		  
+				
 			</div>
 		<div id="footer_spacer"></div>
 	</div>		
