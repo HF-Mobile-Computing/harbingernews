@@ -1,0 +1,260 @@
+html, body {
+  height: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px; }
+
+body {
+  background-image: url("/harbingernews/img/background.png") !important; }
+
+#content {
+  min-height: 100%;
+  margin-bottom: -200px;
+  clear: both; }
+
+#footer_spacer {
+  height: 200px;
+  clear: both; }
+
+#footer {
+  width: 100%;
+  min-height: 200px;
+  background-color: #466843;
+  clear: both;
+  border-top: 4px solid #629b63;
+  color: white; }
+  #footer h3 {
+    padding-top: 0px; }
+
+.important_links {
+  border-left: #629b63 solid 2px;
+  margin-top: 10px;
+  padding-left: 5px; }
+
+#title {
+  font-size: 1.25em;
+  margin-bottom: 5px;
+  padding: 0;
+  display: block; }
+
+.contact {
+  margin-top: 10px;
+  border-left: #629b63 solid 2px;
+  padding-left: 5px; }
+
+#twitter-follow-button {
+  margin-bottom: 5px; }
+
+#edited_by {
+  float: right;
+  margin-right: 10%;
+  margin-top: 40px;
+  display: block;
+  clear: both; }
+
+.facebook {
+  margin-top: 5px;
+  display: block;
+  background: #e8e8e8;
+  border-radius: 4px;
+  min-width: 225px; }
+
+#abt_chrome {
+  width: 400px; }
+
+#footer_holder {
+  margin-top: 10px; }
+
+#edited_by {
+  margin-top: 11px;
+  padding-left: 6px;
+  background: #466843; }
+
+#title a {
+  text-decoration: none; }
+  #title a:hover {
+    text-decoration: underline !important; }
+
+#installgcf {
+  display: none; }
+
+#baseball {
+  background-image: url("/harbingernews/sports/baseball/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#bbasketball {
+  background-image: url("/harbingernews/sports/basketball/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#bowling {
+  background-image: url("/harbingernews/sports/bowling/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#crosscountry {
+  background-image: url("/harbingernews/sports/track/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#gbasketball {
+  background-image: url("/harbingernews/sports/basketball/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#fieldhockey {
+  background-image: url("/harbingernews/sports/field_hockey/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#golf {
+  background-image: url("/harbingernews/sports/golf/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#gymnastics {
+  background-image: url("/harbingernews/sports/gymnastics/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#football {
+  background-image: url("/harbingernews/sports/football/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#softball {
+  background-image: url("/harbingernews/sports/softball/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#bswimming {
+  background-image: url("/harbingernews/sports/swimming/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#gswimming {
+  background-image: url("/harbingernews/sports/swimming/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#btennis {
+  background-image: url("/harbingernews/sports/tennis/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#gtennis {
+  background-image: url("/harbingernews/sports/tennis/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#track {
+  background-image: url("/harbingernews/sports/track/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#volleyball {
+  background-image: url("/harbingernews/sports/volleyball/background-tile.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+@media all and (max-width: 767px) {
+  .sport {
+    float: none !important;
+    margin: 0 auto !important;
+    margin-bottom: 10px !important;
+    width: 97% !important; }
+
+  #seasonsswitcher {
+    width: 100% !important; } }
+body {
+  background-color: #f3f3f3 !important; }
+
+#center {
+  background-color: white;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-top: 5px; }
+
+.sport {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: block;
+  width: 98%;
+  float: right;
+  height: 170px;
+  background-color: red;
+  box-shadow: 1px 1px 4px black; }
+  .sport h2 {
+    margin-top: 0px;
+    margin-left: 20px;
+    padding-top: 0px;
+    color: white;
+    text-shadow: 2px 2px 2px black; }
+  .sport a:hover {
+    text-decoration: none;
+    color: #0a8420; }
+
+#seasonsswitcher {
+  position: relative;
+  padding-top: 2px; }
+
+.affix {
+  position: fixed !important;
+  top: 0px;
+  background-color: white; }
+
+.nav-tabs {
+  z-index: 60; }
+  .nav-tabs .active a:hover {
+    background-color: white !important; }
+  .nav-tabs .active li:hover {
+    background-color: white !important; }
+  .nav-tabs #firsttab:hover a {
+    color: white !important;
+    outline-color: white !important;
+    background-color: white !important;
+    border-color: white !important; }
+  .nav-tabs #firsttab:hover li {
+    color: white !important;
+    outline-color: white !important;
+    background-color: white !important;
+    border-color: white !important; }
+  .nav-tabs a {
+    color: #416847; }
+    .nav-tabs a:hover {
+      background-color: #dddddd !important;
+      color: #629b63;
+      text-shadow: 1px 1px 3px white; }
+
+.inner .holder {
+  position: relative;
+  top: 10px;
+  margin: 0 auto;
+  width: 70%;
+  height: 120px;
+  display: none; }
+  .inner .holder h3 {
+    font-size: 2.1em;
+    color: #4ac362;
+    text-shadow: 2px 2px 2px black; }
+
+.tint {
+  background-color: rgba(255, 255, 255, 0.7); }
+
+.visible {
+  display: block !important; }
+
+#recent_events .well {
+  padding: 0px !important;
+  float: left;
+  width: 94% !important;
+  text-align: center; }
+  #recent_events .well h3 {
+    margin-top: 5px;
+    margin-bottom: 5px; }

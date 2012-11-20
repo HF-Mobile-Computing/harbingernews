@@ -1,0 +1,31 @@
+<h1 id="pagetitle">Gymnastics</h1>
+
+<div id="important">
+
+	<h3>Reminders</h3>
+	
+	<ul>
+		<li>Reminder 1</li>
+		<li>Reminder 2</li>
+	</ul>
+
+</div>
+
+<table border="0px"  cellspacing="0px">
+	<tr>
+		<td class="num" width="55px"><b>Game #</b></td>
+		<td class="date" width="80px"><b>Date</b></td>
+		<td class="op" width="140px"><b>Against</b></td>
+		<td class="loc" width="60px"><b>Location</b></td>
+		<td class="hf_score" width="65px"><b>HF Score</b></td>
+		<td class="op_score" width="65px"><b>OP Score</b></td>
+	</tr>
+	<tr class="even">
+		<td>1</td>
+		<td>-----</td>
+		<td>-----</td>
+		<td>-----</td>
+		<td>-----</td>
+		<td>-----</td>
+	</tr>
+</table>

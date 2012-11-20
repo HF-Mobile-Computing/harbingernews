@@ -16,7 +16,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
 	
 	<link rel="stylesheet" href="/harbingernews/css/jquery.fancybox.css" type="text/css">
-	<link rel="stylesheet" href="/harbingernews/css/sports.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/sports/sports.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/all.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap-responsive.css" type="text/css">
@@ -76,8 +76,8 @@
 		
 			<ul class="nav nav-tabs affix-top container" data-spy="affix" data-offset-top="60" id="seasonsswitcher">
 				<li id="firsttab"><a></a></li>
-				<li class="active"><a href="#fall" data-toggle="tab">Fall</a></li>
-				<li><a href="#winter" data-toggle="tab">Winter</a></li>
+				<li><a href="#fall" data-toggle="tab">Fall</a></li>
+				<li class="active"><a href="#winter" data-toggle="tab">Winter</a></li>
 				<li><a href="#spring" data-toggle="tab">Spring</a></li>
 			</ul>
 			<div class="row">
@@ -123,7 +123,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="sport">
+							<div class="sport" id="football">
 								<div class="inner">
 								<h2>Football</h2>
 									<div class="holder">
@@ -149,9 +149,22 @@
 									</div>
 								</div>
 							</div>
-							<div class="sport" id="soccer">
+							<div class="sport" id="bsoccer">
 								<div class="inner">
-									<h2>Soccer</h2>
+									<h2>Soccer (Boys)</h2>
+									<div class="holder">
+										<div class="pull-left">
+											<h3><a href="#">Varsity</a></h3>
+										</div>
+										<div class="pull-right">
+											<h3><a href="#">Junior Varisty</a></h3>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sport" id="gsoccer">
+								<div class="inner">
+									<h2>Soccer (Girls)</h2>
 									<div class="holder">
 										<div class="pull-left">
 											<h3><a href="#">Varsity</a></h3>
@@ -205,9 +218,9 @@
 						</div><!-- end "fall" -->
 						
 						<div class="tab-pane" id="winter">
-							<div class="sport">
+							<div class="sport" id="bbasketball">
 								<div class="inner">
-									<h2>Football</h2>
+									<h2>Basketball (Boys)</h2>
 									<div class="holder">
 										<div class="pull-left">
 											<h3><a href="#">Varsity</a></h3>
@@ -217,7 +230,72 @@
 										</div>
 									</div>
 								</div>
-							</div>							
+							</div>
+							<div class="sport" id="gbasketball">
+								<div class="inner">
+									<h2>Basketball (Girls)</h2>
+									<div class="holder">
+										<div class="pull-left">
+											<h3><a href="#">Varsity</a></h3>
+										</div>
+										<div class="pull-right">
+											<h3><a href="#">Junior Varisty</a></h3>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sport" id="bowling">
+								<div class="inner">
+									<h2>Bowling</h2>
+									<div class="holder">
+										<div class="pull-left">
+											<h3><a href="#">Varsity</a></h3>
+										</div>
+										<div class="pull-right">
+											<h3><a href="#">Junior Varisty</a></h3>
+										</div>
+									</div>
+								</div>
+							</div>			
+							<div class="sport" id="bswimming">
+								<div class="inner">
+									<h2>Swimming (Boys)</h2>
+									<div class="holder">
+										<div class="pull-left">
+											<h3><a href="#">Varsity</a></h3>
+										</div>
+										<div class="pull-right">
+											<h3><a href="#">Junior Varisty</a></h3>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sport" id="volleyball">
+								<div class="inner">
+									<h2>Volleyball</h2>
+									<div class="holder">
+										<div class="pull-left">
+											<h3><a href="#">Varsity</a></h3>
+										</div>
+										<div class="pull-right">
+											<h3><a href="#">Junior Varisty</a></h3>
+										</div>
+									</div>
+								</div>
+							</div>		
+							<div class="sport" id="wrestling">
+								<div class="inner">
+									<h2>Wrestling</h2>
+									<div class="holder">
+										<div class="pull-left">
+											<h3><a href="#">Varsity</a></h3>
+										</div>
+										<div class="pull-right">
+											<h3><a href="#">Junior Varisty</a></h3>
+										</div>
+									</div>
+								</div>
+							</div>			
 							
 						</div><!-- end "winter" -->
 					
@@ -248,6 +326,71 @@
 									</div>
 								</div>
 							</div>
+							<div class="sport" id="blacrosse">
+								<div class="inner">
+									<h2>Lacrosse (Boys)</h2>
+									<div class="holder">
+										<div class="pull-left">
+											<h3><a href="#">Varsity</a></h3>
+										</div>
+										<div class="pull-right">
+											<h3><a href="#">Junior Varisty</a></h3>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sport" id="glacrosse">
+								<div class="inner">
+									<h2>Lacrosse (Girls)</h2>
+									<div class="holder">
+										<div class="pull-left">
+											<h3><a href="#">Varsity</a></h3>
+										</div>
+										<div class="pull-right">
+											<h3><a href="#">Junior Varisty</a></h3>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sport" id="softball">
+								<div class="inner">
+									<h2>Softball</h2>
+									<div class="holder">
+										<div class="pull-left">
+											<h3><a href="#">Varsity</a></h3>
+										</div>
+										<div class="pull-right">
+											<h3><a href="#">Junior Varisty</a></h3>
+										</div>
+									</div>
+								</div>
+							</div>		
+							<div class="sport" id="btennis">
+								<div class="inner">
+									<h2>Tennis (Boys)</h2>
+									<div class="holder">
+										<div class="pull-left">
+											<h3><a href="#">Varsity</a></h3>
+										</div>
+										<div class="pull-right">
+											<h3><a href="#">Junior Varisty</a></h3>
+										</div>
+									</div>
+								</div>
+							</div>			
+							<div class="sport" id="track">
+								<div class="inner">
+									<h2>Track & Field</h2>
+									<div class="holder">
+										<div class="pull-left">
+											<h3><a href="#">Varsity</a></h3>
+										</div>
+										<div class="pull-right">
+											<h3><a href="#">Junior Varisty</a></h3>
+										</div>
+									</div>
+								</div>
+							</div>		
 							
 						</div><!-- end "spring" -->
 					

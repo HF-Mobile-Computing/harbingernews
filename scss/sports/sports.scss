@@ -1,0 +1,181 @@
+@import "all";
+@import "sportstiles";
+// Adds in the sport tile backgrounds, which are in a separate file for organization's sake
+
+// Variables
+$darkGreen: #416847;
+$lightGreen: #629b63;
+
+// CSS for the mobile layout
+@media all and (max-width: 767px) {
+	.sport {
+		float: none !important;
+		margin: 0 auto !important;
+		margin: {
+			bottom: 10px !important;
+		}
+		width: 97% !important;
+	}
+	#seasonsswitcher {
+		width: 100% !important;
+	}
+}
+
+// Main CSS
+body {
+	background: {
+		color: #f3f3f3 !important;
+	}
+}
+
+#center {
+	background: {
+		color: white;
+	}
+	margin: {
+		top: 12px;
+		bottom: 12px;
+	}
+	padding: {
+		top: 5px;
+	}
+}
+
+.sport {
+	margin: 0 auto;
+	margin: {
+		bottom: 10px;
+	}
+	display: block;
+	width: 98%;
+	float: right;
+	// max-width = 852px
+	height: 170px;
+	background: {
+		color: red;
+	}
+	box-shadow: 1px 1px 4px black;
+	h2 {
+		margin: {
+			top: 0px;
+			left: 20px;
+		}
+		padding: {
+			top: 0px;
+		}
+		color: rgba(255,255,255, 1);
+		text-shadow: 2px 2px 2px black;
+	}
+	a {
+		&:hover {
+			text-decoration: none;
+			color: #0a8420;
+		}
+	}
+}
+
+#seasonsswitcher {
+	position: relative;
+	padding-top: 2px;
+}
+
+.affix {
+	position: fixed !important;
+	top: 0px;
+	background: {
+		color: white;
+	}
+}
+
+.nav-tabs{
+	z-index: 60;
+	.active {
+		a {
+			&:hover {
+				background: {
+					color: white !important;
+				}
+			}
+		}
+		li {
+			&:hover {
+				background: {
+					color: white !important;
+				}
+			}
+		}
+	}
+	#firsttab {
+		&:hover {
+			a {
+				color: white !important;
+				outline-color: white !important;
+				background: {
+					color: white !important;
+				}
+				border: {
+					color: white !important;
+				}
+			}
+			li {
+				color: white !important;
+				outline-color: white !important;
+				background: {
+					color: white !important;
+				}
+				border: {
+					color: white !important;
+				}
+			}
+		}
+	}
+	a {
+		color: $darkGreen;
+		&:hover {
+			background: {
+				color: #dddddd !important;
+			}
+			color: $lightGreen;
+			text-shadow: 1px 1px 3px white;
+		}
+	}
+}
+
+.inner {
+	.holder {
+		position: relative;
+		top: 10px;
+		margin: 0 auto;
+		width: 70%;
+		height: 120px;
+		display: none;
+		h3 {
+			font-size: 2.1em;
+			color: rgba(74,195,98,1);
+			text-shadow: 2px 2px 2px black;
+		}
+	}
+}
+
+.tint {
+	background-color: rgba(255,255,255,0.7);
+}
+
+.visible {
+	display: block !important;
+}
+
+#recent_events {
+	.well {
+		padding: 0px !important;
+		float: left;
+		width: 94% !important;
+		text-align: center;
+		h3 {
+			margin: {
+				top: 5px;
+				bottom: 5px;
+			}
+		}
+	}
+}
