@@ -85,8 +85,7 @@ img#talk_bubble {
   margin-left: 18px;
   margin-top: 10px;
   overflow: hidden;
-  z-index: 2;
-  /*behavior: url(/~alex/Harbinger2/pie/PIE.htc);*/ }
+  z-index: 2; }
   .article p {
     padding-top: 0;
     margin-top: 11px;
