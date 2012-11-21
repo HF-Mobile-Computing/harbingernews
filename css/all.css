@@ -53,7 +53,7 @@ h3#footer {
   margin-top: 10px;
   padding-left: 5px; }
 
-#title {
+#footerTitle {
   font-size: 1.25em;
   margin-bottom: 5px;
   padding: 0;
@@ -92,10 +92,10 @@ h3#footer {
   padding-left: 6px;
   background: #466843; }
 
-#title a {
+#footerTitle a {
   text-decoration: none; }
 
-#title a:hover {
+#footerTitle a:hover {
   text-decoration: underline !important; }
 
 #installgcf {
