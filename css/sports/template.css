@@ -36,7 +36,7 @@ body {
   margin-top: 10px;
   padding-left: 5px; }
 
-#title {
+#footerTitle {
   font-size: 1.25em;
   margin-bottom: 5px;
   padding: 0;
@@ -75,9 +75,9 @@ body {
   padding-left: 6px;
   background: #466843; }
 
-#title a {
+#footerTitle a {
   text-decoration: none; }
-  #title a:hover {
+  #footerTitle a:hover {
     text-decoration: underline !important; }
 
 #installgcf {
@@ -92,15 +92,34 @@ body {
 
 #center {
   margin-top: 10px;
-  background-color: white; }
+  background-color: white;
+  box-shadow: 0px 2px 7px #3c3c3c;
+  behavior: url("/harbingernews/pie/PIE.htc"); }
+  #center .tab-pane {
+    padding-top: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 4px; }
+  #center .alert {
+    margin-top: 8px;
+    margin-bottom: 8px; }
+  #center p {
+    margin-left: 1px; }
 
-#title h1 {
-  color: white;
-  margin-top: 0px;
+#title {
+  position: relative;
   background-image: url("/harbingernews/sports/baseball/background-tile.png");
   background-position: center;
   background-repeat: no-repeat;
-  height: 170px; }
+  height: 170px;
+  margin-bottom: 5px; }
+  #title h1 {
+    position: inherit !important;
+    top: 130px;
+    color: white;
+    width: 95%;
+    margin: 0 auto;
+    text-shadow: 2px 2px 2px #494949; }
 
 .span8 {
   background-color: green; }
@@ -110,19 +129,13 @@ body {
   #about h3 {
     text-align: center; }
 
-#photos {
-  background-color: yellow; }
-  #photos h3 {
-    text-align: center; }
-  #photos .photo {
-    min-height: 10px;
-    background-color: purple; }
-
-#schedule {
-  background-color: blue; }
-  #schedule h3 {
-    text-align: center; }
-
-.nav-tabs {
+.limited-width {
   width: 95% !important;
   margin: 0 auto; }
+
+.nab-tabs a {
+  color: #416847; }
+  .nab-tabs a:hover {
+    background-color: #dddddd !important;
+    color: #629b63;
+    text-shadow: 1px 1px 3px white; }

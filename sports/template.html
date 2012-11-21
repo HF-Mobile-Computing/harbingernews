@@ -53,25 +53,43 @@
 		<!--#include virtual="/harbingernews/tools/header.shtml"-->
 		  
 			<div class="container" id="center">
-				<div class="row-fluid">
+				<div class="row-fluid" id="titleRow">
 					<div class="span12" id="title">
 						<h1>Test</h1>
 					</div>
 				</div>
 				
 				<ul class="nav nav-tabs limited-width">
-					<li class="active"><a href="#info">About</a></li>
-					<li><a href="#photos">Photos</a></li>
-					<li class="disabled"><a href="#">Videos</a></li>
-					<li class="pull-right"><a href="#">Schedule</a></li>
+					<li class="active"><a href="#info" data-toggle="tab">Information</a></li>
+					<li><a href="#photos" data-toggle="tab">Photos</a></li>
+					<li class="disabled"><a href="#videos" data-toggle="tab" onclick="doWork(); return false;">Videos</a></li>
+					<li class="pull-right"><a href="#schedule" data-toggle="tab">Schedule</a></li>
 				</ul>
 		  
 				<div class="tab-content">
-					<div class="tab-pane active" id="info">
-						Test.
+					<div class="tab-pane active limited-width" id="info">
+						<div class="alert">
+							This is an alert!
+						</div>
+						
+						<p>Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						
+						<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 					</div>
-					<div class="tab-pane" id="photos">
-						test.
+					<div class="tab-pane limited-width" id="photos">
+						
+							photos_test.
+						
+					</div>
+					<div class="tab-pane limited-width" id="videos">
+					
+						Video_test
+						
+					</div>
+					<div class="tab-pane limited-width" id="schedule">
+					
+						schedule-test.
+						
 					</div>
 				</div>
 				
@@ -84,7 +102,7 @@
 		
 		<div class="container">
 			<div class="pull-right" style="margin-top: 20px;">
-					This page was last updated by <strong><em>Alex LaFroscia</em></strong> on<em><strong> November 17, 2012.</strong></em>.			
+					This page was last updated by <strong><em>Alex LaFroscia</em></strong> on<em><strong> November 22, 2012.</strong></em>.			
             </div>
 	  </div> <!-- end "container" -->
 	</div> <!-- end "footer" -->
