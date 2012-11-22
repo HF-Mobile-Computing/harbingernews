@@ -1,3 +1,7 @@
+@media (max-width: 767px) {
+  body {
+    padding-right: 0px !important;
+    padding-left: 0px !important; } }
 html, body {
   height: 100%;
   padding-top: 0px;
@@ -83,6 +87,23 @@ body {
 #installgcf {
   display: none; }
 
+.navbar-inner {
+  background-color: #466843 !important;
+  background-image: none !important;
+  border-bottom: 4px solid #629b62 !important; }
+  .navbar-inner a {
+    color: white !important;
+    text-shadow: 0px 1px 0px #717171 !important; }
+  .navbar-inner .active a {
+    background-color: #629b62 !important; }
+
+.brand a {
+  text-shadow: 0 1px 0 #ffffff !important; }
+
+.btn-navbar {
+  background-color: #3e5f3b !important;
+  background-image: none !important; }
+
 @media all and (min-width: 980px) {
   #center {
     max-width: 852px !important; } }
@@ -133,13 +154,22 @@ body {
   width: 95% !important;
   margin: 0 auto; }
 
-.nab-tabs a {
-  color: #416847 !important; }
-  .nab-tabs a:hover {
-    background-color: #dddddd !important;
-    color: #629b63;
+.disabled a:hover {
+  color: #9a9b9d !important;
+  border: none !important;
+  margin-left: 0px !important;
+  margin-bottom: 0px !important;
+  margin-right: 0px !important;
+  margin-top: 0px !important;
+  padding-top: 9px !important;
+  padding-left: 13px !important; }
+
+.nav-tabs a {
+  color: #40763b; }
+  .nav-tabs a:hover {
+    color: #376a44;
     text-shadow: 1px 1px 3px white; }
-  .nab-tabs a:focus {
+  .nav-tabs a:focus {
     outline: 0; }
 
 #photos {

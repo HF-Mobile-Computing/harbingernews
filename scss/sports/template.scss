@@ -88,14 +88,30 @@ body {
 	margin: 0 auto;
 }
 
-.nab-tabs {
+.disabled {
 	a {
-		color: $darkGreen !important;
 		&:hover {
-			background: {
-				color: #dddddd !important;
+			color: #9a9b9d !important;
+			border: none !important;
+			margin: {
+				left: 0px !important;
+				bottom: 0px !important;
+				right: 0px !important;
+				top: 0px !important;
 			}
-			color: $lightGreen;
+			padding: {
+				top: 9px !important;
+				left: 13px !important;
+			}
+		}
+	}
+}
+
+.nav-tabs {
+	a {
+		color: rgba(64,118,59,1);
+		&:hover {
+			color: rgba(55,106,68,1);
 			text-shadow: 1px 1px 3px white;
 		}
 		&:focus {
