@@ -17,24 +17,21 @@
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap-responsive.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/sports/template.css" type="text/css">
-	
+	<link rel="stylesheet" href="../css/jquery.lightbox-0.5.css" type="text/css">
+
 	<script src="/harbingernews/js/jquery-1.8.0.min.js"></script>
-	<script src="/harbingernews/js/bootstrap.js" type="text/javascript"></script>
-	<script src="/harbingernews/js/jquery.fancybox.pack.js" type="text/javascript"></script>
-		
+	<script src="/harbingernews/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/harbingernews/js/jquery.lightbox-0.5.js" type="text/javascript"></script>
 	<script type="text/javascript">
 			
-		// Fancybox
 		$(function() {
-			$('.fancy').fancybox({
-				'hideOnContentClick' : false,
-				'openEffect' : 'fade',
-			});
 			$('#nav_sports').addClass('active');
+			$('#photos img').addClass('img-polaroid');
+			$('#photos a').lightBox({fixedNavigation:true});
+			$('.disabled a').removeAttr("data-toggle");
 		});
 	
-	</script></head>
-	
+	</script>
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-35687930-1']);
@@ -45,6 +42,8 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
 	</script>
+	<script src="/harbingernews/js/jquery.fancybox.js" type="text/javascript"></script>
+</head>
 
 <body>
 
@@ -62,7 +61,7 @@
 				<ul class="nav nav-tabs limited-width">
 					<li class="active"><a href="#info" data-toggle="tab">Information</a></li>
 					<li><a href="#photos" data-toggle="tab">Photos</a></li>
-					<li class="disabled"><a href="#videos" data-toggle="tab" onclick="doWork(); return false;">Videos</a></li>
+					<li class="disabled"><a href="#videos" data-toggle="tab">Videos</a></li>
 					<li class="pull-right"><a href="#schedule" data-toggle="tab">Schedule</a></li>
 				</ul>
 		  
@@ -77,19 +76,61 @@
 						<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 					</div>
 					<div class="tab-pane limited-width" id="photos">
-						
-							photos_test.
-						
+						<div class="row-fluid">
+							<div class="span3">
+								<a href="http://placehold.it/700x700" class="lightbox" title="Test"><img src="http://placehold.it/186x150" /></a>
+							</div>
+							<div class="span3">
+								<a href="http://placehold.it/700x700" class="lightbox" title="Test2"><img src="http://placehold.it/186x150" /></a>
+							</div>
+							<div class="span3">
+								<a href="http://placehold.it/700x700" class="lightbox" title="Test3"><img src="http://placehold.it/186x150" /></a>
+							</div>
+							<div class="span3">
+								<a href="http://placehold.it/700x700" class="lightbox" title="Test4"><img src="http://placehold.it/186x150" /></a>
+							</div>
+						</div>
 					</div>
 					<div class="tab-pane limited-width" id="videos">
-					
-						Video_test
-						
+						<div class="well empty-section">
+							<h2>Nothing Available</h2>
+						</div>
 					</div>
 					<div class="tab-pane limited-width" id="schedule">
-					
-						schedule-test.
-						
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Date</th>
+									<th>Time</th>
+									<th>Opponent</th>
+									<th>Home/Away?</th>
+									<th>Score</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="success">
+									<td>11/24/2012</td>
+									<td>10 am</td>
+									<td>Commack</td>
+									<td>Away</td>
+									<td>10 to 7</td>
+								</tr>
+								<tr class="error">
+									<td>11/29/2012</td>
+									<td>3:30 pm</td>
+									<td>Walt Whitman</td>
+									<td>Home</td>
+									<td>8 to 9</td>
+								</tr>
+								<tr>
+									<td>12/1/2012</td>
+									<td>8 am</td>
+									<td>Northport</td>
+									<td>Home</td>
+									<td>N/A</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 				

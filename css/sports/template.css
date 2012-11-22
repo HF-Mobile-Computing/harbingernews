@@ -134,8 +134,24 @@ body {
   margin: 0 auto; }
 
 .nab-tabs a {
-  color: #416847; }
+  color: #416847 !important; }
   .nab-tabs a:hover {
     background-color: #dddddd !important;
     color: #629b63;
     text-shadow: 1px 1px 3px white; }
+  .nab-tabs a:focus {
+    outline: 0; }
+
+#photos {
+  width: 100%; }
+  #photos a {
+    height: 100%;
+    width: 100%; }
+  #photos img {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 3px; }
+
+.empty-section {
+  color: #949494;
+  text-align: center; }

@@ -90,7 +90,7 @@ body {
 
 .nab-tabs {
 	a {
-		color: $darkGreen;
+		color: $darkGreen !important;
 		&:hover {
 			background: {
 				color: #dddddd !important;
@@ -98,5 +98,28 @@ body {
 			color: $lightGreen;
 			text-shadow: 1px 1px 3px white;
 		}
+		&:focus {
+			outline: 0;
+		}
 	}
+}
+
+#photos {
+	width: 100%;
+	a {
+		height: 100%;
+		width: 100%;
+	}
+	img {
+		width: 100%;
+		margin: 0 auto;
+		margin: {
+			top: 3px;
+		}
+	}
+}
+
+.empty-section {
+	color: #949494;
+	text-align: center;
 }
