@@ -1,40 +1,53 @@
-/*
+@mixin pie {
+	behavior: url('/harbingernews/pie/PIE.htc');
+}
 
-all.css
-Created by Alex LaFroscia
-June 13, 2012
+@media (max-width: 767px) {
+	body {
+	    padding-right: 0px !important;
+	    padding-left: 0px !important;
+	}
+}
 
-Last Updated: June 13, 2012
+@media all and (max-width: 980px) {
+	.navbar-inner {
+		.nav {
+			a {
+				&:hover {
+					background: {
+						color: #4e784a !important;
+					}
+				}
+			}
+		}
+	}
+}
 
-------------------------------------
-
-This is the CSS file for all of the
-attributes that will probably be used
-on most or all of the pages.  This
-does *not* include any CSS regarding
-the headers or footer.  However, it
-does containt the CSS for properly
-sizing and formatting the footer at the
-bottom of the page.
-
-------------------------------------
-
-
-*/
-
-
-/* ----  Footer at Bottom ---- */
 html, body {
 	height: 100%;
+	padding: {
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+	}
+	margin: {
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+	}
 }
 
 body {
-	background-image: url(../background.png) !important;
+	background-image: url('/harbingernews/img/background.png') !important;
 }
 
 #content {
 	min-height: 100%;
-	margin-bottom: -200px;
+	margin: {
+		bottom: -200px;
+	}
 	clear: both;
 }
 
@@ -46,23 +59,30 @@ body {
 #footer {
 	width: 100%;
 	min-height: 200px;
-	background: rgb(70,104,67);
+	background: {
+		color: rgb(70,104,67);
+	}
 	clear: both;
 	border-top: 4px solid #629b63;
 	color: white;
-}
-
-h3#footer {
-	padding-top: 0px;
+	h3 {
+		padding-top: 0px;
+	}
 }
 
 .important_links {
-	border-left: #629b63 solid 2px;
-	margin-top: 10px;
-	padding-left: 5px;
+	border: {
+		left: #629b63 solid 2px;
+	}
+	margin: {
+		top: 10px;
+	}
+	padding: {
+		left: 5px;
+	}
 }
 
-#title {
+#footerTitle {
 	font-size: 1.25em;
 	margin-bottom: 5px;
 	padding: 0;
@@ -110,14 +130,41 @@ h3#footer {
 	background: rgb(70,104,67);
 }
 
-#title a {
-	text-decoration: none;
-}
-
-#title a:hover {
-	text-decoration: underline !important;
+#footerTitle {
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline !important;
+		}
+	}
 }
 
 #installgcf {
 	display: none;
+}
+
+.navbar-inner {
+	background-color: #466843 !important;
+	background-image: none !important;
+	border-bottom: 4px solid #629b62 !important;
+	a {
+		color: white !important;
+		text-shadow: 0px 1px 0px #717171 !important;
+	}
+	.active {
+		a {
+			background-color: #629b62 !important;
+		}
+	}
+}
+
+.brand {
+	a {
+		text-shadow: 0 1px 0 #ffffff !important;
+	}
+}
+
+.btn-navbar {
+	background-color: #3e5f3b !important;
+	background-image: none !important;
 }

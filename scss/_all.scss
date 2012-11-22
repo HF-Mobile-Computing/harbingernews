@@ -9,6 +9,20 @@
 	}
 }
 
+@media all and (max-width: 980px) {
+	.navbar-inner {
+		.nav {
+			a {
+				&:hover {
+					background: {
+						color: #4e784a !important;
+					}
+				}
+			}
+		}
+	}
+}
+
 html, body {
 	height: 100%;
 	padding: {
