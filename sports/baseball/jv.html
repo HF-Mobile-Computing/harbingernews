@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Template</title>
+	
+	<!-- enable webapp on iPhone -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-icon" href="img/Apple-Icon.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="img/Apple-Icon-Retina.png" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	
+	<link rel="stylesheet" href="/harbingernews/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/bootstrap-responsive.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/jquery.fancybox.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/sports/template.css" type="text/css">
+	<link rel="stylesheet" href="../css/jquery.lightbox-0.5.css" type="text/css">
+
+	<script src="/harbingernews/js/jquery-1.8.0.min.js"></script>
+	<script src="/harbingernews/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/harbingernews/js/jquery.lightbox-0.5.js" type="text/javascript"></script>
+	<script type="text/javascript">
+			
+		$(function() {
+			$('#nav_sports').addClass('active');
+			$('#photos img').addClass('img-polaroid');
+			$('#photos a').lightBox({fixedNavigation:true});
+			$('.disabled a').removeAttr("data-toggle");
+		});
+	
+	</script>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-35687930-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	<script src="/harbingernews/js/jquery.fancybox.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+	<div id="content">
+		
+		<!--#include virtual="/harbingernews/tools/header.shtml"-->
+		  
+			<div class="container" id="center">
+				<div class="row-fluid" id="titleRow">
+					<div class="span12" id="title">
+						<h1>Test</h1>
+					</div>
+				</div>
+				
+				<ul class="nav nav-tabs limited-width">
+					<li class="active"><a href="#info" data-toggle="tab">Information</a></li>
+					<li><a href="#photos" data-toggle="tab">Photos</a></li>
+					<li class="disabled"><a href="#videos" data-toggle="tab">Videos</a></li>
+					<li class="pull-right"><a href="#schedule" data-toggle="tab">Schedule</a></li>
+				</ul>
+		  
+				<div class="tab-content">
+					<div class="tab-pane active limited-width" id="info">
+						<div class="alert">
+							This is an alert!
+						</div>
+						
+						<p>Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						
+						<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+					<div class="tab-pane limited-width" id="photos">
+						<div class="row-fluid">
+							<div class="span3">
+								<a href="http://placehold.it/700x700" class="lightbox" title="Test"><img src="http://placehold.it/186x150" /></a>
+							</div>
+							<div class="span3">
+								<a href="http://placehold.it/700x700" class="lightbox" title="Test2"><img src="http://placehold.it/186x150" /></a>
+							</div>
+							<div class="span3">
+								<a href="http://placehold.it/700x700" class="lightbox" title="Test3"><img src="http://placehold.it/186x150" /></a>
+							</div>
+							<div class="span3">
+								<a href="http://placehold.it/700x700" class="lightbox" title="Test4"><img src="http://placehold.it/186x150" /></a>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane limited-width" id="videos">
+						<div class="well empty-section">
+							<h2>Nothing Available</h2>
+						</div>
+					</div>
+					<div class="tab-pane limited-width" id="schedule">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Date</th>
+									<th>Time</th>
+									<th>Opponent</th>
+									<th>Home/Away?</th>
+									<th>Score</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="success">
+									<td>11/24/2012</td>
+									<td>10 am</td>
+									<td>Commack</td>
+									<td>Away</td>
+									<td>10 to 7</td>
+								</tr>
+								<tr class="error">
+									<td>11/29/2012</td>
+									<td>3:30 pm</td>
+									<td>Walt Whitman</td>
+									<td>Home</td>
+									<td>8 to 9</td>
+								</tr>
+								<tr>
+									<td>12/1/2012</td>
+									<td>8 am</td>
+									<td>Northport</td>
+									<td>Home</td>
+									<td>N/A</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+		<div id="footer_spacer"></div>
+	</div>		
+	<div id="footer">
+	
+		<!--#include virtual="/harbingernews/tools/footer.shtml" -->
+		
+		<div class="container">
+			<div class="pull-right" style="margin-top: 20px;">
+					This page was last updated by <strong><em>Alex LaFroscia</em></strong> on<em><strong> November 22, 2012.</strong></em>.			
+            </div>
+	  </div> <!-- end "container" -->
+	</div> <!-- end "footer" -->
+
+</body>
+
+</html>
