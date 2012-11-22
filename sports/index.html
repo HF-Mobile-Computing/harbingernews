@@ -17,7 +17,6 @@
 	
 	<link rel="stylesheet" href="/harbingernews/css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/sports/sports.css" type="text/css">
-	<link rel="stylesheet" href="/harbingernews/css/all.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap-responsive.css" type="text/css">
 	
@@ -35,6 +34,7 @@
 				'openEffect' : 'fade',
 			});
 			$('#nav_sports').addClass('active');
+			$('.disabled a').removeAttr('href');
 		});
 		
 		$(function(){
@@ -89,10 +89,10 @@
 									<h2>Cheerleading</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -102,10 +102,10 @@
 									<h2>Cross Country</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -115,10 +115,10 @@
 									<h2>Field Hockey</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -128,10 +128,10 @@
 								<h2>Football</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -141,10 +141,10 @@
 									<h2>Gymnastics</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -154,10 +154,10 @@
 									<h2>Soccer (Boys)</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -167,10 +167,10 @@
 									<h2>Soccer (Girls)</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -180,10 +180,10 @@
 									<h2>Swimming (Girls)</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -193,10 +193,10 @@
 									<h2>Tennis (Girls)</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -206,10 +206,10 @@
 									<h2>Volleyball</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -217,16 +217,17 @@
 							
 						</div><!-- end "fall" -->
 						
+						<!-- WINTER -->
 						<div class="tab-pane active" id="winter">
 							<div class="sport" id="bbasketball">
 								<div class="inner">
 									<h2>Basketball (Boys)</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -236,10 +237,10 @@
 									<h2>Basketball (Girls)</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -249,10 +250,10 @@
 									<h2>Bowling</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -262,10 +263,10 @@
 									<h2>Swimming (Boys)</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -275,10 +276,10 @@
 									<h2>Volleyball</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -288,10 +289,10 @@
 									<h2>Wrestling</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -305,10 +306,10 @@
 									<h2>Baseball</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -318,10 +319,10 @@
 									<h2>Golf</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varsity</a></h3>
 										</div>
 									</div>
 								</div>
@@ -331,10 +332,10 @@
 									<h2>Lacrosse (Boys)</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -344,10 +345,10 @@
 									<h2>Lacrosse (Girls)</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -357,10 +358,10 @@
 									<h2>Softball</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -370,10 +371,10 @@
 									<h2>Tennis (Boys)</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
@@ -383,10 +384,10 @@
 									<h2>Track & Field</h2>
 									<div class="holder">
 										<div class="pull-left">
-											<h3><a href="#">Varsity</a></h3>
+											<h3 class="disabled"><a href="#">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
-											<h3><a href="#">Junior Varisty</a></h3>
+											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>

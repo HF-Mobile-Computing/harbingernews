@@ -39,6 +39,18 @@ body {
 	padding: {
 		top: 5px;
 	}
+	a {
+		color: #568e63 !important;
+		&:hover {
+			color: #487a54 !important;
+		}
+	}
+	.disabled {
+		a {
+			color: #aaaaaa !important;
+			text-shadow: 2px 2px 2px #616161;
+		}
+	}
 }
 
 .sport {
