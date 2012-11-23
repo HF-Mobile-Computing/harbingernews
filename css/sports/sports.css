@@ -192,6 +192,16 @@ body {
   background-position: center;
   background-repeat: no-repeat; }
 
+#bsoccer {
+  background-image: url("/harbingernews/sports/soccer/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#gsoccer {
+  background-image: url("/harbingernews/sports/soccer/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat; }
+
 @media all and (max-width: 767px) {
   .sport {
     float: none !important;
