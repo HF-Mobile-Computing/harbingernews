@@ -15,11 +15,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 	
-	<link rel="stylesheet" href="/harbingernews/css/jquery.fancybox.css" type="text/css">
-	<link rel="stylesheet" href="/harbingernews/css/homepage.css" type="text/css">
-	<link rel="stylesheet" href="/harbingernews/css/all.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap-responsive.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/jquery.fancybox.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/homepage.css" type="text/css">
 	
 	<script src="js/jquery-1.8.0.min.js"></script>
 	<script src="js/bootstrap.js" type="text/javascript"></script>
@@ -82,162 +81,16 @@
 	<div id="content">
 
 		<?php include('tools/header.shtml') ?>
-<<<<<<< HEAD:index.php
-=======
-				
-		<div id="news">
-			
-			<div class="container">
-				<div class="row">
-					<div class="offset1 span11" id="news_title_row"><h2 id="news_title">Harborfields News</h2></div>
+		
+		<div class="container" id="stuff">
+			<div class="row-fluid">
+				<div class="offset6 span4">
+					<p>Test</p>
+		
 				</div>
 			</div>
-				
-			<div id="container_box">
-			<img id="back_button" src="images/Prev.png" alt="Prev" width="35" height="35" />
-			<img id="forward_button" src="images/Next.png" alt="Next" width="35" height="35" />
-	
-				<div id="outerbox">
-					<div id="innerbox">
-					
-						<a href="stories/2012/november/wots1.html" style="color: black;"><div class="article">
-							
-							<h3>Check out November's "Word on the Street!"</h3>
-							
-							<img src="stories/2012/october/wots.png" width="90%" style="margin-top: 15px;" />
-							<p style="padding-top: 10px">Come see what the school is saying this month!</p>
+		</div>
 						
-						
-						</div></a>
-					
-						<a href="stories/2012/october/wots1.html" style="color: black;"><div class="article">
-						
-							<h3>Check out "The Word on the Street!"</h3>
-							
-							<img src="stories/2012/october/wots.png" width="90%" style="margin-top: 15px;" />
-							<p style="padding-top: 10px;">Take a look at what's up at HF and listen to what your classmates have been saying!</p>
-						</div></a>
-					
-						<a href="stories/2012/september/manning-full.html" style="color: black;"><div id="manning" class="article">
-							
-							<h3>Meet Dr. Manning</h3>
-							
-							<img src="stories/2012/september/manning.jpg" alt="manning" width="170" height="230" />
-							
-							<p>Click here to learn more and read our interview with HF's new principal!</p>
-							
-						</div></a> <!-- end "manning" --> 
-						
-						<div class="article">
-						
-							<div class="empty_article">
-							
-								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
-							
-							</div>
-						
-						</div>
-						
-						<div class="article">
-						
-							<div class="empty_article">
-							
-								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
-							
-							</div>
-						
-						</div>
-						
-						<div class="article">
-						
-							<div class="empty_article">
-							
-								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
-							
-							</div>
-						
-						</div>
-						
-	
-					</div> <!-- end "innerbox" -->
-				</div> <!-- end "outerbox" -->
-			</div> <!-- end "container_box" -->
-		</div> <!-- end "news" -->
->>>>>>> master:index.php
-		
-		<div class="container" id="important_stuff">
-			<div class="row">
-				<div class="span8">
-					<div id="announcements">
-						<?php
-							if ($feed->error())
-							{
-								echo '<div class="sp_errors">' . "\r\n";
-									echo '<p>' . htmlspecialchars($feed->error()) . "</p>\r\n";
-								echo '</div>' . "\r\n";
-							}
-						?>
-						<div id="sp_results">
-							<?php if ($success): ?>
-								<?php foreach($feed->get_items(0, 1) as $item): ?>
-									<div class="chunk">			
-										<h4><?php if ($item->get_permalink()) echo '<a href="' . $item->get_permalink() . '">'; echo $item->get_title();if ($item->get_permalink()) echo '</a>'; ?>&nbsp;<span class="footnote"></span></h4>
-										<?php echo $item->get_content(); ?>
-									</div><!-- end "chunk" -->
-								<?php endforeach; ?>
-							<?php endif; ?>
-						</div><!-- end "sp_results"-->
-					</div><!-- end "announcements"-->
-										
-					<div id="important">
-						<h2 style="margin-bottom: 0px;">Recent Events</h2>
-						<?php
-							if ($feed2->error())
-							{
-								echo '<div class="sp_errors">' . "\r\n";
-									echo '<p>' . htmlspecialchars($feed->error()) . "</p>\r\n";
-								echo '</div>' . "\r\n";
-							}
-						?>
-						<div id="sp_results">
-							<?php if ($success2): ?>
-								<?php foreach($feed2->get_items(0, 1) as $item): ?>
-									<div class="chunk">			
-										<?php echo $item->get_content(); ?>
-									</div><!-- end "chunk" -->
-								<?php endforeach; ?>
-							<?php endif; ?>
-						</div><!-- end "sp_results"-->
-			
-					</div><!-- end "important"-->
-
-				</div><!-- end "span6" -->
-				
-				<div class="span4">
-					<div id="upcoming">
-						<h2 style="margin-bottom: 0px;">Upcoming Events</h2>
-						<?php
-							if ($feed3->error())
-							{
-								echo '<div class="sp_errors">' . "\r\n";
-									echo '<p>' . htmlspecialchars($feed3->error()) . "</p>\r\n";
-								echo '</div>' . "\r\n";
-							}
-						?>
-						<div id="sp_results">
-							<?php if ($success3): ?>
-								<?php foreach($feed3->get_items(0, 1) as $item): ?>
-									<div class="chunk">			
-										<?php echo $item->get_content(); ?>
-									</div><!-- end "chunk" -->
-								<?php endforeach; ?>
-							<?php endif; ?>
-						</div><!-- end "sp_results"-->
-					</div>
-				</div><!-- end "span6" -->
-			</div><!-- end "row" -->
-		</div><!-- end "container" -->
-		
 		<div id="footer_spacer"></div>
 		
 	</div><!-- end "content"-->

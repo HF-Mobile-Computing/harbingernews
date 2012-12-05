@@ -148,9 +148,6 @@ html, body {
   margin-left: 0px;
   margin-right: 0px; }
 
-body {
-  background-image: url("/harbingernews/img/background.png") !important; }
-
 #content {
   min-height: 100%;
   margin-bottom: -200px;
