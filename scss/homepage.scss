@@ -24,13 +24,13 @@ body {
 
 #stuff {
 	min-height: 10px;
+	box-shadow: 0px 0px 7px 1px black;
+	border-radius: 0px 0px 4px 4px;
+	@include pie;
+	position: relative;
+	z-index: 1;
 	background: {
 		color: white;
 	}
 }
 
-.row-fluid {
-	background: {
-		color: red;
-	}
-}
