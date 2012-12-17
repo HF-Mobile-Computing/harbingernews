@@ -21,6 +21,18 @@
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap-responsive.css" type="text/css">
 	
+	<style type="text/css">
+	
+		.article h3 {
+			color: black !important;
+		}
+		
+		.article p {
+			color: black !important;
+		}
+	
+	</style>
+	
 	<script src="js/jquery-1.8.0.min.js"></script>
 	<script src="js/bootstrap.js" type="text/javascript"></script>
 	<script src="js/jquery.news_stories.js" type="text/javascript"></script>
@@ -109,6 +121,14 @@
 				<div id="outerbox">
 					<div id="innerbox">
 					
+						<a href="stories/2012/december/keyclub.html"><div class="article">
+							<h3>Key Club</h3>
+						
+							<img src="stories/2012/december/keyclub.png" width="90%" style="margin-top: 15px" />
+							<p style="padding-top: 10px;">Find out more about HF's newest club!</p>					
+						</div></a>
+
+					
 						<a href="stories/2012/november/wots1.html" style="color: black;"><div class="article">
 							
 							<h3>Check out November's "Word on the Street!"</h3>
@@ -136,17 +156,7 @@
 							<p>Click here to learn more and read our interview with HF's new principal!</p>
 							
 						</div></a> <!-- end "manning" --> 
-						
-						<div class="article">
-						
-							<div class="empty_article">
-							
-								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
-							
-							</div>
-						
-						</div>
-						
+												
 						<div class="article">
 						
 							<div class="empty_article">
