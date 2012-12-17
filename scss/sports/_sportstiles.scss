@@ -1,6 +1,6 @@
 @mixin backgroundTile($path, $position: center, $repeat: no-repeat) {
 	background: {
-		image: url($path);
+		image: url($path) !important;
 		position: $position;
 		repeat: $repeat;
 	}
@@ -68,4 +68,16 @@
 
 #volleyball {
 	@include backgroundTile('/harbingernews/sports/volleyball/background-tile.png');
+}
+
+#wrestling {
+	@include backgroundTile('/harbingernews/sports/wrestling/background-tile.png');
+}
+
+#bsoccer {
+	@include backgroundTile('/harbingernews/sports/soccer/background-tile.png');
+}
+
+#gsoccer {
+	@include backgroundTile('/harbingernews/sports/soccer/background-tile.png');
 }

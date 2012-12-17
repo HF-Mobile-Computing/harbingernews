@@ -1,3 +1,10 @@
+@media (max-width: 767px) {
+  body {
+    padding-right: 0px !important;
+    padding-left: 0px !important; } }
+@media all and (max-width: 980px) {
+  .navbar-inner .nav a:hover {
+    background-color: #4e784a !important; } }
 html, body {
   height: 100%;
   padding-top: 0px;
@@ -33,7 +40,7 @@ html, body {
   margin-top: 10px;
   padding-left: 5px; }
 
-#title {
+#footerTitle {
   font-size: 1.25em;
   margin-bottom: 5px;
   padding: 0;
@@ -72,9 +79,9 @@ html, body {
   padding-left: 6px;
   background: #466843; }
 
-#title a {
+#footerTitle a {
   text-decoration: none; }
-  #title a:hover {
+  #footerTitle a:hover {
     text-decoration: underline !important; }
 
 #installgcf {
@@ -86,83 +93,115 @@ html, body {
   box-shadow: 0px 0px 4px 0px #3e3e3e;
   behavior: url("/harbingernews/pie/PIE.htc"); }
 
+.navbar-inner {
+  background-color: #466843 !important;
+  background-image: none !important;
+  border-bottom: 4px solid #629b62 !important; }
+  .navbar-inner a {
+    color: white !important;
+    text-shadow: 0px 1px 0px #717171 !important; }
+  .navbar-inner .active a {
+    background-color: #629b62 !important; }
+
+.brand a {
+  text-shadow: 0 1px 0 #ffffff !important; }
+
+.btn-navbar {
+  background-color: #3e5f3b !important;
+  background-image: none !important; }
+
 #baseball {
-  background-image: url("/harbingernews/sports/baseball/background-tile.png");
+  background-image: url("/harbingernews/sports/baseball/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
 #bbasketball {
-  background-image: url("/harbingernews/sports/basketball/background-tile.png");
+  background-image: url("/harbingernews/sports/basketball/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
 #bowling {
-  background-image: url("/harbingernews/sports/bowling/background-tile.png");
+  background-image: url("/harbingernews/sports/bowling/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
 #crosscountry {
-  background-image: url("/harbingernews/sports/track/background-tile.png");
+  background-image: url("/harbingernews/sports/track/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
 #gbasketball {
-  background-image: url("/harbingernews/sports/basketball/background-tile.png");
+  background-image: url("/harbingernews/sports/basketball/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
 #fieldhockey {
-  background-image: url("/harbingernews/sports/field_hockey/background-tile.png");
+  background-image: url("/harbingernews/sports/field_hockey/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
 #golf {
-  background-image: url("/harbingernews/sports/golf/background-tile.png");
+  background-image: url("/harbingernews/sports/golf/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
 #gymnastics {
-  background-image: url("/harbingernews/sports/gymnastics/background-tile.png");
+  background-image: url("/harbingernews/sports/gymnastics/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
 #football {
-  background-image: url("/harbingernews/sports/football/background-tile.png");
+  background-image: url("/harbingernews/sports/football/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
 #softball {
-  background-image: url("/harbingernews/sports/softball/background-tile.png");
+  background-image: url("/harbingernews/sports/softball/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
 #bswimming {
-  background-image: url("/harbingernews/sports/swimming/background-tile.png");
+  background-image: url("/harbingernews/sports/swimming/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
 #gswimming {
-  background-image: url("/harbingernews/sports/swimming/background-tile.png");
+  background-image: url("/harbingernews/sports/swimming/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
 #btennis {
-  background-image: url("/harbingernews/sports/tennis/background-tile.png");
+  background-image: url("/harbingernews/sports/tennis/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
 #gtennis {
-  background-image: url("/harbingernews/sports/tennis/background-tile.png");
+  background-image: url("/harbingernews/sports/tennis/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
 #track {
-  background-image: url("/harbingernews/sports/track/background-tile.png");
+  background-image: url("/harbingernews/sports/track/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
 #volleyball {
-  background-image: url("/harbingernews/sports/volleyball/background-tile.png");
+  background-image: url("/harbingernews/sports/volleyball/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#wrestling {
+  background-image: url("/harbingernews/sports/wrestling/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#bsoccer {
+  background-image: url("/harbingernews/sports/soccer/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#gsoccer {
+  background-image: url("/harbingernews/sports/soccer/background-tile.png") !important;
   background-position: center;
   background-repeat: no-repeat; }
 
@@ -183,6 +222,13 @@ body {
   margin-top: 12px;
   margin-bottom: 12px;
   padding-top: 5px; }
+  #center a {
+    color: #568e63 !important; }
+    #center a:hover {
+      color: #487a54 !important; }
+  #center .disabled a {
+    color: #aaaaaa !important;
+    text-shadow: 2px 2px 2px #616161; }
 
 .sport {
   margin: 0 auto;
@@ -192,7 +238,8 @@ body {
   float: right;
   height: 170px;
   background-color: red;
-  box-shadow: 1px 1px 4px black; }
+  box-shadow: 1px 1px 4px black;
+  behavior: url("/harbingernews/pie/PIE.htc"); }
   .sport h2 {
     margin-top: 0px;
     margin-left: 20px;

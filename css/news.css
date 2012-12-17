@@ -85,8 +85,7 @@ img#talk_bubble {
   margin-left: 18px;
   margin-top: 10px;
   overflow: hidden;
-  z-index: 2;
-  /*behavior: url(/~alex/Harbinger2/pie/PIE.htc);*/ }
+  z-index: 2; }
   .article p {
     padding-top: 0;
     margin-top: 11px;
@@ -137,6 +136,13 @@ img#talk_bubble {
   margin-top: 165px;
   margin-left: 704px; }
 
+@media (max-width: 767px) {
+  body {
+    padding-right: 0px !important;
+    padding-left: 0px !important; } }
+@media all and (max-width: 980px) {
+  .navbar-inner .nav a:hover {
+    background-color: #4e784a !important; } }
 html, body {
   height: 100%;
   padding-top: 0px;
@@ -172,7 +178,7 @@ html, body {
   margin-top: 10px;
   padding-left: 5px; }
 
-#title {
+#footerTitle {
   font-size: 1.25em;
   margin-bottom: 5px;
   padding: 0;
@@ -211,9 +217,9 @@ html, body {
   padding-left: 6px;
   background: #466843; }
 
-#title a {
+#footerTitle a {
   text-decoration: none; }
-  #title a:hover {
+  #footerTitle a:hover {
     text-decoration: underline !important; }
 
 #installgcf {
@@ -224,3 +230,20 @@ html, body {
   position: relative;
   box-shadow: 0px 0px 4px 0px #3e3e3e;
   behavior: url("/harbingernews/pie/PIE.htc"); }
+
+.navbar-inner {
+  background-color: #466843 !important;
+  background-image: none !important;
+  border-bottom: 4px solid #629b62 !important; }
+  .navbar-inner a {
+    color: white !important;
+    text-shadow: 0px 1px 0px #717171 !important; }
+  .navbar-inner .active a {
+    background-color: #629b62 !important; }
+
+.brand a {
+  text-shadow: 0 1px 0 #ffffff !important; }
+
+.btn-navbar {
+  background-color: #3e5f3b !important;
+  background-image: none !important; }
