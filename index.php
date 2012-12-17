@@ -30,6 +30,10 @@
 		.article p {
 			color: black !important;
 		}
+		
+		.well img {
+			height: 84px;
+		}
 	
 	</style>
 	
@@ -159,13 +163,12 @@
 				</div> <!-- end "outerbox" -->
 			</div> <!-- end "container_box" -->
 		</div> <!-- end "news" -->
-		
+
 		<div class="container" id="important_stuff">
 			<div class="well">
 				<div class="alert"><i class="icon-warning-sign"></i> Yearbook prices go up to $125 on January 7th! Get yours now!</div>
 				<a href="http://www.yearbookforever.com/ssDeepLink.aspx
-?sid=1-23J-32132&dest=BAYB"><img src="http://www.walsworthyearbooks.com/images/
-schoolbanners/728x90-A.jpg" alt="Buy a Yearbook" style="display: block; margin: 0 auto;" /></a>
+?sid=1-23J-32132&dest=BAYB"><img src="img/728x90-A.png" alt="Buy a Yearbook" style="display: block; margin: 0 auto;" /></a>
 			</div>
 			<div class="row">
 				<div class="span8">
