@@ -120,64 +120,41 @@
 	
 				<div id="outerbox">
 					<div id="innerbox">
-					
 						<a href="stories/2012/december/keyclub.html"><div class="article">
 							<h3>Key Club</h3>
-						
 							<img src="stories/2012/december/keyclub.png" width="90%" style="margin-top: 15px" />
 							<p style="padding-top: 10px;">Find out more about HF's newest club!</p>					
 						</div></a>
 
-					
 						<a href="stories/2012/november/wots1.html" style="color: black;"><div class="article">
-							
 							<h3>Check out November's "Word on the Street!"</h3>
-							
 							<img src="stories/2012/october/wots.png" width="90%" style="margin-top: 15px;" />
 							<p style="padding-top: 10px">Come see what the school is saying this month!</p>
-						
-						
 						</div></a>
 					
 						<a href="stories/2012/october/wots1.html" style="color: black;"><div class="article">
-						
 							<h3>Check out "The Word on the Street!"</h3>
-							
 							<img src="stories/2012/october/wots.png" width="90%" style="margin-top: 15px;" />
 							<p style="padding-top: 10px;">Take a look at what's up at HF and listen to what your classmates have been saying!</p>
 						</div></a>
 					
 						<a href="stories/2012/september/manning-full.html" style="color: black;"><div id="manning" class="article">
-							
 							<h3>Meet Dr. Manning</h3>
-							
 							<img src="stories/2012/september/manning.jpg" alt="manning" width="170" height="230" />
-							
 							<p>Click here to learn more and read our interview with HF's new principal!</p>
-							
 						</div></a> <!-- end "manning" --> 
 												
 						<div class="article">
-						
 							<div class="empty_article">
-							
 								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
-							
 							</div>
-						
 						</div>
 						
 						<div class="article">
-						
 							<div class="empty_article">
-							
 								<a href="pages/getinvolved.html"><h2>Your article could appear here!</h2></a>
-							
 							</div>
-						
 						</div>
-						
-	
 					</div> <!-- end "innerbox" -->
 				</div> <!-- end "outerbox" -->
 			</div> <!-- end "container_box" -->
