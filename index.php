@@ -161,6 +161,9 @@
 		</div> <!-- end "news" -->
 		
 		<div class="container" id="important_stuff">
+			<div class="well">
+				<div class="alert"><i class="icon-warning-sign"></i> Yearbook prices go up to $125 on January 7th! Get yours now!</div>
+			</div>
 			<div class="row">
 				<div class="span8">
 					<div id="announcements">
