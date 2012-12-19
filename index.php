@@ -121,6 +121,14 @@ mysql_select_db("harbinger", $con);
 					
 					</div>
 				</div>
+				<div class="row-fluid" id="events">
+					<div class="span6" id="upcoming">
+						<h3><?php $result = mysql_query("SELECT name FROM homepage WHERE id='1'"); while($row = mysql_fetch_array($result)) {  echo $row['name']; } ?></h3>
+					</div>
+					<div class="span6" id="recent">
+						<h3><?php $result = mysql_query("SELECT name FROM homepage WHERE id='2'"); while($row = mysql_fetch_array($result)) {  echo $row['name']; } ?></h3>
+					</div>
+				</div>
 			</div>
 			<div class="well" id="sidebar">
 				<a href="http://www.yearbookforever.com/ssDeepLink.aspx?sid=1-23J-32132&dest=BAYB"><div id="yearbook">

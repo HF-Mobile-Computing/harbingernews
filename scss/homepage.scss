@@ -199,3 +199,28 @@ body {
 		}
 	}
 }
+
+#events {
+	margin: 0 auto;
+	margin: {
+		top: 10px;
+		bottom: 10px;
+	}
+	width: 90%;
+	h3 {
+		margin: {
+			bottom: 5px;
+			top: 5px;
+		}
+		text-align: center;
+	}
+	#upcoming {
+		background: {
+			color: #fffac1;
+		}
+		box-shadow: 1px 1px 6px rgba(0,0,0,0.68);
+	}
+	#recent {
+		box-shadow: 1px 1px 6px rgba(0,0,0,0.68);
+	}
+}

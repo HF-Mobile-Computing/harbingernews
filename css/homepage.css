@@ -233,3 +233,18 @@ body {
       box-shadow: 0px 1px 7px 1px black; }
   #postits #yearbook {
     background-color: #c51046 !important; }
+
+#events {
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%; }
+  #events h3 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center; }
+  #events #upcoming {
+    background-color: #fffac1;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.68); }
+  #events #recent {
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.68); }
