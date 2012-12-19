@@ -138,7 +138,7 @@ mysql_select_db("harbinger", $con);
 		
 		<div class="container">
 			<div class="pull-right" style="margin-top: 20px;">
-					This page was last updated by Alex LaFroscia on September 5, 2012.
+				<?php echo "This page was last updated on " . date ("F d Y.", getlastmod()); ?>
 			</div>
 		</div>
 		
