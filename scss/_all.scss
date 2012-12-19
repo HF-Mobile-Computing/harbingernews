@@ -42,6 +42,13 @@ html, body {
 		right: 0px;
 	}
 }
+	
+body {
+	@include backgroundNoise;
+	background: {
+		color: #f3f3f3 !important;
+	}
+}
 
 #content {
 	min-height: 100%;
