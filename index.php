@@ -214,5 +214,4 @@ $feed3->handle_content_type();
 	</div> <!-- end "footer" -->
 
 </body>
-<?php mysql_close($con); ?>
 </html>
