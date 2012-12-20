@@ -139,8 +139,9 @@ $feed3->handle_content_type();
 						<h4>Support LB Storm Clean-Up</h4>
 						<p>Buy a Secret Snowflake from Leadership</p>
 					</div>
-					<div class="span4">
-					
+					<div class="span4" id="playfest">
+						<h4>Join playfest!</h4>
+						<p>Contact your grade's government for more information about how you can get involved</p>
 					</div>
 				</div>
 				<div class="row-fluid" id="events">
@@ -194,6 +195,10 @@ $feed3->handle_content_type();
 				<div id="snowflake">
 					<h4>Support LB Storm Clean-Up</h4>
 					<p>Buy a Secret Snowflake from Leadership</p>
+				</div>
+				<div id="playfest">
+					<h4>Join playfest!</h4>
+					<p>Contact your grade's government for more information about how you can get involved</p>
 				</div>
 			</div>
 		</div>		
