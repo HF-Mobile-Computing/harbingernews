@@ -1,0 +1,83 @@
+@mixin backgroundTile($path, $position: center, $repeat: no-repeat) {
+	background: {
+		image: url($path) !important;
+		position: $position;
+		repeat: $repeat;
+	}
+}
+
+#baseball {
+	@include backgroundTile('/harbingernews/sports/baseball/background-tile.png');
+}
+
+#bbasketball {
+	@include backgroundTile('/harbingernews/sports/basketball/background-tile.png');
+}
+
+#bowling {
+	@include backgroundTile('/harbingernews/sports/bowling/background-tile.png');
+}
+
+#crosscountry {
+	@include backgroundTile('/harbingernews/sports/track/background-tile.png');
+}
+
+#gbasketball {
+	@include backgroundTile('/harbingernews/sports/basketball/background-tile.png');
+}
+
+#fieldhockey {
+	@include backgroundTile('/harbingernews/sports/field_hockey/background-tile.png');	
+}
+
+#golf {
+	@include backgroundTile('/harbingernews/sports/golf/background-tile.png');
+}
+
+#gymnastics {
+	@include backgroundTile('/harbingernews/sports/gymnastics/background-tile.png');
+}
+
+#football {
+	@include backgroundTile('/harbingernews/sports/football/background-tile.png');
+}
+
+#softball {
+	@include backgroundTile('/harbingernews/sports/softball/background-tile.png');
+}
+
+#bswimming {
+	@include backgroundTile('/harbingernews/sports/swimming/background-tile.png')
+}
+
+#gswimming {
+	@include backgroundTile('/harbingernews/sports/swimming/background-tile.png');
+}
+
+#btennis {
+	@include backgroundTile('/harbingernews/sports/tennis/background-tile.png');
+}
+
+#gtennis {
+	@include backgroundTile('/harbingernews/sports/tennis/background-tile.png');
+}
+
+#track {
+	@include backgroundTile('/harbingernews/sports/track/background-tile.png');
+}
+
+#volleyball {
+	@include backgroundTile('/harbingernews/sports/volleyball/background-tile.png');
+}
+
+#wrestling {
+	@include backgroundTile('/harbingernews/sports/wrestling/background-tile.png');
+}
+
+#bsoccer {
+	@include backgroundTile('/harbingernews/sports/soccer/background-tile.png');
+}
+
+#gsoccer {
+	@include backgroundTile('/harbingernews/sports/soccer/background-tile.png');
+}

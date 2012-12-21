@@ -1,0 +1,87 @@
+#center {
+  background-color: white;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-top: 5px; }
+
+.sport {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: block;
+  width: 98%;
+  float: right;
+  height: 170px;
+  background-color: red;
+  box-shadow: 1px 1px 4px black; }
+  .sport h2 {
+    margin-top: 0px;
+    margin-left: 20px;
+    padding-top: 0px;
+    color: white;
+    text-shadow: 2px 2px 2px black; }
+  .sport a:hover {
+    text-decoration: none;
+    color: #0a8420; }
+
+#baseball {
+  background-image: url("/harbingernews/sports/baseball/background-tile.png");
+  background-position: center; }
+
+#seasonsswitcher {
+  position: relative;
+  padding-top: 2px; }
+
+.affix {
+  position: fixed !important;
+  top: 0px;
+  background-color: white; }
+
+.nav-tabs {
+  z-index: 60; }
+  .nav-tabs .active a:hover {
+    background-color: white !important; }
+  .nav-tabs .active li:hover {
+    background-color: white !important; }
+  .nav-tabs #firsttab:hover a {
+    color: white !important;
+    outline-color: white !important;
+    background-color: white !important;
+    border-color: white !important; }
+  .nav-tabs #firsttab:hover li {
+    color: white !important;
+    outline-color: white !important;
+    background-color: white !important;
+    border-color: white !important; }
+  .nav-tabs a {
+    color: #416847; }
+    .nav-tabs a:hover {
+      background-color: #dddddd !important;
+      color: #629b63;
+      text-shadow: 1px 1px 3px white; }
+
+.inner .holder {
+  position: relative;
+  top: 10px;
+  margin: 0 auto;
+  width: 70%;
+  height: 120px;
+  display: none; }
+  .inner .holder h3 {
+    font-size: 2.1em;
+    color: #4ac362;
+    text-shadow: 2px 2px 2px black; }
+
+.tint {
+  background-color: rgba(255, 255, 255, 0.6); }
+
+.visible {
+  display: block !important; }
+
+#recent_events .well {
+  padding: 0px !important;
+  float: left;
+  width: 94% !important;
+  text-align: center; }
+  #recent_events .well h3 {
+    margin-top: 5px;
+    margin-bottom: 5px; }
