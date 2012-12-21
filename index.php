@@ -62,28 +62,6 @@ $feed3->handle_content_type();
 		});
 	</script>
 	
-	<?php
-	$starttime = explode(' ', microtime());
-	$starttime = $starttime[1] + $starttime[0];
-	include_once('autoloader.php');
-	include_once('idn/idna_convert.class.php');
-	$feed = new SimplePie();
-	$feed->set_feed_url('http://sites.google.com/site/harborfieldshs/home/posts.xml');
-	$feed->enable_cache(false);
-	$success = $feed->init();
-	$feed->handle_content_type();
-	$feed2 = new SimplePie();
-	$feed2->set_feed_url('http://hfrecent.blogspot.com/feeds/posts/default');
-	$feed2->enable_cache(false);
-	$success2 = $feed2->init();
-	$feed2->handle_content_type();
-	$feed3 = new SimplePie();
-	$feed3->set_feed_url('http://hfupcoming.blogspot.com/feeds/posts/default');
-	$feed3->enable_cache(false);
-	$success3 = $feed3->init();
-	$feed3->handle_content_type();
-	?>
-	
 	<!-- Google Analytics -->
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
