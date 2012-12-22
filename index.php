@@ -1,5 +1,6 @@
-<!DOCTYPE html>
 <?php
+session_start();
+include 'sessions.php';
 $starttime = explode(' ', microtime());
 $starttime = $starttime[1] + $starttime[0];
 include_once('autoloader.php');
@@ -20,6 +21,7 @@ $feed3->enable_cache(false);
 $success3 = $feed3->init();
 $feed3->handle_content_type();
 ?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -80,7 +82,7 @@ $feed3->handle_content_type();
 	
 	<div id="content">
 
-		<?php include('tools/header.shtml') ?>
+		<?php include('tools/header.php') ?>
 			
 		<div class="container" id="all">
 			<div class="container-fluid" id="stuff">

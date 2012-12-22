@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <div class="navbar navbar-static-top">
 	<div class="navbar-inner">
 		<div class="container">
@@ -14,6 +17,27 @@
 					<li id="nav_sports"><a href="/harbingernews/sports/index.html">Sports</a></li>
 					<li id="nav_clubs"><a href="/harbingernews/clubs/index.html">Clubs</a></li>
 				</ul>
+				<ul class="nav pull-right visible-desktop">
+					<?php 
+						if(isLoggedIn())
+						{	
+							echo "<li class=\"dropdown\">";
+							echo "<a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">";
+							echo $_SESSION['username'];
+							echo "<b class=\"caret\"></b>";
+							echo "</a>";
+							echo "<ul class=\"dropdown-menu\">";
+							echo "<li><a href=\"#\">Test.</a></li>";
+							echo "</ul>";
+							echo "</li>";
+						} else {
+							echo "test";
+						}
+					?>
+				</ul>
+				<div class="pull-right visible-desktop">
+					
+				</div>
 			</div>
 		</div>
 	</div>
