@@ -196,9 +196,19 @@ body {
 }
 
 .dropdown-menu li > a,
-.dropdown-sudmenu > a {
+.dropdown-submenu > a {
 	color: $darkGreen !important;
 	text-shadow: none !important;
+}
+
+.dropdown-menu {
+	li {
+		a {
+			&:focus {
+				outline: none !important;
+			}
+		}
+	}
 }
 
 .dropdown-menu li > a:hover,

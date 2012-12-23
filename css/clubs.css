@@ -120,9 +120,12 @@ body {
   background-color: #629b62 !important; }
 
 .dropdown-menu li > a,
-.dropdown-sudmenu > a {
+.dropdown-submenu > a {
   color: #466843 !important;
   text-shadow: none !important; }
+
+.dropdown-menu li a:focus {
+  outline: none !important; }
 
 .dropdown-menu li > a:hover,
 .dropdown-menu li > a:focus,
