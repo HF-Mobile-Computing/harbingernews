@@ -14,15 +14,6 @@
 			}
 		}
 	}
-	#header {
-		h1 {
-			margin: {
-				left: 0 !important;
-			}
-			text-align: center;
-			top: 60px !important;
-		}
-	}
 	#postits {
 		.span4 {
 			margin: {
@@ -33,12 +24,14 @@
 }
 
 // Phone
-@media all and (max-width: 480px) {
+@media all and (max-width: 517px) {
 	#header {
 		height: 140px !important;
 		min-height: 140px !important;
 		h1 {
+			margin-left: auto !important;
 			top: 22px !important;
+			text-align: center;
 		}
 	}
 }
@@ -207,6 +200,13 @@ body {
 	.chunk {
 		h2 {
 			display: none;
+		}
+		li {
+			font-size: 16px;
+			line-height: 18px;
+			padding: {
+				bottom: 6px;
+			}
 		}
 	}
 }
