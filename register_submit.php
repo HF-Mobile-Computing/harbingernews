@@ -24,6 +24,7 @@ $check = mysql_query($nameCheck);
 if(mysql_num_rows($check) > 0)
 {
 	echo "Sorry, that username has been taken already.  Please try a new username.";
+	mysql_close();
 } else {
 	$query = "INSERT INTO users ( username, password, salt) VALUES ('$username' , '$hash' , '$salt' );";
 	mysql_query($query);
