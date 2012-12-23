@@ -122,19 +122,16 @@ body {
     .navbar-static-top .navbar-inner {
       padding-right: 0px !important; }
 
-  #header h1 {
-    margin-left: 0 !important;
-    text-align: center;
-    top: 60px !important; }
-
   #postits .span4 {
     margin-bottom: 9px; } }
-@media all and (max-width: 480px) {
+@media all and (max-width: 517px) {
   #header {
     height: 140px !important;
     min-height: 140px !important; }
     #header h1 {
-      top: 22px !important; } }
+      margin-left: auto !important;
+      top: 22px !important;
+      text-align: center; } }
 @media all and (min-width: 1200px) {
   #sidebar {
     display: block !important;
@@ -241,6 +238,10 @@ body {
       clear: both; }
   #announcements .chunk h2 {
     display: none; }
+  #announcements .chunk li {
+    font-size: 16px;
+    line-height: 18px;
+    padding-bottom: 6px; }
 
 #postits {
   behavior: url("/harbingernews/pie/PIE.htc");
