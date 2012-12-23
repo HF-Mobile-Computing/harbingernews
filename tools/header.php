@@ -20,8 +20,8 @@ session_start();
 				<ul class="nav">
 					<li id="nav_home"><a href="/harbingernews/">Home</a></li>
 					<li id="nav_news"><a href="/harbingernews/news/">News</a></li>
-					<li id="nav_sports"><a href="/harbingernews/sports/index.html">Sports</a></li>
-					<li id="nav_clubs"><a href="/harbingernews/clubs/index.html">Clubs</a></li>
+					<li id="nav_sports"><a href="/harbingernews/sports/">Sports</a></li>
+					<li id="nav_clubs"><a href="/harbingernews/clubs/">Clubs</a></li>
 				</ul>
 				<ul class="nav pull-right visible-desktop">
 					<?php 
