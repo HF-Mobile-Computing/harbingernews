@@ -1,5 +1,32 @@
+@import "all";
+@import "sportstiles";
+// Adds in the sport tile backgrounds, which are in a separate file for organization's sake
+
+// Variables
 $darkGreen: #416847;
 $lightGreen: #629b63;
+
+// CSS for the mobile layout
+@media all and (max-width: 767px) {
+	.sport {
+		float: none !important;
+		margin: 0 auto !important;
+		margin: {
+			bottom: 10px !important;
+		}
+		width: 97% !important;
+	}
+	#seasonsswitcher {
+		width: 100% !important;
+	}
+}
+
+// Main CSS
+body {
+	background: {
+		color: #f3f3f3 !important;
+	}
+}
 
 #center {
 	background: {
@@ -11,6 +38,18 @@ $lightGreen: #629b63;
 	}
 	padding: {
 		top: 5px;
+	}
+	a {
+		color: #568e63 !important;
+		&:hover {
+			color: #487a54 !important;
+		}
+	}
+	.disabled {
+		a {
+			color: #aaaaaa !important;
+			text-shadow: 2px 2px 2px #616161;
+		}
 	}
 }
 
@@ -28,6 +67,7 @@ $lightGreen: #629b63;
 		color: red;
 	}
 	box-shadow: 1px 1px 4px black;
+	@include pie;
 	h2 {
 		margin: {
 			top: 0px;
@@ -44,13 +84,6 @@ $lightGreen: #629b63;
 			text-decoration: none;
 			color: #0a8420;
 		}
-	}
-}
-
-#baseball {
-	background: {
-		image: url('/harbingernews/sports/baseball/background-tile.png');
-		position: center;
 	}
 }
 
@@ -138,7 +171,7 @@ $lightGreen: #629b63;
 }
 
 .tint {
-	background-color: rgba(255,255,255,0.6);
+	background-color: rgba(255,255,255,0.7);
 }
 
 .visible {
