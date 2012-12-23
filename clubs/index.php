@@ -1,3 +1,7 @@
+<?php
+session_start();
+include '../sessions.php';
+?>
 <!DOCTYPE html>
 <html>
 
@@ -131,7 +135,7 @@
 
 	<div id="content">
 	
-		<!--#include virtual="/harbingernews/tools/header.shtml"-->
+		<?php include('../tools/header.php') ?>
 		
 		<div id="page" class="container">
 		
@@ -747,7 +751,7 @@ The club also attends workshops and conferences at area colleges that are design
 			
 	<div id="footer">
 	
-		<!--#include virtual="/harbingernews/tools/footer.shtml"-->
+		<?php include('../tools/footer.php') ?>
 		
 		<div class="container">
 			<div class="pull-right" style="margin-top: 20px;">

@@ -188,7 +188,7 @@ $feed3->handle_content_type();
 	
 	<div id="footer">
 	
-		<?php include('tools/footer.shtml') ?>
+		<?php include('tools/footer.php') ?>
 		
 		<div class="container">
 			<div class="pull-right" style="margin-top: 20px;">
