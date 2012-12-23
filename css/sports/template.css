@@ -114,6 +114,21 @@ body {
   background-color: #3e5f3b !important;
   background-image: none !important; }
 
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  background-color: #629b62 !important; }
+
+.dropdown-menu li > a,
+.dropdown-sudmenu > a {
+  color: #466843 !important;
+  text-shadow: none !important; }
+
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+  color: white !important; }
+
 @media all and (min-width: 980px) {
   #center {
     max-width: 852px !important; } }
