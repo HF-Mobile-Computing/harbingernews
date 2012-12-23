@@ -1,3 +1,7 @@
+<?php
+session_start();
+include('../sessions.php');
+?>
 <!DOCTYPE html>
 <html>
 
@@ -16,7 +20,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
 	
 	<link rel="stylesheet" href="/harbingernews/css/jquery.fancybox.css" type="text/css">
-	<link rel="stylesheet" href="/harbingernews/css/sports/sports.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/sports.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap-responsive.css" type="text/css">
 	
@@ -70,7 +74,7 @@
 
 	<div id="content">
 	
-		<!--#include virtual="/harbingernews/tools/header.shtml"-->
+		<?php include('../tools/header.php'); ?>
 		
 		<div class="container" id="center">
 		
@@ -413,8 +417,8 @@
 
 	<div id="footer">
 	
-		<!--#include virtual="/harbingernews/tools/footer.shtml" -->
-		
+		<?php include('../tools/footer.php'); ?>
+				
 		<div class="container" id="edited_by">
 			<div class="span6 offset6">
 				<span>Last edited by Alex LaFroscia on August 22, 2012.</span>
