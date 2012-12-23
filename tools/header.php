@@ -1,6 +1,12 @@
 <?php 
 session_start();
 ?>
+<script type="text/javascript">
+	function logOut() {
+    	$.get("/harbingenews/logout.php");
+    	return false;
+    }
+</script>
 <div class="navbar navbar-static-top">
 	<div class="navbar-inner">
 		<div class="container">
@@ -22,16 +28,24 @@ session_start();
 						if(isLoggedIn())
 						{	
 							echo "<li class=\"dropdown\">";
-							echo "<a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">";
-							echo $_SESSION['username'];
-							echo "<b class=\"caret\"></b>";
-							echo "</a>";
+							echo "<a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">" . $_SESSION['username'] . "<b class=\"caret\"></b></a>";
 							echo "<ul class=\"dropdown-menu\">";
 							echo "<li><a href=\"#\">Test.</a></li>";
+							echo "<li class=\"divider\"></li>";
+							echo "<li><a href=\"#\" onclick=\"logOut();\">Log Out</a></li>";
 							echo "</ul>";
 							echo "</li>";
 						} else {
-							echo "test";
+							$page = $_SERVER['PHP_SELF'];
+							echo "<li class=\"dropdown\">";
+							echo "<a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">Log In<b class=\"caret\"></b></a>";
+							echo "<div class=\"dropdown-menu\" style=\"padding: 15px; padding-bottom: 0px;\">";
+							echo "<form name=\"login\" action=\"/harbingernews/login_submit.php\" method=\"post\">";
+							echo "Username: <input type=\"text\" name=\"username\" /><br />";
+							echo "Password: <input type=\"password\" name=\"password\" /><br />";
+							echo "<input class=\"btn btn-primary\" style=\"clear: left; width: 100%; height: 32px; font-size: 13px;\" type=\"submit\" value=\"login\" />";
+							echo "</form";
+							echo "</div>";
 						}
 					?>
 				</ul>
