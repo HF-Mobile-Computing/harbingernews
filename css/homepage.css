@@ -132,6 +132,10 @@ body {
 .dropdown-submenu:hover > a {
   color: white !important; }
 
+.caret {
+  border-top-color: white !important;
+  border-bottom-color: white !important; }
+
 @media all and (max-width: 767px) {
   .navbar-static-top {
     margin-right: 0px !important;

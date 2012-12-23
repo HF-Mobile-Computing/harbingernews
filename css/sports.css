@@ -132,6 +132,10 @@ body {
 .dropdown-submenu:hover > a {
   color: white !important; }
 
+.caret {
+  border-top-color: white !important;
+  border-bottom-color: white !important; }
+
 #baseball {
   background-image: url("/harbingernews/sports/baseball/background-tile.png") !important;
   background-position: center;

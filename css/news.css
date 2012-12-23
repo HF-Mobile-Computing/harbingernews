@@ -269,3 +269,7 @@ body {
 .dropdown-menu li > a:focus,
 .dropdown-submenu:hover > a {
   color: white !important; }
+
+.caret {
+  border-top-color: white !important;
+  border-bottom-color: white !important; }

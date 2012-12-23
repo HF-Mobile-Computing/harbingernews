@@ -132,6 +132,10 @@ body {
 .dropdown-submenu:hover > a {
   color: white !important; }
 
+.caret {
+  border-top-color: white !important;
+  border-bottom-color: white !important; }
+
 @media all and (min-width: 980px) {
   #center {
     max-width: 852px !important; } }
