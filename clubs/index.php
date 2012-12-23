@@ -19,10 +19,10 @@ include '../sessions.php';
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 	
-	<link rel="stylesheet" href="/harbingernews/css/bootstrap.css" type="text/css">
-	<link rel="stylesheet" href="/harbingernews/css/bootstrap-responsive.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/clubs.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/bootstrap-responsive.css" type="text/css">
 	
 	<script src="/harbingernews/js/jquery-1.8.0.min.js"></script>
 	<script src="/harbingernews/js/bootstrap.js" type="text/javascript"></script>
@@ -40,83 +40,6 @@ include '../sessions.php';
 		});
 	
 	</script>
-	
-	<style type="text/css">
-	
-		@media (max-width: 480px) {
-			#page {
-				padding-left: 0px !important;
-				padding-right: 0px !important;
-			}
-		}
-	
-		.nav li a {
-			color: #629b63;
-			background: inherit;
-		}
-		
-		.nav li {
-			background: inherit;
-		}
-	
-		.nav li :hover {
-			background: #eeeeee !important;
-			color: #416847;
-		}
-		
-		.nav > .active > a {
-			background: white !important;
-		}
-		
-		.nav-collapse > .nav > .active > a {
-			background: #629b63 !important;
-		}
-	
-		#page {
-			margin-top: 10px;
-			background: white;
-			margin-bottom: 10px;
-			padding-top: 5px;
-			padding-left: 10px;
-			padding-right: 10px;
-		}
-				
-		.accordion-heading {
-			background: #ededed;
-		}
-		
-		.row {
-			padding-left: 10px;
-		}
-		
-		.club-bottom {
-			display: block;
-			background: white;
-			clear: both;
-			border-top: 1px solid #efefef;
-			padding-top: 5px;
-			padding-bottom: 5px;
-		}
-		
-		.image {
-			
-		}
-		
-		.description {
-			font-size: 1.15em;
-			display: block;
-			margin-right: 30px;
-		}
-		
-		.accordion-inner {
-			background: white;
-		}
-		
-		.accordion-group {
-			margin-bottom: 10px;
-		}
-		
-	</style>
 	
 	<script type="text/javascript">
 		var _gaq = _gaq || [];

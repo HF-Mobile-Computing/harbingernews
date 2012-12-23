@@ -135,3 +135,54 @@ body {
 .caret {
   border-top-color: white !important;
   border-bottom-color: white !important; }
+
+@media (max-width: 480px) {
+  #page padding {
+    left: 0px !important;
+    right: 0px !important; } }
+.nav > .active > a {
+  background: white !important; }
+
+.nav-collapse > .nav > .active > a {
+  background: #629b63 !important; }
+
+#page {
+  margin-top: 10px;
+  background: white;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px; }
+  #page .nav li {
+    background: inherit; }
+    #page .nav li:hover {
+      background: #eeeeee !important;
+      color: #416847; }
+    #page .nav li a {
+      color: #629b63;
+      background: inherit; }
+
+.accordion-heading {
+  background: #ededed; }
+
+.row {
+  padding-left: 10px; }
+
+.club-bottom {
+  display: block;
+  background: white;
+  clear: both;
+  border-top: 1px solid #efefef;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.description {
+  font-size: 1.15em;
+  display: block;
+  margin-right: 30px; }
+
+.accordion-inner {
+  background: white; }
+
+.accordion-group {
+  margin-bottom: 10px; }
