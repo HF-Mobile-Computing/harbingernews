@@ -1,29 +1,15 @@
 <?php
 session_start();
 include 'sessions.php';
-$starttime = explode(' ', microtime());
-$starttime = $starttime[1] + $starttime[0];
-include_once('autoloader.php');
-include_once('idn/idna_convert.class.php');
-$feed = new SimplePie();
-$feed->set_feed_url('http://sites.google.com/site/harborfieldshs/home/posts.xml');
-$feed->enable_cache(false);
-$success = $feed->init();
-$feed->handle_content_type();
-$feed2 = new SimplePie();
-$feed2->set_feed_url('http://hfrecent.blogspot.com/feeds/posts/default');
-$feed2->enable_cache(false);
-$success2 = $feed2->init();
-$feed2->handle_content_type();
-$feed3 = new SimplePie();
-$feed3->set_feed_url('http://hfupcoming.blogspot.com/feeds/posts/default');
-$feed3->enable_cache(false);
-$success3 = $feed3->init();
-$feed3->handle_content_type();
+$con = mysql_connect("127.0.0.1","root","laFr0scia");
+if (!$con)
+     {
+          die('Could Not Connect: ' . mysql_error());
+     }
+mysql_select_db("harbinger", $con);
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
 
 	<title>The Harbinger Online</title>
@@ -64,6 +50,28 @@ $feed3->handle_content_type();
 		});
 	</script>
 	
+	<?php
+	$starttime = explode(' ', microtime());
+	$starttime = $starttime[1] + $starttime[0];
+	include_once('autoloader.php');
+	include_once('idn/idna_convert.class.php');
+	$feed = new SimplePie();
+	$feed->set_feed_url('http://sites.google.com/site/harborfieldshs/home/posts.xml');
+	$feed->enable_cache(false);
+	$success = $feed->init();
+	$feed->handle_content_type();
+	$feed2 = new SimplePie();
+	$feed2->set_feed_url('http://hfrecent.blogspot.com/feeds/posts/default');
+	$feed2->enable_cache(false);
+	$success2 = $feed2->init();
+	$feed2->handle_content_type();
+	$feed3 = new SimplePie();
+	$feed3->set_feed_url('http://hfupcoming.blogspot.com/feeds/posts/default');
+	$feed3->enable_cache(false);
+	$success3 = $feed3->init();
+	$feed3->handle_content_type();
+	?>
+	
 	<!-- Google Analytics -->
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
@@ -82,7 +90,7 @@ $feed3->handle_content_type();
 	
 	<div id="content">
 
-		<?php include('tools/header.php') ?>
+		<?php include('tools/header.shtml') ?>
 			
 		<div class="container" id="all">
 			<div class="container-fluid" id="stuff">
@@ -93,78 +101,33 @@ $feed3->handle_content_type();
 				</div><!-- end header -->
 				<div class="row-fluid" id="announcements">
 					<h3>Today's Announcements</h3>
-					<?php
-						if ($feed->error())
-						{
-							echo '<div class="sp_errors">' . "\r\n";
-								echo '<p>' . htmlspecialchars($feed->error()) . "</p>\r\n";
-							echo '</div>' . "\r\n";
-						}
-					?>
-					<div id="sp_results">
-						<?php if ($success): ?>
-							<?php foreach($feed->get_items(0, 1) as $item): ?>
-								<div class="chunk">			
-									<?php echo $item->get_content(); ?>
-								</div><!-- end "chunk" -->
-							<?php endforeach; ?>
-						<?php endif; ?>
-					</div><!-- end "sp_results"-->
+					<div id="basic_info">
+						<span class="pull-left"><?php $result = mysql_query("SELECT date FROM announcements ORDER BY id DESC LIMIT 1"); while($row = mysql_fetch_array($result)) { echo $row['date']; } ?></span>
+						<span class="pull-right">Today is an <?php $result = mysql_query("SELECT a_or_b FROM announcements ORDER BY id DESC LIMIT 1"); while($row = mysql_fetch_array($result)) { echo $row['a_or_b']; } ?> Day</span>
+					</div>
+					<div id="bullets">
+						<ul class="clearfix">
+							<?php $result = mysql_query("SELECT announcements FROM announcements ORDER BY id DESC LIMIT 1"); while($row = mysql_fetch_array($result)) { echo $row['announcements']; } ?>
+						</ul>
+					</div>
 				</div>
 				<div class="row-fluid" id="postits">
 					<a href="http://www.yearbookforever.com/ssDeepLink.aspx?sid=1-23J-32132&dest=BAYB"><div class="span4" id="yearbook">
 						<img src="/harbingernews/img/ssDeepLink.png" alt="Buy a Yearbook" />
 					</div></a>
-					<div class="span4" id="snowflake">
-						<h4>Support LB Storm Clean-Up</h4>
-						<p>Buy a Secret Snowflake from Leadership</p>
+					<div class="span4">
+					
 					</div>
-					<div class="span4" id="playfest">
-						<h4>Join playfest!</h4>
-						<p>Contact your grade's government for more information about how you can get involved</p>
+					<div class="span4">
+					
 					</div>
 				</div>
 				<div class="row-fluid" id="events">
 					<div class="span6" id="upcoming">
-						<h3>Upcoming Events</h3>
-						<?php
-							if ($feed3->error())
-							{
-								echo '<div class="sp_errors">' . "\r\n";
-									echo '<p>' . htmlspecialchars($feed3->error()) . "</p>\r\n";
-								echo '</div>' . "\r\n";
-							}
-						?>
-						<div id="sp_results">
-							<?php if ($success3): ?>
-								<?php foreach($feed3->get_items(0, 1) as $item): ?>
-									<div class="chunk">			
-										<?php echo $item->get_content(); ?>
-									</div><!-- end "chunk" -->
-								<?php endforeach; ?>
-							<?php endif; ?>
-						</div><!-- end "sp_results"-->
-
+						<h3><?php $result = mysql_query("SELECT name FROM homepage WHERE id='1'"); while($row = mysql_fetch_array($result)) {  echo $row['name']; } ?></h3>
 					</div>
 					<div class="span6" id="recent">
-						<h3>Recent Events</h3>
-						<?php
-							if ($feed2->error())
-							{
-								echo '<div class="sp_errors">' . "\r\n";
-									echo '<p>' . htmlspecialchars($feed->error()) . "</p>\r\n";
-								echo '</div>' . "\r\n";
-							}
-						?>
-						<div id="sp_results">
-							<?php if ($success2): ?>
-								<?php foreach($feed2->get_items(0, 1) as $item): ?>
-									<div class="chunk">			
-										<?php echo $item->get_content(); ?>
-									</div><!-- end "chunk" -->
-								<?php endforeach; ?>
-							<?php endif; ?>
-						</div><!-- end "sp_results"-->
+						<h3><?php $result = mysql_query("SELECT name FROM homepage WHERE id='2'"); while($row = mysql_fetch_array($result)) {  echo $row['name']; } ?></h3>
 					</div>
 				</div>
 			</div>
@@ -172,14 +135,6 @@ $feed3->handle_content_type();
 				<a href="http://www.yearbookforever.com/ssDeepLink.aspx?sid=1-23J-32132&dest=BAYB"><div id="yearbook">
 					<img src="/harbingernews/img/ssDeepLink.png" alt="Buy a Yearbook" />
 				</div></a>
-				<div id="snowflake">
-					<h4>Support LB Storm Clean-Up</h4>
-					<p>Buy a Secret Snowflake from Leadership</p>
-				</div>
-				<div id="playfest">
-					<h4>Join playfest!</h4>
-					<p>Contact your grade's government for more information about how you can get involved</p>
-				</div>
 			</div>
 		</div>		
 		<div id="footer_spacer"></div>
@@ -188,7 +143,7 @@ $feed3->handle_content_type();
 	
 	<div id="footer">
 	
-		<?php include('tools/footer.php') ?>
+		<?php include('tools/footer.shtml') ?>
 		
 		<div class="container">
 			<div class="pull-right" style="margin-top: 20px;">
@@ -199,4 +154,5 @@ $feed3->handle_content_type();
 	</div> <!-- end "footer" -->
 
 </body>
+<?php mysql_close($con); ?>
 </html>
