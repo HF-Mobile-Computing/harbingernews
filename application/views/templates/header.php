@@ -1,6 +1,3 @@
-<?php 
-session_start();
-?>
 <script type="text/javascript">
 	function logOut() {
     	$.get("/harbingenews/logout.php");

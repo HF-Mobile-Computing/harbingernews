@@ -1,4 +1,5 @@
 <?php
+session_start();
 function validateUser()
 {
 	session_regenerate_id ();

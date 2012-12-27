@@ -113,7 +113,7 @@ $feed3->handle_content_type();
 				</div>
 				<div class="row-fluid" id="postits">
 					<a href="http://www.yearbookforever.com/ssDeepLink.aspx?sid=1-23J-32132&dest=BAYB"><div class="span4" id="yearbook">
-						<img src="/harbingernews/img/ssDeepLink.png" alt="Buy a Yearbook" />
+						<img src="<?php echo base_url(); ?>assets/img/ssDeepLink.png" alt="Buy a Yearbook" />
 					</div></a>
 					<div class="span4" id="snowflake">
 						<h4>Support LB Storm Clean-Up</h4>
@@ -170,7 +170,7 @@ $feed3->handle_content_type();
 			</div>
 			<div class="well" id="sidebar">
 				<a href="http://www.yearbookforever.com/ssDeepLink.aspx?sid=1-23J-32132&dest=BAYB"><div id="yearbook">
-					<img src="/harbingernews/img/ssDeepLink.png" alt="Buy a Yearbook" />
+					<img src="<?php echo base_url(); ?>assets/img/ssDeepLink.png" alt="Buy a Yearbook" />
 				</div></a>
 				<div id="snowflake">
 					<h4>Support LB Storm Clean-Up</h4>
