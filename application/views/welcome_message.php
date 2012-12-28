@@ -78,12 +78,12 @@ mysql_select_db("harbinger", $con);
 				<div class="row-fluid" id="announcements">
 					<h3>Today's Announcements</h3>
 					<div id="basic_info">
-						<span class="pull-left"><?php $result = mysql_query("SELECT date FROM announcements ORDER BY id DESC LIMIT 1"); while($row = mysql_fetch_array($result)) { echo $row['date']; } ?></span>
-						<span class="pull-right">Today is an <?php $result = mysql_query("SELECT a_or_b FROM announcements ORDER BY id DESC LIMIT 1"); while($row = mysql_fetch_array($result)) { echo $row['a_or_b']; } ?> Day</span>
+						<span class="pull-left"><?php echo $date; ?></span>
+						<span class="pull-right">Today is an <?php echo $a_or_b; ?> Day</span>
 					</div>
 					<div id="bullets">
 						<ul class="clearfix">
-							<?php $result = mysql_query("SELECT announcements FROM announcements ORDER BY id DESC LIMIT 1"); while($row = mysql_fetch_array($result)) { echo $row['announcements']; } ?>
+							<?php echo $announcements; ?>
 						</ul>
 					</div>
 				</div>
@@ -102,10 +102,12 @@ mysql_select_db("harbinger", $con);
 				</div>
 				<div class="row-fluid" id="events">
 					<div class="span6" id="upcoming">
-						<h3><?php echo $upcomingName ?></h3>
+						<h3><?php echo $upcomingName; ?></h3>
+						<?php echo $upcomingContent; ?>
 					</div>
 					<div class="span6" id="recent">
 						<h3><?php echo $recentName; ?></h3>
+						<?php echo $recentContent; ?>
 					</div>
 				</div>
 			</div>

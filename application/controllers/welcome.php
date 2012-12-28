@@ -14,6 +14,9 @@ class Welcome extends CI_Controller {
 		$data['upcomingContent'] = $this->homepage_model->upcomingContent();
 		$data['recentName'] = $this->homepage_model->recentName();
 		$data['recentContent'] = $this->homepage_model->recentContent();
+		$data['date'] = $this->homepage_model->getDate();
+		$data['a_or_b'] = $this->homepage_model->getAorB();
+		$data['announcements'] = $this->homepage_model->getAnnouncements();
 						
 		$this->load->view('templates/sessions');
 		$this->load->helper('url');
