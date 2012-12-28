@@ -102,7 +102,7 @@ mysql_select_db("harbinger", $con);
 				</div>
 				<div class="row-fluid" id="events">
 					<div class="span6" id="upcoming">
-						<h3><?php echo $upcomingName; ?></h3>
+						<h3><?php echo $upcomingName ?></h3>
 					</div>
 					<div class="span6" id="recent">
 						<h3><?php echo $recentName; ?></h3>

@@ -2,15 +2,19 @@
 
 class Welcome extends CI_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('homepage_model');
+	}
+
 	public function index()
 	{
-		$this->load->database();
-		$sql = "SELECT ? FROM homepage WHERE id = ?";
-		$data['upcomingName'] = $this->db->query($sql, array('name', 1));
-		$data['upcomingContent'] = $this->db->query($sql, array('content', 1));
-		$data['recentName'] = $this->db->query($sql, array('name', 2));
-		$data['recentContent'] = $this->db->query($sql, array('content', 2));
-				
+		$data['upcomingName'] = $this->homepage_model->upcomingName();
+		$data['upcomingContent'] = $this->homepage_model->upcomingContent();
+		$data['recentName'] = $this->homepage_model->recentName();
+		$data['recentContent'] = $this->homepage_model->recentContent();
+						
 		$this->load->view('templates/sessions');
 		$this->load->helper('url');
 		$this->load->view('welcome_message', $data);
