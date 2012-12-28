@@ -274,6 +274,8 @@ body {
 }
 
 #events {
+	$bottomPadding: 10px;
+	text-align: justify;
 	margin: 0 auto;
 	margin: {
 		top: 13px;
@@ -287,15 +289,24 @@ body {
 		}
 		text-align: center;
 	}
+	li {
+		padding: {
+			left: 10px;
+		}
+	}
 	#upcoming {
 		background: {
 			color: #fffac1;
 		}
 		box-shadow: 1px 1px 6px rgba(0,0,0,0.68);
-		text-align: center;
+		padding: {
+			bottom: $bottomPadding;
+		}
 	}
 	#recent {
 		box-shadow: 1px 1px 6px rgba(0,0,0,0.68);
-		text-align: center;
+		padding: {
+			bottom: $bottomPadding;
+		}
 	}
 }

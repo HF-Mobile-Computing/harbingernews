@@ -306,6 +306,7 @@ body {
       width: 90%; }
 
 #events {
+  text-align: justify;
   margin: 0 auto;
   margin-top: 13px;
   margin-bottom: 10px;
@@ -314,10 +315,12 @@ body {
     margin-bottom: 5px;
     margin-top: 5px;
     text-align: center; }
+  #events li {
+    padding-left: 10px; }
   #events #upcoming {
     background-color: #fffac1;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.68);
-    text-align: center; }
+    padding-bottom: 10px; }
   #events #recent {
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.68);
-    text-align: center; }
+    padding-bottom: 10px; }
