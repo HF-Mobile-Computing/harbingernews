@@ -15,7 +15,10 @@ class Sports extends CI_Controller {
 	
 		$this->load->view('templates/sessions');
 		$this->load->helper('url');
+		$this->load->view('sports/index_head');
+		$this->load->view('templates/header');
 		$this->load->view('sports/index', $data);
+		$this->load->view('templates/footer');
 	}
 	
 	public function view($slug)
@@ -31,7 +34,10 @@ class Sports extends CI_Controller {
 		
 		$this->load->view('templates/sessions');
 		$this->load->helper('url');
+		$this->load->view('sports/view_head.php');
+		$this->load->view('templates/header.php');
 		$this->load->view('sports/view', $data);
+		$this->load->view('templates/footer.php');
 	}
 	
 }

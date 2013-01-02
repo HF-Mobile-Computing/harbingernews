@@ -21,6 +21,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('templates/sessions');
 		$this->load->helper('url');
 		$this->load->view('welcome_message', $data);
+		$this->load->view('templates/footer.php');
 	}
 }
 

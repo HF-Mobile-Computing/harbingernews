@@ -117,22 +117,3 @@
 				</div>
 			</div>
 		</div>		
-		<div id="footer_spacer"></div>
-		
-	</div><!-- end "content"-->
-	
-	<div id="footer">
-	
-		<?php include('templates/footer.php') ?>
-		
-		<div class="container">
-			<div class="pull-right" style="margin-top: 20px;">
-				<?php echo "This page was last updated on " . date ("F d Y.", getlastmod()); ?>
-			</div>
-		</div>
-		
-	</div> <!-- end "footer" -->
-
-</body>
-<?php mysql_close($con); ?>
-</html>

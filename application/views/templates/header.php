@@ -46,9 +46,6 @@
 						}
 					?>
 				</ul>
-				<div class="pull-right visible-desktop">
-					
-				</div>
 			</div>
 		</div>
 	</div>
