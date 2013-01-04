@@ -41,6 +41,9 @@ $feed3->handle_content_type();
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap-responsive.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/homepage.css" type="text/css">
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" href="/harbingernews/css/homepage_ie.css" type="text/css">
+	<![endif]-->
 	
 	<script src="js/jquery-1.8.0.min.js"></script>
 	<script src="js/bootstrap.js" type="text/javascript"></script>

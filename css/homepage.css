@@ -244,12 +244,12 @@ body {
     padding-bottom: 6px; }
 
 #postits {
-  behavior: url("/harbingernews/pie/PIE.htc");
   margin: 0 auto;
   margin-top: 12px;
   margin-bottom: 10px;
   width: 89% !important; }
   #postits .span4 {
+    behavior: url("/harbingernews/pie/PIE.htc");
     background-color: red;
     border-radius: 15px;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.8);
@@ -262,8 +262,10 @@ body {
     #postits .span4:hover {
       box-shadow: 0px 1px 7px 1px black; }
   #postits #yearbook {
+    behavior: url("/harbingernews/pie/PIE.htc");
     background-color: #c51046 !important; }
   #postits #snowflake {
+    behavior: url("/harbingernews/pie/PIE.htc");
     background-color: #286cff !important;
     color: white; }
     #postits #snowflake p {
@@ -277,6 +279,7 @@ body {
       margin: 0 auto;
       width: 80%; }
   #postits #playfest {
+    behavior: url("/harbingernews/pie/PIE.htc");
     color: white;
     background-color: #319358 !important; }
     #postits #playfest p {
@@ -293,9 +296,11 @@ body {
     margin-top: 5px;
     text-align: center; }
   #events #upcoming {
+    behavior: url("/harbingernews/pie/PIE.htc");
     background-color: #fffac1;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.68);
     text-align: center; }
   #events #recent {
+    background-color: #ffffff;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.68);
     text-align: center; }

@@ -1,0 +1,14 @@
+#postits {
+	.span4 {
+		behavior: url('/harbingernews/PIE/pie.htc');
+	}
+}
+
+#events {
+	#recent {
+		behavior: url('/harbingernews/PIE/pie.htc');
+		background: {
+			color: #ffffff !important;
+		}
+	}
+}
