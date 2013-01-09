@@ -17,8 +17,8 @@ class Welcome extends CI_Controller {
 		$data['date'] = $this->homepage_model->getDate();
 		$data['a_or_b'] = $this->homepage_model->getAorB();
 		$data['announcements'] = $this->homepage_model->getAnnouncements();
+		$data['username'] = $this->ion_auth->users()->row()->username;
 						
-		$this->load->view('templates/sessions');
 		$this->load->helper('url');
 		$this->load->view('welcome_message', $data);
 		$this->load->view('templates/footer.php');

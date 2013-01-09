@@ -1,6 +1,6 @@
 <script type="text/javascript">
 	function logOut() {
-    	$.get("/harbingenews/logout.php");
+    	$.get("/harbingenews/index.php/auth/logout");
     	return false;
     }
 </script>
@@ -21,11 +21,12 @@
 					<li id="nav_clubs"><a href="/harbingernews/clubs/">Clubs</a></li>
 				</ul>
 				<ul class="nav pull-right visible-desktop">
-					<?php 
-						if(isLoggedIn())
+					<?php
+						$user = $this->ion_auth->user()->row();
+						if($this->ion_auth->logged_in())
 						{	
 							echo "<li class=\"dropdown\">";
-							echo "<a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">" . $_SESSION['username'] . "<b class=\"caret\"></b></a>";
+							echo "<a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">" . $username . "<b class=\"caret\"></b></a>";
 							echo "<ul class=\"dropdown-menu\">";
 							echo "<li><a href=\"#\">Test.</a></li>";
 							echo "<li class=\"divider\"></li>";
