@@ -33,6 +33,10 @@
 							echo "<li><a href=\"#\" onclick=\"logOut();\">Log Out</a></li>";
 							echo "</ul>";
 							echo "</li>";
+							if($this->ion_auth->is_admin())
+							{
+								echo "<li><a href=\"#\">Test</a></li>";
+							}
 						} else {
 							$page = $_SERVER['PHP_SELF'];
 							echo "<li class=\"dropdown\">";
