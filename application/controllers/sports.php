@@ -12,11 +12,12 @@ class Sports extends CI_Controller {
 	{
 		$data['sports'] = $this->sports_model->get_sports();
 		$data['title'] = 'Sports';
+		$data['username'] = $this->ion_auth->users()->row()->username;
 	
 		$this->load->view('templates/sessions');
 		$this->load->helper('url');
 		$this->load->view('sports/index_head');
-		$this->load->view('templates/header');
+		$this->load->view('templates/header', $data);
 		$this->load->view('sports/index', $data);
 		$this->load->view('templates/footer');
 	}
@@ -31,11 +32,12 @@ class Sports extends CI_Controller {
 		}
 		
 		$data['title'] = $data['sports_item']['title'];
+		$data['username'] = $this->ion_auth->users()->row()->username;
 		
 		$this->load->view('templates/sessions');
 		$this->load->helper('url');
 		$this->load->view('sports/view_head.php');
-		$this->load->view('templates/header.php');
+		$this->load->view('templates/header.php', $data);
 		$this->load->view('sports/view', $data);
 		$this->load->view('templates/footer.php');
 	}
