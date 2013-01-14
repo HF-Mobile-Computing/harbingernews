@@ -36,7 +36,7 @@ class Sports extends CI_Controller {
 		
 		$this->load->view('templates/sessions');
 		$this->load->helper('url');
-		$this->load->view('sports/view_head.php');
+		$this->load->view('sports/view_head.php', $data);
 		$this->load->view('templates/header.php', $data);
 		$this->load->view('sports/view', $data);
 		$this->load->view('templates/footer.php');

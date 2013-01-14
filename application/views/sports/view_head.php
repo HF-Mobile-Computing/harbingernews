@@ -3,7 +3,7 @@
 
 <head>
 
-	<title>Template</title>
+	<title>HF Sports | <?php echo $sports_item['title']; ?></title>
 	
 	<!-- enable webapp on iPhone -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -43,7 +43,12 @@
 		})();
 	</script>
 	<script src="<?php echo base_url(); ?>assets/js/jquery.fancybox.js" type="text/javascript"></script>
-</head>
+	<style type="text/css">
+		#title {
+			background-image: url(<?php echo base_url() . $sports_item['photo_path']; ?>) !important;
+		}
+	</style>
+</head>	
 
 <body>
 
