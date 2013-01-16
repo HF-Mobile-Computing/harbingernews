@@ -24,19 +24,18 @@
 								</div>
 							</div>
 							<?php foreach ($sports as $sports_item): ?>
-							<div class="sport">
+							<div class="sport" style="background-image: url(<?php echo base_url() . $sports_item['photo_path']; ?>);">
 								<div class="inner">
 							  		<h2><?php echo $sports_item['title'] ?></h2>
 						  			<div class="holder">
 						  				<div class="pull-left">
-											<h3 class="disabled"><a href="#">Varsity</a></h3>
+											<h3><a href="<?php echo base_url() . 'index.php/sports/view/' . $sports_item['slug'] ?>">Varsity</a></h3>
 										</div>
 										<div class="pull-right">
 											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
 										</div>
 									</div>
 								</div>
-								<p><a href="news/<?php echo $sports_item['slug'] ?>">View article</a></p>
 							</div>
 							<?php endforeach ?>
 														
