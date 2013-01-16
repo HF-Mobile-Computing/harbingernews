@@ -1,6 +1,14 @@
 #postits {
 	.span4 {
-		behavior: url('/harbingernews/PIE/pie.htc');
+		behavior: none !important;
+		box-shadow: none !important;
+		border-radius: none !important;
+		border: 1px solid #111111;
+		&:hover {
+			behavior: none !important;
+			box-shadow: none !important;
+			border-radius: none !important;
+		}
 	}
 }
 
@@ -10,5 +18,12 @@
 		background: {
 			color: #ffffff !important;
 		}
+		box-shadow: none !important;
+		border: 1px solid #111111;
+	}
+	#upcoming {
+		behavior: url('/harbingenews/PIE/pie.htc');
+		box-shadow: none !important;
+		border: 1px solid #111111;
 	}
 }
