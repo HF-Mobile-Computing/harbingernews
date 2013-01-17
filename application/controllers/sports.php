@@ -10,7 +10,9 @@ class Sports extends CI_Controller {
 	
 	public function index()
 	{
-		$data['sports'] = $this->sports_model->get_sports();
+		$data['winter'] = $this->sports_model->get_list('winter');
+		$data['fall'] = $this->sports_model->get_list('fall');
+		$data['spring'] = $this->sports_model->get_list('spring');
 		$data['title'] = 'Sports';
 		$data['username'] = $this->ion_auth->users()->row()->username;
 	

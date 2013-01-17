@@ -19,6 +19,12 @@ class Sports_model extends CI_Model {
 		
 	}
 	
+	public function get_list($season)
+	{
+		$query = $this->db->get_where('sports', array('season' => $season));
+		return $query->result_array();
+	}
+	
 }
 
 ?>
