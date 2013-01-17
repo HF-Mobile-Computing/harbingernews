@@ -10,19 +10,6 @@
 				<div class="span8">
 					<div class="tab-content">
 						<div class="tab-pane" id="fall">
-							<div class="sport" id="cheerleading">
-								<div class="inner">
-									<h2>Cheerleading</h2>
-									<div class="holder">
-										<div class="pull-left">
-											<h3 class="disabled"><a href="#">Varsity</a></h3>
-										</div>
-										<div class="pull-right">
-											<h3 class="disabled"><a href="#">Junior Varisty</a></h3>
-										</div>
-									</div>
-								</div>
-							</div>
 							<?php foreach ($sports as $sports_item): ?>
 							<div class="sport" style="background-image: url(<?php echo base_url() . $sports_item['photo_path']; ?>);">
 								<div class="inner">
