@@ -112,6 +112,12 @@ class Auth extends CI_Controller {
 		$this->session->set_flashdata('message', $this->ion_auth->messages());
 		redirect('auth/login', 'refresh');
 	}
+	
+	//quick logout (used to by the logout button in the header)
+	function quicklogout()
+	{
+		$this->ion_auth->logout();
+	}
 
 	//change password
 	function change_password()

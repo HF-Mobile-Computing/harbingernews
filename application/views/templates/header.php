@@ -1,9 +1,3 @@
-<script type="text/javascript">
-	function logOut() {
-    	$.get("/harbingenews/index.php/auth/logout");
-    	return false;
-    }
-</script>
 <div class="navbar navbar-static-top">
 	<div class="navbar-inner">
 		<div class="container">
@@ -30,7 +24,7 @@
 							echo "<ul class=\"dropdown-menu\">";
 							echo "<li><a href=\"#\">Test.</a></li>";
 							echo "<li class=\"divider\"></li>";
-							echo "<li><a href=\"#\" onclick=\"logOut();\">Log Out</a></li>";
+							echo "<li class=\"logout\"><a href=\"#\">Log Out</a></li>";
 							echo "</ul>";
 							echo "</li>";
 							if($this->ion_auth->is_admin())
@@ -55,3 +49,20 @@
 		</div>
 	</div>
 </div>
+<!-- <?php echo base_url() . 'index.php/auth/quicklogout'; ?> -->
+<script type="text/javascript">
+	$(function(){
+		$('.logout').click(function(e) {
+			e.preventDefault();
+			$.ajax({
+				type: "POST",
+				url: '<?php echo base_url() . 'index.php/auth/quicklogout'; ?>',
+				data: "",
+				dataType: 'json',
+				success: function() {
+					location.reload();
+				}
+			})
+	    });
+	});
+</script>
