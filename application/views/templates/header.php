@@ -36,11 +36,17 @@
 							echo "<li class=\"dropdown\">";
 							echo "<a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">Log In<b class=\"caret\"></b></a>";
 							echo "<div class=\"dropdown-menu\" style=\"padding: 15px; padding-bottom: 0px;\">";
-							echo "<form name=\"login\" action=\"/harbingernews/login_submit.php\" method=\"post\">";
-							echo "Username: <input type=\"text\" name=\"username\" /><br />";
-							echo "Password: <input type=\"password\" name=\"password\" /><br />";
-							echo "<input class=\"btn btn-primary\" style=\"clear: left; width: 100%; height: 32px; font-size: 13px;\" type=\"submit\" value=\"login\" />";
-							echo "</form";
+							echo form_open("auth/quicklogin");
+							echo '<p>';
+							echo '<label for="identity">Email/Username:</label>';
+							echo form_input('identity');
+							echo '</p>';
+							echo '<p>';
+							echo '<label for="password">Password:</label>';
+							echo form_input('password');
+							echo '</p>';
+							echo '<p>' . form_submit('submit', 'Login') . '</p>';
+							echo form_close();
 							echo "</div>";
 						}
 					?>
