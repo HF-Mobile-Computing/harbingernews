@@ -22,7 +22,6 @@
 	
 	<script src="<?php echo base_url(); ?>assets/js/jquery-1.8.0.min.js"></script>
 	<script src="<?php echo base_url(); ?>assets/js/bootstrap.js" type="text/javascript"></script>
-	<script src="<?php echo base_url(); ?>assest/js/jquery.news_stories.js" type="text/javascript"></script>
 	<script src="<?php echo base_url(); ?>assets/js/jquery.fancybox.pack.js" type="text/javascript"></script>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
