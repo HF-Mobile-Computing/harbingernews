@@ -26,7 +26,7 @@
 						if($this->ion_auth->logged_in())
 						{	
 							echo "<li class=\"dropdown\">";
-							echo "<a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">" . $username . "<b class=\"caret\"></b></a>";
+							echo "<a class=\"dropdown-toggle\" href=\"#\" data-toggle=\"dropdown\">" . $user->username . "<b class=\"caret\"></b></a>";
 							echo "<ul class=\"dropdown-menu\">";
 							echo "<li><a href=\"#\">Test.</a></li>";
 							echo "<li class=\"divider\"></li>";
