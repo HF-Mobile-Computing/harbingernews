@@ -9,10 +9,10 @@
 			<a class="brand" href="/harbingernews/">The Harbinger Online</a>
 			<div class="nav-collapse">
 				<ul class="nav">
-					<li id="nav_home"><a href="/harbingernews/">Home</a></li>
-					<li id="nav_news"><a href="/harbingernews/news/">News</a></li>
-					<li id="nav_sports"><a href="/harbingernews/sports/">Sports</a></li>
-					<li id="nav_clubs"><a href="/harbingernews/clubs/">Clubs</a></li>
+					<li id="nav_home"><a href="<?php echo base_url(); ?>">Home</a></li>
+					<li id="nav_news"><a href="<?php echo base_url() . 'index.php/news'; ?>">News</a></li>
+					<li id="nav_sports"><a href="<?php echo base_url() . 'index.php/sports'; ?>">Sports</a></li>
+					<li id="nav_clubs"><a href="<?php echo base_url() . 'index.php/clubs'; ?>">Clubs</a></li>
 				</ul>
 				<ul class="nav pull-right visible-desktop">
 					<?php
