@@ -1,0 +1,110 @@
+<div class="navbar navbar-static-top" style = "border-bottom: #629b63;">
+    <div class = "navbar-inner">
+    	<div class = "container">
+        	<ul class = "nav pull-left">
+            	<li class="dropdown" id="menu1"><!-- Starts the "Arts" dropdown menu-->
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    	Arts
+                    	<b class="caret"></b>
+                    	</a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                        	<li><a href="../Art Club/template.html">Art</a></li>
+                        	<li><a href="../Harbinger/template.html">Harbinger</a></li>
+                        	<li><a href="../HTco/template.html">HTco</a></li>
+                        	<li><a href="../Jazz band/template.html">Jazz Band</a></li>
+                            <li><a href="../Marching band/template.html">Marching Band</a></li>
+                        	<li><a href="../Music appreciation/template.html">Music Appreciation</a></li>
+                        	<li><a href="../NAHS/template.html">NAHS</a></li>
+                        	<li><a href="../Playfest/template.html">Playfest</a></li>
+                            <li><a href="../Tri-M/template.html">Tri-M</a></li>
+                        	<li><a href="../Zephyr/template.html">Zephyr</a></li>
+                	</ul>
+                </li><!--Ends dropdown menu-->
+
+            </ul>
+            <ul class = "nav pull-left">
+                <li class="dropdown" id="menu2"><!-- Starts the "Academics" dropdown menu-->
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Academic
+                    <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                        <li><a href="../Academic Team/template.html">Academic Club</a></li>
+                        <li><a href="../Deca/template.html">DECA</a></li>
+                        <li><a href="../Future Educators club/template.html">Future Educators Club</a></li>
+                        <li><a href="../Mathletes/template.html">Mathletes</a></li>
+                        <li><a href="../Mock Trial/template.html">Mock Trial</a></li>
+                        <li><a href="../NHS/template.html">NHS</a></li>
+                    </ul>
+                </li><!--Ends dropdown menu-->
+
+            </ul>
+            <ul class = "nav pull-left">
+                <li class="dropdown" id="menu3"><!-- Starts the "Community Service" dropdown menu-->
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Community Service
+                    <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                        <li><a href="../Community Outreach Club/template.html">Community Outreach</a></li>
+                        <li><a href="../Global Justice/template.html">Global Justice</a></li>
+                        <li><a href="../Habitat/template.html">Habitat for Humanity</a></li>
+                        <li><a href="../Interact/template.html">Interact</a></li>
+                        <li><a href="../SHOC/template.html">SHOC</a></li>
+                    </ul>
+                </li><!--Ends dropdown menu-->
+
+            </ul>
+            <ul class = "nav pull-left">
+                <li class="dropdown" id="menu4"><!-- Starts the "Cultural" dropdown menu-->
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Cultural
+                    <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu;">
+                        <li><a href="../Caribbean Club/template.html">Caribbean Club</a></li>
+                        <li><a href="../French Club/template.html">French Club</a></li>
+                        <li><a href="../Italian Club/template.html">Italian Club</a></li>
+                        <li><a href="../Model UN/template.html">Model UN</a></li>
+                        <li><a href="../Council for Multicultural Unity/template.html">Multi-Cultural Club</a></li>
+                        <li><a href="../Spanish Club/template.html">Spanish Club</a></li>
+                    </ul>
+                </li><!--Ends dropdown menu-->
+
+            </ul>
+            <ul class = "nav pull-left">
+                <li class="dropdown" id="menu5"><!-- Starts the "Sciences" dropdown menu-->
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Sciences
+                    <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                        <li><a href="../Environmental Club/template.html">Environmental Club</a></li>
+                        <li><a href="../Forensics Club/template.html">Forensics Club</a></li>
+                        <li><a href="../Engineering and Science Club/template.html">Science and Engineering</a></li>
+                        <li><a href="../Technology Club/template.html">Technology Club</a></li>
+                    </ul>
+                </li><!--Ends dropdown menu-->
+
+            </ul>
+            <ul class = "nav pull-left">
+                <li class="dropdown" id="menu6"><!-- Starts the "Student Services" dropdown menu-->
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Student Services
+                    <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                        <li><a href="../Athletes Helping Athletes/template.html">Athletes Helping Athletes</a></li>
+                        <li><a href="../Best Buddies/template.html">Best Buddies</a></li>
+                        <li><a href="../GSA/template.html">Gay/Straight Alliance</a></li>
+                        <li><a href="../SADD/template.html">SADD</a></li>
+                        <li><a href="../Student Gov/template.html">Student Government</a></li>
+                    </ul>
+                </li><!--Ends final dropdown menu-->
+            </ul>
+            <div style = "display:none;"
+		    </div>
+	    </div>
+    </div>
+</div>
+</div>
