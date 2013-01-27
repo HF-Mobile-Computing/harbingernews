@@ -23,9 +23,6 @@
 		}
 				
 		#reminders {
-			background: red;
-			color: black;
-			margin-bottom: 10px;
 			margin-top: 10px;
 		}
 		
@@ -104,9 +101,10 @@
 			<div class="row">
 				<div class="span8" id="reminders" style = "display:none;">
 				
-					<h4 style="text-align: center;">Important Reminders</h4>
-								
-					<p>Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+					<div class="alert alert-error">
+  						<button type="button" class="close" data-dismiss="alert">&times;</button>
+  						<h3>Important!</h3>
+					</div>
 				
 				</div>
 				<div id="upcoming_events" style = "right:5%; position:absolute; width: 20%;">
