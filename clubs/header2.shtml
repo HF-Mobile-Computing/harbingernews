@@ -1,3 +1,8 @@
+<!--
+Row of club dropdown menus to go underneath the Harbinger header.  Requires the base page to have Bootstrap enabled. Server Side Includes must also be enabled.
+Add by putting '#include virtual="/harbingernews/clubs/header2.shtml"' in comment tags without the ''. Must go under the main header #include. 
+-->
+
 <div class="navbar navbar-static-top" style = "border-bottom: #629b63;">
     <div class = "navbar-inner">
     	<div class = "container">
@@ -102,9 +107,6 @@
                     </ul>
                 </li><!--Ends final dropdown menu-->
             </ul>
-            <div style = "display:none;"
-		    </div>
-	    </div>
+        </div>
     </div>
-</div>
 </div>
