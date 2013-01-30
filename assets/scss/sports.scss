@@ -63,11 +63,11 @@ body {
 	float: right;
 	// max-width = 852px
 	height: 170px;
-	background: {
+	/* background: {
 		color: red;
-	}
+	} */
 	box-shadow: 1px 1px 4px black;
-	@include pie;
+	// @include pie;
 	h2 {
 		margin: {
 			top: 0px;
@@ -85,6 +85,10 @@ body {
 			color: #0a8420;
 		}
 	}
+}
+
+.span8 {
+	overflow: visible !important;
 }
 
 #seasonsswitcher {

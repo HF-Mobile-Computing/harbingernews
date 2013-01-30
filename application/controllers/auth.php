@@ -102,6 +102,7 @@ class Auth extends CI_Controller {
 	
 	// log the user in (used by login tab in the header)
 	function quicklogin() {
+		$this->load->helper('form');
 		$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
 		$this->form_validation->set_rules('identity', 'Identity', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');

@@ -38,12 +38,12 @@
 							echo "<div class=\"dropdown-menu\" style=\"padding: 15px; padding-bottom: 0px;\">";
 							echo form_open("auth/quicklogin");
 							echo '<p>';
-							echo '<label for="identity">Email/Username:</label>';
+							echo '<label for="identity">Email:</label>';
 							echo form_input('identity');
 							echo '</p>';
 							echo '<p>';
 							echo '<label for="password">Password:</label>';
-							echo form_input('password');
+							echo form_password('password');
 							echo '</p>';
 							echo '<p>' . form_submit('submit', 'Login') . '</p>';
 							echo form_close();

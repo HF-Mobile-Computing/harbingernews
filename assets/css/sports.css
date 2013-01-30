@@ -108,7 +108,7 @@ body {
     background-color: #629b62 !important; }
 
 .brand a {
-  text-shadow: 0 1px 0 #ffffff !important; }
+  text-shadow: 0 1px 0 white !important; }
 
 .btn-navbar {
   background-color: #3e5f3b !important;
@@ -263,9 +263,10 @@ body {
   width: 98%;
   float: right;
   height: 170px;
-  background-color: red;
-  box-shadow: 1px 1px 4px black;
-  behavior: url("/harbingernews/pie/PIE.htc"); }
+  /* background: {
+  	color: red;
+  } */
+  box-shadow: 1px 1px 4px black; }
   .sport h2 {
     margin-top: 0px;
     margin-left: 20px;
@@ -275,6 +276,9 @@ body {
   .sport a:hover {
     text-decoration: none;
     color: #0a8420; }
+
+.span8 {
+  overflow: visible !important; }
 
 #seasonsswitcher {
   position: relative;
