@@ -94,7 +94,7 @@
 		}
 		h4 {
 			margin: {
-				bottom: 23px;
+				bottom: 15px;
 			}
 			position: relative;
 			top: 10px;
@@ -271,6 +271,12 @@ body {
 		background: {
 			color: #319358 !important;
 		}
+		h4 {
+			margin: {
+				top: 5px !important;
+				bottom: 5px !important;
+			}
+		}
 		p {
 			margin: 0 auto;
 			width: 90%
@@ -306,5 +312,14 @@ body {
 		}
 		box-shadow: 1px 1px 6px rgba(0,0,0,0.68);
 		text-align: center;
+	}
+}
+
+.chunk {
+	table {
+		margin: 0 auto !important;
+	}
+	td {
+		width: inherit !important;
 	}
 }

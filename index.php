@@ -121,8 +121,8 @@ $feed3->handle_content_type();
 						<p>Buy a Secret Snowflake from Leadership</p>
 					</div>
 					<div class="span4" id="playfest">
-						<h4>Join playfest!</h4>
-						<p>Contact your grade's government for more information about how you can get involved</p>
+						<h4>Instrument donations</h4>
+						<p>If you have an old band instrument that you no longer use, why not give it to someone that needs it? See Ms. Scilla for details</p>
 					</div>
 				</div>
 				<div class="row-fluid" id="events">
@@ -178,8 +178,8 @@ $feed3->handle_content_type();
 					<p>Buy a Secret Snowflake from Leadership</p>
 				</div>
 				<div id="playfest">
-					<h4>Join playfest!</h4>
-					<p>Contact your grade's government for more information about how you can get involved</p>
+					<h4>Instrument donations</h4>
+					<p>If you have an old band instrument that you no longer use, why not give it to someone that needs it? See Ms. Scilla for details</p>
 				</div>
 			</div>
 		</div>		

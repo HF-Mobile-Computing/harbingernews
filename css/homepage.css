@@ -173,7 +173,7 @@ body {
     color: white;
     background-color: #319358 !important; }
     #playfest h4 {
-      margin-bottom: 23px;
+      margin-bottom: 15px;
       position: relative;
       top: 10px; }
     #playfest p {
@@ -283,6 +283,9 @@ body {
     behavior: url("/harbingernews/pie/PIE.htc");
     color: white;
     background-color: #319358 !important; }
+    #postits #playfest h4 {
+      margin-top: 5px !important;
+      margin-bottom: 5px !important; }
     #postits #playfest p {
       margin: 0 auto;
       width: 90%; }
@@ -305,3 +308,8 @@ body {
     background-color: #ffffff;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.68);
     text-align: center; }
+
+.chunk table {
+  margin: 0 auto !important; }
+.chunk td {
+  width: inherit !important; }
