@@ -105,8 +105,10 @@ body {
   .navbar-inner a {
     color: white !important;
     text-shadow: 0px 1px 0px #717171 !important; }
+    .navbar-inner a:hover {
+      background-color: #4a683e !important; }
   .navbar-inner .active a {
-    background-color: #629b62 !important; }
+    background-color: #639c63 !important; }
 
 .brand a {
   text-shadow: 0 1px 0 white !important; }

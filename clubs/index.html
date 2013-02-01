@@ -55,14 +55,15 @@
 			background: inherit;
 		}
 	
-		.nav li :hover {
+		/* Not sure why this was made white. It should be green. */
+		/* .nav li :hover {
 			background: #eeeeee !important;
 			color: #416847;
 		}
 		
 		.nav > .active > a {
 			background: white !important;
-		}
+		} */
 		
 		.nav-collapse > .nav > .active > a {
 			background: #629b63 !important;
@@ -100,6 +101,18 @@
   			-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
 			-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
   			box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18); 
+  		}
+  		
+  		.navbar li.dropbown {
+	  		background-image: none !important;
+  		}
+  		
+  		.navbar li.dropdown.open {
+	  		background-color: #4a683e !important;
+  		}
+  		
+  		.navbar li.dropdown.open > .dropdown-toggle {
+	  		background-color: #4a683e !important;
   		}
 	</style>
 	
@@ -233,8 +246,8 @@
 			<div>
 				<div  id = "announcements"> <!--Begins announcements part of the page-->
 					<h1>Club Announcements</h1>
-					<div class = "row">
-						<div class = "span8 offset1" style = "font-size:15px; margin-right: 0px;">
+					<div class = "row-fluid">
+						<div class = "span11 offset1" style = "font-size:15px; margin-right: 0px;">
 							<ul>
 								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia scelerisque eros nec viverra. Phasellus vehicula est consectetur arcu convallis viverra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras a leo facilisis elit vulputate dignissim non auctor nisl. Cras blandit vehicula nisl, non feugiat sem venenatis eget. Vivamus lectus sapien, sodales id sagittis sit amet, placerat nec dolor. Nunc sapien mauris, consequat nec tincidunt id, mattis sed odio. Aliquam erat volutpat.</li>
 								<li>Donec laoreet accumsan justo, non fermentum orci dictum sit amet. Nam euismod nisi eget nunc sagittis hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi vel erat id massa dapibus fermentum. Nullam dignissim nulla vitae justo sollicitudin vel varius neque placerat. In feugiat nulla ac nulla laoreet interdum.</li>
