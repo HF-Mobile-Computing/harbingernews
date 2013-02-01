@@ -94,8 +94,8 @@
 </head>
 <body>
 	<div id = "content" style ="">
-		<!--#include virtual="/harbingernews/tools/header.shtml"-->
-		<!--#include virtual="/harbingernews/clubs/header2.shtml"-->
+		<?php include('/harbingernews/tools/header.shtml') ?>
+		<?php include('/harbingernews/clubs/header2.shtml') ?>
 		
 		<div id="info" class="container">
 			<div class="row">
