@@ -164,7 +164,7 @@ cans and bottles recycling program at the high school.
 	</div><!-- end "content" -->
 	
 	<div id="footer">
-		<!--#include virtual="/harbingernews/tools/footer.shtml"-->
+		<?php include('../../tools/footer.shtml') ?>
 		
 		<div class="container">
 			<div class="pull-right" style="margin-top: 20px;">

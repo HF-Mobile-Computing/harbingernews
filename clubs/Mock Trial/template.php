@@ -157,7 +157,7 @@ join and in the past, some of the best participants have been 9th graders.
 	</div><!-- end "content" -->
 	
 	<div id="footer">
-		<!--#include virtual="/harbingernews/tools/footer.shtml"-->
+		<?php include('../../tools/footer.shtml') ?>
 		
 		<div class="container">
 			<div class="pull-right" style="margin-top: 20px;">
