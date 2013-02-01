@@ -13,16 +13,16 @@ Add by putting '#include virtual="/harbingernews/clubs/header2.shtml"' in commen
                     	<b class="caret"></b>
                     	</a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                        	<li><a href="../Art Club/template.html">Art</a></li>
-                        	<li><a href="../Harbinger/template.html">Harbinger</a></li>
-                        	<li><a href="../HTco/template.html">HTco</a></li>
-                        	<li><a href="../Jazz band/template.html">Jazz Band</a></li>
-                            <li><a href="../Marching band/template.html">Marching Band</a></li>
-                        	<li><a href="../Music appreciation/template.html">Music Appreciation</a></li>
-                        	<li><a href="../NAHS/template.html">NAHS</a></li>
-                        	<li><a href="../Playfest/template.html">Playfest</a></li>
-                            <li><a href="../Tri-M/template.html">Tri-M</a></li>
-                        	<li><a href="../Zephyr/template.html">Zephyr</a></li>
+                        	<li><a href="../Art Club/template.php">Art</a></li>
+                        	<li><a href="../Harbinger/template.php">Harbinger</a></li>
+                        	<li><a href="../HTco/template.php">HTco</a></li>
+                        	<li><a href="../Jazz band/template.php">Jazz Band</a></li>
+                            <li><a href="../Marching band/template.php">Marching Band</a></li>
+                        	<li><a href="../Music appreciation/template.php">Music Appreciation</a></li>
+                        	<li><a href="../NAHS/template.php">NAHS</a></li>
+                        	<li><a href="../Playfest/template.php">Playfest</a></li>
+                            <li><a href="../Tri-M/template.php">Tri-M</a></li>
+                        	<li><a href="../Zephyr/template.php">Zephyr</a></li>
                 	</ul>
                 </li><!--Ends dropdown menu-->
 
@@ -34,12 +34,12 @@ Add by putting '#include virtual="/harbingernews/clubs/header2.shtml"' in commen
                     <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                        <li><a href="../Academic Team/template.html">Academic Club</a></li>
-                        <li><a href="../Deca/template.html">DECA</a></li>
-                        <li><a href="../Future Educators club/template.html">Future Educators Club</a></li>
-                        <li><a href="../Mathletes/template.html">Mathletes</a></li>
-                        <li><a href="../Mock Trial/template.html">Mock Trial</a></li>
-                        <li><a href="../NHS/template.html">NHS</a></li>
+                        <li><a href="../Academic Team/template.php">Academic Club</a></li>
+                        <li><a href="../Deca/template.php">DECA</a></li>
+                        <li><a href="../Future Educators club/template.php">Future Educators Club</a></li>
+                        <li><a href="../Mathletes/template.php">Mathletes</a></li>
+                        <li><a href="../Mock Trial/template.php">Mock Trial</a></li>
+                        <li><a href="../NHS/template.php">NHS</a></li>
                     </ul>
                 </li><!--Ends dropdown menu-->
 
@@ -51,11 +51,11 @@ Add by putting '#include virtual="/harbingernews/clubs/header2.shtml"' in commen
                     <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                        <li><a href="../Community Outreach Club/template.html">Community Outreach</a></li>
-                        <li><a href="../Global Justice/template.html">Global Justice</a></li>
-                        <li><a href="../Habitat/template.html">Habitat for Humanity</a></li>
-                        <li><a href="../Interact/template.html">Interact</a></li>
-                        <li><a href="../SHOC/template.html">SHOC</a></li>
+                        <li><a href="../Community Outreach Club/template.php">Community Outreach</a></li>
+                        <li><a href="../Global Justice/template.php">Global Justice</a></li>
+                        <li><a href="../Habitat/template.php">Habitat for Humanity</a></li>
+                        <li><a href="../Interact/template.php">Interact</a></li>
+                        <li><a href="../SHOC/template.php">SHOC</a></li>
                     </ul>
                 </li><!--Ends dropdown menu-->
 
@@ -67,12 +67,12 @@ Add by putting '#include virtual="/harbingernews/clubs/header2.shtml"' in commen
                     <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu;">
-                        <li><a href="../Caribbean Club/template.html">Caribbean Club</a></li>
-                        <li><a href="../French Club/template.html">French Club</a></li>
-                        <li><a href="../Italian Club/template.html">Italian Club</a></li>
-                        <li><a href="../Model UN/template.html">Model UN</a></li>
-                        <li><a href="../Council for Multicultural Unity/template.html">Multi-Cultural Club</a></li>
-                        <li><a href="../Spanish Club/template.html">Spanish Club</a></li>
+                        <li><a href="../Caribbean Club/template.php">Caribbean Club</a></li>
+                        <li><a href="../French Club/template.php">French Club</a></li>
+                        <li><a href="../Italian Club/template.php">Italian Club</a></li>
+                        <li><a href="../Model UN/template.php">Model UN</a></li>
+                        <li><a href="../Council for Multicultural Unity/template.php">Multi-Cultural Club</a></li>
+                        <li><a href="../Spanish Club/template.php">Spanish Club</a></li>
                     </ul>
                 </li><!--Ends dropdown menu-->
 
@@ -84,10 +84,10 @@ Add by putting '#include virtual="/harbingernews/clubs/header2.shtml"' in commen
                     <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                        <li><a href="../Environmental Club/template.html">Environmental Club</a></li>
-                        <li><a href="../Forensics Club/template.html">Forensics Club</a></li>
-                        <li><a href="../Engineering and Science Club/template.html">Science and Engineering</a></li>
-                        <li><a href="../Technology Club/template.html">Technology Club</a></li>
+                        <li><a href="../Environmental Club/template.php">Environmental Club</a></li>
+                        <li><a href="../Forensics Club/template.php">Forensics Club</a></li>
+                        <li><a href="../Engineering and Science Club/template.php">Science and Engineering</a></li>
+                        <li><a href="../Technology Club/template.php">Technology Club</a></li>
                     </ul>
                 </li><!--Ends dropdown menu-->
 
@@ -99,11 +99,11 @@ Add by putting '#include virtual="/harbingernews/clubs/header2.shtml"' in commen
                     <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                        <li><a href="../Athletes Helping Athletes/template.html">Athletes Helping Athletes</a></li>
-                        <li><a href="../Best Buddies/template.html">Best Buddies</a></li>
-                        <li><a href="../GSA/template.html">Gay/Straight Alliance</a></li>
-                        <li><a href="../SADD/template.html">SADD</a></li>
-                        <li><a href="../Student Gov/template.html">Student Government</a></li>
+                        <li><a href="../Athletes Helping Athletes/template.php">Athletes Helping Athletes</a></li>
+                        <li><a href="../Best Buddies/template.php">Best Buddies</a></li>
+                        <li><a href="../GSA/template.php">Gay/Straight Alliance</a></li>
+                        <li><a href="../SADD/template.php">SADD</a></li>
+                        <li><a href="../Student Gov/template.php">Student Government</a></li>
                     </ul>
                 </li><!--Ends final dropdown menu-->
             </ul>
