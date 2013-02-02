@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap-responsive.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/all.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/clubs.css" type="text/css">
 
 	<script type="text/javascript" src="/harbingernews/js/jquery-1.8.0.min.js"></script>
 	<script type="text/javascript" src="/harbingernews/js/bootstrap.min.js"></script>
