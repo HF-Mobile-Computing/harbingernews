@@ -104,6 +104,7 @@ Add by putting '#include virtual="/harbingernews/clubs/header2.shtml"' in commen
                         <li><a href="../GSA/template.php">Gay/Straight Alliance</a></li>
                         <li><a href="../SADD/template.php">SADD</a></li>
                         <li><a href="../Student Gov/template.php">Student Government</a></li>
+                        <li><a href="../Tri-Fit/template.php">Tri-Fit</a></li>
                     </ul>
                 </li><!--Ends final dropdown menu-->
             </ul>

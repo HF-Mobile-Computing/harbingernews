@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap-responsive.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/all.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/clubs.css" type="text/css">
 
 	<script type="text/javascript" src="/harbingernews/js/jquery-1.8.0.min.js"></script>
 	<script type="text/javascript" src="/harbingernews/js/bootstrap.min.js"></script>
@@ -65,14 +66,10 @@
 			background: inherit;
 		}
 	
-		.nav li :hover {
-			background: #eeeeee !important;
-			color: #416847;
+		
 		}
 		
-		.nav > .active > a {
-			background: white !important;
-		}
+		
 		
 		.nav-collapse > .nav > .active > a {
 			background: #629b63 !important;
@@ -116,7 +113,7 @@
 					</div>
 				
 				</div>
-				<div id="upcoming_events" style = "right:5%; position:absolute; width: 20%; display: none;">
+				<div id="upcoming_events" style = "display: none;">
 					<h4>Upcoming Events</h4>
 					<ul>
 						<li>Event One</li>
@@ -164,7 +161,7 @@
 		<?php include('../../tools/footer.shtml') ?>
 		
 		<div class="container">
-			<div class="pull-right" style="margin-top: 20px;">
+			<div class="pull-right">
 					This page was last updated by Brian Kelley on January 12, 2013.
 			</div>
 		</div>

@@ -8,88 +8,12 @@
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/bootstrap-responsive.css" type="text/css">
 	<link rel="stylesheet" href="/harbingernews/css/all.css" type="text/css">
+	<link rel="stylesheet" href="/harbingernews/css/clubs.css" type="text/css">
 
 	<script type="text/javascript" src="/harbingernews/js/jquery-1.8.0.min.js"></script>
 	<script type="text/javascript" src="/harbingernews/js/bootstrap.min.js"></script>
 		
-	<style type="text/css">
 	
-		#page_title {
-			display: block;
-			background: white;
-			height: 70px;
-			margin-top: 10px;
-			padding-top: 5px;
-		}
-				
-		#reminders {
-			margin-top: 10px;
-		}
-		
-		#reminders p {
-			
-		}
-		
-		#upcoming_events {
-			background: rgb(70,104,67);
-			margin-bottom: 10px;
-			margin-top: 10px;
-			border-style: outset;
-			border-width: medium;
-			border-color: #629b63;
-			color: white;
-		}
-		
-		#upcoming_events h4 {
-			text-align: center;
-		}
-
-				
-		#photos {
-			background: green;
-		}
-		
-		#photo_holder {
-			background: grey;
-			height: 120px;
-			text-align: center;
-			margin-bottom: 10px;
-		}
-		.nav li a {
-			color: #629b63;
-			background: inherit;
-		}
-		
-		.nav li {
-			background: inherit;
-		}
-	
-		.nav li :hover {
-			background: #eeeeee !important;
-			color: #416847;
-		}
-		
-		.nav > .active > a {
-			background: white !important;
-		}
-		
-		.nav-collapse > .nav > .active > a {
-			background: #629b63 !important;
-		}
-		.nav ul li a {
-			background-color: white !important;
-			color: #629b63 !important;
-		}
-		.about {
-			width: 70%; 
-			background-color: white; 
-			box-shadow: 0px 2px 2px 0px; 
-			padding: 5px 10px 5px 10px; 
-			margin-top: 10px; 
-			float: left;
-		}
-	
-	</style>
 	
 </head>
 <body>
@@ -107,7 +31,7 @@
 					</div>
 				
 				</div>
-				<div id="upcoming_events" style = "right:5%; position:absolute; width: 20%; display: none;">
+				<div id="upcoming_events" style = "display: none;">
 					<h4>Upcoming Events</h4>
 					<ul>
 						<li>Event One</li>
@@ -165,7 +89,7 @@ leadership and service. The Tri-M meets on the second Monday of each month.
 		<?php include('../../tools/footer.shtml') ?>
 		
 		<div class="container">
-			<div class="pull-right" style="margin-top: 20px;">
+			<div class="pull-right">
 					This page was last updated by Alex LaFroscia on September 10, 2012.
 			</div>
 		</div>
