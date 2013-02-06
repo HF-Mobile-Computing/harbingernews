@@ -12,6 +12,7 @@ class Admin extends CI_Controller {
 		$this->load->view('templates/sessions');
 		$this->load->helper('url');
 		$this->load->view('admin/index');
+		$this->load->view('templates/footer');
 	}
 		
 }

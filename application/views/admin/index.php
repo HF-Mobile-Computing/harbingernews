@@ -18,9 +18,7 @@
 	
 	<script src="<?php echo base_url(); ?>assets/js/jquery-1.8.0.min.js"></script>
 	<script src="<?php echo base_url(); ?>assets/js/bootstrap.js" type="text/javascript"></script>
-	<script src="<?php echo base_url(); ?>assets/js/jquery.fancybox.pack.js" type="text/javascript"></script>
-	<script src="<?php echo base_url(); ?>assets/js/jquery-ui-1.9.1.custom.min.js" type="text/javascript"></script>
-		
+			
 	<!-- Google Analytics -->
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
@@ -32,11 +30,15 @@
 	    	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	    })();
 	</script>
-	
-
 
 </head>
 <body>
 	<?php $this->load->view('templates/header'); ?>
-</body>
-</html>
+	
+	<div id="content">
+	
+		<div class="container" id="stuff">
+			
+			
+			
+		</div>
