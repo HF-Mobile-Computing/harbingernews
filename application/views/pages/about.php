@@ -36,9 +36,23 @@
 	<?php $this->load->view('templates/header'); ?>
 	
 	<div id="content">
-	
-		<div class="container" id="stuff">
-			
-			
-			
+		<div class="container" id="page">
+			<div class="row-fluid">
+				<div class="span12">
+					<h1>About the Harbinger Online</h1>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span12">
+					<h2 id="thesite">About the Site</h2>
+					<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span12">
+					<h2 id="theteam">About the Team</h2>
+					<p>Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus.</p>
+				</div>
+			</div><!-- end "row" -->
 		</div>
