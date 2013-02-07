@@ -22,16 +22,52 @@ class Admin extends CI_Controller {
 		}
 	}
 	
-	public function homepage()
+	public function add_announcement()
 	{
 		if($this->ion_auth->is_admin())
 		{
 			$this->load->view('templates/sessions');
 			$this->load->helper('url');
-			$this->load->view('admin/homepage');
+			$this->load->view('admin/add_announcements');
 			$this->load->view('templates/footer');
 			if( $this->input->post('submit') ) {
 				$this->admin_model->add_announcement();
+			}
+		} else {
+			redirect('/', 'refresh');
+		}
+	}
+	
+	public function add_upcoming()
+	{
+		if($this->ion_auth->is_admin())
+		{
+			$data['title'] = 'Add Upcoming Event';
+			$data['name'] = 'add_upcoming';
+			$this->load->view('templates/sessions');
+			$this->load->helper('url');
+			$this->load->view('admin/add_to_homepage',$data);
+			$this->load->view('templates/footer');
+			if( $this->input->post('submit') ) {
+				$this->admin_model->add_to_homepage('Upcoming Events');
+			}
+		} else {
+			redirect('/', 'refresh');
+		}
+	}
+	
+	public function add_recent()
+	{
+		if($this->ion_auth->is_admin())
+		{
+			$data['title'] = 'Add Recent Events';
+			$data['name'] = 'add_recent';
+			$this->load->view('templates/sessions');
+			$this->load->helper('url');
+			$this->load->view('admin/add_to_homepage',$data);
+			$this->load->view('templates/footer');
+			if( $this->input->post('submit') ) {
+				$this->admin_model->add_to_homepage('Recent Events');
 			}
 		} else {
 			redirect('/', 'refresh');

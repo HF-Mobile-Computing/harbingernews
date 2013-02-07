@@ -1,7 +1,7 @@
 <html>
 <head>
 
-	<title>Admin</title>
+	<title>Homepage | <?php echo $title; ?></title>
 	
 	<!-- enable webapp on iPhone -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -12,12 +12,24 @@
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 	
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery.fancybox.css" type="text/css">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/admin_home.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/admin_homepage.css" type="text/css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.css" type="text/css">
 	
 	<script src="<?php echo base_url(); ?>assets/js/jquery-1.8.0.min.js"></script>
 	<script src="<?php echo base_url(); ?>assets/js/bootstrap.js" type="text/javascript"></script>
+	
+	<!-- markitup -->
+	<script src="<?php echo base_url(); ?>assets/markitup/jquery.markitup.js" type="text/javascript"></script>
+	<script src="<?php echo base_url(); ?>assets/markitup/sets/default/set.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/markitup/skins/markitup/style.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/markitup/sets/default/style.css" type="text/css">
+	<script type="text/javascript">
+		$(function(){
+			$('textarea').markItUp(mySettings);
+			
+		});
+	</script>
 			
 	<!-- Google Analytics -->
 	<script type="text/javascript">
@@ -34,26 +46,20 @@
 </head>
 <body>
 	<?php $this->load->view('templates/header'); ?>
-	
 	<div id="content">
+		
 		<div class="container" id="everything">
-			<div id="header">
+			<div id="announcements">
 				<div class="row-fluid">
-					<div class="span12">
-						<h1>Edit the Harbinger! <small>What do you want to change?</small></h1>
+					<div class="span9">
+						<h1><?php echo $title; ?></h1>
+						<?php echo form_open('admin/' . $name); ?>
+							<fieldset>
+								<textarea name="content"></textarea><br />
+								<button type="submit" name="submit" value="Submit" class="btn pull-right">Submit</button>
+							</fieldset>
+						<?php echo form_close(); ?>
 					</div>
 				</div>
-			</div>
-			<div id="homepage">
-				<div class="row-fluid" id="homepage">
-					<div class="span12">
-						<h2>Homepage</h2>
-						<ul>
-							<li><a href="<?php echo base_url() . 'index.php/admin/add_announcement'; ?>">Add Announcement</a></li>
-							<li><a href="<?php echo base_url() . 'index.php/admin/add_upcoming'; ?>">Add Upcoming Events</a></li>
-							<li><a href="<?php echo base_url() . 'index.php/admin/add_recent'; ?>">Add Recent Events</a></li>
-						</ul>
-					</div>
-				</div>
-			</div><!-- end "homepage" -->
-		</div>
+			</div><!-- end "announcements" -->
+		</div><!-- end "everything" -->

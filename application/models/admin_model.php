@@ -21,9 +21,15 @@ class Admin_model extends CI_Model {
 		$this->db->insert('announcements',$data);
 	}
 	
-	public function add_post()
+	public function add_to_homepage($name)
 	{
-		
+		$id = $this->input->post('id');
+		$content = $this->input->post('content');
+		$data = array(
+			'content' => $content,
+		);
+		$this->db->where('name', $name);
+		$this->db->update('homepage', $data);
 	}
 }
 
