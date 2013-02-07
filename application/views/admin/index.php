@@ -1,7 +1,7 @@
 <html>
 <head>
 
-	<title>Admin</title>
+	<title>Admin Console</title>
 	
 	<!-- enable webapp on iPhone -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,15 +52,37 @@
 			</div>
 			<div id="homepage">
 				<div class="row-fluid" id="homepage">
-					<div class="span3">
-						<h2>Homepage</h2>
-						<ul>
-							<li><a href="<?php echo base_url() . 'index.php/admin/add_announcement'; ?>">Add Announcement</a></li>
-							<li><a href="<?php echo base_url() . 'index.php/admin/add_upcoming'; ?>">Add Upcoming Events</a></li>
-							<li><a href="<?php echo base_url() . 'index.php/admin/add_recent'; ?>">Add Recent Events</a></li>
-						</ul>
+					<div class="span9">
+						<div class="row-fluid">
+							<div class="span12">
+								<h2>Homepage</h2>
+								<ul>
+									<li><a href="<?php echo base_url() . 'index.php/admin/add_announcement'; ?>">Add Announcement</a></li>
+									<li><a href="<?php echo base_url() . 'index.php/admin/add_upcoming'; ?>">Add Upcoming Events</a></li>
+									<li><a href="<?php echo base_url() . 'index.php/admin/add_recent'; ?>">Add Recent Events</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row-fluid">
+							<div class="span12">
+								<h2>Sports</h2>
+								<ul>
+									<li>Test.</li>
+									<li>Test.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="row-fluid">
+							<div class="span12">
+								<h2>Clubs</h2>
+								<ul>
+									<li>Test.</li>
+									<li>Test.</li>
+								</ul>
+							</div>
+						</div>
 					</div>
-					<div class="offset1 span8">
+					<div class="span3 well">
 						<h2>Users</h2>
 						<ul>
 							<li>Manage a list of users!</li>
