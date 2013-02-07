@@ -5,6 +5,7 @@ class Admin extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('admin_model');
 	}
 	
 	public function index()
@@ -21,6 +22,9 @@ class Admin extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->view('admin/homepage');
 		$this->load->view('templates/footer');
+		if( $this->input->post('submit') ) {
+			$this->admin_model->add_announcement();
+		}
 	}
 }
 ?>

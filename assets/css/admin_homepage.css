@@ -135,3 +135,19 @@ body {
 .caret {
   border-top-color: white !important;
   border-bottom-color: white !important; }
+
+h1 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 10px; }
+
+#announcements h1 {
+  width: 810px; }
+
+#everything {
+  background-color: white;
+  margin-top: 10px; }
+
+.row-fluid {
+  margin: 0 auto;
+  width: 97% !important; }

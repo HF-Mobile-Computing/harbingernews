@@ -18,6 +18,17 @@
 	
 	<script src="<?php echo base_url(); ?>assets/js/jquery-1.8.0.min.js"></script>
 	<script src="<?php echo base_url(); ?>assets/js/bootstrap.js" type="text/javascript"></script>
+	
+	<!-- markitup -->
+	<script src="<?php echo base_url(); ?>assets/markitup/jquery.markitup.js" type="text/javascript"></script>
+	<script src="<?php echo base_url(); ?>assets/markitup/sets/default/set.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/markitup/skins/markitup/style.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/markitup/sets/default/style.css" type="text/css">
+	<script type="text/javascript">
+		$(function(){
+			$('textarea').markItUp(mySettings);
+		});
+	</script>
 			
 	<!-- Google Analytics -->
 	<script type="text/javascript">
@@ -36,19 +47,22 @@
 	<?php $this->load->view('templates/header'); ?>
 	
 	<div id="content">
+		
 		<div class="container" id="everything">
-			<div id="header">
+			<div id="announcements">
 				<div class="row-fluid">
 					<div class="span12">
-						<h1>Edit the Harbinger! <small>What do you want to change?</small></h1>
+						<h1>Announcements <small>Add a new post to the announcements feed</small></h1>
+						<?php echo form_open('admin/homepage'); ?>
+							<? echo form_input('date'); ?>
+							<br />
+							<? echo form_input('a_or_b'); ?>
+							<br />
+							<? echo form_input('announcements'); ?>
+							<br />
+							<? echo form_submit('submit', 'Submit'); ?>
+						<?php echo form_close(); ?>
 					</div>
 				</div>
-			</div>
-			<div id="homepage">
-				<div class="row-fluid" id="homepage">
-					<div class="span12">
-						<h2>Homepage</h2>
-					</div>
-				</div>
-			</div><!-- end "homepage" -->
-		</div>
+			</div><!-- end "announcements" -->
+		</div><!-- end "everything" -->
