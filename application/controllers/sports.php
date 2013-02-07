@@ -35,7 +35,6 @@ class Sports extends CI_Controller {
 		
 		$data['title'] = $data['sports_item']['title'];
 		$data['username'] = $this->ion_auth->users()->row()->username;
-		
 		$this->load->view('templates/sessions');
 		$this->load->helper('url');
 		$this->load->view('sports/view_head.php', $data);

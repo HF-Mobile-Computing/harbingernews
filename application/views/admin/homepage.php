@@ -51,16 +51,20 @@
 		<div class="container" id="everything">
 			<div id="announcements">
 				<div class="row-fluid">
-					<div class="span12">
+					<div class="span9">
 						<h1>Announcements <small>Add a new post to the announcements feed</small></h1>
 						<?php echo form_open('admin/homepage'); ?>
-							<? echo form_input('date'); ?>
-							<br />
-							<? echo form_input('a_or_b'); ?>
-							<br />
-							<? echo form_input('announcements'); ?>
-							<br />
-							<? echo form_submit('submit', 'Submit'); ?>
+							<fieldset>
+								<input name="date" type="text" placeholder="Enter Today's Date">
+								<select name="a_or_b">
+									<option value="empty" selected="selected">Select A or B Day</option>
+									<option value="A">A</option>
+									<option value="B">B</option>
+								</select>
+								<button type="submit" name="submit" value="Submit" class="btn pull-right">Submit</button>
+								<br />
+								<textarea name="announcements"></textarea>
+							</fieldset>
 						<?php echo form_close(); ?>
 					</div>
 				</div>
