@@ -18,6 +18,12 @@
 	
 	<script src="<?php echo base_url(); ?>assets/js/jquery-1.8.0.min.js"></script>
 	<script src="<?php echo base_url(); ?>assets/js/bootstrap.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+		$(function() {
+			$('#nav_admin').addClass('active');
+		});
+	</script>
 			
 	<!-- Google Analytics -->
 	<script type="text/javascript">
@@ -46,7 +52,7 @@
 			</div>
 			<div id="homepage">
 				<div class="row-fluid" id="homepage">
-					<div class="span12">
+					<div class="span3">
 						<h2>Homepage</h2>
 						<ul>
 							<li><a href="<?php echo base_url() . 'index.php/admin/add_announcement'; ?>">Add Announcement</a></li>
@@ -54,6 +60,14 @@
 							<li><a href="<?php echo base_url() . 'index.php/admin/add_recent'; ?>">Add Recent Events</a></li>
 						</ul>
 					</div>
-				</div>
+					<div class="offset1 span8">
+						<h2>Users</h2>
+						<ul>
+							<li>Manage a list of users!</li>
+							<li>Make new administrators!</li>
+							<li>DELETE THEM ALL. WARNING: DO NOT TOUCH</li>
+						</ul>
+					</div>
+				</div>	
 			</div><!-- end "homepage" -->
 		</div>
