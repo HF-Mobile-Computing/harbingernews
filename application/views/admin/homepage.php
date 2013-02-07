@@ -1,7 +1,7 @@
 <html>
 <head>
 
-	<title>Admin</title>
+	<title>Homepage | Admin Console</title>
 	
 	<!-- enable webapp on iPhone -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -12,7 +12,7 @@
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 	
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery.fancybox.css" type="text/css">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/admin_home.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/admin_homepage.css" type="text/css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.css" type="text/css">
 	

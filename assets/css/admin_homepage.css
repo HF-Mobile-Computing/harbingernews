@@ -135,8 +135,3 @@ body {
 .caret {
   border-top-color: white !important;
   border-bottom-color: white !important; }
-
-#stuff {
-  background-color: white;
-  margin-top: 10px;
-  min-height: 10px; }
