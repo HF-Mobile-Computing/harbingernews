@@ -29,7 +29,7 @@
 							echo "</li>";
 							if($this->ion_auth->is_admin())
 							{
-								echo "<li><a href=\"" . base_url() . "/index.php/admin\">Admin</a></li>";
+								echo "<li id=\"nav_admin\"><a href=\"" . base_url() . "index.php/admin\">Admin</a></li>";
 							}
 						} else {
 							$page = $_SERVER['PHP_SELF'];
