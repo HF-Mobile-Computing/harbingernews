@@ -45,7 +45,6 @@
 </head>
 <body>
 	<?php $this->load->view('templates/header'); ?>
-	
 	<div id="content">
 		
 		<div class="container" id="everything">

@@ -6,24 +6,35 @@ class Admin extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('admin_model');
+		$this->load->helper('url');
 	}
 	
 	public function index()
 	{
-		$this->load->view('templates/sessions');
-		$this->load->helper('url');
-		$this->load->view('admin/index');
-		$this->load->view('templates/footer');
+		if($this->ion_auth->is_admin())
+		{
+			$this->load->view('templates/sessions');
+			$this->load->helper('url');
+			$this->load->view('admin/index');
+			$this->load->view('templates/footer');
+		} else {
+			redirect('/', 'refresh');
+		}
 	}
 	
 	public function homepage()
 	{
-		$this->load->view('templates/sessions');
-		$this->load->helper('url');
-		$this->load->view('admin/homepage');
-		$this->load->view('templates/footer');
-		if( $this->input->post('submit') ) {
-			$this->admin_model->add_announcement();
+		if($this->ion_auth->is_admin())
+		{
+			$this->load->view('templates/sessions');
+			$this->load->helper('url');
+			$this->load->view('admin/homepage');
+			$this->load->view('templates/footer');
+			if( $this->input->post('submit') ) {
+				$this->admin_model->add_announcement();
+			}
+		} else {
+			redirect('/', 'refresh');
 		}
 	}
 }

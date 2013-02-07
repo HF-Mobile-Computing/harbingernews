@@ -9,7 +9,6 @@ class Admin_model extends CI_Model {
 	
 	public function add_announcement()
 	{
-		$this->load->database();
 		$id = $this->input->post('id');
 		$date = $this->input->post('date');
 		$a_or_b = $this->input->post('a_or_b');
@@ -20,6 +19,11 @@ class Admin_model extends CI_Model {
 			'announcements' => $this->input->post('announcements'),
 		);
 		$this->db->insert('announcements',$data);
+	}
+	
+	public function add_post()
+	{
+		
 	}
 }
 
