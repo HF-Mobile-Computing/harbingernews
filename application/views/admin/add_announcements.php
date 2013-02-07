@@ -1,7 +1,7 @@
 <html>
 <head>
 
-	<title>Homepage | Admin Console</title>
+	<title>Admin Console | Add Announcements</title>
 	
 	<!-- enable webapp on iPhone -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -22,11 +22,12 @@
 	<!-- markitup -->
 	<script src="<?php echo base_url(); ?>assets/markitup/jquery.markitup.js" type="text/javascript"></script>
 	<script src="<?php echo base_url(); ?>assets/markitup/sets/default/set.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/markitup/skins/markitup/style.css" type="text/css">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/markitup/sets/default/style.css" type="text/css">
+	<script src="<?php echo base_url(); ?>assets/ckeditor/ckeditor.js" type="text/javascript"></script>
+
 	<script type="text/javascript">
 		$(function(){
-			$('textarea').markItUp(mySettings);
+			
+			$('#nav_admin').addClass('active');
 		});
 	</script>
 			
@@ -62,7 +63,7 @@
 								</select>
 								<button type="submit" name="submit" value="Submit" class="btn pull-right">Submit</button>
 								<br />
-								<textarea name="announcements"></textarea>
+								<textarea name="announcements" class="ckeditor"></textarea>
 							</fieldset>
 						<?php echo form_close(); ?>
 					</div>

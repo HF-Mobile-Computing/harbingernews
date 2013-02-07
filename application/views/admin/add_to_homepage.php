@@ -18,16 +18,11 @@
 	
 	<script src="<?php echo base_url(); ?>assets/js/jquery-1.8.0.min.js"></script>
 	<script src="<?php echo base_url(); ?>assets/js/bootstrap.js" type="text/javascript"></script>
+	<script src="<?php echo base_url(); ?>assets/ckeditor/ckeditor.js" type="text/javascript"></script>
 	
-	<!-- markitup -->
-	<script src="<?php echo base_url(); ?>assets/markitup/jquery.markitup.js" type="text/javascript"></script>
-	<script src="<?php echo base_url(); ?>assets/markitup/sets/default/set.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/markitup/skins/markitup/style.css" type="text/css">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/markitup/sets/default/style.css" type="text/css">
 	<script type="text/javascript">
 		$(function(){
-			$('textarea').markItUp(mySettings);
-			
+			$('#nav_admin').addClass('active');
 		});
 	</script>
 			
@@ -55,7 +50,7 @@
 						<h1><?php echo $title; ?></h1>
 						<?php echo form_open('admin/' . $name); ?>
 							<fieldset>
-								<textarea name="content"></textarea><br />
+								<textarea name="content" class="ckeditor"></textarea><br />
 								<button type="submit" name="submit" value="Submit" class="btn pull-right">Submit</button>
 							</fieldset>
 						<?php echo form_close(); ?>
