@@ -96,7 +96,9 @@ class Admin extends CI_Controller {
 			$this->load->helper('url');
 			$this->load->view('admin/sports_page',$data);
 			$this->load->view('templates/footer');
-			
+			if( $this->input->post("submit") ) {
+				$this->admin_model->update_sport($slug);
+			}
 		} else {
 			redirect('/', 'refresh');
 		}

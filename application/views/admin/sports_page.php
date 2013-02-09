@@ -18,10 +18,14 @@
 	
 	<script src="<?php echo base_url(); ?>assets/js/jquery-1.8.0.min.js"></script>
 	<script src="<?php echo base_url(); ?>assets/js/bootstrap.js" type="text/javascript"></script>
+	<script src="<?php echo base_url(); ?>assets/ckeditor/ckeditor.js" type="text/javascript"></script>
 	
 	<script type="text/javascript">
 		$(function() {
 			$('#nav_admin').addClass('active');
+			$('form').submit(function() {
+				window.location.reload();
+			});
 		});
 	</script>
 			
@@ -44,4 +48,12 @@
 	<div id="content">
 		<div class="container">
 			<h1><?php echo $sports_item['title']; ?></h1>
+			
+			<?php echo form_open('admin/sports/' . $sports_item['slug'] ); ?>
+				<fieldset>
+					<textarea name="content" class="ckeditor"><?php echo $sports_item['content']; ?></textarea><br />
+					<button type="submit" name="submit" value="Submit" class="btn pull-right">Submit</button>
+				</fieldset>
+			<?php echo form_close(); ?>
+			
 		</div>

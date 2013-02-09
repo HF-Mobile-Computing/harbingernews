@@ -31,6 +31,20 @@ class Admin_model extends CI_Model {
 		$this->db->where('name', $name);
 		$this->db->update('homepage', $data);
 	}
+	
+	public function update_sport($slug)
+	{
+		$id = $this->input->post('id');
+		$title = $this->input->post('title');
+		$season = $this->input->post('title');
+		$content = $this->input->post('content');
+		$photo_path = $this->input->post('photo_path');
+		$data = array(
+			'content' => $content,
+		);
+		$this->db->where('slug', $slug);
+		$this->db->update('sports', $data);
+	}
 }
 
 ?>
