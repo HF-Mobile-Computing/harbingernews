@@ -13,9 +13,15 @@ class Admin extends CI_Controller {
 	{
 		if($this->ion_auth->is_admin())
 		{
+			$this->load->model('sports_model');
+			
+			$data['winter'] = $this->sports_model->get_list('winter');
+			$data['fall'] = $this->sports_model->get_list('fall');
+			$data['spring'] = $this->sports_model->get_list('spring');
+			
 			$this->load->view('templates/sessions');
 			$this->load->helper('url');
-			$this->load->view('admin/index');
+			$this->load->view('admin/index',$data);
 			$this->load->view('templates/footer');
 		} else {
 			redirect('/', 'refresh');
@@ -69,6 +75,16 @@ class Admin extends CI_Controller {
 			if( $this->input->post('submit') ) {
 				$this->admin_model->add_to_homepage('Recent Events');
 			}
+		} else {
+			redirect('/', 'refresh');
+		}
+	}
+	
+	public function sports()
+	{
+		if($this->ion_auth->is_admin())
+		{
+			
 		} else {
 			redirect('/', 'refresh');
 		}

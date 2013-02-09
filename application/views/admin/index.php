@@ -22,6 +22,9 @@
 	<script type="text/javascript">
 		$(function() {
 			$('#nav_admin').addClass('active');
+			$('a[data-toggle="popover"]').popover({
+				title: "Pick a Sport to Edit",
+			});
 		});
 	</script>
 			
@@ -67,8 +70,9 @@
 							<div class="span12">
 								<h2>Sports</h2>
 								<ul>
-									<li>Test.</li>
-									<li>Test.</li>
+									<li><a href="#" id="fall" data-toggle="popover" data-html="true" data-content='<ul><?php foreach($fall as $sportsItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/sports/' . $sportsItem['slug']; ?>"><?php echo $sportsItem['title'] ?></a></li><?php endforeach ?></ul>'>Fall</a></li>
+									<li><a href="#" id="winter" data-toggle="popover" data-html="true" data-content='<ul><?php foreach($winter as $sportsItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/sports/' . $sportsItem['slug']; ?>"><?php echo $sportsItem['title'] ?></a></li><?php endforeach ?></ul>'>Winter</a></li>
+									<li><a href="#" id="spring" data-toggle="popover" data-html="true" data-content='<ul><?php foreach($spring as $sportsItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/sports/' . $sportsItem['slug']; ?>"><?php echo $sportsItem['title'] ?></a></li><?php endforeach ?></ul>'>Spring</a></li>
 								</ul>
 							</div>
 						</div>
@@ -90,6 +94,6 @@
 							<li>DELETE THEM ALL. WARNING: DO NOT TOUCH</li>
 						</ul>
 					</div>
-				</div>	
+				</div>
 			</div><!-- end "homepage" -->
 		</div>

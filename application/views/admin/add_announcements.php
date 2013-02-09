@@ -53,7 +53,7 @@
 				<div class="row-fluid">
 					<div class="span9">
 						<h1>Announcements <small>Add a new post to the announcements feed</small></h1>
-						<?php echo form_open('admin/homepage'); ?>
+						<?php echo form_open('admin/add_announcement'); ?>
 							<fieldset>
 								<input name="date" type="text" placeholder="Enter Today's Date">
 								<select name="a_or_b">
