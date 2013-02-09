@@ -80,10 +80,22 @@ class Admin extends CI_Controller {
 		}
 	}
 	
-	public function sports()
+	public function sports($slug)
 	{
 		if($this->ion_auth->is_admin())
 		{
+		
+			$this->load->model('sports_model');
+			$data['sports_item'] = $this->sports_model->get_sports($slug);
+			if(empty($data['sports_item']))
+			{
+				show_404();
+			}
+			
+			$this->load->view('templates/sessions');
+			$this->load->helper('url');
+			$this->load->view('admin/sports_page',$data);
+			$this->load->view('templates/footer');
 			
 		} else {
 			redirect('/', 'refresh');
