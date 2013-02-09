@@ -55,38 +55,32 @@
 			</div>
 			<div id="homepage">
 				<div class="row-fluid" id="homepage">
-					<div class="span9">
-						<div class="row-fluid">
-							<div class="span12">
-								<h2>Homepage</h2>
-								<ul>
-									<li><a href="<?php echo base_url() . 'index.php/admin/add_announcement'; ?>">Add Announcement</a></li>
-									<li><a href="<?php echo base_url() . 'index.php/admin/add_upcoming'; ?>">Add Upcoming Events</a></li>
-									<li><a href="<?php echo base_url() . 'index.php/admin/add_recent'; ?>">Add Recent Events</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="row-fluid">
-							<div class="span12">
-								<h2>Sports</h2>
-								<ul>
-									<li><a href="#" id="fall" data-toggle="popover" data-html="true" data-content='<ul><?php foreach($fall as $sportsItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/sports/' . $sportsItem['slug']; ?>"><?php echo $sportsItem['title'] ?></a></li><?php endforeach ?></ul>'>Fall</a></li>
-									<li><a href="#" id="winter" data-toggle="popover" data-html="true" data-content='<ul><?php foreach($winter as $sportsItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/sports/' . $sportsItem['slug']; ?>"><?php echo $sportsItem['title'] ?></a></li><?php endforeach ?></ul>'>Winter</a></li>
-									<li><a href="#" id="spring" data-toggle="popover" data-html="true" data-content='<ul><?php foreach($spring as $sportsItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/sports/' . $sportsItem['slug']; ?>"><?php echo $sportsItem['title'] ?></a></li><?php endforeach ?></ul>'>Spring</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="row-fluid">
-							<div class="span12">
-								<h2>Clubs</h2>
-								<ul>
-									<li>Test.</li>
-									<li>Test.</li>
-								</ul>
-							</div>
-						</div>
+					<div class="span3">
+						<h2>Homepage</h2>
+						<ul>
+							<li><a href="<?php echo base_url() . 'index.php/admin/add_announcement'; ?>">Add Announcement</a></li>
+							<li><a href="<?php echo base_url() . 'index.php/admin/add_upcoming'; ?>">Add Upcoming Events</a></li>
+							<li><a href="<?php echo base_url() . 'index.php/admin/add_recent'; ?>">Add Recent Events</a></li>
+						</ul>
 					</div>
-					<div class="span3 well">
+					<div class="span3">
+						<h2>Sports</h2>
+						<ul>
+							<li><a href="#" id="fall" data-toggle="popover" data-html="true" data-content='<ul><?php foreach($fall as $sportsItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/sports/' . $sportsItem['slug']; ?>"><?php echo $sportsItem['title'] ?></a></li><?php endforeach ?></ul>'>Fall</a></li>
+							<li><a href="#" id="winter" data-toggle="popover" data-html="true" data-content='<ul><?php foreach($winter as $sportsItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/sports/' . $sportsItem['slug']; ?>"><?php echo $sportsItem['title'] ?></a></li><?php endforeach ?></ul>'>Winter</a></li>
+							<li><a href="#" id="spring" data-toggle="popover" data-html="true" data-content='<ul><?php foreach($spring as $sportsItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/sports/' . $sportsItem['slug']; ?>"><?php echo $sportsItem['title'] ?></a></li><?php endforeach ?></ul>'>Spring</a></li>
+						</ul>
+					</div>			
+					<div class="span3">
+						<h2>Clubs</h2>
+						<ul>
+							<li>Test.</li>
+							<li>Test.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="span12 well">
 						<h2>Users</h2>
 						<ul>
 							<li>Manage a list of users!</li>
