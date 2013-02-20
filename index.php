@@ -62,6 +62,10 @@ $feed3->handle_content_type();
 			});
 			// Set the Home tab to 'active'
 			$('#nav_home').addClass('active');
+			$('#snowflake').click(function() {
+				console.log('click');
+				window.location.href = 'http://www.harborfieldscsd.net/harbingernews/clubs/Global%20Justice/template.php';
+			});
 		});
 	</script>
 	
@@ -117,8 +121,9 @@ $feed3->handle_content_type();
 						<img src="/harbingernews/img/ssDeepLink.png" alt="Buy a Yearbook" />
 					</div></a>
 					<div class="span4" id="snowflake">
-						<h4>Support LB Storm Clean-Up</h4>
-						<p>Buy a Secret Snowflake from Leadership</p>
+						<h4>Annual Global Justice Concert</h4>
+						<p><b>March 1,  7pm</b></p>
+						<p>Click here for more info!</p>
 					</div>
 					<div class="span4" id="playfest">
 						<h4>Instrument donations</h4>
@@ -174,8 +179,9 @@ $feed3->handle_content_type();
 					<img src="/harbingernews/img/ssDeepLink.png" alt="Buy a Yearbook" />
 				</div></a>
 				<div id="snowflake">
-					<h4>Support LB Storm Clean-Up</h4>
-					<p>Buy a Secret Snowflake from Leadership</p>
+					<h4>Annual Global Justice Concert</h4>
+					<p><b>March 1,  7pm</b></p>
+					<p>Click here for more info!</p>
 				</div>
 				<div id="playfest">
 					<h4>Instrument donations</h4>
