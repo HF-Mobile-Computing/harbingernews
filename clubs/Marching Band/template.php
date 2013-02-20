@@ -32,13 +32,10 @@
 				
 				</div>
 				
-				<div id="upcoming_events" style = "display: none;">
+				<div id="upcoming_events" style = "display:none;">
 					<h4>Upcoming Events</h4>
 					<ul>
-						<li>Event One</li>
-						<li>Event Two</li>
-						<li>Event Three</li>
-						<li>Event Four</li>
+						<li></li>
 					</ul>
 					
 				</div>		
@@ -46,9 +43,9 @@
 			</div>
 			
 			<div class="span4 row-fluid" id="pictures">
-				<strong><p>Other Photos</p></strong>
+				<a href="photogallery.php" style = "text-decoration: none; color: white;"><strong><p>Click Here for Other Photos</p></strong></a>
 				<div class="span10 offset1"> <!--Keep pictures in div with small border around.-->
-					<a href="Marching Band Seniors.jpg"><img src="Marching Band Seniors.png" alt="Marching Band Seniors" title="Click here to view full size." style="margin-bottom: 10px"></a>
+					<a href="big/Marching Band Seniors.jpg"><img src="small/Marching Band Seniors.png" alt="Marching Band Seniors" title="Click here to view full size." style="margin-bottom: 10px"></a>
 				</div>
 			</div>
 			
@@ -56,13 +53,13 @@
 				<div class = "about">
 					<h4 class = "offset1">About Marching Band</h4>
 					<div class="row-fluid">
-						<div class="span6" id="photo_holder" style="float: right;">
-							<a href="Marching Band.jpg"><img src="Marching Band.png" alt="Marching Band" title="Click here to view full size."></a>
-						</div>
-						<div class="span6"style="float: left;">
-							<p>Advisor(s): <em>Coming Soon</em></p> 
+							<a href="big/Marching Band.jpg"><img src="small/Marching Band.png" alt="Marching Band" title="Click here to view full size." align = "right" style = "margin: 10px;"></a>
+						<div>
+							<p>Advisor: Ms. Scilla</p> 
 							<p>Room: <em>Coming Soon</em></p>
-							<p>Information Coming Soon</p>
+							<p>The Harborfields High School Marching Band is made up of band, orchestra, and choral students from Harborfields High School. The marching band season officially begins in August at our annual summer clinic, run by the Long Island Summer Music Workshop at SUNY Farmingdale.  This summer’s clinic is Thursday – Saturday, August 15th – 17th.  The band rehearses on Thursday evenings from 6:30 – 8:30 pm at the high school, beginning the first week of school through the end of October.  The band performs throughout the school year at various evenings, including football games, parades, the Newsday Marching Band Festival and special field trips.  In the past, the Marching Band has traveled to Busch Gardens in Virginia, Disney World in Orlando, Florida and will be returning to perform at Hershey Park this May.</p>
+							<br/>
+							<p>If you have any questions about joining the marching band, please email the director Ms. Allison Scilla at scillaa@harborfieldscsd.org</p>
 							<br/>
 							<p>This club meets <em>TBA</em></p>
 						</div>
