@@ -32,13 +32,10 @@
 				
 				</div>
 				
-				<div id="upcoming_events" style = "display: none;">
+				<div id="upcoming_events">
 					<h4>Upcoming Events</h4>
 					<ul>
-						<li>Event One</li>
-						<li>Event Two</li>
-						<li>Event Three</li>
-						<li>Event Four</li>
+						<li>Global Justice Concert: March 1st @ 7pm</li>
 					</ul>
 					
 				</div>		
@@ -48,7 +45,7 @@
 			<div class="span4 row-fluid" id="pictures">
 				<strong><p>Other Photos</p></strong>
 				<div class="span10 offset1"> <!--Keep pictures in div with small border around.-->
-					<a href="Marching Band Seniors.jpg"><img src="Marching Band Seniors.png" alt="Marching Band Seniors" title="Click here to view full size." style="margin-bottom: 10px"></a>
+					<a href="big/Marching Band Seniors.jpg"><img src="small/Marching Band Seniors.png" alt="Marching Band Seniors" title="Click here to view full size." style="margin-bottom: 10px"></a>
 				</div>
 			</div>
 			
@@ -56,7 +53,7 @@
 				<div class = "about">
 					<h4 class = "offset1">About Marching Band</h4>
 					<div class="row-fluid">
-							<a href="Marching Band.jpg"><img src="Marching Band.png" alt="Marching Band" title="Click here to view full size." align = "right" style = "margin: 10px;"></a>
+							<a href="big/Marching Band.jpg"><img src="small/Marching Band.png" alt="Marching Band" title="Click here to view full size." align = "right" style = "margin: 10px;"></a>
 						<div>
 							<p>Advisor: Ms. Scilla</p> 
 							<p>Room: <em>Coming Soon</em></p>

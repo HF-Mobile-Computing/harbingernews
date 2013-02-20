@@ -31,13 +31,10 @@
 					</div>
 				
 				</div>
-				<div id="upcoming_events" style = "display: none;">
+				<div id="upcoming_events">
 					<h4>Upcoming Events</h4>
 					<ul>
-						<li>Event One</li>
-						<li>Event Two</li>
-						<li>Event Three</li>
-						<li>Event Four</li>
+						<li>Global Justice Concert: March 1st @ 7pm</li>
 					</ul>
 					
 				</div>		

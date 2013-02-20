@@ -31,13 +31,10 @@
 					</div>
 				
 				</div>
-				<div id="upcoming_events" style = "display: none;">
+				<div id="upcoming_events" >
 					<h4>Upcoming Events</h4>
 					<ul>
-						<li>Event One</li>
-						<li>Event Two</li>
-						<li>Event Three</li>
-						<li>Event Four</li>
+						<li>SADD and Interact will be hosting a Blood Drive on Tuesday, April 16th in the MPR.</li>
 					</ul>
 					
 				</div>		
