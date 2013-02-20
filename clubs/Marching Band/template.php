@@ -32,10 +32,10 @@
 				
 				</div>
 				
-				<div id="upcoming_events">
+				<div id="upcoming_events" style = "display:none;">
 					<h4>Upcoming Events</h4>
 					<ul>
-						<li>Global Justice Concert: March 1st @ 7pm</li>
+						<li></li>
 					</ul>
 					
 				</div>		
@@ -43,7 +43,7 @@
 			</div>
 			
 			<div class="span4 row-fluid" id="pictures">
-				<strong><p>Other Photos</p></strong>
+				<a href="photogallery.php" style = "text-decoration: none; color: white;"><strong><p>Click Here for Other Photos</p></strong></a>
 				<div class="span10 offset1"> <!--Keep pictures in div with small border around.-->
 					<a href="big/Marching Band Seniors.jpg"><img src="small/Marching Band Seniors.png" alt="Marching Band Seniors" title="Click here to view full size." style="margin-bottom: 10px"></a>
 				</div>
