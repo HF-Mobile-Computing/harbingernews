@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Club Template</title>
+	<title>Global Justice</title>
 	
 	<meta charset="utf-8">
 
@@ -88,10 +88,10 @@
 					<hr />
 					<h4>Global Justice: Rockin' for Charity<small> by Jake Deluca</small></h4>
 					<p>Whether you’re a regular attendee, a musical participant or a member of the club itself, chances are you’ve heard of the Global Justice Concert. The club has been doing the concert for about five years now, ever since it first came about as an “extension of World History AP.”</p>
-<p>Mrs. DaSilva, who has been teaching World History AP (better known in its colloquial form: WHAP) for years, sat down with me to talk about both the club and the concert. The club was initiated by an old student of hers who felt that there should have been a group that practiced the principals discussed in WHAP. It was first created with the hopes of bringing the larger-scale worldwide problems, i.e. the privation of food, water and/or shelter, warfare, and human rights violation, to light on a more local level. The club has achieved many of its goals since its start; Global Justice has raised money for the construction of a school in Ecuador, as well as charitable funds for groups who have similar goals, and has also encouraged the students of Harborfields to educate themselves on significant global events like the recent story of Malala Yousafzai.</p>
-<p>As for the concert, the idea originated from the compiled efforts of Mrs. DaSilva and Mr. Leary, who used Mrs. DaSilva’s classroom as a means of recording an album of student-made music for the financial benefit of charity. The concert was a by-product of that album, a sort of “release performance,” and every year since the club has encouraged students to audition to perform in the event.</p>
-<p>Mrs. DaSilva, who is both musically talented and passionate about influencing the world for the better, explained that music was always her “comfort zone,” and thought that it was a great way to raise money for groups like The Magic Penny.</p>
-<p>This year, the Annual Global Justice Concert will be on March 1st at 7 pm at the high school, will feature 2 acts and 12 performances respectively, and will also feature a flee market held in the lobby of student made sales.  Come down to the high school on the first and share in an enriching and beneficial event!</p>
+					<p>Mrs. DaSilva, who has been teaching World History AP (better known in its colloquial form: WHAP) for years, sat down with me to talk about both the club and the concert. The club was initiated by an old student of hers who felt that there should have been a group that practiced the principals discussed in WHAP. It was first created with the hopes of bringing the larger-scale worldwide problems, i.e. the privation of food, water and/or shelter, warfare, and human rights violation, to light on a more local level. The club has achieved many of its goals since its start; Global Justice has raised money for the construction of a school in Ecuador, as well as charitable funds for groups who have similar goals, and has also encouraged the students of Harborfields to educate themselves on significant global events like the recent story of Malala Yousafzai.</p>
+					<p>As for the concert, the idea originated from the compiled efforts of Mrs. DaSilva and Mr. Leary, who used Mrs. DaSilva’s classroom as a means of recording an album of student-made music for the financial benefit of charity. The concert was a by-product of that album, a sort of “release performance,” and every year since the club has encouraged students to audition to perform in the event.</p>
+					<p>Mrs. DaSilva, who is both musically talented and passionate about influencing the world for the better, explained that music was always her “comfort zone,” and thought that it was a great way to raise money for groups like The Magic Penny.</p>
+					<p>This year, the Annual Global Justice Concert will be on March 1st at 7 pm at the high school, will feature 2 acts and 12 performances respectively, and will also feature a flee market held in the lobby of student made sales.  Come down to the high school on the first and share in an enriching and beneficial event!</p>
 
 				</div>
 			</div>
