@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Club Template</title>
+	<title>Student Gov</title>
 	
 	<meta charset="utf-8">
 

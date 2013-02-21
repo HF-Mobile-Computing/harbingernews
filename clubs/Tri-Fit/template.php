@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Club Template</title>
+	<title>Tri-Fit</title>
 	
 	<meta charset="utf-8">
 

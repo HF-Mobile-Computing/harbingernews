@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Club Template</title>
+	<title>Marching Band</title>
 	
 	<meta charset="utf-8">
 

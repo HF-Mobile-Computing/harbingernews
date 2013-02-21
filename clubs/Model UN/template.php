@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Club Template</title>
+	<title>Model UN</title>
 	
 	<meta charset="utf-8">
 
