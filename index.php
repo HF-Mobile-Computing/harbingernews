@@ -63,7 +63,6 @@ $feed3->handle_content_type();
 			// Set the Home tab to 'active'
 			$('#nav_home').addClass('active');
 			$('#snowflake').click(function() {
-				console.log('click');
 				window.location.href = 'http://www.harborfieldscsd.net/harbingernews/clubs/Global%20Justice/template.php';
 			});
 		});
