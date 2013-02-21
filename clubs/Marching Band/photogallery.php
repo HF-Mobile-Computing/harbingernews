@@ -12,7 +12,8 @@
 
 	<script type="text/javascript" src="/harbingernews/js/jquery-1.8.0.min.js"></script>
 	<script type="text/javascript" src="/harbingernews/js/bootstrap.min.js"></script>
-		
+	
+
 	<style type="text/css">
 		h2 {
 			text-align: center;
@@ -45,12 +46,12 @@
 					<h2>Photo Gallery</h2>
 					<div class = "span11" style = "margin-bottom: 10px;">
 						<div class = "picture span2 offset1 holder">
-							<a href="#" title="#"><img src="small/Marching Band.png" /></a>
+							<a href="big/Marching Band.jpg" title="#"><img src="small/Marching Band.png" /></a>
 							
 						</div>
 
 						<div class = "picture span2 holder">
-							<a href="big/drums-big.jpg" title="#"><img src="small/drums-small.jpg" /></a>
+							<a href="big/drums-big.jpg"  title="#"><img src="small/drums-small.jpg" /></a>
 							
 						</div>
 						<div class = "picture span2 holder">
