@@ -28,6 +28,22 @@ class Admin extends CI_Controller {
 		}
 	}
 	
+	public function user_list()
+	{
+		if($this->ion_auth->is_admin())
+		{
+			$this->load->model('users_model');
+			
+			$data['user_list'] = $this->users_model->list_users();
+			
+			$this->load->view('templates/sessions');
+			$this->load->view('admin/list_users',$data);
+			$this->load->view('templates/footer');
+		} else {
+			redirect('/', 'refresh');
+		}
+	}
+	
 	public function add_announcement()
 	{
 		if($this->ion_auth->is_admin())

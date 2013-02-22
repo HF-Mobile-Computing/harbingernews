@@ -83,7 +83,7 @@
 					<div class="span12 well">
 						<h2>Users</h2>
 						<ul>
-							<li>Manage a list of users!</li>
+							<li><a href="<? echo base_url() . 'index.php/admin/user_list'; ?>">Manage a list of users!</a></li>
 							<li>Make new administrators!</li>
 							<li>DELETE THEM ALL. WARNING: DO NOT TOUCH</li>
 						</ul>
