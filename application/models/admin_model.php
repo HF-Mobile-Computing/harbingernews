@@ -19,6 +19,7 @@ class Admin_model extends CI_Model {
 			'announcements' => $this->input->post('announcements'),
 		);
 		$this->db->insert('announcements',$data);
+		redirect('admin/add_announcement','refresh');
 	}
 	
 	public function add_to_homepage($name)
@@ -30,6 +31,11 @@ class Admin_model extends CI_Model {
 		);
 		$this->db->where('name', $name);
 		$this->db->update('homepage', $data);
+		if ("upcoming" == $name) {
+			redirect('/admin/add_upcoming','refresh');
+		} else {
+			redirect('/admin/add_recent','refresh');
+		}
 	}
 	
 	public function update_sport($slug)
@@ -44,6 +50,7 @@ class Admin_model extends CI_Model {
 		);
 		$this->db->where('slug', $slug);
 		$this->db->update('sports', $data);
+		redirect('/admin/sports/' . $slug,'refresh');
 	}
 }
 

@@ -23,9 +23,6 @@
 	<script type="text/javascript">
 		$(function() {
 			$('#nav_admin').addClass('active');
-			$('form').submit(function() {
-				window.location.reload();
-			});
 		});
 	</script>
 			
