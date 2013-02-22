@@ -1,0 +1,40 @@
+@import 'all';
+
+h1 {
+	text-align: center;
+}
+
+table {
+	margin: 0 auto;
+}
+
+td {
+	height: 2em;
+}
+
+#form {
+	@include pie;
+	background: {
+		color: white;
+	}
+	border-radius: 4px;
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.56);
+	margin: {
+		top: 10px;
+	}
+	min-height: 2em;
+	input[type="text"],
+	input[type="password"] {
+		height: 1.5em !important;
+		margin: {
+			bottom: 0px !important;
+		}
+	}
+}
+
+.left {
+	text-align: right;
+	padding: {
+		right: 10px;
+	}
+}
