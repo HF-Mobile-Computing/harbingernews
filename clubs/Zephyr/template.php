@@ -51,7 +51,8 @@
 					<p>The Zephyr is the school’s literary magazine. The club meets to discuss topics and publish the magazine. They use computers to scan images and lay out text on a pagemaker program to prepare the publication for print. The literary magazine club is made up of 5 to 10 students. They meet periodically, and there are no requirements to join, but students should have an interest in art, literature and poetry, computers and/or typing.</p>
 					<br/>
 					<p>This club meets on alternating Wednesdays; 2:30-3:30.</p>
-
+					<br/>
+					<p> <a href="http://zephyrhhsritter.weebly.com/" title="">Zephyr Website</a> </p>
 				</div>
 			
 			</div><!-- end "row" -->

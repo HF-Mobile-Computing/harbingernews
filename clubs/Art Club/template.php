@@ -51,7 +51,10 @@
 					<p>The Art Club meets weekly to create various arts and crafts projects. Students can work in a group or individually. The club also participates in many community service activities related to art, such as designing posters and an arts and crafts table during Black History Month. The club participates in some art contests and has at times had guest artists speak. They also participate in some fundraising activities. Art activities are usually student initiated. The Art Club meets weekly and there are no requirements to join. Refreshments are sometimes provided!</p>
 					<br/>
 					<p>This club meets on the 1st and 3rd Thurday of every month. See advisor for more details.</p>
-
+					<br/>
+					<p><a href="http://www.aparthhsritter.weebly.com">AP Art website</a></p>
+					<p><a href="http://www.sculptureandceramicshhsritter.weebly.com">Sculpture and Ceramics</a></p>
+					<p><a href="http://www.studioarthhsritter.weebly.com">Studio Art website</a></p>
 				</div>
 			
 			</div><!-- end "row" -->
