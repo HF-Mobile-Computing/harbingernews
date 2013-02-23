@@ -38,6 +38,7 @@ class Users extends CI_Controller {
 		
 		if($this->form_validation->run() == TRUE && $this->ion_auth->register($username, $password, $email))
 		{
+			$this->session->set_flashdata('info', '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button>New User Successfully Created</div>');
 			redirect('/','refresh');
 		}
 	}

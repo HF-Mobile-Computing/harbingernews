@@ -66,6 +66,9 @@
 						<h1>Harborfields High School</h1>
 					</div>
 				</div><!-- end header -->
+				
+				<?php echo $this->session->flashdata('info'); ?>
+				
 				<div class="row-fluid" id="announcements">
 					<h3>Today's Announcements</h3>
 					<div id="basic_info">

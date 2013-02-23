@@ -24,6 +24,7 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/index',$data);
 			$this->load->view('templates/footer');
 		} else {
+			$this->session->set_flashdata('info', '<div class="alert alert-error"><button type="button" class="close" data-dismiss="alert">&times;</button><b>Get out of here!</b> You don\'t have permission to access this part of the site.</div>');
 			redirect('/', 'refresh');
 		}
 	}
@@ -40,6 +41,7 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/list_users',$data);
 			$this->load->view('templates/footer');
 		} else {
+			$this->session->set_flashdata('info', '<div class="alert alert-error"><button type="button" class="close" data-dismiss="alert">&times;</button><b>Get out of here!</b> You don\'t have permission to access this part of the site.</div>');
 			redirect('/', 'refresh');
 		}
 	}
@@ -56,6 +58,7 @@ class Admin extends CI_Controller {
 				$this->admin_model->add_announcement();
 			}
 		} else {
+			$this->session->set_flashdata('info', '<div class="alert alert-error"><button type="button" class="close" data-dismiss="alert">&times;</button><b>Get out of here!</b> You don\'t have permission to access this part of the site.</div>');
 			redirect('/', 'refresh');
 		}
 	}
@@ -74,6 +77,7 @@ class Admin extends CI_Controller {
 				$this->admin_model->add_to_homepage('Upcoming Events');
 			}
 		} else {
+			$this->session->set_flashdata('info', '<div class="alert alert-error"><button type="button" class="close" data-dismiss="alert">&times;</button><b>Get out of here!</b> You don\'t have permission to access this part of the site.</div>');
 			redirect('/', 'refresh');
 		}
 	}
@@ -92,6 +96,7 @@ class Admin extends CI_Controller {
 				$this->admin_model->add_to_homepage('Recent Events');
 			}
 		} else {
+			$this->session->set_flashdata('info', '<div class="alert alert-error"><button type="button" class="close" data-dismiss="alert">&times;</button><b>Get out of here!</b> You don\'t have permission to access this part of the site.</div>');
 			redirect('/', 'refresh');
 		}
 	}
@@ -116,6 +121,7 @@ class Admin extends CI_Controller {
 				$this->admin_model->update_sport($slug);
 			}
 		} else {
+			$this->session->set_flashdata('info', '<div class="alert alert-error"><button type="button" class="close" data-dismiss="alert">&times;</button><b>Get out of here!</b> You don\'t have permission to access this part of the site.</div>');
 			redirect('/', 'refresh');
 		}
 	}
