@@ -61,8 +61,6 @@
 				</div>			
 			</div><!-- end "row-fluid" -->
 			
-			</div><!-- end "row" -->
-			
 			<br />
 			
 			<div class="row" style = "display:none;">
