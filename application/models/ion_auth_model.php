@@ -24,7 +24,7 @@ class Ion_auth_model extends CI_Model
 	/**
 	 * Holds an array of tables used
 	 *
-	 * @var string
+	 * @var array
 	 **/
 	public $tables = array();
 
@@ -66,14 +66,14 @@ class Ion_auth_model extends CI_Model
 	/**
 	 * Select
 	 *
-	 * @var string
+	 * @var array
 	 **/
 	public $_ion_select = array();
 
 	/**
 	 * Like
 	 *
-	 * @var string
+	 * @var array
 	 **/
 	public $_ion_like = array();
 
@@ -170,7 +170,7 @@ class Ion_auth_model extends CI_Model
 		$this->load->helper('date');
 
 		//Load the session, CI2 as a library, CI3 uses it as a driver
-		if (substr(CI_VERSION, 0, 1) == '2') 
+		if (substr(CI_VERSION, 0, 1) == '2')
 		{
 			$this->load->library('session');
 		}
@@ -178,7 +178,7 @@ class Ion_auth_model extends CI_Model
 		{
 			$this->load->driver('session');
 		}
-		
+
 		$this->lang->load('ion_auth');
 
 		//initialize db tables data
@@ -864,12 +864,12 @@ class Ion_auth_model extends CI_Model
 		                  ->where($this->identity_column, $this->db->escape_str($identity))
 		                  ->limit(1)
 		                  ->get($this->tables['users']);
-						  
+
 		if($this->is_time_locked_out($identity))
 		{
 			//Hash something anyway, just to take up time
 			$this->hash_password($password);
-			
+
 			$this->trigger_events('post_login_unsuccessful');
 			$this->set_error('login_timeout');
 
@@ -892,19 +892,11 @@ class Ion_auth_model extends CI_Model
 					return FALSE;
 				}
 
-				$session_data = array(
-				    'identity'             => $user->{$this->identity_column},
-				    'username'             => $user->username,
-				    'email'                => $user->email,
-				    'user_id'              => $user->id, //everyone likes to overwrite id so we'll use user_id
-				    'old_last_login'       => $user->last_login
-				);
+				$this->set_session($user);
 
 				$this->update_last_login($user->id);
 
 				$this->clear_login_attempts($identity);
-
-				$this->session->set_userdata($session_data);
 
 				if ($remember && $this->config->item('remember_users', 'ion_auth'))
 				{
@@ -968,7 +960,7 @@ class Ion_auth_model extends CI_Model
 		}
 		return 0;
 	}
-	
+
 	/**
 	 * Get a boolean to determine if an account should be locked out due to
 	 * exceeded login attempts within a given period
@@ -979,7 +971,7 @@ class Ion_auth_model extends CI_Model
 
 		return $this->is_max_login_attempts_exceeded($identity) && $this->get_last_attempt_time($identity) > time() - $this->config->item('lockout_time', 'ion_auth');
 	}
-	
+
 	/**
 	 * Get the time of the last time a login attempt occured from given IP-address or identity
 	 *
@@ -989,17 +981,17 @@ class Ion_auth_model extends CI_Model
 	public function get_last_attempt_time($identity) {
 		if ($this->config->item('track_login_attempts', 'ion_auth')) {
 			$ip_address = $this->_prepare_ip($this->input->ip_address());
-			
+
 			$this->db->select_max('time');
 			$this->db->where('ip_address', $ip_address);
 			if (strlen($identity) > 0) $this->db->or_where('login', $identity);
 			$qres = $this->db->get($this->tables['login_attempts'], 1);
-			
+
 			if($qres->num_rows() > 0) {
 				return $qres->row()->time;
 			}
 		}
-		
+
 		return 0;
 	}
 
@@ -1159,7 +1151,7 @@ class Ion_auth_model extends CI_Model
 	{
 		$this->trigger_events('users');
 
-		if (isset($this->_ion_select))
+		if (isset($this->_ion_select) && !empty($this->_ion_select))
 		{
 			foreach ($this->_ion_select as $select)
 			{
@@ -1193,18 +1185,18 @@ class Ion_auth_model extends CI_Model
 				$this->db->distinct();
 				$this->db->join(
 				    $this->tables['users_groups'],
-				    $this->tables['users_groups'].'.user_id = ' . $this->tables['users'].'.id',
+				    $this->tables['users_groups'].'.'.$this->join['users'].'='.$this->tables['users'].'.id',
 				    'inner'
 				);
 
-				$this->db->where_in($this->tables['users_groups'].'.group_id', $groups);
+				$this->db->where_in($this->tables['users_groups'].'.'.$this->join['groups'], $groups);
 			}
 		}
 
 		$this->trigger_events('extra_where');
 
 		//run each where that was passed
-		if (isset($this->_ion_where))
+		if (isset($this->_ion_where) && !empty($this->_ion_where))
 		{
 			foreach ($this->_ion_where as $where)
 			{
@@ -1214,7 +1206,7 @@ class Ion_auth_model extends CI_Model
 			$this->_ion_where = array();
 		}
 
-		if (isset($this->_ion_like))
+		if (isset($this->_ion_like) && !empty($this->_ion_like))
 		{
 			foreach ($this->_ion_like as $like)
 			{
@@ -1305,6 +1297,9 @@ class Ion_auth_model extends CI_Model
 		//if no id was passed use the current users id
 		$user_id || $user_id = $this->session->userdata('user_id');
 
+		//check if unique - num_rows() > 0 means row found
+		if ($this->db->where(array( $this->join['groups'] => (int)$group_id, $this->join['users'] => (int)$user_id))->get($this->tables['users_groups'])->num_rows()) return false;
+
 		if ($return = $this->db->insert($this->tables['users_groups'], array( $this->join['groups'] => (int)$group_id, $this->join['users'] => (int)$user_id)))
 		{
 			if (isset($this->_cache_groups[$group_id])) {
@@ -1376,7 +1371,7 @@ class Ion_auth_model extends CI_Model
 		$this->trigger_events('groups');
 
 		//run each where that was passed
-		if (isset($this->_ion_where))
+		if (isset($this->_ion_where) && !empty($this->_ion_where))
 		{
 			foreach ($this->_ion_where as $where)
 			{
@@ -1508,8 +1503,14 @@ class Ion_auth_model extends CI_Model
 		// remove user from groups
 		$this->remove_from_group(NULL, $id);
 
-		// delete user from users table
+		// delete user from users table should be placed after remove from group
 		$this->db->delete($this->tables['users'], array('id' => $id));
+
+		// if user does not exist in database then it returns FALSE else removes the user from groups
+		if ($this->db->affected_rows() == 0)
+		{
+		    return FALSE;
+		}
 
 		if ($this->db->trans_status() === FALSE)
 		{
@@ -1571,6 +1572,32 @@ class Ion_auth_model extends CI_Model
 			'value'  => $lang,
 			'expire' => $expire
 		));
+
+		return TRUE;
+	}
+
+	/**
+	 * remember_user
+	 *
+	 * @return bool
+	 * @author jrmadsen67
+	 **/
+	public function set_session($user)
+	{
+
+		$this->trigger_events('pre_set_session');
+
+		$session_data = array(
+		    'identity'             => $user->{$this->identity_column},
+		    'username'             => $user->username,
+		    'email'                => $user->email,
+		    'user_id'              => $user->id, //everyone likes to overwrite id so we'll use user_id
+		    'old_last_login'       => $user->last_login
+		);
+
+		$this->session->set_userdata($session_data);
+
+		$this->trigger_events('post_set_session');
 
 		return TRUE;
 	}
@@ -1648,7 +1675,7 @@ class Ion_auth_model extends CI_Model
 
 		//get the user
 		$this->trigger_events('extra_where');
-		$query = $this->db->select($this->identity_column.', id')
+		$query = $this->db->select($this->identity_column.', id, username, email, last_login')
 		                  ->where($this->identity_column, get_cookie('identity'))
 		                  ->where('remember_code', get_cookie('remember_code'))
 		                  ->limit(1)
@@ -1661,14 +1688,7 @@ class Ion_auth_model extends CI_Model
 
 			$this->update_last_login($user->id);
 
-			$session_data = array(
-			    $this->identity_column => $user->{$this->identity_column},
-			    'id'                   => $user->id, //kept for backwards compatibility
-			    'user_id'              => $user->id, //everyone likes to overwrite id so we'll use user_id
-			);
-
-			$this->session->set_userdata($session_data);
-
+			$this->set_session($user);
 
 			//extend the users cookies if the option is enabled
 			if ($this->config->item('user_extend_on_login', 'ion_auth'))
@@ -1690,11 +1710,12 @@ class Ion_auth_model extends CI_Model
 	 *
 	 * @author aditya menon
 	*/
-	public function create_group($group_name = FALSE, $group_description = NULL)
+	public function create_group($group_name = FALSE, $group_description = '', $additional_data = array())
 	{
 		// bail if the group name was not passed
 		if(!$group_name)
 		{
+			$this->set_error('group_name_required');
 			return FALSE;
 		}
 
@@ -1706,8 +1727,16 @@ class Ion_auth_model extends CI_Model
 			return FALSE;
 		}
 
+		$data = array('name'=>$group_name,'description'=>$group_description);
+
+		//filter out any data passed that doesnt have a matching column in the groups table
+		//and merge the set group data and the additional data
+		if (!empty($additional_data)) $data = array_merge($this->_filter_data($this->tables['groups'], $additional_data), $data);
+
+		$this->trigger_events('extra_group_set');
+
 		// insert the new group
-		$this->db->insert($this->tables['groups'], array('name' => $group_name, 'description' => $group_description));
+		$this->db->insert($this->tables['groups'], $data);
 		$group_id = $this->db->insert_id();
 
 		// report success
@@ -1722,32 +1751,39 @@ class Ion_auth_model extends CI_Model
 	 * @return bool
 	 * @author aditya menon
 	 **/
-	public function update_group($group_id = FALSE, $group_name = FALSE, $group_description = NULL)
+	public function update_group($group_id = FALSE, $group_name = FALSE, $additional_data = array())
 	{
-		$mandatory = array($group_id, $group_name);
+		if (empty($group_id)) return FALSE;
 
-		// bail if no group id or name given
-		foreach ($mandatory as $mandatory_param) {		
-			if(!$mandatory_param || empty($mandatory_param))
-			{
-				return FALSE;
-			}
-		}
+		$data = array();
 
-		// bail if the group name already exists
-		$existing_group = $this->db->get_where($this->tables['groups'], array('name' => $group_name))->row();
-		if(isset($existing_group->id) && $existing_group->id != $group_id)
+		if (!empty($group_name))
 		{
-			$this->set_error('group_already_exists');
-			return FALSE;
+			// we are changing the name, so do some checks
+
+			// bail if the group name already exists
+			$existing_group = $this->db->get_where($this->tables['groups'], array('name' => $group_name))->row();
+			if(isset($existing_group->id) && $existing_group->id != $group_id)
+			{
+				$this->set_error('group_already_exists');
+				return FALSE;
+			}	
+
+			$data['name'] = $group_name;		
 		}
+		
 
-		$query_data = array(
-			'name' => $group_name,
-			'description' => $group_description,
-		);
+		// IMPORTANT!! Third parameter was string type $description; this following code is to maintain backward compatibility
+		// New projects should work with 3rd param as array
+		if (is_string($additional_data)) $additional_data = array('description' => $additional_data);
+		
 
-		$this->db->update($this->tables['groups'], $query_data, array('id' => $group_id));
+		//filter out any data passed that doesnt have a matching column in the groups table
+		//and merge the set group data and the additional data
+		if (!empty($additional_data)) $data = array_merge($this->_filter_data($this->tables['groups'], $additional_data), $data);
+
+
+		$this->db->update($this->tables['groups'], $data, array('id' => $group_id));
 
 		$this->set_message('group_update_successful');
 
@@ -1773,7 +1809,7 @@ class Ion_auth_model extends CI_Model
 		$this->db->trans_begin();
 
 		// remove all users from this group
-		$this->db->delete($this->tables['users_groups'], array('group_id' => $group_id));
+		$this->db->delete($this->tables['users_groups'], array($this->join['groups'] => $group_id));
 		// remove the group itself
 		$this->db->delete($this->tables['groups'], array('id' => $group_id));
 
