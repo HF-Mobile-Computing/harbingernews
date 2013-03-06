@@ -3,7 +3,7 @@
 
 <head>
 
-	<title>HF Sports | <?php echo $club_item['name']; ?></title>
+	<title>HF Clubs | <?php echo $club_item['name']; ?></title>
 	
 	<!-- enable webapp on iPhone -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
