@@ -31,7 +31,7 @@
 					</div>
 				
 				</div>
-				<div id="upcoming_events" style = "">
+				<div id="upcoming_events" style = "display: none;">
 					<h4>Upcoming Events</h4>
 					<ul>
 						<li>Circolo Italiano is making its annual pilgrimage to the <a href="http://www.alacartecs.com/">A La Carte Culinary School</a> on February 12, 2013!</li>
