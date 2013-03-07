@@ -45,7 +45,11 @@
 	    	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	    })();
 	</script>
-	
+	<style type="text/css">
+		a {
+			text-decoration: none;
+		}
+	</style>
 </head>
 
 <body>

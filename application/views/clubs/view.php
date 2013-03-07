@@ -1,5 +1,4 @@
 
-
 			<div class="container box span9 offset1" id="center">
 				<div class="row-fluid" id="titleRow">
 					<div class="span12" id="title">
@@ -8,7 +7,7 @@
 				</div>
 		  
 				<div class="tab-content">
-					<div class="announcements" id="info">
+					<div class="announcements" id="info" style="float:left; margin-right: 2%;">
 						
 						<p class = "offset1"><?php echo $club_item['content']; ?></p>
 					</div>

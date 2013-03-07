@@ -43,12 +43,16 @@
 	<style type="text/css">
 		.box {
 			background-color: white;
-			box-shadow: 1px 2px 2px 1px;
+			box-shadow: 1px 1px 1px 1px;
 			margin-top: 10px;
 			float: left;
 			margin-left: 10%;
+			margin-bottom: 15px;
 		}
 
+		a {
+			text-decoration: none;
+		}
 
 	</style>
 </head>	
