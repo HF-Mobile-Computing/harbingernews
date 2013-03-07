@@ -76,9 +76,9 @@
 						<span class="pull-right">Today is an <?php echo $a_or_b; ?> Day</span>
 					</div>
 					<div id="bullets">
-						<ul class="clearfix">
+						<div class="clearfix">
 							<?php echo $announcements; ?>
-						</ul>
+						</div>
 					</div>
 				</div>
 				<div class="row-fluid" id="postits">
