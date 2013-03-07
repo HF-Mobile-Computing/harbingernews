@@ -19,7 +19,7 @@ Row of club dropdown menus to go underneath the Harbinger header.
                     	</a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                         	<?php foreach ($arts as $club_item): ?>
-                                <a href="<?php echo base_url() . 'index.php/clubs/view/' . $club_item['slug'] ?>"><?php echo "<li style='color: #466843; margin-left: 10px;'>", $club_item["name"], "</li>"  ?></a>
+                                <a href="<?php echo base_url() . 'index.php/clubs/view/' . $club_item['slug'] ?>"><?php echo "<li style='margin-top: 5px; color: #466843; margin-left: 10px;'>", $club_item["name"], "</li>"  ?></a>
                             <?php endforeach ?>
                 	</ul>
                 </li><!--Ends dropdown menu-->
@@ -33,7 +33,7 @@ Row of club dropdown menus to go underneath the Harbinger header.
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                         <?php foreach ($academic as $club_item): ?>
-                            <a href="<?php echo base_url() . 'index.php/clubs/view/' . $club_item['slug'] ?>"><?php echo "<li style='color: #466843; margin-left: 10px;'>", $club_item["name"], "</li>"  ?></a>
+                            <a href="<?php echo base_url() . 'index.php/clubs/view/' . $club_item['slug'] ?>"><?php echo "<li style='margin-top: 5px; color: #466843; margin-left: 10px;'>", $club_item["name"], "</li>"  ?></a>
                         <?php endforeach ?>
                     </ul>
                 </li><!--Ends dropdown menu-->
@@ -47,7 +47,7 @@ Row of club dropdown menus to go underneath the Harbinger header.
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                         <?php foreach ($community as $club_item): ?>
-                            <a href="<?php echo base_url() . 'index.php/clubs/view/' . $club_item['slug'] ?>"><?php echo "<li style='color: #466843; margin-left: 10px;'>", $club_item["name"], "</li>"  ?></a>
+                            <a href="<?php echo base_url() . 'index.php/clubs/view/' . $club_item['slug'] ?>"><?php echo "<li style='margin-top: 5px; color: #466843; margin-left: 10px;'>", $club_item["name"], "</li>"  ?></a>
                         <?php endforeach ?>
                     </ul>
                 </li><!--Ends dropdown menu-->
@@ -61,7 +61,7 @@ Row of club dropdown menus to go underneath the Harbinger header.
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu;">
                         <?php foreach ($cultural as $club_item): ?>
-                            <a href="<?php echo base_url() . 'index.php/clubs/view/' . $club_item['slug'] ?>"><?php echo "<li style='color: #466843; margin-left: 10px;'>", $club_item["name"], "</li>"  ?></a>
+                            <a href="<?php echo base_url() . 'index.php/clubs/view/' . $club_item['slug'] ?>"><?php echo "<li style='margin-top: 5px; color: #466843; margin-left: 10px;'>", $club_item["name"], "</li>"  ?></a>
                         <?php endforeach ?>
                     </ul>
                 </li><!--Ends dropdown menu-->
@@ -75,7 +75,7 @@ Row of club dropdown menus to go underneath the Harbinger header.
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                         <?php foreach ($science as $club_item): ?>
-                            <a href="<?php echo base_url() . 'index.php/clubs/view/' . $club_item['slug'] ?>"><?php echo "<li style='color: #466843; margin-left: 10px;'>", $club_item["name"], "</li>"  ?></a>
+                            <a href="<?php echo base_url() . 'index.php/clubs/view/' . $club_item['slug'] ?>"><?php echo "<li style='margin-top: 5px; color: #466843; margin-left: 10px;'>", $club_item["name"], "</li>"  ?></a>
                         <?php endforeach ?>
                     </ul>
                 </li><!--Ends dropdown menu-->
@@ -89,7 +89,7 @@ Row of club dropdown menus to go underneath the Harbinger header.
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                         <?php foreach ($services as $club_item): ?>
-                            <a href="<?php echo base_url() . 'index.php/clubs/view/' . $club_item['slug'] ?>"><?php echo "<li style='color: #466843; margin-left: 10px;'>", $club_item["name"], "</li>"  ?></a>
+                            <a href="<?php echo base_url() . 'index.php/clubs/view/' . $club_item['slug'] ?>"><?php echo "<li style='margin-top: 5px; color: #466843; margin-left: 10px;'>", $club_item["name"], "</li>"  ?></a>
                         <?php endforeach ?>
                     </ul>
                 </li><!--Ends final dropdown menu-->
