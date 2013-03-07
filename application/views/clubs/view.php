@@ -6,10 +6,11 @@
 					</div>
 				</div>
 		  
-				<div class="tab-content">
-					<div class="announcements" id="info" style="float:left; margin-right: 2%;">
-						
-						<p class = "offset1"><?php echo $club_item['content']; ?></p>
+				<div class="row-fluid">
+					
+					<div class = "span11 offset1"
+						<p><?php echo $club_item['content']; ?></p>
 					</div>
+					
 				</div>
 			</div>
