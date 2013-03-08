@@ -26,6 +26,12 @@
 				title: "Pick a Sport to Edit",
 			});
 		});
+		$(function() {
+			$('#nav_admin').addClass('active');
+			$('a[data-toggle="club-popover"]').popover({
+				title: "Pick a Club to Edit",
+			});
+		});
 	</script>
 			
 	<!-- Google Analytics -->
@@ -71,11 +77,18 @@
 							<li><a href="#" id="spring" data-toggle="popover" data-html="true" data-content='<ul><?php foreach($spring as $sportsItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/sports/' . $sportsItem['slug']; ?>"><?php echo $sportsItem['title'] ?></a></li><?php endforeach ?></ul>'>Spring</a></li>
 						</ul>
 					</div>			
-					<div class="span3">
+					<div class="span4">
 						<h2>Clubs</h2>
-						<ul>
-							<li>Test.</li>
-							<li>Test.</li>
+						<ul style="float: left;">
+							<li><a href="#" data-toggle="club-popover" data-html="true" data-content='<ul><?php foreach($arts as $clubItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/clubs/' . $clubItem['slug']; ?>"><?php echo $clubItem['name'] ?></a></li><?php endforeach ?></ul>'>Arts</a></li>
+							<li><a href="#" data-toggle="club-popover" data-html="true" data-content='<ul><?php foreach($academic as $clubItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/clubs/' . $clubItem['slug']; ?>"><?php echo $clubItem['name'] ?></a></li><?php endforeach ?></ul>'>Academic</a></li>
+							<li><a href="#" data-toggle="club-popover" data-html="true" data-content='<ul><?php foreach($community as $clubItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/clubs/' . $clubItem['slug']; ?>"><?php echo $clubItem['name'] ?></a></li><?php endforeach ?></ul>'>Community Service</a></li>
+						</ul>
+					
+						<ul style="float: right;">
+							<li><a href="#" data-toggle="club-popover" data-html="true" data-content='<ul><?php foreach($cultural as $clubItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/clubs/' . $clubItem['slug']; ?>"><?php echo $clubItem['name'] ?></a></li><?php endforeach ?></ul>'>Cultural</a></li>
+							<li><a href="#" data-toggle="club-popover" data-html="true" data-content='<ul><?php foreach($science as $clubItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/clubs/' . $clubItem['slug']; ?>"><?php echo $clubItem['name'] ?></a></li><?php endforeach ?></ul>'>Sciences</a></li>
+							<li><a href="#" data-toggle="club-popover" data-html="true" data-content='<ul><?php foreach($services as $clubItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/clubs/' . $clubItem['slug']; ?>"><?php echo $clubItem['name'] ?></a></li><?php endforeach ?></ul>'>Student Services</a></li>
 						</ul>
 					</div>
 				</div>
