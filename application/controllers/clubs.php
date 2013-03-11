@@ -15,9 +15,11 @@ class Clubs extends CI_Controller {
 		$data['cultural'] = $this->club_model->get_type('cultural');
 		$data['science'] = $this->club_model->get_type('science');
 		$data['services'] = $this->club_model->get_type('services');
+		$data['all'] = $this->club_model->get_type('all');
 		$data['title'] = 'Clubs';
 		$data['username'] = $this->ion_auth->users()->row()->username;
-		
+
+		$data['club_item'] = $this->club_model->get_clubs('all');
 
 
 		$this->load->view('templates/sessions');
@@ -48,6 +50,8 @@ class Clubs extends CI_Controller {
 		$data['cultural'] = $this->club_model->get_type('cultural');
 		$data['science'] = $this->club_model->get_type('science');
 		$data['services'] = $this->club_model->get_type('services');
+		$data['all'] = $this->club_model->get_type('all');
+
 
 
 		$this->load->view('templates/sessions');

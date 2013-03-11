@@ -65,6 +65,7 @@
 						<h2>Homepage</h2>
 						<ul>
 							<li><a href="<?php echo base_url() . 'index.php/admin/add_announcement'; ?>">Add Announcement</a></li>
+							<li><a href="<?php foreach($all as $clubItem): ?><?php echo base_url() . 'index.php/admin/clubs/' . $clubItem['slug']; ?>">Edit Club Announcements</a></li><?php endforeach ?>
 							<li><a href="<?php echo base_url() . 'index.php/admin/add_upcoming'; ?>">Add Upcoming Events</a></li>
 							<li><a href="<?php echo base_url() . 'index.php/admin/add_recent'; ?>">Add Recent Events</a></li>
 						</ul>

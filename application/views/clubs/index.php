@@ -4,9 +4,9 @@
             <h1 style="margin-left: 10px;">  Club Announcements</h1>
             <div class = "row-fluid">
                 <div class = "span11 offset1" style = "font-size:15px; margin-right: 0px;">
-                    <ul>
-                       <li>Announcements</li>
-                    </ul>
+                    
+                    <?php echo $club_item['content']; ?>
+                    
                 </div>
             </div>
         </div><!--Ends announcements-->

@@ -65,6 +65,19 @@ class Admin_model extends CI_Model {
 		$this->db->update('clubs', $data);
 		redirect('/admin/clubs/' . $slug,'refresh');
 	}
+	public function club_announcements($slug)
+	{
+		$id = $this->input->post('id');
+		$title = $this->input->post('title');
+		$type = $this->input->post('title');
+		$announcements = $this->input->post('announcements');
+		$data = array(
+			'announcements' => $announcements,
+		);
+		$this->db->where('slug', $slug);
+		$this->db->update('clubs', $data);
+		redirect('/admin/clubs/' . $slug,'refresh');
+	}
 }
 
 ?>
