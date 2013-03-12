@@ -51,7 +51,7 @@
 	<?php $this->load->view('templates/header'); ?>
 	
 	<div id="content">
-		<div class="container" id="everything">
+		<div class="container" id="everything" style = "margin-bottom: 10px;">
 			<div id="header">
 				<div class="row-fluid">
 					<div class="span12">
@@ -65,7 +65,6 @@
 						<h2>Homepage</h2>
 						<ul>
 							<li><a href="<?php echo base_url() . 'index.php/admin/add_announcement'; ?>">Add Announcement</a></li>
-							<li><a href="<?php foreach($all as $clubItem): ?><?php echo base_url() . 'index.php/admin/clubs/' . $clubItem['slug']; ?>">Edit Club Announcements</a></li><?php endforeach ?>
 							<li><a href="<?php echo base_url() . 'index.php/admin/add_upcoming'; ?>">Add Upcoming Events</a></li>
 							<li><a href="<?php echo base_url() . 'index.php/admin/add_recent'; ?>">Add Recent Events</a></li>
 						</ul>
@@ -78,9 +77,10 @@
 							<li><a href="#" id="spring" data-toggle="popover" data-html="true" data-content='<ul><?php foreach($spring as $sportsItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/sports/' . $sportsItem['slug']; ?>"><?php echo $sportsItem['title'] ?></a></li><?php endforeach ?></ul>'>Spring</a></li>
 						</ul>
 					</div>			
-					<div class="span4">
+					<div class="span5">
 						<h2>Clubs</h2>
 						<ul style="float: left;">
+							<li><a href="<?php foreach($all as $clubItem): ?><?php echo base_url() . 'index.php/admin/clubs/' . $clubItem['slug']; ?>">Edit Club Announcements</a></li><?php endforeach ?>
 							<li><a href="#" data-toggle="club-popover" data-html="true" data-content='<ul><?php foreach($arts as $clubItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/clubs/' . $clubItem['slug']; ?>"><?php echo $clubItem['name'] ?></a></li><?php endforeach ?></ul>'>Arts</a></li>
 							<li><a href="#" data-toggle="club-popover" data-html="true" data-content='<ul><?php foreach($academic as $clubItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/clubs/' . $clubItem['slug']; ?>"><?php echo $clubItem['name'] ?></a></li><?php endforeach ?></ul>'>Academic</a></li>
 							<li><a href="#" data-toggle="club-popover" data-html="true" data-content='<ul><?php foreach($community as $clubItem): ?><?php echo "<li><a href=\"" . base_url() . 'index.php/admin/clubs/' . $clubItem['slug']; ?>"><?php echo $clubItem['name'] ?></a></li><?php endforeach ?></ul>'>Community Service</a></li>
