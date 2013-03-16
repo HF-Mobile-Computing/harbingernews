@@ -8,7 +8,7 @@ Row of club dropdown menus to go underneath the Harbinger header.
             });
 </script>
 
-<div class="navbar navbar-static-top" style = "border-bottom: #629b63;">
+<div class="navbar navbar-static-top" style = "border-bottom: #629b63; z-index: 0;">
     <div class = "navbar-inner">
     	<div class = "container">
         	<ul class = "nav pull-left">
