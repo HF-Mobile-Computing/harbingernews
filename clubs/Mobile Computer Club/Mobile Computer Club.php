@@ -18,7 +18,7 @@
 </head>
 <body>
 	<div id = "content" style ="">
-		<!--#include virtual="/harbingernews/tools/header.shtml"-->
+		<?php include('../../tools/header.shtml') ?>
 		<?php include('../header2.shtml') ?>
 		
 		<div id="info" class="container">
@@ -27,7 +27,7 @@
 					<!--
 					When enabled, (^ get rid of display:none;) shows a box to be used for important reminders such as reschedulings or cancellations. Maybe more. 
 					-->
-					<div class="alert alert-error">
+					<div class="alert alert-error" style = "display: none;">
   						<button type="button" class="close" data-dismiss="alert">&times;</button>
   						<h3>Important!</h3>
 					</div>
@@ -51,7 +51,7 @@
 					<p>Advisor: Mr. Schaeffer</p> 
 					<p>Room: 405</p>
 					<p>Phone and app development</p>
-					<p>Link to the website: https://sites.google.com/site/mobilecomputingclubhhs/</p>
+					<p><a href="https://sites.google.com/site/mobilecomputingclubhhs/">Link to the website</a></p>
 					<br/>
 					<p>This club meets on Tuesdays</p>
 
