@@ -1,30 +1,32 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Slug:</b>
-  <%= @sport.slug %>
-</p>
-
-<p>
-  <b>Title:</b>
-  <%= @sport.title %>
-</p>
-
-<p>
-  <b>Content:</b>
-  <%= @sport.content %>
-</p>
-
-<p>
-  <b>Season:</b>
-  <%= @sport.season %>
-</p>
-
-<p>
-  <b>Photo path:</b>
-  <%= @sport.photo_path %>
-</p>
-
-
-<%= link_to 'Edit', edit_sport_path(@sport) %> |
-<%= link_to 'Back', sports_path %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  
+  <p>
+    <b>Slug:</b>
+    <%= @sport.slug %>
+  </p>
+  
+  <p>
+    <b>Title:</b>
+    <%= @sport.title %>
+  </p>
+  
+  <p>
+    <b>Content:</b>
+    <%= @sport.content %>
+  </p>
+  
+  <p>
+    <b>Season:</b>
+    <%= @sport.season %>
+  </p>
+  
+  <p>
+    <b>Photo path:</b>
+    <%= @sport.photo_path %>
+  </p>
+  
+  
+  <%= link_to 'Edit', edit_sport_path(@sport) %> |
+  <%= link_to 'Back', sports_path %>
+</div>
