@@ -4,3 +4,5 @@
 /Build
 .sass-cache
 /log
+/.bundle
+/tmp
