@@ -1,4 +1,6 @@
 class SportsController < ApplicationController
+  layout 'sportspage', :only => :show
+
   # GET /sports
   # GET /sports.json
   def index
