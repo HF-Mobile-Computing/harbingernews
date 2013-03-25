@@ -1,0 +1,31 @@
+<h1>Listing sports</h1>
+
+<table>
+  <tr>
+    <th>Slug</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Season</th>
+    <th>Photo path</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sports.each do |sport| %>
+  <tr>
+    <td><%= sport.slug %></td>
+    <td><%= sport.title %></td>
+    <td><%= sport.content %></td>
+    <td><%= sport.season %></td>
+    <td><%= sport.photo_path %></td>
+    <td><%= link_to 'Show', sport %></td>
+    <td><%= link_to 'Edit', edit_sport_path(sport) %></td>
+    <td><%= link_to 'Destroy', sport, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sport', new_sport_path %>
