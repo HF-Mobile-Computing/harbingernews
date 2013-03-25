@@ -1,10 +1,13 @@
 class SportsController < ApplicationController
-  layout 'sportspage', :only => :show
+  layout :resolve_layout
 
   # GET /sports
   # GET /sports.json
   def index
     @sports = Sport.all
+    @fall = Sport.where("season = :season", { :season => "fall"})
+    @spring = Sport.where("season = :season", { :season => "spring"})
+    @winter = Sport.where("season = :season", { :season => "winter"})
 
     respond_to do |format|
       format.html # index.html.erb
@@ -82,4 +85,19 @@ class SportsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # Set multiple layouts for different page types
+  private
+  
+  def resolve_layout
+    case action_name
+    when "index"
+      "sports_index"
+    when "show"
+      "sports_page"
+    else
+      "application"
+    end
+  end
+  
 end
