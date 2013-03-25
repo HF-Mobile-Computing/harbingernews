@@ -1,4 +1,8 @@
 Harbingernews::Application.routes.draw do
+  get "static_pages/about"
+
+  get "static_pages/get_involved"
+
   resources :sports
 
   # The priority is based upon order of creation:

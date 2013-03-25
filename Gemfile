@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Always available
 gem 'rails', '3.2.8'
 gem 'jquery-rails'
+gem 'bootstrap-sass'
 
 group :development do
   gem 'rspec-rails'
@@ -16,7 +17,7 @@ group :assets do
 end
 
 group :test do
-  'capybara'
+  gem 'capybara'
 end
 
 group :production do
