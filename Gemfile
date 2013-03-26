@@ -6,8 +6,10 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 
 group :development do
+  gem 'rspec'
   gem 'rspec-rails'
   gem 'sqlite3'
+  gem 'guard-rspec'
 end
 
 group :assets do
@@ -17,7 +19,12 @@ group :assets do
 end
 
 group :test do
+  gem 'rspec-rails'
   gem 'capybara'
+  gem 'rb-fsevent', :require => false
+  gem 'growl'
+  gem 'guard-spork'
+  gem 'spork'
 end
 
 group :production do
