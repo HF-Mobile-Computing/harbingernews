@@ -18,7 +18,7 @@ class SportsController < ApplicationController
   # GET /sports/1
   # GET /sports/1.json
   def show
-    @sport = Sport.find(params[:id])
+    @sport = Sport.find_by_slug(params[:slug])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -39,7 +39,7 @@ class SportsController < ApplicationController
 
   # GET /sports/1/edit
   def edit
-    @sport = Sport.find(params[:id])
+    @sport = Sport.find_by_slug(params[:slug])
   end
 
   # POST /sports
