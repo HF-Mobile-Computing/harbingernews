@@ -1,9 +1,12 @@
 /*
 *=require bootstrap
 *=require bootstrap-responsive
+*=require_tree
 *=require_self
 */
 
+@import "bootstrap";
+@import "bootstrap-responsive";
 @import "all";
 @import "sportstiles";
 // Adds in the sport tile backgrounds, which are in a separate file for organization's sake
