@@ -1,9 +1,14 @@
 Harbingernews::Application.routes.draw do
-  get "static_pages/about"
 
-  get "static_pages/get_involved"
+  match '/about', to: 'static_pages#about'
 
+  match '/get_involved', to: "static_pages#get_involved"
+  
+  # match '/sports', to: "sports#index"
+  
   resources :sports
+  
+  # match '/sports/:slug', to: 'sports#show'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
