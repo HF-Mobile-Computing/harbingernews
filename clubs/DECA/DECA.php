@@ -46,7 +46,7 @@
 			<div class="row">
 				<div class = "about">
 					<h4 class = "offset1">About DECA</h4>
-					<p>Advisor: Ms. Pollard</p> 
+					<p>Advisor: Mrs. Matthews</p> 
 					<p>Room: T9 </p>
 					<p>DECA is a student organization focusing on leadership and personal development and is
 designed specifically for students interested in marketing, management and entrepreneurship.
