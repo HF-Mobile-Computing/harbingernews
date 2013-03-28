@@ -92,7 +92,7 @@ class SportsController < ApplicationController
   def resolve_layout
     case action_name
     when "index"
-      "sports_index"
+      false
     when "show"
       "sports_page"
     else
