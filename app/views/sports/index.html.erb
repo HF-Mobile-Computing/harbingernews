@@ -23,9 +23,7 @@
   </script>
 </head>
 <body>
-
   <div id="content">
-  
   <%= render 'layouts/header' %>
     <div class="container" id="center">
     	<ul class="nav nav-tabs affix-top container" data-spy="affix" data-offset-top="60" id="seasonsswitcher">
@@ -37,7 +35,6 @@
     	<div class="row-fluid">
     		<div class="span8">
     			<div class="tab-content">
-    			
     				<div class="tab-pane" id="fall">
     					<% @fall.each do |sport| %>
     					<% photo_path = "/assets/sports/" + sport.slug + ".png" %>
@@ -56,7 +53,6 @@
     					</div>
     					<% end %>
     				</div>
-    				
     				<div class="tab-pane active" id="winter">
     					<% @winter.each do |sport| %>
     					<% photo_path = "/assets/sports/" + sport.slug + ".png" %>
@@ -75,7 +71,6 @@
     					</div>
     					<% end %>
     				</div>
-    				
     				<div class="tab-pane" id="spring">
     					<% @spring.each do |sport| %>
     					<% photo_path = "/assets/sports/" + sport.slug + ".png" %>
@@ -94,7 +89,6 @@
     					</div>
     					<% end %>
     				</div>
-    				
     		  </div><!-- end "tab-content" -->
     		</div>
     		  
@@ -107,8 +101,6 @@
     </div>
     <div id="footer_spacer"></div>
 	</div><!-- end "content"-->
-	 
-	 <%= render 'layouts/footer' %>
-	
+	<%= render 'layouts/footer' %>
 </body>
 </html>
