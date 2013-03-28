@@ -5,7 +5,6 @@
 */
 
 @import "all";
-@import "sportstiles";
 // Adds in the sport tile backgrounds, which are in a separate file for organization's sake
 
 // Variables
@@ -67,11 +66,10 @@ body {
 	display: block;
 	width: 98%;
 	float: right;
-	// max-width = 852px
+	background: {
+  	position: center;
+	}
 	height: 170px;
-	/* background: {
-		color: red;
-	} */
 	box-shadow: 1px 1px 4px black;
 	// @include pie;
 	h2 {
@@ -201,4 +199,14 @@ body {
 			}
 		}
 	}
+}
+
+.span8 {
+  position: relative;
+  z-index: 2;
+}
+
+.span4 {
+  position: relative;
+  z-index: 2;
 }
