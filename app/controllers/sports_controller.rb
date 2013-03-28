@@ -94,7 +94,7 @@ class SportsController < ApplicationController
     when "index"
       false
     when "show"
-      "sports_page"
+      false
     else
       "application"
     end
