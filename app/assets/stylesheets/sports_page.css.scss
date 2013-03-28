@@ -4,8 +4,6 @@
 *=require_self
 */
 
-@import "bootstrap";
-@import "bootstrap-responsive";
 @import "all";
 
 $darkGreen: #416847;
@@ -73,12 +71,6 @@ body {
 		width: 95%;
 		margin: 0 auto;
 		text-shadow: 2px 2px 2px #494949;
-	}
-}
-
-.span8 {
-	background: {
-		color: green;
 	}
 }
 

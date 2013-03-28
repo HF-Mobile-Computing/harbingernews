@@ -3,9 +3,23 @@
 <head>
   <title>Harbingernews</title>
   <%= stylesheet_link_tag    "sports_index", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "sports" %>
   <%= csrf_meta_tags %>
-  <style type="text/css"><%= yield :style %></style>
+  <script type="text/javascript">
+    $(function(){
+    	$time = 150;
+    	$(".sport").hover(function() {
+    	   console.log("Hover activated");
+    		$(this).find(".inner").addClass("tint", $time);
+    		$(this).find(".holder").fadeIn($time);
+    		$(this).find("h2").addClass("faded_text", $time);
+    	}, function() {
+    		$(this).find('.inner').removeClass("tint", $time);
+    		$(this).find('.holder').fadeOut($time);
+    		$(this).find('h2').removeClass("faded_text", $time);
+    	});
+    });
+  </script>
 </head>
 <body>
 
