@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Always available
 gem 'rails', '3.2.3'
-# gem 'jquery-rails', '2.0.0'
+gem 'jquery-rails'
 gem 'bootstrap-sass'
 
 group :development do
