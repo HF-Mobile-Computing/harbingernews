@@ -1,5 +1,7 @@
 Harbingernews::Application.routes.draw do
 
+  resources :announcements
+
   match '/', to: "home#index"
 
   # Mostly static pages
