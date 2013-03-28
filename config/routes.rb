@@ -1,16 +1,17 @@
 Harbingernews::Application.routes.draw do
 
+  match '/', to: "home#index"
+
+  # Mostly static pages
+  match '/about', to: 'static_pages#about'
+  match '/get_involved', to: "static_pages#get_involved"
+
   get "users/new"
 
-  match '/about', to: 'static_pages#about'
-
-  match '/get_involved', to: "static_pages#get_involved"
-  
-  match '/sports/:slug', to: "sports#show"
-  
+  # Sports Pages
+  match '/sports/:slug', to: "sports#show" # Show the sports pages by name (slug) not id
+  match '/sports/:slug/edit', to: "sports#edit" # Allows the edit pages to work with the same
   resources :sports
-  
-  # match '/sports/:slug', to: 'sports#show'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -69,3 +70,18 @@ Harbingernews::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 end
+#== Route Map
+# Generated on 27 Mar 2013 23:38
+#
+#        about        /about(.:format)             static_pages#about
+# get_involved        /get_involved(.:format)      static_pages#get_involved
+#    users_new GET    /users/new(.:format)         users#new
+#                     /sports/:slug(.:format)      sports#show
+#                     /sports/:slug/edit(.:format) sports#edit
+#       sports GET    /sports(.:format)            sports#index
+#              POST   /sports(.:format)            sports#create
+#    new_sport GET    /sports/new(.:format)        sports#new
+#   edit_sport GET    /sports/:id/edit(.:format)   sports#edit
+#        sport GET    /sports/:id(.:format)        sports#show
+#              PUT    /sports/:id(.:format)        sports#update
+#              DELETE /sports/:id(.:format)        sports#destroy
