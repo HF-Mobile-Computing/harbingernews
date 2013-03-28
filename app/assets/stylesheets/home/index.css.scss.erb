@@ -1,0 +1,324 @@
+@import "bootstrap";
+@import "bootstrap-responsive";
+@import "all";
+
+// Tablet-Size and Under
+@media all and (max-width: 767px) {
+	.navbar-static-top {
+		margin: {
+			right: 0px !important;
+			left: -20px !important;
+			width: auto !important;
+		}
+		.navbar-inner {
+			padding: {
+				right: 0px !important;
+			}
+		}
+	}
+	#postits {
+		.span4 {
+			margin: {
+				bottom: 9px;
+			}
+		}
+	}
+}
+
+// Phone
+@media all and (max-width: 517px) {
+	#header {
+		height: 140px !important;
+		min-height: 140px !important;
+		h1 {
+			margin-left: auto !important;
+			top: 22px !important;
+			text-align: center;
+		}
+	}
+}
+
+// Wide-Screen
+@media all and (min-width: 1200px) {
+	#sidebar {
+		display: block !important;
+		float: right;
+		width: 175px;
+		div {
+			$height: 140px;
+			border-radius: 15px;
+			box-shadow: 0px 1px 6px rgba(0,0,0,0.8);
+			height: $height;
+			min-height: $height;
+			max-height: $height;
+			text-align: center;
+			&:hover {
+				box-shadow: 0px 1px 7px 1px black;
+			}
+		}
+	}
+	
+	#stuff {
+		float: left;
+		min-width: 940px;
+		padding: {
+			right: 20px !important;
+		}
+	}
+	
+	#postits {
+		display: none !important;
+	}
+	
+	#yearbook {
+		background: {
+			color: #c51046;
+		}
+			}
+	#snowflake {
+		background: {
+			color: #286cff !important;
+		}
+		color: white;
+		h4 {
+			position: relative;
+			top: 10px;
+		}
+		p {
+			position: relative;
+			top: 35px;
+		}
+	}
+	#playfest {
+		color: white;
+		background: {
+			color: #319358 !important;
+		}
+		h4 {
+			margin: {
+				bottom: 23px;
+			}
+			position: relative;
+			top: 10px;
+		}
+		p {
+			margin: 0 auto;
+			width: 95%
+		}
+	}
+}
+
+// All
+
+body {
+	@include backgroundNoise;
+}
+
+#sidebar {
+	display: none;
+}
+
+#all {
+	
+}
+
+#stuff {
+	@include pie;
+	background: {
+		color: white;
+	}
+	border-radius: 0px 0px 4px 4px;
+	box-shadow: 0px 0px 7px 1px black;
+	max-width: 940px;
+	margin: {
+		bottom: 12px;
+	}
+	min-height: 10px;
+	padding: {
+		left: 0px !important;
+		right: 0px !important
+	}
+	position: relative;
+	z-index: 1;
+}
+
+#header {
+	min-height: 230px;
+	background: {
+		image: url(<%= image_path('entrance.png') %>);
+		position: center;
+	}
+	box-shadow: inset 0px -20px 20px -18px black;
+	h1 {
+		color: white;
+		width: 90%;
+		margin: 0 auto;
+		margin: {
+			top: 0px;
+			bottom: 0px;
+		}
+		padding: {
+			top: 0px;
+			bottom: 0px;
+		}
+		position: relative;
+		text-shadow: 1px 1px 5px rgba(30,30,30,0.9);
+		top: 180px;
+	}
+}
+
+#announcements {
+	@include pie;
+	background: {
+		color: #e7e7e7;
+	}
+	box-shadow: 1px 1px 6px rgba(0,0,0,0.68);
+	margin: 0 auto;
+	margin: {
+		top: 15px;
+		bottom: 5px;
+	}
+	max-width: 836px;
+	min-height: 100px;
+	width: 89%;
+	h3 {
+		text-align: center;
+		line-height: 24px;
+	}
+	#basic_info {
+		width: 90%;
+		margin: 0 auto;
+		margin: {
+			bottom: 40px;
+		}
+	}
+	#bullets {
+		margin: 0 auto;
+		width: 90%;
+		ul {
+			clear: both;
+		}
+	}
+	.chunk {
+		h2 {
+			display: none;
+		}
+		li {
+			font-size: 16px;
+			line-height: 18px;
+			padding: {
+				bottom: 6px;
+			}
+		}
+	}
+}
+
+.alert {
+	margin: {
+		top: 10px;
+		left: auto;
+		right: auto;
+		bottom: -3px;
+	}
+	width: 84%;
+}
+
+#postits {
+	$height: 140px;
+	@include pie;
+	margin: 0 auto;
+	margin: {
+		top: 12px;
+		bottom: 10px;
+	}
+	width: 89% !important;
+	.span4 {
+		background: {
+			color: red;
+		}
+		border-radius: 15px;
+		box-shadow: 0px 1px 6px rgba(0,0,0,0.8);
+		height: $height;
+		min-height: $height;
+		max-height: $height;
+		padding: {
+			top: 2px;
+			bottom: 2px;
+		}
+		text-align: center;
+		&:hover {
+			box-shadow: 0px 1px 7px 1px black;
+		}
+	}
+	#yearbook {
+		background: {
+			color: #c51046 !important;
+		}
+	}
+	#snowflake {
+		background: {
+			color: #286cff !important;
+		}
+		color: white;
+		p {
+			position: relative;
+			margin: 0 auto;
+			top: 23px;
+			width: 80%;
+		}
+		h4 {
+			position: relative;
+			top: 10px;
+			margin: 0 auto;
+			width: 80%;
+		}
+	}
+	#playfest {
+		color: white;
+		background: {
+			color: #319358 !important;
+		}
+		p {
+			margin: 0 auto;
+			width: 90%
+		}
+	}
+}
+
+#events {
+	$bottomPadding: 10px;
+	text-align: justify;
+	margin: 0 auto;
+	margin: {
+		top: 13px;
+		bottom: 10px;
+	}
+	width: 89%;
+	h3 {
+		margin: {
+			bottom: 5px;
+			top: 5px;
+		}
+		text-align: center;
+	}
+	li {
+		padding: {
+			left: 10px;
+		}
+	}
+	#upcoming {
+		background: {
+			color: #fffac1;
+		}
+		box-shadow: 1px 1px 6px rgba(0,0,0,0.68);
+		padding: {
+			bottom: $bottomPadding;
+		}
+	}
+	#recent {
+		box-shadow: 1px 1px 6px rgba(0,0,0,0.68);
+		padding: {
+			bottom: $bottomPadding;
+		}
+	}
+}
