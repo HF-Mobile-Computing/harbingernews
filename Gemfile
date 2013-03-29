@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 # Always available
 gem 'rails', '3.2.3'
 gem 'jquery-rails'
-gem 'bootstrap-sass'
 
 group :development do
   gem 'rspec-rails', '2.9.0'

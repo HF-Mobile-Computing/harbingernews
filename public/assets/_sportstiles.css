@@ -1,0 +1,132 @@
+/* line 9, ../../app/assets/stylesheets/_sportstiles.scss */
+#baseball {
+  background-image: url("/harbingernews/sports/baseball/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 13, ../../app/assets/stylesheets/_sportstiles.scss */
+#bbasketball {
+  background-image: url("/harbingernews/sports/basketball/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 17, ../../app/assets/stylesheets/_sportstiles.scss */
+#bowling {
+  background-image: url("/harbingernews/sports/bowling/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 21, ../../app/assets/stylesheets/_sportstiles.scss */
+#crosscountry {
+  background-image: url("/harbingernews/sports/track/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 25, ../../app/assets/stylesheets/_sportstiles.scss */
+#gbasketball {
+  background-image: url("/harbingernews/sports/basketball/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 29, ../../app/assets/stylesheets/_sportstiles.scss */
+#fieldhockey {
+  background-image: url("/harbingernews/sports/field_hockey/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 33, ../../app/assets/stylesheets/_sportstiles.scss */
+#golf {
+  background-image: url("/harbingernews/sports/golf/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 37, ../../app/assets/stylesheets/_sportstiles.scss */
+#gymnastics {
+  background-image: url("/harbingernews/sports/gymnastics/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 41, ../../app/assets/stylesheets/_sportstiles.scss */
+#football {
+  background-image: url("/harbingernews/sports/football/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 45, ../../app/assets/stylesheets/_sportstiles.scss */
+#softball {
+  background-image: url("/harbingernews/sports/softball/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 49, ../../app/assets/stylesheets/_sportstiles.scss */
+#bswimming {
+  background-image: url("/harbingernews/sports/swimming/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 53, ../../app/assets/stylesheets/_sportstiles.scss */
+#gswimming {
+  background-image: url("/harbingernews/sports/swimming/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 57, ../../app/assets/stylesheets/_sportstiles.scss */
+#btennis {
+  background-image: url("/harbingernews/sports/tennis/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 61, ../../app/assets/stylesheets/_sportstiles.scss */
+#gtennis {
+  background-image: url("/harbingernews/sports/tennis/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 65, ../../app/assets/stylesheets/_sportstiles.scss */
+#track {
+  background-image: url("/harbingernews/sports/track/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 69, ../../app/assets/stylesheets/_sportstiles.scss */
+#volleyball {
+  background-image: url("/harbingernews/sports/volleyball/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 73, ../../app/assets/stylesheets/_sportstiles.scss */
+#wrestling {
+  background-image: url("/harbingernews/sports/wrestling/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 77, ../../app/assets/stylesheets/_sportstiles.scss */
+#bsoccer {
+  background-image: url("/harbingernews/sports/soccer/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 81, ../../app/assets/stylesheets/_sportstiles.scss */
+#gsoccer {
+  background-image: url("/harbingernews/sports/soccer/background-tile.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
