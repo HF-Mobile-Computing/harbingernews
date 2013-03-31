@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   protected
     
     def set_vars
-      # @announcement = Announcement.last
-      # @hello = "hello"
+      @announcement = Announcement.last
+      @hello = "hello"
   end
 end
