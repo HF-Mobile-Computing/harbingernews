@@ -5,6 +5,11 @@
   <%= stylesheet_link_tag    "sports_page", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript">
+    $(function(){
+      $('#nav_sports').addClass('active');
+    });
+  </script>
   <style type="text/css">
     #title { 
       background-image: url( <%= @sport.photo_path %> );
