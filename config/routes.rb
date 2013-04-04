@@ -8,12 +8,14 @@ Harbingernews::Application.routes.draw do
   match '/about', to: 'static_pages#about'
   match '/get_involved', to: "static_pages#get_involved"
 
-  get "users/new"
-
   # Sports Pages
   match '/sports/:slug', to: "sports#show" # Show the sports pages by name (slug) not id
   match '/sports/:slug/edit', to: "sports#edit" # Allows the edit pages to work with the same
   resources :sports
+  
+  
+  # User pages
+  resources :users
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
