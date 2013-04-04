@@ -25,6 +25,9 @@ sports/volleyball.png: sports/volleyball-aa8555652d96ed6706f24c4a5ce91ffb.png
 sports/wrestling.png: sports/wrestling-4696e1f2d5017019df454f7e09cf47ff.png
 ssDeepLink.png: ssDeepLink-596c2d241a6d596f8f54672dc098cd1f.png
 application.js: application-b5c4645aaebaa9e16b293a89a6ab9b0e.js
+home.js: home-5263f0f118eb7bfd830c7db7c15f6fe3.js
+sports.js: sports-b5c4645aaebaa9e16b293a89a6ab9b0e.js
 application.css: application-8c3be74dda4a9b8c8c77f47867a6b467.css
 home/index.css: home/index-c7d77c01d0019f50629a7483a6d8e936.css
+sports_index.css: sports_index-cf232631fa748e7fe8a339dd4267b608.css
 jquery.min.map: jquery.min-0633f0a59e3d0cd55ac3518f228b2893.map
