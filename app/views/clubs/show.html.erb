@@ -15,10 +15,10 @@
 <%= render 'layouts/header' %>
 <%= render 'layouts/header2' %>
 
-
+<div id="root">
 <div class="row">
-	<div class = "about offset1">
-		<h4 style="margin-left: 7%">About <%= @club.name %></h4>
+	<div class = "offset1 span10" id='announcements'>
+		<h2>About <%= @club.name %></h4>
 		<div class = 'offset1'>
 			<%= @club.content %>
 
@@ -27,3 +27,4 @@
 			
 </div><!-- end "row" -->
 <%= render 'layouts/footer' %>
+</div>
