@@ -1,5 +1,7 @@
 Harbingernews::Application.routes.draw do
 
+  
+
   resources :announcements
 
   match '/', to: "home#index"
@@ -13,6 +15,10 @@ Harbingernews::Application.routes.draw do
   match '/sports/:slug/edit', to: "sports#edit" # Allows the edit pages to work with the same
   resources :sports
   
+
+  match '/clubs/:slug', to: "clubs#show"
+  match '/clubs/:slug/edit', to: "clubs#edit"
+  resources :clubs
   
   # User pages
   resources :users

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HF Clubs</title>
+  <%= stylesheet_link_tag    "clubs", :media => "all" %>
+  <%= javascript_include_tag "clubs" %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript">
+    $(function(){
+      $('#nav_clubs').addClass('active');
+    });
+  </script>
+</head>
+
+<%= render 'layouts/header' %>
+<%= render 'layouts/header2' %>
+<div id="root">
+<div id = "announcements" class = "span10 offset1">
+
+  <h1>Club Announcements</h1>
+  
+  <div class = "offset1">
+  <% @all.each do |announcement| %>
+  
+    <li> <%= announcement.content %> </li>
+  
+  <% end %>
+  </div>
+  
+</div>
+
+<br />
+
+<div id="footer_spacer"></div>
+
+<%= render 'layouts/footer' %>
+</div>
+</body>
+</html>
