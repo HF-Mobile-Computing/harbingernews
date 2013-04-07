@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # Always available
 gem 'rails', '3.2.3'
+gem 'nokogiri'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '3.0.1'
 
@@ -18,7 +19,7 @@ group :assets do
 end
 
 group :test do
-  gem 'capybara', '1.1.2'
+  gem 'capybara', '2.0.0'
   gem 'factory_girl_rails', '1.4.0'
 end
 
