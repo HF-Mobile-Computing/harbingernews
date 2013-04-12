@@ -33,6 +33,7 @@ class ClubsController < ApplicationController
     @services = Club.where("category = :category", {:category => "services"})
     @all = Club.where("category = :category", {:category => "all"})
     
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @club }
@@ -74,7 +75,7 @@ class ClubsController < ApplicationController
   # PUT /clubs/1
   # PUT /clubs/1.json
   def update
-    @club = Club.find(params[:id])
+    @club = Club.find_by_slug(params[:slug])
 
     respond_to do |format|
       if @club.update_attributes(params[:club])
@@ -90,7 +91,7 @@ class ClubsController < ApplicationController
   # DELETE /clubs/1
   # DELETE /clubs/1.json
   def destroy
-    @club = Club.find(params[:id])
+    @club = Club.find(params[:slug])
     @club.destroy
 
     respond_to do |format|

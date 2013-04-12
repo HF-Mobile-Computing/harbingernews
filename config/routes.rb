@@ -16,6 +16,7 @@ Harbingernews::Application.routes.draw do
   resources :sports
   
 
+  match '/clubs/new', to: "clubs#new"
   match '/clubs/:slug', to: "clubs#show"
   match '/clubs/:slug/edit', to: "clubs#edit"
   resources :clubs
