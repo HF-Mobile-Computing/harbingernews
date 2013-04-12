@@ -23,7 +23,7 @@ class ClubsController < ApplicationController
   # GET /clubs/1
   # GET /clubs/1.json
   def show
-    @club = Club.find_by_slug(params[:slug])
+    @club = Club.find(params[:id])
     @clubs = Club.all
     @arts = Club.where("category = :category", {:category => "arts"})
     @academic = Club.where("category = :category", {:category => "academic"})
@@ -53,7 +53,7 @@ class ClubsController < ApplicationController
 
   # GET /clubs/1/edit
   def edit
-    @club = Club.find_by_slug(params[:slug])
+    @club = Club.find(params[:id])
   end
 
   # POST /clubs
@@ -75,7 +75,8 @@ class ClubsController < ApplicationController
   # PUT /clubs/1
   # PUT /clubs/1.json
   def update
-    @club = Club.find_by_slug(params[:slug])
+    @club = Club.find(params[:id])
+
 
     respond_to do |format|
       if @club.update_attributes(params[:club])

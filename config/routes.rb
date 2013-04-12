@@ -17,8 +17,8 @@ Harbingernews::Application.routes.draw do
   
 
   match '/clubs/new', to: "clubs#new"
-  match '/clubs/:slug', to: "clubs#show"
-  match '/clubs/:slug/edit', to: "clubs#edit"
+  match '/clubs/:id', to: "clubs#show"
+  match '/clubs/:id/edit', to: "clubs#edit"
   resources :clubs
   
   # User pages

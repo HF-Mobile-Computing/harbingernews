@@ -9,7 +9,7 @@
                       </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                        <% @arts.each do |club| %> 
-                       <li><a href="/clubs/<%= club.slug %>"><%= club.name %></a></li>
+                       <li><a href="/clubs/<%= club.id %>"><%= club.name %></a></li>
                        <% end %>  
                   </ul>
               </li><!--Ends dropdown menu-->
@@ -21,7 +21,7 @@
                       </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                        <% @academic.each do |club| %> 
-                       <li><a href="/clubs/<%= club.slug %>"><%= club.name %></a></li>
+                       <li><a href="/clubs/<%= club.id %>"><%= club.name %></a></li>
                        <% end %>  
                   </ul>
               </li><!--Ends dropdown menu-->
@@ -32,7 +32,7 @@
                       </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                        <% @community.each do |club| %> 
-                       <li><a href="/clubs/<%= club.slug %>"><%= club.name %></a></li>
+                       <li><a href="/clubs/<%= club.id %>"><%= club.name %></a></li>
                        <% end %>  
                   </ul>
               </li><!--Ends dropdown menu-->
@@ -43,7 +43,7 @@
                       </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                        <% @cultural.each do |club| %> 
-                       <li><a href="/clubs/<%= club.slug %>"><%= club.name %></a></li>
+                       <li><a href="/clubs/<%= club.id %>"><%= club.name %></a></li>
                        <% end %>  
                   </ul>
               </li><!--Ends dropdown menu-->
@@ -54,7 +54,7 @@
                       </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                        <% @sciences.each do |club| %> 
-                       <li><a href="/clubs/<%= club.slug %>"><%= club.name %></a></li>
+                       <li><a href="/clubs/<%= club.id %>"><%= club.name %></a></li>
                        <% end %>  
                   </ul>
               </li><!--Ends dropdown menu-->
@@ -65,7 +65,7 @@
                       </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                        <% @services.each do |club| %> 
-                       <li><a href="/clubs/<%= club.slug %>"><%= club.name %></a></li>
+                       <li><a href="/clubs/<%= club.id %>"><%= club.name %></a></li>
                        <% end %>  
                   </ul>
               </li><!--Ends dropdown menu-->
