@@ -7,3 +7,4 @@
 /.bundle
 /tmp
 .sqlite3
+development.sqlite3
