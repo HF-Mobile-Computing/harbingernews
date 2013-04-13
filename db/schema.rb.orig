@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130405114150) do
+=======
+ActiveRecord::Schema.define(:version => 20130413012557) do
+>>>>>>> refs/heads/Rails_Sign-In-and-Out
 
   create_table "announcements", :force => true do |t|
     t.string   "a_or_b"

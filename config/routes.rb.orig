@@ -1,7 +1,13 @@
 Harbingernews::Application.routes.draw do
 
+<<<<<<< HEAD
+  
+
+  resources :announcements
+=======
   # set root path
   root :to => "home#index"
+>>>>>>> refs/heads/Rails_Sign-In-and-Out
 
   resources :announcements
 
@@ -13,6 +19,7 @@ Harbingernews::Application.routes.draw do
   match '/sports/:slug', to: "sports#show" # Show the sports pages by name (slug) not id
   match '/sports/:slug/edit', to: "sports#edit" # Allows the edit pages to work with the same
   resources :sports
+  
 
   match '/clubs/new', to: "clubs#new"
   match '/clubs/:id', to: "clubs#show"

@@ -61,7 +61,7 @@ class SportsController < ApplicationController
   # PUT /sports/1
   # PUT /sports/1.json
   def update
-    @sport = Sport.find(params[:id])
+    @sport = Sport.find_by_slug(params[:slug])
 
     respond_to do |format|
       if @sport.update_attributes(params[:sport])

@@ -14,6 +14,24 @@
   					<li id="nav_sports"><%= link_to "Sports", sports_path %></li>
   					<li id="nav_clubs"><%= link_to "Clubs", clubs_path %></li>
   				</ul>
+  				<ul class="nav pull-right visible-desktop">
+					<% if signed_in? %>
+						<li class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown"><%= current_user.name %><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+						<li><a href="#">Test.</a></li>
+						<li class="divider"></li>
+						<li class="logout"><a href="#">Log Out</a></li>
+						</ul>
+						</li>
+				  <% else %>
+				  	<li class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Log In<b class="caret"></b></a>
+						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+						
+						</div>
+				  <% end %>
+				  </ul>
   		  </div>
   		</div>
   	</div>

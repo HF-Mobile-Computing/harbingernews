@@ -5,6 +5,7 @@ gem 'rails', '3.2.3'
 gem 'nokogiri'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '3.0.1'
+gem 'bourbon'
 
 group :development do
   gem 'rspec-rails', '2.9.0'

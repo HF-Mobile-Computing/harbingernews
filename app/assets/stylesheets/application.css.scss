@@ -13,4 +13,32 @@
  * =require_self
  */
  
+ @import 'bourbon';
  @import "all";
+ 
+ #box {
+    @include box-shadow(0 1px 6px 0px black);
+    border-radius: 6px;
+    background: {
+      color: white;
+    }
+    padding: {
+      top: .5em;
+      bottom: .5em;
+    }
+    margin: {
+      top: 1em;
+    }
+    text-align: center;
+ }
+ 
+ #form_box {
+    text-align: left;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    width: 60%;
+ }
+ 
+ 

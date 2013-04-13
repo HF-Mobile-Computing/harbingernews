@@ -57,7 +57,10 @@ body {
 }
 
 a {
-  color: white;
+  color: $darkGreen;
+  &:hover {
+    color: $lightGreen;
+  }
 }
 
 #content {
@@ -84,6 +87,12 @@ a {
 	color: white;
 	h3 {
 		padding-top: 0px;
+	}
+	a {
+  	color: white;
+  	&:hover {
+    	color: white;
+  	}
 	}
 }
 
