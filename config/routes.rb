@@ -1,8 +1,9 @@
 Harbingernews::Application.routes.draw do
 
-  resources :announcements
+  # set root path
+  root :to => "home#index"
 
-  match '/', to: "home#index"
+  resources :announcements
 
   # Mostly static pages
   match '/about', to: 'static_pages#about'
@@ -16,7 +17,12 @@ Harbingernews::Application.routes.draw do
   
   # User pages
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   match '/signup', to: "users#new"
+  match '/signin', to: "sessions#new"
+  match '/login', to: "sessions#new"
+  match '/signout', to: "sessions#destroy"
+  match '/signout', to: "sessions#destroy", via: :delete
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
