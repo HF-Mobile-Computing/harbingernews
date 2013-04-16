@@ -18,4 +18,3 @@ Club.create(name: "Athletes Helping Athletes", category: "services", content: "C
 Sport.create(slug: "basketball", title: "Basketball", content: "This is the Basketball page.", season: "winter")
 Sport.create(slug: "football", title: "Football", content: "This is the Football page.", season: "fall")
 Sport.create(slug: "baseball", title: "Baseball", content: "This is the Baseball page.", season: "spring")
-
