@@ -1,0 +1,32 @@
+/*
+*=require bootstrap
+*=require bootstrap-responsive
+*=require_self
+*=require _all
+*/
+
+.btn-custom {
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #466843;
+	*background-color: #466843;
+	background-image: -moz-linear-gradient(top, #629B62, #466843);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#629B62), to(#466843));
+	background-image: -webkit-linear-gradient(top, #629B62, #466843);
+	background-image: -o-linear-gradient(top, #629B62, #466843);
+	background-image: linear-gradient(to bottom, #629B62, #466843);
+	background-repeat: repeat-x;
+	border-color: #466843;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#629B62', endColorstr='#466843', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.btn-custom:hover,
+.btn-custom:active,
+.btn-custom.active,
+.btn-custom.disabled,
+.btn-custom[disabled] {
+	color: #FFFFFF;
+	background-color: #466843;
+	*background-color: #003bb3;
+}
