@@ -12,7 +12,7 @@ Club.create(name: "Art Club", category: "arts", content: "Content for the Art Cl
 Club.create(name: "Academic Club", category: "academic", content: "Content for the Academic Club", slug: "academic")
 Club.create(name: "Community Outreach", category: "community", content: "Content for the Community Outreach Club", slug:"community")
 Club.create(name: "Spanish Club", category: "cultural", content: "Content for the Spanish Club", slug: "spanish")
-Club.create(name: "Forensics Club", category: "science", content: "Content for the Forensics Club", slug: "forensics")
+Club.create(name: "Forensics Club", category: "sciences", content: "Content for the Forensics Club", slug: "forensics")
 Club.create(name: "Athletes Helping Athletes", category: "services", content: "Content for AHA", slug: "aha")
 
 Sport.create(slug: "basketball", title: "Basketball", content: "This is the Basketball page.", season: "winter")
