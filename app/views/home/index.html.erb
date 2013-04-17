@@ -46,10 +46,14 @@
 				<div id="memos">
 			    <div id="slider">
 				    <% @memos.each do |memo| %>
-				      <div class="memo">
+				      <% if memo.is_image %>
+				      
+				      <% else %>
+				      <div class="memo" style="background-color: <%= memo.bg_color %>;">
 				        <h2><%= memo.title %></h2>
 				        <p><%= memo.content %></p>
 				      </div>
+				      <% end %>
 				    <% end %>
 			    </div>
 				  <%= image_tag('buttons/Next.png', id: "advance") %>
