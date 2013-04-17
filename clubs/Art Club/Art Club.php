@@ -31,13 +31,10 @@
 					</div>
 				
 				</div>
-				<div id="upcoming_events" style = "display: none;">
+				<div id="upcoming_events">
 					<h4>Upcoming Events</h4>
 					<ul>
-						<li>Event One</li>
-						<li>Event Two</li>
-						<li>Event Three</li>
-						<li>Event Four</li>
+						<li>The annual art show at the Harborfields Library is going on this month with an awards ceremony on April 29, 2013 in the evening. Awards will be presented.</li>
 					</ul>
 					
 				</div>		
