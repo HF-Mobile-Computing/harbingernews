@@ -17,12 +17,12 @@
   				<ul class="nav pull-right visible-desktop">
 					<% if signed_in? %>
 						<li class="dropdown">
-						<a class="dropdown-toggle" href="#" data-toggle="dropdown"><%= current_user.name %><b class="caret"></b></a>
-						<ul class="dropdown-menu">
-						<li><a href="#">Test.</a></li>
-						<li class="divider"></li>
-						<li class="logout"><a href="#">Log Out</a></li>
-						</ul>
+  						<a class="dropdown-toggle" href="#" data-toggle="dropdown"><%= current_user.name %><b class="caret"></b></a>
+  						<ul class="dropdown-menu">
+  						  <li><a href="#">Test.</a></li>
+  						  <li class="divider"></li>
+  						  <li><%= link_to "Log Out", logout_url, class: "logout" %></li>
+  						</ul>
 						</li>
 				  <% else %>
 				  	<li class="dropdown">
