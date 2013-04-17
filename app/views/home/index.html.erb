@@ -11,13 +11,7 @@
 	
 	<%= stylesheet_link_tag "home/index", :media => "all" %>
 	<%= javascript_include_tag "home" %>
-
-	<script type="text/javascript">
-		$(function(){
-			$('#nav_home').addClass('active');
-		});
-	</script>
-	
+		
 	<!-- Google Analytics -->
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
@@ -58,9 +52,9 @@
 				      </div>
 				    <% end %>
 			    </div>
-				  <div id="advance"></div>
-				  <div id="reverse"></div>
-				</div>
+				  <%= image_tag('buttons/Next.png', id: "advance") %>
+				  <%= image_tag('buttons/Prev.png', id: 'reverse') %>
+				  </div>
 				<div class="row-fluid" id="events">
 					<div class="span6" id="upcoming">
 						<h3>Upcoming Events</h3>
