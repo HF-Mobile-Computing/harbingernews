@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130413012557) do
+ActiveRecord::Schema.define(:version => 20130417124618) do
 
   create_table "announcements", :force => true do |t|
     t.string   "a_or_b"
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(:version => 20130413012557) do
     t.string   "name"
     t.string   "category"
     t.string   "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "memos", :force => true do |t|
+    t.string   "title"
+    t.string   "content"
+    t.string   "bg_color"
+    t.boolean  "is_image"
+    t.string   "image_path"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
