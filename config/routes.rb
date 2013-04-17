@@ -22,11 +22,13 @@ Harbingernews::Application.routes.draw do
   # User pages
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  match '/signup', to: "users#new"
-  match '/signin', to: "sessions#new"
-  match '/login', to: "sessions#new"
-  match '/signout', to: "sessions#destroy"
-  match '/signout', to: "sessions#destroy", via: :delete
+  match '/signup',   to: "users#new"
+  match '/signin',   to: "sessions#new"
+  match '/signout',  to: "sessions#destroy"
+  match '/signout',  to: "sessions#destroy", via: :delete
+  match '/login',    to: "sessions#new"
+  match '/logout',   to: "sessions#destroy"
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
