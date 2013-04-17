@@ -24,7 +24,7 @@ $(function() {
   console.log("counter = " + counter);
   $('#advance').click(function() {
     // console.log("Advance button clicked");
-    if (counter < 5) {
+    if (counter < 3) {
       $('#slider').animate({
         right: '+=' + slideAmt,
       }, 100);
