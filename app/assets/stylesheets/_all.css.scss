@@ -19,6 +19,12 @@ $lightGreen: #629b62;
 	}
 }
 
+div .link {
+	a {
+	color: 	#629b62 !important;
+	}
+}
+
 @media all and (max-width: 980px) {
 	.navbar-inner {
 		.nav {

@@ -29,6 +29,25 @@
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Log In<b class="caret"></b></a>
 						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
 						
+              <div id="box">
+                <h3 style="text-align: center">Sign In</h1>
+                  <div id="form_box">
+                  <%= form_for(:session, url: sessions_path) do |f| %>
+                    <%= f.label :email %>
+                    <%= f.text_field :email %>
+                      
+                    <%= f.label :password %>
+                    <%= f.password_field :password %>
+                    <br />
+                    <div style="text-align: center;">
+                      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+                    </div>
+                  <% end %><!-- end of form -->
+                <div class = "link">
+                  <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+                </div>
+              </div>
+            
 						</div>
 				  <% end %>
 				  </ul>
