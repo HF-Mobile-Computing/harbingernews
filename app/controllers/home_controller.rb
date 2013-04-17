@@ -9,7 +9,8 @@ class HomeController < ApplicationController
   protected
     
     def set_vars
+      @memos = Memo.all
       @announcement = Announcement.last
       @hello = "hello"
-  end
+    end
 end
