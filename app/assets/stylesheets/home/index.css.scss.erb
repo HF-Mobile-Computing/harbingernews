@@ -2,6 +2,8 @@
 *= require_self
 */
 
+@import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
 @import "bootstrap";
 @import "bootstrap-responsive";
 @import "all";
@@ -165,7 +167,7 @@ body {
 	background: {
 		color: #e7e7e7;
 	}
-	box-shadow: 1px 1px 6px rgba(0,0,0,0.68);
+	@include box-shadow(rgba(0,0,0,0.68) 1px 1px 6px);
 	margin: 0 auto;
 	margin: {
 		top: 15px;
@@ -257,12 +259,18 @@ body {
 #memos {
   min-height: 11em;
   display: block;
+  padding: {
+    left: 4px;
+    right: 4px;
+    top: 2px;
+    bottom: 4px;
+  }
   margin: {
     top: .8em;
     right: auto;
     left: auto;
   }
-  overflow: hidden;
+  overflow-x: hidden;
   width: 89%;
 }
 
@@ -288,6 +296,8 @@ body {
 }
 
 .memo {
+  @include box-shadow(rgba(0,0,0,0.68) 1px 1px 6px);
+  @include border-radius(6px);
   display: inline-block;
   margin: {
     left: 4px;
