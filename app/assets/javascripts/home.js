@@ -6,40 +6,58 @@ $(function() {
   // Add "active" to nav bar
   $('#nav_home').addClass('active');
   
-  // Constantly Check Page Width
+  // Constantly Check Page Width and set variables accordingly
   
   var thePage = {};
-  thePage.width = $(window).width();
+  function setVars() {
+    thePage.width = $(window).width();
+    if (thePage.width >= 980) {
+      thePage.slideAmt = 849;
+      thePage.counterAmt = 3;
+    } else if (thePage.width <= 979 && thePage.width >= 768) {
+      thePage.slideAmt = 566; 
+      thePage.counterAmt = 5;
+    }
+  }
+  
+  setVars();
   $(window).resize(function(){
-      thePage.width = $(window).width();
+      setVars();
   });
   
   // Operate the slider for memos
   // Note: All console.log statements can be removed before production
-  if (thePage.width > 979) {
-    slideAmt = 849;
-  }
+  
   counter = 0;
   
-  console.log("counter = " + counter);
   $('#advance').click(function() {
     // console.log("Advance button clicked");
-    if (counter < 3) {
+    if (counter < thePage.counterAmt) {
       $('#slider').animate({
-        right: '+=' + slideAmt,
+        right: '+=' + thePage.slideAmt,
       }, 100);
       counter = counter + 1;
     }
-    console.log("counter = " + counter);
+    testLog();
   });
   $('#reverse').click(function() {
     // console.log("Reverse button clicked");
     if (counter > 0) {
       $('#slider').animate({
-        right: '-=' + slideAmt,
+        right: '-=' + thePage.slideAmt,
       }, 100);
       counter = counter - 1;
     }
-    console.log("counter = " + counter);
+    testLog();
   });
+  
+  function testLog() {
+    console.log("counter = " + counter);
+    console.log("Counter Amt: " + thePage.counterAmt);
+    console.log("Slide Amt: " + thePage.slideAmt);
+  };
+  
+  testLog();
+  
+  
 });

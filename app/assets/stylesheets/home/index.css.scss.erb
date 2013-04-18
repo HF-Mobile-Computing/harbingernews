@@ -256,6 +256,11 @@ body {
 	}
 }
 
+// memo variables
+$smallestMax: 517px;
+$smallMax: 669px;
+$midMax: 979px;
+
 #memos {
   min-height: 11em;
   display: block;
@@ -270,8 +275,22 @@ body {
     right: auto;
     left: auto;
   }
+  background: {
+    color: grey;
+  }
   overflow-x: hidden;
-  width: 89%;
+  @media (max-width: $smallestMax) {
+    width: 275px;
+  }
+  @media (max-width: $smallMax) and (min-width: $smallestMax +1) {
+    width: 275px;
+  }
+  @media (max-width: $midMax) and (min-width: $smallMax + 1) {
+    width: 553px;
+  }
+  @media (min-width: $midMax + 1) {
+    width: 89%;
+  }
 }
 
 #slider {
@@ -282,17 +301,46 @@ body {
   position: relative;
   width: 3400px;
 }
+
 #advance {
-  top: 30em;
-  left: 894px;
   position: absolute;
   display: block;
+  @media (max-width: $smallestMax) {
+    top: 24.5em;
+    left: 80%;
+  }
+  @media (max-width: $smallMax) and (min-width: $smallestMax + 1) {
+    top: 30.5em;
+    left: 85%;
+  }
+  @media (max-width: $midMax) and (min-width: $smallMax + 1) {
+    top: 30.5em;
+    left: 90.5%;
+  }
+  @media (min-width: $midMax + 1) {
+    top: 30em;
+    left: 894px;
+  }
 }
 #reverse {
-  top: 30em;
-  left: 9px;
   position: absolute;
   display: block;
+  @media (max-width: $smallestMax) {
+    top: 24.5em;
+    left: 12%;
+  }
+  @media (max-width: $smallMax) and (min-width: $smallestMax + 1) {
+    top: 30.5em;
+    left: 6.5%;
+  }
+  @media (max-width: $midMax) and (min-width: $smallMax + 1) {
+    top: 30.5em;
+    left: 5%;
+  }
+  @media (min-width: $midMax + 1) {
+    top: 30em;
+    left: 9px;
+  }
 }
 
 .memo {
