@@ -3,7 +3,11 @@ Harbingernews::Application.routes.draw do
   # set root path
   root :to => "home#index"
 
+  # Announcements
   resources :announcements
+  
+  # Memos
+  resources :memos
 
   # Mostly static pages
   match '/about', to: 'static_pages#about'
