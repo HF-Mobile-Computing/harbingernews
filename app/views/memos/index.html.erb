@@ -20,11 +20,14 @@
       width: 98%;
       height: 12em;
     }
+    .alert {
+      margin-top: .5em;
+    }
   </style>
 </head>
 <div class="container">
 
-  <% unless notice.nil? %><div class=""><%= notice %></div><% end %>
+  <% unless notice.nil? %><div class="alert alert-success"><%= notice %></div><% end %>
 
   <div class="accordion" id="accordion2">
     <div class="accordion-group">
@@ -67,7 +70,7 @@
         <td><%= memo.id %></td>
         <td><%= memo.title %></td>
         <td><%= memo.content %></td>
-        <td <% unless memo.bg_color.empty? || memo.bg_color.nil? %>style="color: <%= memo.bg_color %>;"<% end %>><% if memo.bg_color.nil? %>Not Set<% else %><%= memo.bg_color %><% end %></td>
+        <td style="color: <% unless memo.bg_color.empty? %><%= memo.bg_color %><% else %>white; text-shadow: black 1px 1px 2px<% end %>;"><% if memo.bg_color.empty? %>White<% else %><%= memo.bg_color %><% end %></td>
         <td style="color: <% if memo.text_color.empty? %>black<% else %><%= memo.text_color %><% end %>;<% if memo.text_color.downcase == "white" %> text-shadow: black 1px 1px 2px;<% end %>"><% if memo.text_color.empty? %>Black<% else %><%= memo.text_color %><% end %></td>
         <td><% if memo.is_image? %>Yes<% else %>No<% end %></td>
         <td><%= link_to "Edit", :controller => 'memos', :action => 'edit', :id => memo.id %></td>
