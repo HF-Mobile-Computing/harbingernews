@@ -1,16 +1,27 @@
 //= require jquery
 //= require bootstrap.min
+//= require breakpoints
 //= require_self
 
 $(function() {
   // Add "active" to nav bar
   $('#nav_home').addClass('active');
   
+  // Set breakpoints (see breakpoints.js)
+  $(window).setBreakpoints({
+    distinct: true,
+    breakpoints: [
+      980,
+      670
+    ]
+  });
+  
   // Constantly Check Page Width and set variables accordingly
   
   var thePage = {};
   thePage.width = $(window).width();
   function setVars() {
+    thePage.width = $(window).width();
     if (thePage.width >= 980) {
       thePage.slideAmt = 849;
       thePage.counterAmt = 3;
@@ -27,21 +38,10 @@ $(function() {
   
   setVars();
   $(window).resize(function(){
-      thePage.width = $(window).width();
       setVars();
-      if (thePage.width == 980 || thePage.width == 670) {
-        console.log('reset of slider should take place: ' + thePage.width);
-        $('#slider').css('right', 0);
-        thePage.counter = 0;
-      }
   });
   
-  thePage.startSize = $(window).width();
-  $(window).resize(function(){
-      if (thePage.width == 980) {
-        console.log("%cStart size is set to " + thePage.width, "color: blue;");
-      }
-  });
+  // Moving the slider
   
   $('#advance').click(function() {
     // console.log("Advance button clicked");
@@ -58,11 +58,35 @@ $(function() {
     if (thePage.counter > 0) {
       $('#slider').animate({
         right: '-=' + thePage.slideAmt,
-      }, 100);
+      }, 175);
       thePage.counter = thePage.counter - 1;
     }
     testLog();
   });
+  
+  // Reset slider at breakpoints 
+  
+  function resetSlider() {
+    $('#slider').animate({
+      right: '0',
+    }, 200);
+    thePage.counter = 0;
+  }
+  
+  $(window).bind('enterBreakpoint980', function() {
+    resetSlider();
+  });
+  $(window).bind('exitBreakpoint980', function() {
+    resetSlider();
+  });
+  $(window).bind('enterBreakpoint670', function() {
+    resetSlider();
+  });
+  $(window).bind('exitBreakpoint670', function() {
+    resetSlider();
+  })
+  
+  // Debugging functions
   
   function testLog() {
     console.log("counter = " + thePage.counter);
