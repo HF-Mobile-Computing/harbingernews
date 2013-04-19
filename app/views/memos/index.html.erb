@@ -1,0 +1,64 @@
+<head>
+  <style>
+    .table {
+      margin-top: 1em;
+      background-color: white;
+    }
+    .accordion {
+      margin-top: 1em;
+    }
+    .accordion-group {
+      background-color: white;
+    }
+    
+  </style>
+</head>
+<div class="container">
+
+  <div class="accordion" id="accordion2">
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+          Add a new memo...
+        </a>
+      </div>
+      <div id="collapseOne" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <%= form_for(@memo) do |f| %>
+            
+            <%= f.label :title %><%= f.text_field :title %>
+            
+            <%= f.submit "Create Memo", class: "btn btn-primary pull-right" %>
+          
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Content</th>
+      <th>BG Color</th>
+      <th>Text Color</th>
+      <th>Image?</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    <% @memos.each do |memo| %>
+      <tr>
+        <td><%= memo.id %></td>
+        <td><%= memo.title %></td>
+        <td><%= memo.content %></td>
+        <td><%= memo.bg_color %></td>
+        <td></td>
+        <td><% if memo.is_image? %>Yes<% else %>No<% end %></td>
+        <td><%= link_to "Edit", :controller => 'memos', :action => 'edit', :id => memo.id %></td>
+        <td><%= link_to "Delete", memo, :method => :delete, :confirm => "Are you sure you want to delete this memo?" %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
