@@ -49,7 +49,7 @@
 				      <% if memo.is_image %>
 				      
 				      <% else %>
-				      <div class="memo" style="background-color: <%= memo.bg_color %>;">
+				      <div class="memo" style="background-color: <%= memo.bg_color %>; color: <% unless memo.text_color.nil? %><%= memo.text_color %><% else %>black<% end %>;">
 				        <h2><%= memo.title %></h2>
 				        <p><%= memo.content %></p>
 				      </div>

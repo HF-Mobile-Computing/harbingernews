@@ -1,5 +1,8 @@
 class Memo < ActiveRecord::Base
-  attr_accessible :title, :content, :bg_color, :is_image, :image_path
+  attr_accessible :title, :content, :bg_color, :text_color, :is_image, :image_path
+  
+  validates :title, presence: true
+  validates :content, presence: true
 end
 # == Schema Information
 #
@@ -13,5 +16,6 @@ end
 #  image_path :string(255)
 #  created_at :datetime        not null
 #  updated_at :datetime        not null
+#  text_color :string(255)
 #
 

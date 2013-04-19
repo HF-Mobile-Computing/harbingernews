@@ -15,5 +15,6 @@ end
 #  image_path :string(255)
 #  created_at :datetime        not null
 #  updated_at :datetime        not null
+#  text_color :string(255)
 #
 

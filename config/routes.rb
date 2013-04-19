@@ -7,7 +7,6 @@ Harbingernews::Application.routes.draw do
   resources :announcements
   
   # Memos
-  match '/memos/:id', to: 'memos#index'
   resources :memos
 
   # Mostly static pages
