@@ -6,6 +6,7 @@ gem 'nokogiri'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'bourbon'
+gem 'devise'
 
 group :development do
   gem 'rspec-rails', '2.9.0'

@@ -1,5 +1,14 @@
 Harbingernews::Application.routes.draw do
 
+  devise_for :users, :skip => [:sessions] 
+
+  devise_scope :user do
+    get "login" => "devise/sessions#new"
+    post 'login' => 'devise/sessions#create', :as => :user_session
+    get "signup" => "devise/registrations#new"
+    get 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session
+  end
+
   # set root path
   root :to => "home#index"
 
@@ -23,15 +32,8 @@ Harbingernews::Application.routes.draw do
   match '/clubs/:id/edit', to: "clubs#edit"
   resources :clubs
   
-  # User pages
-  resources :users
-  resources :sessions, only: [:new, :create, :destroy]
-  match '/signup',   to: "users#new"
-  match '/signin',   to: "sessions#new"
-  match '/signout',  to: "sessions#destroy"
-  match '/signout',  to: "sessions#destroy", via: :delete
-  match '/login',    to: "sessions#new"
-  match '/logout',   to: "sessions#destroy"
+  # User pages  resources :sessions, only: [:new, :create, :destroy]
+
   
   
   # The priority is based upon order of creation:
