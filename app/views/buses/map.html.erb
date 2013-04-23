@@ -1,3 +1,4 @@
+<% date = @bus.created_at.to_time.strftime('%b %d, %Y') %>
 <head>
   <style type="text/css">
     #map {
@@ -16,10 +17,11 @@
     }
     .bus {
       color: black;
-      background-color: gold;
       width: 35px;
       position: absolute;
-      border: solid black 1px;
+    }
+    .span12 {
+      background: white;
     }
     #one {
       left: 690px;
@@ -34,41 +36,92 @@
       top: 335px;
     }
     #four {
-      left: 640px;
-      top: 355px;
+      left: 630px;
+      top: 365px;
+    }
+    #five {
+      left: 585px;
+      top: 385px;
+    }
+    #six {
+      left: 535px;
+      top: 390px;
+    }
+    #seven {
+      left: 490px;
+      top: 393px;
+    }
+    #eight {
+      left: 445px;
+      top: 393px;
+    }
+    #nine {
+      left: 400px;
+      top: 394px;
+    }
+    #ten {
+      left: 320px;
+      top: 396px;
+    }
+    #eleven {
+      left: 265px;
+      top: 397px;
+    }
+    #twelve {
+      left: 125px;
+      top: 400px;
+    }
+    #thirteen {
+      left: 80px;
+      top: 395px;
+    }
+    #fourteen {
+      left: 30px;
+      top: 250px;
+    }
+    #fifteen {
+      left: 30px;
+      top: 210px;
+    }
+    #sixteen {
+      left: 30px;
+      top: 140px;
+    }
+    #seventeen {
+      left: 30px;
+      top: 100px;
     }
   </style>
   <script type="text/javascript">
     $(function() {
-      if $('.bus').text().length > 0 {
-        $(this).css('background-color', 'gold');
-      }
+      $('.bus').filter(function(index) {
+        return !$(this).is(':empty');
+      }).css('background-color', 'gold').css('border', 'solid 1px black');
     });
   </script>
 </head>
-<div class="row">
-  <div class="span12">
-    <h1>Bus Map for <%= @bus.created_at %></h1>
-    <div id="map">
-      <div class="bus" id="one"><%= @bus.one %></div>
-      <div class="bus" id="two"><%= @bus.two %></div>
-      <div class="bus" id="three"><%= @bus.three %></div>
-      <div class="bus" id="four"><%= @bus.four %></div>
-      <div class="bus" id="five"><%= @bus.five %></div>
-      <div class="bus" id="six"><%= @bus.six %></div>
-      <div class="bus" id="seven"><%= @bus.seven %></div>
-      <div class="bus" id="eight"><%= @bus.eight %></div>
-      <div class="bus" id="nine"><%= @bus.nine %></div>
-      <div class="bus" id="ten"><%= @bus.ten %></div>
-      <div class="bus" id="eleven"><%= @bus.eleven %></div>
-      <div class="bus" id="twelve"><%= @bus.twelve %></div>
-      <div class="bus" id="thirteen"><%= @bus.thirteen %></div>
-      <div class="bus" id="fourteen"><%= @bus.fourteen %></div>
-      <div class="bus" id="fifteen"><%= @bus.fifteen %></div>
-      <div class="bus" id="sixteen"><%= @bus.sixteen %></div>
-      <div class="bus" id="seventeen"><%= @bus.seventeen %></div>
-      <div class="bus" id="eighteen"><%= @bus.eighteen %></div>
-      <div class="bus" id="nineteen"><%= @bus.nineteen %></div>
-    </div>
+<div id="wrapper">
+  <h1>Bus Map for <%= date %></h1>
+  <div id="map">
+    <div class="bus" id="one"><%= @bus.one %></div>
+    <div class="bus" id="two"><%= @bus.two %></div>
+    <div class="bus" id="three"><%= @bus.three %></div>
+    <div class="bus" id="four"><%= @bus.four %></div>
+    <div class="bus" id="five"><%= @bus.five %></div>
+    <div class="bus" id="six"><%= @bus.six %></div>
+    <div class="bus" id="seven"><%= @bus.seven %></div>
+    <div class="bus" id="eight"><%= @bus.eight %></div>
+    <div class="bus" id="nine"><%= @bus.nine %></div>
+    <div class="bus" id="ten"><%= @bus.ten %></div>
+    <div class="bus" id="eleven"><%= @bus.eleven %></div>
+    <div class="bus" id="twelve"><%= @bus.twelve %></div>
+    <div class="bus" id="thirteen"><%= @bus.thirteen %></div>
+    <div class="bus" id="fourteen"><%= @bus.fourteen %></div>
+    <div class="bus" id="fifteen"><%= @bus.fifteen %></div>
+    <div class="bus" id="sixteen"><%= @bus.sixteen %></div>
+    <div class="bus" id="seventeen"><%= @bus.seventeen %></div>
+    <div class="bus" id="eighteen"><%= @bus.eighteen %></div>
+    <div class="bus" id="nineteen"><%= @bus.nineteen %></div>
   </div>
 </div>
+    
