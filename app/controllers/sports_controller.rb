@@ -49,7 +49,7 @@ class SportsController < ApplicationController
 
     respond_to do |format|
       if @sport.save
-        format.html { redirect_to @sport, notice: 'Sport was successfully created.' }
+        format.html { redirect_to sports_url, notice: 'Sport was successfully created.' }
         format.json { render json: @sport, status: :created, location: @sport }
       else
         format.html { render action: "new" }
@@ -65,7 +65,7 @@ class SportsController < ApplicationController
 
     respond_to do |format|
       if @sport.update_attributes(params[:sport])
-        format.html { redirect_to @sport, notice: 'Sport was successfully updated.' }
+        format.html { redirect_to sports_url, notice: 'Sport was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

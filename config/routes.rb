@@ -16,8 +16,10 @@ Harbingernews::Application.routes.draw do
   # Sports Pages
   match '/sports/:slug', to: "sports#show" # Show the sports pages by name (slug) not id
   match '/sports/:slug/edit', to: "sports#edit" # Allows the edit pages to work with the same
-  resources :sports
-
+  put   '/sports/:slug', to: 'sports#update'
+  resources :sports, only: [:index, :new, :create, :destroy]
+  
+  # Clubs Pages
   match '/clubs/new', to: "clubs#new"
   match '/clubs/:id', to: "clubs#show"
   match '/clubs/:id/edit', to: "clubs#edit"
