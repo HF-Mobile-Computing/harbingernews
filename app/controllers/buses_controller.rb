@@ -82,7 +82,7 @@ class BusesController < ApplicationController
   end
   
    def map
-    @bus = Bus.find(:all, limit: 5)
+    @bus = Bus.last
   end
   
 end
