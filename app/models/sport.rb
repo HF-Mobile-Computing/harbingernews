@@ -10,7 +10,6 @@ end
 #  title      :string(255)
 #  content    :text
 #  season     :string(255)
-#  photo_path :string(255)
 #  created_at :datetime        not null
 #  updated_at :datetime        not null
 #  alert      :text
