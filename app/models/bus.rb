@@ -1,5 +1,5 @@
 class Bus < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :one, :two, :three, :four, :five, :six, :seven, :eight, :nine, :ten, :eleven, :twelve, :thirteen, :fourteen, :fifteen, :sixteen, :seventeen, :eighteen, :nineteen
 end
 # == Schema Information
 #

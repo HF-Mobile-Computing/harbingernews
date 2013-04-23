@@ -2,7 +2,7 @@ class BusesController < ApplicationController
   # GET /buses
   # GET /buses.json
   def index
-    @buses = Bus.all
+    @buses = Bus.all(:order => "id DESC")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -80,4 +80,9 @@ class BusesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+   def map
+    @bus = Bus.find(:all, limit: 5)
+  end
+  
 end

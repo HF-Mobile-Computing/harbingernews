@@ -1,7 +1,5 @@
 Harbingernews::Application.routes.draw do
 
-  resources :buses
-
   devise_for :users, :skip => [:sessions] 
 
   devise_scope :user do
@@ -33,6 +31,10 @@ Harbingernews::Application.routes.draw do
   match '/clubs/:id', to: "clubs#show"
   match '/clubs/:id/edit', to: "clubs#edit"
   resources :clubs
+  
+  # Bus Server Service
+  match '/buses/map', to: "buses#map"
+  resources :buses
   
   # User pages  resources :sessions, only: [:new, :create, :destroy]
 

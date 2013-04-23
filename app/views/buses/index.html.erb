@@ -1,21 +1,72 @@
-<h1>Listing buses</h1>
+<head>
+  <style type="text/css">
+    .table {
+      background-color: white;
+    }
+  
+  </style>
+</head>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @buses.each do |bus| %>
-  <tr>
-    <td><%= link_to 'Show', bus %></td>
-    <td><%= link_to 'Edit', edit_bus_path(bus) %></td>
-    <td><%= link_to 'Destroy', bus, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Bus', new_bus_path %>
+<div class="row"> 
+  <div class="span12">
+    <h1 style="float: left">Listing buses</h1><%= link_to 'New Bus List', new_bus_path, class: 'pull-right btn' %>
+    
+    <table class="table table-hover">
+      <tr>
+        <th>Date</th>
+        <th>Show</th>
+        <th>One</th>
+        <th>Two</th>
+        <th>Three</th>
+        <th>Four</th>
+        <th>Five</th>
+        <th>Six</th>
+        <th>Seven</th>
+        <th>Eight</th>
+        <th>Nine</th>
+        <th>Ten</th>
+        <th>Eleven</th>
+        <th>Twelve</th>
+        <th>Thirteen</th>
+        <th>Fourteen</th>
+        <th>Fifteen</th>
+        <th>Sixteen</th>
+        <th>Seventeen</th>
+        <th>Eighteen</th>
+        <th>Nineteen</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    
+    <% @buses.each do |bus| %>
+      <tr>
+        <td><%= bus.created_at %></td>
+        <td><%= link_to 'Show', bus %></td>
+        <td><%= bus.one %></td>
+        <td><%= bus.two %></td>
+        <td><%= bus.three %></td>
+        <td><%= bus.four %></td>
+        <td><%= bus.five %></td>
+        <td><%= bus.six %></td>
+        <td><%= bus.seven %></td>
+        <td><%= bus.eight %></td>
+        <td><%= bus.nine %></td>
+        <td><%= bus.ten %></td>
+        <td><%= bus.eleven %></td>
+        <td><%= bus.twelve %></td>
+        <td><%= bus.thirteen %></td>
+        <td><%= bus.fourteen %></td>
+        <td><%= bus.fifteen %></td>
+        <td><%= bus.sixteen %></td>
+        <td><%= bus.seventeen %></td>
+        <td><%= bus.eighteen %></td>
+        <td><%= bus.nineteen %></td>
+        <td><%= link_to 'Edit', edit_bus_path(bus) %></td>
+        <td><%= link_to 'Destroy', bus, confirm: 'Are you sure?', method: :delete %></td>
+      </tr>
+    <% end %>
+    </table>
+    
+    <br />
+  </div>
+</div>
