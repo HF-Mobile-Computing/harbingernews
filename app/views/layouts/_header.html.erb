@@ -27,11 +27,10 @@
 				  <% else %>
 				  	<li class="dropdown">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Log In<b class="caret"></b></a>
-						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-						
-              <div id="box">
+						<div class="dropdown-menu span4" style = "position: absolute;">
                 <h3 style="text-align: center">Sign In</h1>
                   <div id="form_box">
+                  <div style = "margin-left: 15px;">
                   <%= form_for(:user, :as => :user, :url => session_path(:user)) do |f| %>
                     <%= f.label :email %>
                     <%= f.text_field :email %>
@@ -39,6 +38,7 @@
                     <%= f.label :password %>
                     <%= f.password_field :password %>
                     <br />
+                  </div>
                     <div style="text-align: center;">
                       <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
                     </div>
