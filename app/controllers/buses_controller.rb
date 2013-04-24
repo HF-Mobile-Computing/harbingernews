@@ -83,6 +83,10 @@ class BusesController < ApplicationController
   
    def map
     @bus = Bus.last
+    Time.use_zone('Eastern Time (US & Canada)') do
+      @created = @bus.created_at.strftime('%B %d, %Y')
+      @updated = @bus.updated_at.strftime('%H:%M%P')
+    end
   end
   
 end

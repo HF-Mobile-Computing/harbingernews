@@ -60,5 +60,9 @@ module Harbingernews
     config.assets.version = '1.0'
     
     config.assets.prefix = "/assets/"
+    
+    config.time_zone = 'Eastern Time (US & Canada)'
+    config.active_record.default_timezone = :local
+    
   end
 end

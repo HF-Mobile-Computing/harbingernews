@@ -2,71 +2,79 @@
   <style type="text/css">
     .table {
       background-color: white;
+      font-size: .9em;
     }
-  
+    #table_wrapper {
+      overflow: scroll;
+      width: 100%;
+    }
+    #new {
+      margin-top: 1.5em;
+    }
   </style>
 </head>
 
 <div class="row"> 
   <div class="span12">
-    <h1 style="float: left">Listing buses</h1><%= link_to 'New Bus List', new_bus_path, class: 'pull-right btn' %>
-    
-    <table class="table table-hover">
-      <tr>
-        <th>Date</th>
-        <th>Show</th>
-        <th>One</th>
-        <th>Two</th>
-        <th>Three</th>
-        <th>Four</th>
-        <th>Five</th>
-        <th>Six</th>
-        <th>Seven</th>
-        <th>Eight</th>
-        <th>Nine</th>
-        <th>Ten</th>
-        <th>Eleven</th>
-        <th>Twelve</th>
-        <th>Thirteen</th>
-        <th>Fourteen</th>
-        <th>Fifteen</th>
-        <th>Sixteen</th>
-        <th>Seventeen</th>
-        <th>Eighteen</th>
-        <th>Nineteen</th>
-        <th>Edit</th>
-        <th>Delete</th>
-      </tr>
-    
-    <% @buses.each do |bus| %>
-      <tr>
-        <td><%= bus.created_at %></td>
-        <td><%= link_to 'Show', bus %></td>
-        <td><%= bus.one %></td>
-        <td><%= bus.two %></td>
-        <td><%= bus.three %></td>
-        <td><%= bus.four %></td>
-        <td><%= bus.five %></td>
-        <td><%= bus.six %></td>
-        <td><%= bus.seven %></td>
-        <td><%= bus.eight %></td>
-        <td><%= bus.nine %></td>
-        <td><%= bus.ten %></td>
-        <td><%= bus.eleven %></td>
-        <td><%= bus.twelve %></td>
-        <td><%= bus.thirteen %></td>
-        <td><%= bus.fourteen %></td>
-        <td><%= bus.fifteen %></td>
-        <td><%= bus.sixteen %></td>
-        <td><%= bus.seventeen %></td>
-        <td><%= bus.eighteen %></td>
-        <td><%= bus.nineteen %></td>
-        <td><%= link_to 'Edit', edit_bus_path(bus) %></td>
-        <td><%= link_to 'Destroy', bus, confirm: 'Are you sure?', method: :delete %></td>
-      </tr>
-    <% end %>
-    </table>
-    
+    <h1 style="float: left">Listing buses</h1><%= link_to 'New Bus List', new_bus_path, class: 'pull-right btn', id: 'new' %>
+    <div id="table_wrapper">
+      <table class="table table-hover">
+        <tr>
+          <th>Date</th>
+          <th>Show</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+          <th>10</th>
+          <th>11</th>
+          <th>12</th>
+          <th>13</th>
+          <th>14</th>
+          <th>15</th>
+          <th>16</th>
+          <th>17</th>
+          <th>18</th>
+          <th>19</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      
+      <% @buses.each do |bus| %>
+        <% date = bus.created_at.to_time.strftime('%m/%d') %>
+        <tr>
+          <td><%= date %></td>
+          <td><%= link_to 'Show', bus %></td>
+          <td><%= bus.one %></td>
+          <td><%= bus.two %></td>
+          <td><%= bus.three %></td>
+          <td><%= bus.four %></td>
+          <td><%= bus.five %></td>
+          <td><%= bus.six %></td>
+          <td><%= bus.seven %></td>
+          <td><%= bus.eight %></td>
+          <td><%= bus.nine %></td>
+          <td><%= bus.ten %></td>
+          <td><%= bus.eleven %></td>
+          <td><%= bus.twelve %></td>
+          <td><%= bus.thirteen %></td>
+          <td><%= bus.fourteen %></td>
+          <td><%= bus.fifteen %></td>
+          <td><%= bus.sixteen %></td>
+          <td><%= bus.seventeen %></td>
+          <td><%= bus.eighteen %></td>
+          <td><%= bus.nineteen %></td>
+          <td><%= link_to 'Edit', edit_bus_path(bus) %></td>
+          <td><%= link_to 'Delete', bus, confirm: 'Are you sure?', method: :delete %></td>
+        </tr>
+      <% end %>
+      </table>
+    </div>
     <br />
   </div>
 </div>

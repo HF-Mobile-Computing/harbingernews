@@ -1,11 +1,14 @@
-<% date = @bus.created_at.to_time.strftime('%b %d, %Y') %>
 <head>
   <style type="text/css">
+    .container {
+      overflow: visible;
+    }
     #map {
       background-image: url(<%= image_path('map.png') %>);
       background-repeat: no-repeat;
       display: block;
       margin: 0 auto;
+      margin-bottom: .5em;
       text-align: center;
       margin-top: .2em;
       width: 763px;
@@ -20,8 +23,17 @@
       width: 35px;
       position: absolute;
     }
-    .span12 {
+    #wrapper {
       background: white;
+      padding-top: .5em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      overflow: auto;
+    }
+    #updated {
+      float: right;
+      clear: both;
+      margin-right: 10%;
     }
     #one {
       left: 690px;
@@ -101,7 +113,7 @@
   </script>
 </head>
 <div id="wrapper">
-  <h1>Bus Map for <%= date %></h1>
+  <h1>Bus Map for <%= @created %></h1>
   <div id="map">
     <div class="bus" id="one"><%= @bus.one %></div>
     <div class="bus" id="two"><%= @bus.two %></div>
@@ -123,5 +135,6 @@
     <div class="bus" id="eighteen"><%= @bus.eighteen %></div>
     <div class="bus" id="nineteen"><%= @bus.nineteen %></div>
   </div>
+  <p id="updated">Last updated at: <%= @updated %></p>
 </div>
     
