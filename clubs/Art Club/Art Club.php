@@ -35,6 +35,7 @@
 					<h4>Upcoming Events</h4>
 					<ul>
 						<li>The annual art show at the Harborfields Library is going on this month with an awards ceremony on April 29, 2013 in the evening. Awards will be presented.</li>
+						<li>More information can be found <a href="apr13_HS Art Show Program.pdf" style = "color: white; text-decoration: underline;">here</a> </li>
 					</ul>
 					
 				</div>		
