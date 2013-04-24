@@ -3,11 +3,34 @@
 <head>
   <title>Harbingernews</title>
   <%= favicon_link_tag %>
+  
+  <%= csrf_meta_tags %>
+  
+  <!-- Mobile Display Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-icon" href="img/Apple-Icon.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="img/Apple-Icon-Retina.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= yield :css %>
+  
   <%= javascript_include_tag "application" %>
   <%= yield :js %>
-  <%= csrf_meta_tags %>
+  
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-35687930-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+	    	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	    })();
+	</script>
+  
 </head>
 <body>
 
