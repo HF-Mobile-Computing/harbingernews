@@ -1,5 +1,4 @@
 class SportsController < ApplicationController
-  layout :resolve_layout
 
   # GET /sports
   # GET /sports.json
@@ -83,20 +82,6 @@ class SportsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to sports_url }
       format.json { head :no_content }
-    end
-  end
-  
-  # Set multiple layouts for different page types
-  private
-  
-  def resolve_layout
-    case action_name
-    when "index"
-      false
-    when "show"
-      false
-    else
-      "application"
     end
   end
   

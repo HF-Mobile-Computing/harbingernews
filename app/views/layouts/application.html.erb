@@ -4,10 +4,11 @@
   <title>Harbingernews</title>
   <%= favicon_link_tag %>
   <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= yield :css %>
   <%= stylesheet_link_tag "buttons", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= yield :js %>
   <%= csrf_meta_tags %>
-  <style type="text/css"><%= yield :style %></style>
 </head>
 <body>
 
