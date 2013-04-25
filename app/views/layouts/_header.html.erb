@@ -21,30 +21,30 @@
   						<ul class="dropdown-menu">
   						  <li><a href="#">Test.</a></li>
   						  <li class="divider"></li>
-  						  <li><%= link_to "Log Out", logout_url, class: "logout" %></li>
+  						  <li><%= link_to "Log out", destroy_user_session_path%></li>
   						</ul>
 						</li>
 				  <% else %>
 				  	<li class="dropdown">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Log In<b class="caret"></b></a>
-						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-						
-              <div id="box">
+						<div class="dropdown-menu span4" style = "position: absolute;">
                 <h3 style="text-align: center">Sign In</h1>
                   <div id="form_box">
-                  <%= form_for(:session, url: sessions_path) do |f| %>
+                  <div style = "margin-left: 15px;">
+                  <%= form_for(:user, :as => :user, :url => session_path(:user)) do |f| %>
                     <%= f.label :email %>
                     <%= f.text_field :email %>
                       
                     <%= f.label :password %>
                     <%= f.password_field :password %>
                     <br />
+                  </div>
                     <div style="text-align: center;">
                       <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
                     </div>
                   <% end %><!-- end of form -->
                 <div class = "link">
-                  <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+                  <p>New user? <%= link_to "Sign up now!", new_user_registration_path %></p>
                 </div>
               </div>
             

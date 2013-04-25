@@ -2,6 +2,10 @@
 $darkGreen: #466843;
 $lightGreen: #629b62;
 
+// Imports
+
+@import 'buttons';
+
 
 // Mixins
 @mixin backgroundNoise {

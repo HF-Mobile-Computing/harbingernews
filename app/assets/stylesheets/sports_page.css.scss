@@ -1,10 +1,6 @@
 /*
-*=require bootstrap
-*=require bootstrap-responsive
 *=require_self
 */
-
-@import "all";
 
 $darkGreen: #416847;
 $lightGreen: #629b63;
@@ -32,7 +28,6 @@ body {
 		color: white;
 	}
 	box-shadow: 0px 2px 7px #3c3c3c;
-	@include pie;
 	.tab-pane {
 		padding: {
 			top: 4px;
@@ -85,7 +80,7 @@ body {
 
 .limited-width {
 	width: 95% !important;
-	margin: 0 auto;
+	margin: 0 auto !important;
 }
 
 .disabled {
