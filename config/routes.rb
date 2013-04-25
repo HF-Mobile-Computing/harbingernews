@@ -34,6 +34,10 @@ Harbingernews::Application.routes.draw do
   put '/clubs/:slug',            to: 'clubs#update'
   resources :clubs,  only: [:index, :new, :create, :destroy]
   
+  # Bus Server Service
+  match '/buses/map', to: "buses#map"
+  resources :buses
+  
   # User pages  resources :sessions, only: [:new, :create, :destroy]
 
   

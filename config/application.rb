@@ -62,5 +62,7 @@ module Harbingernews
     config.assets.prefix = "/assets/"
     
     config.assets.initialize_on_precompile = false
+    config.active_record.default_timezone = :local
+    
   end
 end
