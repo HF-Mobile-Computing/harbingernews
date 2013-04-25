@@ -1,5 +1,10 @@
 class Sport < ActiveRecord::Base
   attr_accessible :content, :photo_path, :season, :slug, :title
+  
+  def to_param
+    slug
+  end
+  
 end
 # == Schema Information
 #

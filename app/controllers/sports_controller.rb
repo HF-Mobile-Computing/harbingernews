@@ -64,7 +64,7 @@ class SportsController < ApplicationController
 
     respond_to do |format|
       if @sport.update_attributes(params[:sport])
-        format.html { redirect_to sports_url, notice: 'Sport was successfully updated.' }
+        format.html { redirect_to @sport, notice: 'Sport was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

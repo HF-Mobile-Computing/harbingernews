@@ -19,13 +19,13 @@ Harbingernews::Application.routes.draw do
   resources :memos
 
   # Mostly static pages
-  match '/about', to: 'static_pages#about'
-  match '/get_involved', to: "static_pages#get_involved"
+  get '/about', to: 'static_pages#about'
+  get '/get_involved', to: "static_pages#get_involved"
 
   # Sports Pages
-  match '/sports/:slug', to: "sports#show" # Show the sports pages by name (slug) not id
-  match '/sports/:slug/edit', to: "sports#edit" # Allows the edit pages to work with the same
-  put   '/sports/:slug', to: 'sports#update'
+  get '/sports/:slug', to: "sports#show" # Show the sports pages by name (slug) not id
+  get '/sports/:slug/edit', to: "sports#edit" # Allows the edit pages to work with the same
+  put '/sports/:slug', to: 'sports#update'
   resources :sports, only: [:index, :new, :create, :destroy]
   
   # Clubs Pages
