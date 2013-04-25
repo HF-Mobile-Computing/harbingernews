@@ -60,5 +60,7 @@ module Harbingernews
     config.assets.version = '1.0'
     
     config.assets.prefix = "/assets/"
+    
+    config.assets.initialize_on_precompile = false
   end
 end

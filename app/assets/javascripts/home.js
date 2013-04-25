@@ -1,5 +1,3 @@
-//= require jquery
-//= require bootstrap.min
 //= require breakpoints
 //= require_self
 

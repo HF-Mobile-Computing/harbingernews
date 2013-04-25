@@ -1,4 +1,4 @@
-<head>
+<% content_for :css %>
   <style>
     .table {
       margin-top: 1em;
@@ -24,58 +24,56 @@
       margin-top: .5em;
     }
   </style>
-</head>
-<div class="container">
+<% end %>
 
-  <% unless notice.nil? %><div class="alert alert-success"><%= notice %></div><% end %>
+<% unless notice.nil? %><div class="alert alert-success"><%= notice %></div><% end %>
 
-  <div class="accordion" id="accordion2">
-    <div class="accordion-group">
-      <div class="accordion-heading">
-        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-          Add a new memo...
-        </a>
-      </div>
-      <div id="collapseOne" class="accordion-body collapse">
-        <div class="accordion-inner">
-          <%= form_for(@memo) do |f| %>
-            
-            <%= f.label :title %>:<%= f.text_field :title %>
-            Background Color: <%= f.text_field :bg_color %>
-            Text Color: <%= f.text_field :text_color %><br /<
-            <%= f.label :content %>:<br /><%= f.text_area :content %>
-            
-            <%= f.submit "Create Memo", class: "btn btn-primary pull-right" %>
+<div class="accordion" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        Add a new memo...
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <%= form_for(@memo) do |f| %>
           
-          <% end %>
-        </div>
+          <%= f.label :title %>:<%= f.text_field :title %>
+          Background Color: <%= f.text_field :bg_color %>
+          Text Color: <%= f.text_field :text_color %><br /<
+          <%= f.label :content %>:<br /><%= f.text_area :content %>
+          
+          <%= f.submit "Create Memo", class: "btn btn-primary pull-right" %>
+        
+        <% end %>
       </div>
     </div>
   </div>
-  
-  
-  <table class="table">
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Content</th>
-      <th>BG Color</th>
-      <th>Text Color</th>
-      <th>Image?</th>
-      <th>Edit</th>
-      <th>Delete</th>
-    </tr>
-    <% @memos.each do |memo| %>
-      <tr>
-        <td><%= memo.id %></td>
-        <td><%= memo.title %></td>
-        <td><%= memo.content %></td>
-        <td style="color: <% unless memo.bg_color.empty? %><%= memo.bg_color %><% else %>white; text-shadow: black 1px 1px 2px<% end %>;"><% if memo.bg_color.empty? %>White<% else %><%= memo.bg_color %><% end %></td>
-        <td style="color: <% if memo.text_color.empty? %>black<% else %><%= memo.text_color %><% end %>;<% if memo.text_color.downcase == "white" %> text-shadow: black 1px 1px 2px;<% end %>"><% if memo.text_color.empty? %>Black<% else %><%= memo.text_color %><% end %></td>
-        <td><% if memo.is_image? %>Yes<% else %>No<% end %></td>
-        <td><%= link_to "Edit", :controller => 'memos', :action => 'edit', :id => memo.id %></td>
-        <td><%= link_to "Delete", memo, :method => :delete, :confirm => "Are you sure you want to delete this memo?" %></td>
-      </tr>
-    <% end %>
-  </table>
 </div>
+
+
+<table class="table">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Content</th>
+    <th>BG Color</th>
+    <th>Text Color</th>
+    <th>Image?</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <% @memos.each do |memo| %>
+    <tr>
+      <td><%= memo.id %></td>
+      <td><%= memo.title %></td>
+      <td><%= memo.content %></td>
+      <td style="color: <% unless memo.bg_color.empty? %><%= memo.bg_color %><% else %>white; text-shadow: black 1px 1px 2px<% end %>;"><% if memo.bg_color.empty? %>White<% else %><%= memo.bg_color %><% end %></td>
+      <td style="color: <% if memo.text_color.empty? %>black<% else %><%= memo.text_color %><% end %>;<% if memo.text_color.downcase == "white" %> text-shadow: black 1px 1px 2px;<% end %>"><% if memo.text_color.empty? %>Black<% else %><%= memo.text_color %><% end %></td>
+      <td><% if memo.is_image? %>Yes<% else %>No<% end %></td>
+      <td><%= link_to "Edit", :controller => 'memos', :action => 'edit', :id => memo.id %></td>
+      <td><%= link_to "Delete", memo, :method => :delete, :confirm => "Are you sure you want to delete this memo?" %></td>
+    </tr>
+  <% end %>
+</table>

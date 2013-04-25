@@ -1,5 +1,9 @@
 class Club < ActiveRecord::Base
   attr_accessible :slug, :name, :category, :content
+  
+  def to_param
+    slug
+  end
 end
 # == Schema Information
 #

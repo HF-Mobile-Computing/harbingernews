@@ -1,5 +1,4 @@
 class SportsController < ApplicationController
-  layout :resolve_layout
 
   # GET /sports
   # GET /sports.json
@@ -49,7 +48,7 @@ class SportsController < ApplicationController
 
     respond_to do |format|
       if @sport.save
-        format.html { redirect_to @sport, notice: 'Sport was successfully created.' }
+        format.html { redirect_to sports_url, notice: 'Sport was successfully created.' }
         format.json { render json: @sport, status: :created, location: @sport }
       else
         format.html { render action: "new" }
@@ -83,20 +82,6 @@ class SportsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to sports_url }
       format.json { head :no_content }
-    end
-  end
-  
-  # Set multiple layouts for different page types
-  private
-  
-  def resolve_layout
-    case action_name
-    when "index"
-      false
-    when "show"
-      false
-    else
-      "application"
     end
   end
   
