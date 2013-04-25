@@ -1,0 +1,21 @@
+<h1>Listing recent_events</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @recent_events.each do |recent_event| %>
+  <tr>
+    <td><%= link_to 'Show', recent_event %></td>
+    <td><%= link_to 'Edit', edit_recent_event_path(recent_event) %></td>
+    <td><%= link_to 'Destroy', recent_event, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Recent event', new_recent_event_path %>
