@@ -48,7 +48,7 @@ Harbingernews::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-  config.assets.precompile += %w[ home/index.css home.js sports_index.css sports.js ]
+  config.assets.precompile += %w[ home/index.css home.js sports_index.css sports_page.css sports.js clubs.js clubs.css ]
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
