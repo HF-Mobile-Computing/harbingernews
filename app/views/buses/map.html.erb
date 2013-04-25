@@ -1,0 +1,154 @@
+<head>
+  <style type="text/css">
+    .container {
+      overflow: visible;
+    }
+    #map {
+      background-image: url(<%= image_path('map.png') %>);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: .5em;
+      text-align: center;
+      margin-top: .2em;
+      width: 863px;
+      height: 447px;
+      position: relative;
+    }
+    h1 {
+      text-align: center;
+    }
+    .bus {
+      color: black;
+      width: 35px;
+      position: absolute;
+    }
+    #wrapper {
+      background: white;
+      padding-top: .5em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      overflow: auto;
+    }
+    #updated {
+      float: right;
+      clear: both;
+      margin-right: 10%;
+    }
+    #one {
+      left: 815px;
+      top: 275px;
+    }
+    #two {
+      left: 810px;
+      top: 305px;
+    }
+    #three {
+      left: 800px;
+      top: 335px;
+    }
+    #four {
+      left: 780px;
+      top: 365px;
+    }
+    #five {
+      left: 725px;
+      top: 395px;
+    }
+    #six {
+      left: 670px;
+      top: 408px;
+    }
+    #seven {
+      left: 610px;
+      top: 410px;
+    }
+    #eight {
+      left: 550px;
+      top: 410.5px;
+    }
+    #nine {
+      left: 490px;
+      top: 410px;
+    }
+    #ten {
+      left: 400px;
+      top: 409px;
+    }
+    #eleven {
+      left: 340px;
+      top: 409px;
+    }
+    #twelve {
+      left: 280px;
+      top: 408px;
+    }
+    #thirteen {
+      left: 170px;
+      top: 408px;
+    }
+    #fourteen {
+      left: 110px;
+      top: 395px;
+    }
+    #fifteen {
+      left: 64px;
+      top: 320px;
+    }
+    #sixteen {
+      left: 69px;
+      top: 270px;
+    }
+    #seventeen {
+      left: 81px;
+      top: 220px;
+    }
+    #eighteen {
+      left: 93px;
+      top: 170px;
+    }
+    #nineteen {
+      left: 70px;
+      top: 62px;
+    }
+    #twenty {
+      left: 20px;
+      top: 62px;
+    }
+  </style>
+  <script type="text/javascript">
+    $(function() {
+      $('.bus').filter(function(index) {
+        return !$(this).is(':empty');
+      }).css('background-color', 'gold').css('border', 'solid 1px black');
+    });
+  </script>
+</head>
+<div id="wrapper">
+  <h1>Bus Map for <%= @created %></h1>
+  <div id="map">
+    <div class="bus" id="one"><%= @bus.one %></div>
+    <div class="bus" id="two"><%= @bus.two %></div>
+    <div class="bus" id="three"><%= @bus.three %></div>
+    <div class="bus" id="four"><%= @bus.four %></div>
+    <div class="bus" id="five"><%= @bus.five %></div>
+    <div class="bus" id="six"><%= @bus.six %></div>
+    <div class="bus" id="seven"><%= @bus.seven %></div>
+    <div class="bus" id="eight"><%= @bus.eight %></div>
+    <div class="bus" id="nine"><%= @bus.nine %></div>
+    <div class="bus" id="ten"><%= @bus.ten %></div>
+    <div class="bus" id="eleven"><%= @bus.eleven %></div>
+    <div class="bus" id="twelve"><%= @bus.twelve %></div>
+    <div class="bus" id="thirteen"><%= @bus.thirteen %></div>
+    <div class="bus" id="fourteen"><%= @bus.fourteen %></div>
+    <div class="bus" id="fifteen"><%= @bus.fifteen %></div>
+    <div class="bus" id="sixteen"><%= @bus.sixteen %></div>
+    <div class="bus" id="seventeen"><%= @bus.seventeen %></div>
+    <div class="bus" id="eighteen"><%= @bus.eighteen %></div>
+    <div class="bus" id="nineteen"><%= @bus.nineteen %></div>
+    <div class="bus" id="twenty"><%= @bus.twenty %></div>
+  </div>
+  <p id="updated">Last updated at: <%= @updated %></p>
+</div>
+    
