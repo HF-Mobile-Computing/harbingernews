@@ -2,9 +2,10 @@
 $darkGreen: #466843;
 $lightGreen: #629b62;
 
+// Imports
 @import "compass/layout/sticky-footer";
 @include sticky-footer(200px, "#footer");
-
+@import 'buttons';
 
 // Mixins
 @mixin backgroundNoise {

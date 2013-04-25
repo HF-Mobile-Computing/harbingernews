@@ -1,81 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>The Harbinger Online</title>
-	
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<link rel="apple-touch-icon" href="img/Apple-Icon.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="img/Apple-Icon-Retina.png" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-	<meta http-equiv="X-UA-Compatible" content="chrome=1">
-	
-	<%= stylesheet_link_tag "home/index", :media => "all" %>
-	<%= javascript_include_tag "home" %>
-		
-	<!-- Google Analytics -->
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-35687930-1']);
-		_gaq.push(['_trackPageview']);
-		(function() {
-	    	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	    })();
-	</script>
+<% content_for :css do %>
+  <%= stylesheet_link_tag "home/index", :media => "all" %>
+<% end %>
+<% content_for :js do %>
+  <%= javascript_include_tag "home" %>
+<% end %>
 
-</head>
-
-<body>
-	
-	<div id="content">
-
-		<%= render 'layouts/header' %>
-			
-		<div class="container" id="all">
-			<div class="container-fluid" id="stuff">
-				<div class="row-fluid"><!-- header -->
-					<div class="span12" id="header">
-						<h1>Harborfields High School</h1>
-					</div>
-				</div><!-- end header -->
-				<div class="row-fluid" id="announcements">
-					<h3>Today's Announcements</h3>
-					 <p><%= @announcement.content %></p>
-				</div>
-				<div id="memos">
-			    <div id="slider">
-				    <% @memos.each do |memo| %>
-				      <% if memo.is_image %>
-				      
-				      <% else %>
-				      <div class="memo" style="background-color: <%= memo.bg_color %>; color: <% unless memo.text_color.nil? %><%= memo.text_color %><% else %>black<% end %>;">
-				        <h2><%= memo.title %></h2>
-				        <p><%= memo.content %></p>
-				      </div>
-				      <% end %>
-				    <% end %>
-			    </div>
-				  <%= image_tag('buttons/Next.png', id: "advance") %>
-				  <%= image_tag('buttons/Prev.png', id: 'reverse') %>
-				  </div>
-				<div class="row-fluid" id="events">
-					<div class="span6" id="upcoming">
-						<h3>Upcoming Events</h3>
-						<p>EVENTS</p>
-					</div>
-					<div class="span6" id="recent">
-						<h3>Recent Events</h3>
-						<p>OTHER EVENTS</p>
-					</div>
-				</div>
-			</div>
-		</div>		
-		<div id="footer_spacer"></div>
-		
-	</div><!-- end "content"-->
-
-	<%= render 'layouts/footer' %>
-
-</body>
-</html>
+<div id="all">
+  <div class="container-fluid" id="stuff">
+  	<div class="row-fluid"><!-- header -->
+  		<div class="span12" id="header">
+  			<h1>Harborfields High School</h1>
+  		</div>
+  	</div><!-- end header -->
+  	<div class="row-fluid" id="announcements">
+  		<h3>Today's Announcements</h3>
+  		 <p><%= @announcement.content %></p>
+  	</div>
+  	<div id="memos">
+      <div id="slider">
+  	    <% @memos.each do |memo| %>
+  	      <% if memo.is_image %>
+  	      
+  	      <% else %>
+  	      <div class="memo" style="background-color: <%= memo.bg_color %>; color: <% unless memo.text_color.nil? %><%= memo.text_color %><% else %>black<% end %>;">
+  	        <h2><%= memo.title %></h2>
+  	        <p><%= memo.content %></p>
+  	      </div>
+  	      <% end %>
+  	    <% end %>
+      </div>
+  	  <%= image_tag('buttons/Next.png', id: "advance") %>
+  	  <%= image_tag('buttons/Prev.png', id: 'reverse') %>
+  	  </div>
+  	<div class="row-fluid" id="events">
+  		<div class="span6" id="upcoming">
+  			<h3>Upcoming Events</h3>
+  			<p>EVENTS</p>
+  		</div>
+  		<div class="span6" id="recent">
+  			<h3>Recent Events</h3>
+  			<p>OTHER EVENTS</p>
+  		</div>
+  	</div>
+  </div>
+</div>

@@ -1,16 +1,8 @@
 class HomeController < ApplicationController
   
-  before_filter :set_vars
-  
   def index
-    render layout: false
+    @memos = Memo.limit(12).reverse_order
+    @announcement = Announcement.last
   end
-  
-  protected
-    
-    def set_vars
-      @memos = Memo.limit(12).reverse_order
-      @announcement = Announcement.last
-      @hello = "hello"
-    end
+
 end
