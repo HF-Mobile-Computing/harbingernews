@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20130423185138) do
     t.string   "seventeen"
     t.string   "eighteen"
     t.string   "nineteen"
+    t.string   "twenty"
   end
 
   create_table "clubs", :force => true do |t|

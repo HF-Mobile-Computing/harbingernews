@@ -20,5 +20,6 @@ class AddLocationsToBuses < ActiveRecord::Migration
     add_column :buses, :seventeen,    :string
     add_column :buses, :eighteen,     :string
     add_column :buses, :nineteen,     :string
+    add_column :buses, :twenty,       :string
   end
 end
