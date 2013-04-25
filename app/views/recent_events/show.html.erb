@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Recents Events Posted <%= @event.created_at %></h1>
 
+<div>
+  <%= @event.content %>
+</div>
+
+<br />
 <%= link_to 'Edit', edit_recent_event_path(@recent_event) %> |
 <%= link_to 'Back', recent_events_path %>

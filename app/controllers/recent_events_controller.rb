@@ -2,7 +2,7 @@ class RecentEventsController < ApplicationController
   # GET /recent_events
   # GET /recent_events.json
   def index
-    @recent_events = RecentEvent.all
+    @recent_events = RecentEvent.all(:order => 'id DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,11 +13,11 @@ class RecentEventsController < ApplicationController
   # GET /recent_events/1
   # GET /recent_events/1.json
   def show
-    @recent_event = RecentEvent.find(params[:id])
+    @event = RecentEvent.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @recent_event }
+      format.json { render json: @event }
     end
   end
 

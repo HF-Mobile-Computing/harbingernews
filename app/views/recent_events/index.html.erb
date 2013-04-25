@@ -1,17 +1,21 @@
 <h1>Listing recent_events</h1>
 
-<table>
+<table class="table">
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>ID</th>
+    <th>Content</th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </tr>
 
 <% @recent_events.each do |recent_event| %>
   <tr>
+    <td><%= recent_event.id %>
+    <td><%= recent_event.content %>
     <td><%= link_to 'Show', recent_event %></td>
     <td><%= link_to 'Edit', edit_recent_event_path(recent_event) %></td>
-    <td><%= link_to 'Destroy', recent_event, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Delete', recent_event, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
