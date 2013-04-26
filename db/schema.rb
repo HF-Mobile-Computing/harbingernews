@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130423185138) do
+ActiveRecord::Schema.define(:version => 20130426165946) do
 
   create_table "announcements", :force => true do |t|
     t.string   "a_or_b"
@@ -66,6 +66,12 @@ ActiveRecord::Schema.define(:version => 20130423185138) do
     t.string   "text_color"
   end
 
+  create_table "recent_events", :force => true do |t|
+    t.string   "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "sports", :force => true do |t|
     t.string   "slug"
     t.string   "title"
@@ -74,6 +80,12 @@ ActiveRecord::Schema.define(:version => 20130423185138) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.text     "alert"
+  end
+
+  create_table "upcoming_events", :force => true do |t|
+    t.string   "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
