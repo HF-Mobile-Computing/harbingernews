@@ -1,5 +1,7 @@
 Harbingernews::Application.routes.draw do
 
+  resources :upcoming_events
+
   resources :recent_events
 
   devise_for :users, :skip => [:sessions] 
