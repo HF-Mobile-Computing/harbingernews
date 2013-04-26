@@ -1,34 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>HF Clubs</title>
+<% content_for :css do %>
   <%= stylesheet_link_tag    "clubs", :media => "all" %>
+<% end %>
+<% content_for :js do %>
   <%= javascript_include_tag "clubs" %>
-  <%= csrf_meta_tags %>
   <script type="text/javascript">
     $(function(){
       $('#nav_clubs').addClass('active');
     });
   </script>
-</head>
+<% end %>
+<% content_for :above_container do %>
+  <%= render 'layouts/header2' %>
+<% end %>
 
-<%= render 'layouts/header' %>
-<%= render 'layouts/header2' %>
-<div id="content">
-<div id = "announcements" class = "span10 offset1">
-
-  <h1>Club Announcements</h1>
+<div class="row">
+  <div id = "announcements" class = "span10 offset1">
   
-  <div class = "offset1">
-  <% @all.each do |announcement| %>
-  
-    <li> <%= announcement.content %> </li>
-  
-  <% end %>
+    <h1>Club Announcements</h1>
+    
+    <div class = "offset1">
+    <% @all.each do |announcement| %>
+    
+      <li> <%= announcement.content %> </li>
+    
+    <% end %>
+    </div>
   </div>
 </div>
-
-<%= render 'layouts/footer' %>
-</div>
-</body>
-</html>

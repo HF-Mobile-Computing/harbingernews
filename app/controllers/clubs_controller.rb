@@ -1,5 +1,4 @@
 class ClubsController < ApplicationController
-  layout :resolve_layout
 
   # GET /clubs
   # GET /clubs.json
@@ -98,21 +97,6 @@ class ClubsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to clubs_url }
       format.json { head :no_content }
-    end
-  end
-  private
-
-  def resolve_layout
-    case action_name
-    
-    when "index"
-      false
-    
-    when 'show'
-      false
-    
-    else
-      "application"
     end
   end
 end
