@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>HF Clubs | <%= @club.name %></title>
+<% content_for :css do %>
   <%= stylesheet_link_tag    "clubs", :media => "all" %>
+<% end %>
+<% content_for :js do %>
   <%= javascript_include_tag "clubs" %>
-  <%= csrf_meta_tags %>
   <script type="text/javascript">
     $(function(){
       $('#nav_clubs').addClass('active');
     });
   </script>
-</head>
+<% end %>
+<% content_for :above_continer do %>
+  <%= render 'layouts/header2' %>
+<% end %>
 
-<%= render 'layouts/header' %>
-<%= render 'layouts/header2' %>
-
-<div id="root">
 <div class="row">
 	<div class = "offset1 span10" id='announcements'>
 		<h2>About <%= @club.name %></h4>
@@ -24,7 +21,4 @@
 
 		</div>
 	</div>
-			
 </div><!-- end "row" -->
-<%= render 'layouts/footer' %>
-</div>
