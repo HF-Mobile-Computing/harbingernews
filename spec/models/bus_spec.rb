@@ -30,5 +30,6 @@ end
 #  seventeen  :string(255)
 #  eighteen   :string(255)
 #  nineteen   :string(255)
+#  twenty     :string(255)
 #
 
