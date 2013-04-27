@@ -1,27 +1,68 @@
-<div class="content" style="margin-bottom: 10px;">
-    <div class="row-fluid">
-        <div id="box" class="span6 offset3">
-            <h2>
-                Sign up
-            </h2>
-            <div style="float: left; text-align: left;" class="offset3">
-                <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %><%= devise_error_messages! %>
-                <div>
-                    <%= f.label :name %><%= f.text_field :name %>
-                </div><br>
-                <div>
-                    <%= f.label :email %><%= f.email_field :email, :autofocus => true %>
-                </div><br>
-                <div>
-                    <%= f.label :password %><%= f.password_field :password %>
-                </div><br>
-                <div>
-                    <%= f.label :password_confirmation %><%= f.password_field :password_confirmation %>
-                </div>
-            </div>
-            <div style="clear: both;">
-                <%= f.submit "Sign up", class: "btn btn-large btn-primary" %>
-            </div><% end %>
-        </div>
+<% content_for :css do %>
+  <%= stylesheet_link_tag "jasny-bootstrap" %>
+  <style type="text/css">
+    #box {
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 5%;
+    }
+    form {
+      margin-top: 1em;
+      text-align: left;
+    }
+    input[type=file] {
+      line-height: 9px;
+    }
+  </style>
+<% end %>
+<%= content_for :js do %>
+  <%= javascript_include_tag "jasny-bootstrap" %>
+<% end %>
+
+<div id="box">
+  <h2>Sign up</h2>
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal new_user' }) do |f| %><%= devise_error_messages! %>
+    <div class="control-group">
+      <%= f.label :name, class: 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :name, placeholder: 'Name', :autofocus => true %>
+      </div>
     </div>
+    <div class="control-group">
+      <%= f.label :email, class: 'control-label' %>
+      <div class="controls">
+        <%= f.email_field :email, placeholder: 'Email' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :password, class: 'control-label' %>
+      <div class="controls">
+        <%= f.password_field :password, placeholder: 'Password' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :password_confirmation, class: 'control-label' %>
+      <div class="controls">
+        <%= f.password_field :password_confirmation, placeholder: 'Repeat Password' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="avatar">Profile Picture</label>
+      <div class="controls">
+        <div class="fileupload fileupload-new" data-provides="fileupload">
+          <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"><img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" /></div>
+            <div>
+              <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><%= f.file_field :avatar %></span>
+              <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <%= f.submit "Sign up", class: "btn btn-large btn-primary" %>
+      </div>
+    </div>
+  <% end %>
 </div>
