@@ -37,6 +37,9 @@ Harbingernews::Application.configure do
   
   # Tell Paperclip where to find ImageMagick
   # Warning: Below is the location if installed on OSX through Homebrew
-  Paperclip.options[:command_path] = '/usr/local/bin'
-  
+  if RUBY_PLATFORM.include? 'darwin'
+    Paperclip.options[:command_path] = '/usr/local/bin'
+  elsif RUBY_PLATFORM.include? 'linux'
+    
+  end
 end
