@@ -20,7 +20,7 @@
   <%= javascript_include_tag "jasny-bootstrap" %>
 <% end %>
 
-<div id="box">
+<div id="box" style = "margin-bottom: 5px;">
   <h2>Sign up</h2>
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal new_user' }) do |f| %><%= devise_error_messages! %>
     <div class="control-group">
