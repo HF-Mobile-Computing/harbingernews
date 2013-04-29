@@ -1,5 +1,5 @@
 class ClubsController < ApplicationController
-
+  load_and_authorize_resource
   # GET /clubs
   # GET /clubs.json
   def index

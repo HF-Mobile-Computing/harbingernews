@@ -13,6 +13,8 @@ Harbingernews::Application.routes.draw do
     get 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session
   end
 
+  
+
   # set root path
   root :to => "home#index"
 

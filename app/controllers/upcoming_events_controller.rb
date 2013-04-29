@@ -1,4 +1,5 @@
 class UpcomingEventsController < ApplicationController
+  load_and_authorize_resource
   # GET /upcoming_events
   # GET /upcoming_events.json
   def index

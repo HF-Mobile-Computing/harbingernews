@@ -8,6 +8,8 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'bourbon'
 gem 'devise'
 gem 'paperclip', '~> 3.0'
+gem 'cancan'
+gem 'role_model'
 
 group :development do
   gem 'rspec-rails', '2.9.0'

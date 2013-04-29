@@ -1,4 +1,5 @@
 class BusesController < ApplicationController
+  load_and_authorize_resource
   # GET /buses
   # GET /buses.json
   def index

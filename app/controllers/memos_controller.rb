@@ -1,4 +1,5 @@
 class MemosController < ApplicationController
+  load_and_authorize_resource
   # GET /memos
   # GET /memos.json
   def index

@@ -1,4 +1,5 @@
 class RecentEventsController < ApplicationController
+  load_and_authorize_resource
   # GET /recent_events
   # GET /recent_events.json
   def index
