@@ -12,7 +12,15 @@
   			<h1>Harborfields High School</h1>
   		</div>
   	</div><!-- end header -->
-  	<div class="row-fluid" id="announcements">
+    
+    <% flash.each do |type, message| %>
+      <div class="alert <%= bootstrap_class_for(type) %> fade in">
+        <button class="close" data-dismiss="alert">×</button>
+        <%= message %>
+      </div>
+    <% end %>
+  	
+    <div class="row-fluid" id="announcements">
   		<h3>Today's Announcements</h3>
   		 <p><%= @announcement.content %></p>
   	</div>
