@@ -1,8 +1,6 @@
 Harbingernews::Application.routes.draw do
 
-  resources :upcoming_events
-
-  resources :recent_events
+  root :to => "home#index"
 
   devise_for :users, :skip => [:sessions] 
 
@@ -13,10 +11,16 @@ Harbingernews::Application.routes.draw do
     get 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session
   end
 
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  resources :upcoming_events
+
+  resources :recent_events
+
   
 
   # set root path
-  root :to => "home#index"
+  
 
   # Announcements
   resources :announcements

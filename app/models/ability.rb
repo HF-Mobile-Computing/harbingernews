@@ -8,14 +8,14 @@ class Ability
     
     user ||= User.new # guest user (not logged in)
     
-    can :read, :all
+    can :read, [Club, Sport, Bus, UpcomingEvent, RecentEvent, Memo, Announcement]
 
     if user.has_role? :admin
         can :manage, :all
     
     elsif user.has_role? :editor
       can :manage, [Club, Sport]
-      can :read, :all
+      can :read, [Club, Sport, Bus, UpcomingEvent, RecentEvent, Memo, Announcement]
     
     end
 
