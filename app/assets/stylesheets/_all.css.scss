@@ -23,12 +23,6 @@ $lightGreen: #629b62;
 	}
 }
 
-div .link {
-	a {
-	color: 	#629b62 !important;
-	}
-}
-
 @media all and (max-width: 980px) {
 	.navbar-inner {
 		.nav {
@@ -79,6 +73,40 @@ a {
 		bottom: -200px;
 	}
 	clear: both;
+}
+
+.navbar-static-top {
+  #user-nav-box {
+    width: 320px;
+    .controls {
+      margin: {
+        left: 60px;
+      }
+    }
+    .control-label {
+      padding: {
+        right: 8px;
+      }
+      width: 80px;
+      &:after {
+        content: ":";
+      }
+    }
+    .btn {
+      display: block;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+    }
+    .link {
+      width: 100%;
+      text-align: center;
+      a {
+        color: 	$lightGreen !important;
+    	}
+    }
+  }
 }
 
 #footer_spacer {
