@@ -12,6 +12,7 @@ gem 'cancan'
 gem 'role_model'
 gem 'rails_admin'
 
+
 group :development do
   gem 'rspec-rails', '2.9.0'
   gem 'sqlite3', '1.3.5'
@@ -32,4 +33,6 @@ end
 
 group :production do
   gem 'pg', '0.15'
+  gem 'therubyracer'
+  gem 'execjs'
 end
