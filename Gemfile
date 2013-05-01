@@ -8,9 +8,10 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'bourbon'
 gem 'devise'
 gem 'paperclip', '~> 3.0'
-gem 'cancan'
+gem 'cancan'  ## Authorization / Admin stuff
 gem 'role_model'
 gem 'rails_admin'
+gem 'paper_trail'
 
 
 group :development do
