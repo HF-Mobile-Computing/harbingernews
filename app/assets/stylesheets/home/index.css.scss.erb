@@ -161,6 +161,13 @@ body {
 }
 
 #announcements {
+	//Padding for announcement text on home page
+	p {
+		padding: {
+		left: 5px;
+		right: 5px;
+		}
+	}
 	@include pie;
 	background: {
 		color: #e7e7e7;
@@ -218,7 +225,6 @@ body {
 
 #events {
 	$bottomPadding: 10px;
-	text-align: justify;
 	margin: 0 auto;
 	margin: {
 		top: 13px;
@@ -244,12 +250,16 @@ body {
 		box-shadow: 1px 1px 6px rgba(0,0,0,0.68);
 		padding: {
 			bottom: $bottomPadding;
+			right:5px; 
+			left:20px;
 		}
 	}
 	#recent {
 		box-shadow: 1px 1px 6px rgba(0,0,0,0.68);
 		padding: {
 			bottom: $bottomPadding;
+			right:5px; 
+			left:20px;
 		}
 	}
 }

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130426174955) do
+ActiveRecord::Schema.define(:version => 20130428155804) do
 
   create_table "announcements", :force => true do |t|
     t.string   "a_or_b"
@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(:version => 20130426174955) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.integer  "roles_mask"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
