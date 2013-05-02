@@ -11,6 +11,7 @@ gem 'paperclip', '~> 3.0'
 gem 'cancan'  ## Authorization / Admin stuff
 gem 'role_model'
 gem 'rails_admin'
+gem 'rich'
 gem 'paper_trail'
 
 
