@@ -7,7 +7,7 @@ RailsAdmin.config do |config|
   ################  Global configuration  ################
   config.authorize_with :cancan
   # Set the admin name here (optional second array element will appear in red). For example:
-  config.main_app_name = ['Harbingernews', 'Admin']
+  config.main_app_name = ['Harbinger News', 'Admin']
   # or for a more dynamic name:
   # config.main_app_name = Proc.new { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
 
@@ -34,6 +34,96 @@ RailsAdmin.config do |config|
 
   # Label methods for model instances:
   # config.label_methods << :description # Default is [:name, :title]
+  
+  ### Configurations
+  
+  # Sports
+  config.model Sport do
+    edit do
+      field :title
+      field :season, :enum do
+        enum do
+          ['spring', 'winter', 'fall']
+        end
+      end
+      # Add Rick to Sports Content
+      field :content, :rich_editor do
+        config({
+          :insert_many => true
+        })
+      end
+    end
+  end
+  
+  # Clubs
+  config.model Club do
+    edit do
+      field :name
+      field :category
+      field :content, :rich_editor do
+        config({
+          :insert_many => true
+        })
+      end
+    end
+  end
+  
+  # Announcements
+  config.model Announcement do
+    edit do
+      field :a_or_b, :enum do
+        enum do
+          ['A', 'B']
+        end
+      end
+      field :content, :rich_editor do
+        config({
+          :insert_many => true
+        })
+      end
+    end
+  end
+  
+  # Memos
+  config.model Memo do
+    edit do
+      field :title
+      field :bg_color
+      field :text_color
+      field :is_image
+      field :image_path
+      field :content, :rich_editor do
+        config({
+          :insert_many => true
+        })
+      end
+    end
+  end
+  
+  # Recent Events
+  config.model RecentEvent do
+    edit do
+      field :content, :rich_editor do
+        config({
+          :insert_many => true
+        })
+      end
+    end
+  end
+  
+  # Upcoming Events
+  config.model UpcomingEvent do
+    edit do
+      field :content, :rich_editor do
+        config({
+          :insert_many => true
+        })
+      end
+    end
+  end
+
+
+  
 
 
   ################  Model configuration  ################

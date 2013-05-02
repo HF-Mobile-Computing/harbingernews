@@ -1,5 +1,7 @@
 Harbingernews::Application.routes.draw do
 
+  mount Rich::Engine => '/rich', :as => 'rich'
+
   root :to => "home#index"
 
   devise_for :users, :skip => [:sessions] 
