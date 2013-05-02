@@ -12,12 +12,11 @@ class Ability
 
     if user.has_role? :admin
         can :manage, :all
-    
     elsif user.has_role? :editor
       can :manage, [Club, Sport]
       can :read, [Club, Sport, Bus, UpcomingEvent, RecentEvent, Memo, Announcement]
-    
+      can :access, :rails_admin
+      can :dashboard
     end
-
   end
 end
