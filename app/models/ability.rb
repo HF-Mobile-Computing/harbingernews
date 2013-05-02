@@ -17,6 +17,11 @@ class Ability
       can :read, [Club, Sport, Bus, UpcomingEvent, RecentEvent, Memo, Announcement]
       can :access, :rails_admin
       can :dashboard
+    elsif user.has_role? :secretary
+      can :read, [Club, Sport, Bus, UpcomingEvent, RecentEvent, Memo, Announcement]
+      can :manage, [Announcement, RecentEvent, UpcomingEvent]
+      can :access, :rails_admin
+      can :dashboard
     end
   end
 end
