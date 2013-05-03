@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
  
+  has_paper_trail
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :avatar, :roles, :roles_mask
   # attr_accessible :title, :body
@@ -21,7 +22,7 @@ class User < ActiveRecord::Base
  
   # declare the valid roles -- do not change the order if you add more
   # roles later, always append them at the end!
-  roles :admin, :editor, :teacher, :student, :guest
+  roles :admin, :editor, :teacher, :student, :guest, :secretary
 
 end
 # == Schema Information

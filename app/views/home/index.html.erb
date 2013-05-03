@@ -22,7 +22,7 @@
   	
     <div class="row-fluid" id="announcements">
   		<h3>Today's Announcements</h3>
-  		 <p><%= @announcement.content %></p>
+  		 <p><%=raw @announcement.content %></p>
   	</div>
   	<div id="memos">
       <div id="slider">
@@ -32,7 +32,7 @@
   	      <% else %>
   	      <div class="memo" style="background-color: <%= memo.bg_color %>; color: <% unless memo.text_color.nil? %><%= memo.text_color %><% else %>black<% end %>;">
   	        <h2><%= memo.title %></h2>
-  	        <p><%= memo.content %></p>
+  	        <p><%=raw memo.content %></p>
   	      </div>
   	      <% end %>
   	    <% end %>

@@ -1,5 +1,6 @@
 class Memo < ActiveRecord::Base
   attr_accessible :title, :content, :bg_color, :text_color, :is_image, :image_path
+  has_paper_trail
   
   validates :title, presence: true
   validates :content, presence: true
