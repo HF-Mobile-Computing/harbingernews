@@ -269,6 +269,10 @@ $smallestMax: 517px;
 $smallMax: 669px;
 $midMax: 979px;
 
+#memos_wrapper {
+  position: relative;
+}
+
 #memos {
   min-height: 11em;
   display: block;
@@ -310,41 +314,37 @@ $midMax: 979px;
 #advance {
   position: absolute;
   display: block;
+  top: 5em;
+  z-index: 1000;
   @media (max-width: $smallestMax) {
-    top: 24.5em;
     left: 80%;
   }
   @media (max-width: $smallMax) and (min-width: $smallestMax + 1) {
-    top: 30.5em;
     left: 85%;
   }
   @media (max-width: $midMax) and (min-width: $smallMax + 1) {
-    top: 30.5em;
     left: 90.5%;
   }
   @media (min-width: $midMax + 1) {
-    top: 30em;
     left: 894px;
   }
 }
 #reverse {
   position: absolute;
   display: block;
+  top: 5em;
+  z-index: 1000;
   @media (max-width: $smallestMax) {
-    top: 24.5em;
-    left: 12%;
+    left: 10%;
   }
   @media (max-width: $smallMax) and (min-width: $smallestMax + 1) {
-    top: 30.5em;
     left: 6.5%;
   }
   @media (max-width: $midMax) and (min-width: $smallMax + 1) {
-    top: 30.5em;
     left: 5%;
   }
   @media (min-width: $midMax + 1) {
-    top: 30em;
-    left: 9px;
+    left: 12px;
   }
 }
 

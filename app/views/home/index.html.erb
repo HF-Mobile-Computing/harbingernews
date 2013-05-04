@@ -24,7 +24,8 @@
   		<h3>Today's Announcements</h3>
   		 <p><%=raw @announcement.content %></p>
   	</div>
-  	<div id="memos">
+  	<div id="memos_wrapper">
+    	<div id="memos">
       <div id="slider">
   	    <% @memos.each do |memo| %>
   	      <% if memo.is_image %>
@@ -36,10 +37,11 @@
   	      </div>
   	      <% end %>
   	    <% end %>
+        </div>
       </div>
-  	  <%= image_tag('buttons/Next.png', id: "advance") %>
-  	  <%= image_tag('buttons/Prev.png', id: 'reverse') %>
-  	  </div>
+      <%= image_tag('buttons/Next.png', id: "advance") %>
+      <%= image_tag('buttons/Prev.png', id: 'reverse') %>
+    </div>
   	<div class="row-fluid" id="events">
   		<div class="span6" id="upcoming">
   			<h3>Upcoming Events</h3>
