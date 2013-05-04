@@ -277,7 +277,7 @@ $midMax: 979px;
   min-height: 11em;
   display: block;
   padding: {
-    left: 4px;
+    left: 5px;
     right: 4px;
     top: 2px;
     bottom: 4px;
@@ -286,6 +286,9 @@ $midMax: 979px;
     top: .8em;
     right: auto;
     left: auto;
+  }
+  background: {
+    color: red;
   }
   overflow-x: hidden;
   @media (max-width: $smallestMax) {
@@ -344,20 +347,25 @@ $midMax: 979px;
     left: 5%;
   }
   @media (min-width: $midMax + 1) {
-    left: 12px;
+    left: 10px;
   }
 }
 
 .memo {
   @include box-shadow(rgba(0,0,0,0.68) 1px 1px 6px);
   @include border-radius(6px);
-  display: inline-block;
+  display: block;
+  float: left;
   margin: {
-    left: 4px;
-    right: 4px;
+    left: 5px;
+    right: 5px;
   }
   text-align: center;
-  padding: 0;
   height: 12em;
   width: 271px;
+  ul {
+    padding: {
+      left: 7px;
+    }
+  }
 }
