@@ -68,4 +68,14 @@ Harbingernews::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   
+  # Handling S3 Uploads
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :bucket => 'harbingernews',
+    :s3_credentials => {
+      :access_key_id => ENV['S3_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['S3_SECRET_ACCESS_KEY']
+    }
+  }
+  
 end

@@ -42,4 +42,5 @@ Harbingernews::Application.configure do
   elsif RUBY_PLATFORM.include? 'linux'
     
   end
+  
 end

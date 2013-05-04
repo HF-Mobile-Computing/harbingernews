@@ -12,8 +12,10 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :avatar, :roles, :roles_mask
   # attr_accessible :title, :body
-  has_attached_file :avatar, :styles => { :medium => '300x300>', :thumb => '100x100>', :header => '18x18>' }, :default_url => '/images/:style/missing.png'
-
+  has_attached_file :avatar,
+    :styles => { :medium => '300x300>', :thumb => '100x100>', :header => '18x18>' }, 
+    :default_url => '/images/:style/missing.png'
+    
   include RoleModel
  
   # optionally set the integer attribute to store the roles in,
