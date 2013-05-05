@@ -67,8 +67,8 @@
 				<tbody>
 				  <% @sport.games.each do |game| %>
 				  <tr <% if game.status == "win"%> class="success" <% elsif game.status == "loss" %> class="error" <% end %>>
-				    <td><%= game.date %></td>
-				    <td><%= game.time %></td>
+				    <td><%= game.date.strftime("%a, %b %d, %Y") %></td>
+				    <td><%= game.time.strftime("%I:%M %p") %></td>
 				    <td><%= game.opponent %></td>
 				    <td><% if game.is_home %>Home<% else %>Away<% end %></td>
 				    <td><%= game.score %>
