@@ -8,6 +8,7 @@ Harbingernews::Application.routes.draw do
 
   devise_scope :user do
     get "login" => "devise/sessions#new"
+    get "signin" => "devise/sessions#new"
     post 'login' => 'devise/sessions#create', :as => :user_session
     get "signup" => "devise/registrations#new", :as => :new_user_registration
     get 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session
