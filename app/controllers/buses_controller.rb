@@ -1,5 +1,5 @@
 class BusesController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource :except => :map 
   # GET /buses
   # GET /buses.json
   def index

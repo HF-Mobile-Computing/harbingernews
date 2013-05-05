@@ -15,18 +15,18 @@ else
 end
 # Memos
 if Memo.count == 0
-	Memo.create(title: "Test Memo 1", content: "This is the content for test memo one.", bg_color: 'red', text_color: '')
-	Memo.create(title: "Test Memo 2", content: "This is the content for test memo two.", bg_color: 'yellow', text_color: '')
-	Memo.create(title: "Test Memo 3", content: "This is the content for test memo three.", bg_color: 'orange', text_color: '')
-	Memo.create(title: "Test Memo 4", content: "This is the content for test memo four.", bg_color: 'green', text_color: '')
-	Memo.create(title: "Test Memo 5", content: "This is the content for test memo five.", bg_color: 'blue', text_color: '')
-	Memo.create(title: "Test Memo 6", content: "This is the content for test memo six.", bg_color: 'aqua', text_color: '')
-	Memo.create(title: "Test Memo 7", content: "This is the content for test memo seven.", bg_color: 'purple', text_color: '')
-	Memo.create(title: "Test Memo 8", content: "This is the content for test memo eight.", bg_color: 'pink', text_color: '')
-	Memo.create(title: "Test Memo 9", content: "This is the content for test memo nine.", bg_color: 'DarkSlateGray', text_color: '')
-	Memo.create(title: "Test Memo 10", content: "This is the content for test memo ten.", bg_color: 'GoldenRod', text_color: '')
-	Memo.create(title: "Test Memo 11", content: "This is the content for test memo eleven.", bg_color: 'LightSeaGreen', text_color: '')
-	Memo.create(title: "Test Memo 12", content: "This is the content for test memo twelve.", bg_color: 'SteelBlue', text_color: '')
+	Memo.create(title: "Test Memo 1", content: "This is the content for test memo one.", bg_color: 'FF0000', text_color: '000000')
+	Memo.create(title: "Test Memo 2", content: "This is the content for test memo two.", bg_color: 'FFFF00', text_color: '000000')
+	Memo.create(title: "Test Memo 3", content: "This is the content for test memo three.", bg_color: 'FFA500', text_color: '000000')
+	Memo.create(title: "Test Memo 4", content: "This is the content for test memo four.", bg_color: '008000', text_color: '000000')
+	Memo.create(title: "Test Memo 5", content: "This is the content for test memo five.", bg_color: '0000FF', text_color: '000000')
+	Memo.create(title: "Test Memo 6", content: "This is the content for test memo six.", bg_color: '00FFFF', text_color: '000000')
+	Memo.create(title: "Test Memo 7", content: "This is the content for test memo seven.", bg_color: '80080', text_color: '000000')
+	Memo.create(title: "Test Memo 8", content: "This is the content for test memo eight.", bg_color: 'FFC0CB', text_color: '000000')
+	Memo.create(title: "Test Memo 9", content: "This is the content for test memo nine.", bg_color: '2F4F4F', text_color: '000000')
+	Memo.create(title: "Test Memo 10", content: "This is the content for test memo ten.", bg_color: 'DAA520', text_color: '')
+	Memo.create(title: "Test Memo 11", content: "This is the content for test memo eleven.", bg_color: '20B2AA', text_color: '000000')
+	Memo.create(title: "Test Memo 12", content: "This is the content for test memo twelve.", bg_color: '4682B4', text_color: '000000')
 	puts "Created memos"
 else
 	puts "Memos already exist"
