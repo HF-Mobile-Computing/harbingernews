@@ -11,11 +11,15 @@
                 <div>
                     <%= f.label :password %><%= f.password_field :password %>
                 </div><% if devise_mapping.rememberable? -%>
-                <div>
+                <div style="text-align:center;"> 
+                    <!--Remove te styling above if u dont like the centered 'remember me'. My OCD made me do it-->
                     <%= f.check_box :remember_me %><%= f.label :remember_me %>
                 </div><% end -%>
-                <div>
-                    <%= f.submit "Sign in" %>
+                <div style="text-align:center;">
+                    <%= f.submit "Sign in", class: "btn btn-large btn-primary"%>             
+                    <div class = "link">
+                        <p style="padding-top:20px;">New user? <%= link_to "Sign up now!", new_user_registration_path %></p>
+                    </div>
                 </div><% end %>
             </div>
         </div>
