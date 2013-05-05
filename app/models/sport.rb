@@ -6,6 +6,8 @@ class Sport < ActiveRecord::Base
     slug
   end
   
+  has_many :games, :inverse_of => :sport
+  
 end
 # == Schema Information
 #
