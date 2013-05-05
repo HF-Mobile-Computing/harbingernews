@@ -14,6 +14,7 @@ gem 'role_model'
 gem 'rails_admin'
 gem 'rich'
 gem 'paper_trail'
+gem 'enumerize'
 
 
 group :development do
