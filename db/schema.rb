@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130502171244) do
+ActiveRecord::Schema.define(:version => 20130505035350) do
 
   create_table "announcements", :force => true do |t|
     t.string   "a_or_b"
@@ -56,6 +56,13 @@ ActiveRecord::Schema.define(:version => 20130502171244) do
   end
 
   create_table "games", :force => true do |t|
+    t.integer  "sport_id"
+    t.date     "date"
+    t.time     "time"
+    t.string   "opponent"
+    t.boolean  "is_home"
+    t.string   "score"
+    t.string   "status"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
