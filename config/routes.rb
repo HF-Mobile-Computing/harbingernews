@@ -27,6 +27,7 @@ Harbingernews::Application.routes.draw do
   # Mostly static pages
   get '/about', to: 'static_pages#about'
   get '/get_involved', to: "static_pages#get_involved"
+  get '/harbingerteam', to: "static_pages#harbingerteam"
 
   # Sports Pages
   get '/sports/:slug',           to: "sports#show" # Show the sports pages by name (slug) not id
