@@ -21,13 +21,16 @@ $(function() {
   function setVars() {
     thePage.width = $(window).width();
     if (thePage.width >= 980) {
-      thePage.slideAmt = 849;
+      // Largest
+      thePage.slideAmt = 843;
       thePage.counterAmt = 3;
     } else if (thePage.width <= 979 && thePage.width >= 670) {
-      thePage.slideAmt = 566; 
+      // Middle
+      thePage.slideAmt = 562; 
       thePage.counterAmt = 5;
     } else if (thePage.width < 670) {
-      thePage.slideAmt = 283;
+      // Smallest
+      thePage.slideAmt = 281;
       thePage.counterAmt = 11;
     }
   }

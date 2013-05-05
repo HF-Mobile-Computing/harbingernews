@@ -8,8 +8,13 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'bourbon'
 gem 'devise'
 gem 'paperclip', '~> 3.0'
-gem 'cancan'
+gem 'aws-sdk'
+gem 'cancan'  ## Authorization / Admin stuff
 gem 'role_model'
+gem 'rails_admin'
+gem 'rich'
+gem 'paper_trail'
+
 
 group :development do
   gem 'rspec-rails', '2.9.0'
@@ -31,4 +36,6 @@ end
 
 group :production do
   gem 'pg', '0.15'
+  gem 'therubyracer'
+  gem 'execjs'
 end

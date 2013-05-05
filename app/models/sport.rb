@@ -1,5 +1,6 @@
 class Sport < ActiveRecord::Base
   attr_accessible :content, :photo_path, :season, :slug, :title
+  has_paper_trail
   
   def to_param
     slug

@@ -267,11 +267,15 @@ $smallestMax: 517px;
 $smallMax: 669px;
 $midMax: 979px;
 
+#memos_wrapper {
+  position: relative;
+}
+
 #memos {
   min-height: 11em;
   display: block;
   padding: {
-    left: 4px;
+    left: 5px;
     right: 4px;
     top: 2px;
     bottom: 4px;
@@ -308,54 +312,56 @@ $midMax: 979px;
 #advance {
   position: absolute;
   display: block;
+  top: 5em;
+  z-index: 1000;
   @media (max-width: $smallestMax) {
-    top: 24.5em;
     left: 80%;
   }
   @media (max-width: $smallMax) and (min-width: $smallestMax + 1) {
-    top: 30.5em;
     left: 85%;
   }
   @media (max-width: $midMax) and (min-width: $smallMax + 1) {
-    top: 30.5em;
     left: 90.5%;
   }
   @media (min-width: $midMax + 1) {
-    top: 30em;
     left: 894px;
   }
 }
 #reverse {
   position: absolute;
   display: block;
+  top: 5em;
+  z-index: 1000;
   @media (max-width: $smallestMax) {
-    top: 24.5em;
-    left: 12%;
+    left: 10%;
   }
   @media (max-width: $smallMax) and (min-width: $smallestMax + 1) {
-    top: 30.5em;
     left: 6.5%;
   }
   @media (max-width: $midMax) and (min-width: $smallMax + 1) {
-    top: 30.5em;
     left: 5%;
   }
   @media (min-width: $midMax + 1) {
-    top: 30em;
-    left: 9px;
+    left: 10px;
   }
 }
 
 .memo {
   @include box-shadow(rgba(0,0,0,0.68) 1px 1px 6px);
   @include border-radius(6px);
-  display: inline-block;
+  display: block;
+  float: left;
   margin: {
-    left: 4px;
-    right: 4px;
+    left: 5px;
+    right: 5px;
   }
   text-align: center;
-  padding: 0;
   height: 12em;
   width: 271px;
+  ul {
+    padding: {
+      left: 7px;
+    }
+    text-align: left;
+  }
 }

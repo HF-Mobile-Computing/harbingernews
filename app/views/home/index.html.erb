@@ -22,9 +22,10 @@
   	
     <div class="row-fluid" id="announcements">
   		<h3>Today's Announcements</h3>
-  		 <p><%= @announcement.content %></p>
+  		 <p><%=raw @announcement.content %></p>
   	</div>
-  	<div id="memos">
+  	<div id="memos_wrapper">
+    	<div id="memos">
       <div id="slider">
   	    <% @memos.each do |memo| %>
   	      <% if memo.is_image %>
@@ -32,14 +33,15 @@
   	      <% else %>
   	      <div class="memo" style="background-color: <%= memo.bg_color %>; color: <% unless memo.text_color.nil? %><%= memo.text_color %><% else %>black<% end %>;">
   	        <h2><%= memo.title %></h2>
-  	        <p><%= memo.content %></p>
+  	        <%=raw memo.content %>
   	      </div>
   	      <% end %>
   	    <% end %>
+        </div>
       </div>
-  	  <%= image_tag('buttons/Next.png', id: "advance") %>
-  	  <%= image_tag('buttons/Prev.png', id: 'reverse') %>
-  	  </div>
+      <%= image_tag('buttons/Next.png', id: "advance") %>
+      <%= image_tag('buttons/Prev.png', id: 'reverse') %>
+    </div>
   	<div class="row-fluid" id="events">
   		<div class="span6" id="upcoming">
   			<h3>Upcoming Events</h3>

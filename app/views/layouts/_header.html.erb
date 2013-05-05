@@ -9,8 +9,7 @@
   			<a class="brand" href="/">The Harbinger Online</a>
   			<div class="nav-collapse">
   				<ul class="nav">
-  					<li id="nav_home"><%= link_to "Home", "/" %></li>
-  					<li id="nav_news"><a href="#">News</a></li>
+  					<li id="nav_home"><%= link_to "Home", root_path %></li>
   					<li id="nav_sports"><%= link_to "Sports", sports_path %></li>
   					<li id="nav_clubs"><%= link_to "Clubs", clubs_path %></li>
   				</ul>
@@ -19,8 +18,10 @@
 						<li class="dropdown">
   						<a class="dropdown-toggle" href="#" data-toggle="dropdown"><%= image_tag current_user.avatar.url(:header), class: 'nav-avatar' %> <%= current_user.name %><b class="caret"></b></a>
   						<ul class="dropdown-menu">
-  						  <li><a href="#">Test.</a></li>
-  						  <li class="divider"></li>
+  						  <% if can? :manage, :all %>
+                  <li><%= link_to "Admin Interface", "/admin" %></li>
+  						    <li class="divider"></li>
+                <% end %>
   						  <li><%= link_to "Log out", destroy_user_session_path%></li>
   						</ul>
 						</li>
