@@ -88,10 +88,10 @@ RailsAdmin.config do |config|
   config.model Memo do
     edit do
       field :title
-      field :bg_color
-      field :text_color
-      field :is_image
-      field :image_path
+      field :bg_color, :color
+      field :text_color, :color
+      # field :is_image
+      # field :image_path
       field :content, :rich_editor do
         config({
           :insert_many => true
