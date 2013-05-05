@@ -122,7 +122,17 @@ RailsAdmin.config do |config|
     end
   end
 
-
+  config.model User do
+    edit do
+      field :name
+      field :email
+      field :roles, :enum do
+        enum do
+          User.roles_enum
+        end
+      end
+    end
+  end
   
 
 
