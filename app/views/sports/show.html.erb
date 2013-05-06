@@ -1,9 +1,8 @@
-<% photo_path = "/assets/sports/" + @sport.slug + ".png" %>
 <% content_for :css do %>
   <%= stylesheet_link_tag "sports_page", :media => "all" %>
   <style type="text/css">
     #title { 
-      background-image: url( <%= photo_path %> );
+      background-image: url( <%= @sport.banner.url(:full) %> );
     }
   </style>
 <% end %>
