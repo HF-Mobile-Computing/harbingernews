@@ -1,12 +1,22 @@
 class Sport < ActiveRecord::Base
-  attr_accessible :content, :photo_path, :season, :slug, :title
+  attr_accessible :content, :photo_path, :season, :slug, :title, :banner
   has_paper_trail
+  
+  has_attached_file :banner, 
+    :styles => { :full => "852x170" }, 
+    :default_url => "http://placehold.it/852x170"
   
   def to_param
     slug
   end
   
   has_many :games, :inverse_of => :sport
+  
+  before_create :set_slug
+  
+  def set_slug
+    self.slug = self.title.gsub(/\s+/, "").downcase
+  end
   
 end
 # == Schema Information
