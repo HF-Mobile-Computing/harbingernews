@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
  
   has_paper_trail
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :avatar, :roles, :roles_mask
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :avatar, :roles, :roles_mask, :teacher
   # attr_accessible :title, :body
   has_attached_file :avatar,
     :styles => { :medium => '300x300>', :thumb => '100x100>', :header => '18x18>' }, 
@@ -27,13 +27,13 @@ class User < ActiveRecord::Base
   # The authorization system we are using uses something called a "bitmask" to store multiple roles.
   # As far as I know, it takes the position of the item in the list (Admin is 1) and "converts" it to a binary type form by adding a 0 for each space.
   # It then adds them together and stores them as an integer.
-  roles :admin, :editor, :teacher, :student, :guest, :secretary
+  roles :admin, :editor, :secretary
   # bin:   1       10       100      1000     10000    100000     Continues as # of roles grows
   # mask:  1        2        4         8       16        32
   # Therefore, Editor + Student would be 10, Secretary + teacher would be 36, etc.
 
   def roles_enum
-      [["Admin", :admin], ["Editor", :editor], ["Teacher", :teacher], ["Student", :student], ["Guest", :guest], ["Secretary", :secretary]]
+      [ ["Admin", :admin], ["Editor", :editor], ["Secretary", :secretary] ]
   end
 
 
