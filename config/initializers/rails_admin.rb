@@ -46,6 +46,10 @@ RailsAdmin.config do |config|
           ['spring', 'winter', 'fall']
         end
       end
+      field :banner do
+        label "Banner Image"
+        help  "Note: Banner Image should be 852px by 170px. It will get resized to those dimensions on upload, but to avoid distortion, please upload it at as close to that size as possible."
+      end
       # Add Rick to Sports Content
       field :content, :rich_editor do
         config({
@@ -122,6 +126,7 @@ RailsAdmin.config do |config|
     end
   end
 
+  # Users
   config.model User do
     edit do
       field :name
