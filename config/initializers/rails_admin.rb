@@ -131,6 +131,10 @@ RailsAdmin.config do |config|
           User.roles_enum
         end
       end
+      field :teacher
+      field :password
+      field :password_confirmation
+      field :avatar
     end
   end
   
