@@ -59,6 +59,23 @@ RailsAdmin.config do |config|
     end
   end
   
+  # Games
+  config.model Game do
+    edit do
+      field :sport
+      field :date
+      field :time
+      field :opponent
+      field :is_home
+      field :score
+      field :status, :enum do
+        enum do
+          ['win', 'loss']
+        end
+      end
+    end
+  end
+  
   # Clubs
   config.model Club do
     edit do
