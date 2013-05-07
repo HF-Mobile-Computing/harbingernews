@@ -1,26 +1,43 @@
 <div class="content" style="margin-bottom: 10px;">
     <div class="row-fluid">
-        <div id="box" class="span6 offset3">
+        <div id="box" class="span6 offset3 form-horizontal">
             <div style="float: left; text-align: left;" class="offset3">
+                
                 <h2 style="text-align: center;">
                     Sign in
-                </h2><%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-                <div>
-                    <%= f.label :email %><%= f.email_field :email, :autofocus => true %>
-                </div><br>
-                <div>
-                    <%= f.label :password %><%= f.password_field :password %>
-                </div><% if devise_mapping.rememberable? -%>
-                <div style="text-align:center;"> 
-                    <!--Remove te styling above if u dont like the centered 'remember me'. My OCD made me do it-->
-                    <%= f.check_box :remember_me %><%= f.label :remember_me %>
-                </div><% end -%>
-                <div style="text-align:center;">
-                    <%= f.submit "Sign in", class: "btn btn-large btn-primary"%>             
-                    <div class = "link">
-                        <p style="padding-top:20px;">New user? <%= link_to "Sign up now!", new_user_registration_path %></p>
+                </h2>
+                <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+                
+                    <div>
+                        <%= f.label :email %><%= f.email_field :email, :autofocus => true %>
                     </div>
-                </div><% end %>
+
+                    <br/>
+                    
+                    <div>
+                        <%= f.label :password %><%= f.password_field :password %>
+                    </div>
+
+                    <% if devise_mapping.rememberable? -%>
+                    
+                        <div class="form-inline control-group" style = "text-align: center; margin-top: 10px;"> 
+                            <div class="controls>">
+                                <%= f.check_box :remember_me, class: "checkbox" %>
+                            
+                                <%= f.label :remember_me, class: "checkbox" %>
+                            </div>
+                        </div>
+                    <% end %>
+                    
+                    <div style="text-align:center;">
+                        <%= f.submit "Sign in", class: "btn btn-large btn-primary"%>             
+                        <div class = "link">
+                            <p style="padding-top:20px;">
+                                New user? <%= link_to "Sign up now!", new_user_registration_path %>
+                            </p>
+                        </div>
+                    </div>
+                <% end %>
             </div>
         </div>
     </div>
