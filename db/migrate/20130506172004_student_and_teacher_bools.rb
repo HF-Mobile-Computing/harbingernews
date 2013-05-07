@@ -1,6 +1,6 @@
 class StudentAndTeacherBools < ActiveRecord::Migration
   def up
-  	add_column :users, :teacher, :boolean, :default => 0
+  	add_column :users, :teacher, :boolean, :default => false
   end
 
   def down
