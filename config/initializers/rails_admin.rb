@@ -150,7 +150,7 @@ RailsAdmin.config do |config|
       field :email
       field :roles, :enum do
         enum do
-          User.roles_enum
+          [ ["Admin", :admin], ["Editor", :editor], ["Secretary", :secretary] ]
         end
       end
       field :teacher
