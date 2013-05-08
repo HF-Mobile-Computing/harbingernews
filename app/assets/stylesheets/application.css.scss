@@ -11,14 +11,12 @@
  * =require bootstrap_and_overrides
  * =require_self
  */
- 
-// Variables
-$darkGreen: #466843;
-$lightGreen: #629b62;
+
 
 // Imports
 @import 'bourbon';
 @import "compass/layout/sticky-footer";
+@import 'variables';
 @import 'mixins';
 @import 'overrides';
 
