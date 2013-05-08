@@ -18,14 +18,13 @@ $lightGreen: #629b62;
 
 // Imports
 @import 'bourbon';
+@import 'mixins';
 @import "compass/layout/sticky-footer";
 @import 'overrides';
 
 // Includes
 @include sticky-footer(200px, "#footer");
 
-// Mixins
-@import 'mixins';
 // Styles
 
 html, body {
@@ -154,14 +153,6 @@ a {
 	margin-bottom: 5px;
 }
 
-#edited_by {
-	float: right;
-	margin-right: 10%;
-	margin-top: 40px;
-	display: block;
-	clear: both;
-}
-
 .facebook {
 	margin-top: 5px;
 	display: block;
@@ -196,28 +187,6 @@ a {
 
 #installgcf {
 	display: none;
-}
-
-.navbar-static-top {
-	z-index: 100;
-	position: relative;
-	box-shadow: 0px 0px 4px 0px #3e3e3e;
-	@include pie;
-}
-
-.navbar-inner {
-	background-color: $darkGreen !important;
-	background-image: none !important;
-	border-bottom: 4px solid #629b62 !important;
-	a {
-		color: white !important;
-		text-shadow: 0px 1px 0px #717171 !important;
-	}
-	.active {
-		a {
-			background-color: $lightGreen !important;
-		}
-	}
 }
 
 .nav-avatar {
