@@ -15,6 +15,7 @@ gem 'rails_admin'
 gem 'rich'
 gem 'paper_trail'
 gem 'enumerize'
+gem 'twitter-bootstrap-rails'
 
 
 group :development do
