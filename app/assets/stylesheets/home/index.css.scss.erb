@@ -4,10 +4,15 @@
 
 @import "compass/css3/box-shadow";
 @import "compass/css3/border-radius";
-@import 'compass/css3/pie';
+@import "compass/css3/pie";
 @import "mixins";
 
 $pie-behavior: url("/assets/PIE.htc");
+$pie-base-class: pie-element;
+
+.pie-element {
+  @include pie-element(relative);
+}
 
 // Tablet-Size and Under
 @media all and (max-width: 767px) {
@@ -172,7 +177,6 @@ body {
 		right: 5px;
 		}
 	}
-	@include pie;
 	background: {
 		color: #e7e7e7;
 	}
@@ -248,7 +252,7 @@ body {
 		background: {
 			color: #fffac1;
 		}
-		box-shadow: 1px 1px 6px rgba(0,0,0,0.68);
+		@include box-shadow(1px 1px 6px rgba(0,0,0,0.68));
 		padding: {
 			bottom: $bottomPadding;
 			right:5px; 
@@ -257,7 +261,7 @@ body {
 
 	}
 	#recent {
-		box-shadow: 1px 1px 6px rgba(0,0,0,0.68);
+		@include box-shadow(1px 1px 6px rgba(0,0,0,0.68));
 		padding: {
 			bottom: $bottomPadding;
 			right:5px; 
