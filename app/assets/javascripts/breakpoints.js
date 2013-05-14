@@ -190,7 +190,7 @@ var dd = today.getDate();
 var mm = today.getMonth()+1; //January is 0!
 var yyyy = today.getFullYear()
 
-if (dd >= 1 && mm >= 4 && yyyy >= 2013) {
+if (dd >= 1 && mm >= 4 && yyyy >= 2014) {
 	scrollhelper(5);
 	console.log("It Works!")
 }
