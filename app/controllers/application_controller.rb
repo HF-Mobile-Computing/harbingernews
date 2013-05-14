@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   rescue_from ActiveRecord::RecordNotFound do |exception|
-    render "error_pages/users/404.html.erb", status: 404, locals: { exception: exception }
+    render "static_pages/404.html.erb", status: 404, locals: { exception: exception }
   end
 
 
