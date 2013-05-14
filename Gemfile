@@ -12,9 +12,10 @@ gem 'aws-sdk'
 gem 'cancan'  ## Authorization / Admin stuff
 gem 'role_model'
 gem 'rails_admin'
-gem 'rich'
+gem 'rich', :git => 'git://github.com/HF-Mobile-Computing/rich.git'
 gem 'paper_trail'
 gem 'enumerize'
+gem 'twitter-bootstrap-rails'
 
 
 group :development do
