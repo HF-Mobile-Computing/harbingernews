@@ -11,9 +11,13 @@ class ApplicationController < ActionController::Base
     redirect_to '/', alert: exception.message
   end
 
-  rescue_from ActiveRecord::RecordNotFound do |exception|
-    render "static_pages/404.html.erb", status: 404, locals: { exception: exception }
-  end
+  rescue_from ActionController::RoutingError, with: :render_404_page
+
+  protected
+    def render_404_page
+      render "error_pages/application/some_generic_404.html.erb", status: 404
+    end
+
 
 
 end
