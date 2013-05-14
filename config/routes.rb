@@ -1,5 +1,7 @@
 Harbingernews::Application.routes.draw do
 
+
+
   mount Rich::Engine => '/rich', :as => 'rich'
 
   root :to => "home#index"
@@ -55,6 +57,11 @@ Harbingernews::Application.routes.draw do
   # Bus Server Service
   match '/buses/map', to: "buses#map"
   resources :buses
+
+  # Custom Error Pages
+  unless Rails.application.config.consider_all_requests_local
+    match '*not_found', to: 'errors#error_404'
+  end
   
   # User pages  resources :sessions, only: [:new, :create, :destroy]
 

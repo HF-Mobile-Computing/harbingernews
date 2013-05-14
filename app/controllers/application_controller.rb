@@ -10,16 +10,18 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to '/', alert: exception.message
   end
+  unless Rails.application.config.consider_all_requests_local
+    rescue_from Exception, with: lambda { |exception| render_error 500, exception }
+    rescue_from ActionController::RoutingError, ActionController::UnknownController, ::AbstractController::ActionNotFound, ActiveRecord::RecordNotFound, with: lambda { |exception| render_error 404, exception }
+  end
 
-  rescue_from ActionController::RoutingError, with: :render_404_page
-
-  protected
-    def render_404_page
-      render "static_pages/404.html.erb", status: 404
+  private
+  def render_error(status, exception)
+    respond_to do |format|
+      format.html { render template: "errors/error_#{status}", layout: 'layouts/application', status: status }
+      format.all { render nothing: true, status: status }
     end
-
-
-
+  end
 end
 
 
