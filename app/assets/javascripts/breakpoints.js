@@ -192,5 +192,4 @@ var yyyy = today.getFullYear()
 
 if (dd >= 1 && mm >= 4 && yyyy >= 2014) {
 	scrollhelper(5);
-	console.log("It Works!")
 }
