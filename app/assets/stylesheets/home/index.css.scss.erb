@@ -247,10 +247,9 @@ body {
 		}
 		text-align: center;
 	}
-
-	
 	#upcoming {
-		background: {
+  	@include pie;
+  	background: {
 			color: #fffac1;
 		}
 		@include box-shadow(1px 1px 6px rgba(0,0,0,0.68));
@@ -262,6 +261,7 @@ body {
 
 	}
 	#recent {
+  	@include pie;
 		@include box-shadow(1px 1px 6px rgba(0,0,0,0.68));
 		padding: {
 			bottom: $bottomPadding;
@@ -353,6 +353,7 @@ $midMax: 979px;
 }
 
 .memo {
+  @include pie;
   @include box-shadow(rgba(0,0,0,0.68) 1px 1px 6px);
   @include border-radius(6px);
   display: block;
