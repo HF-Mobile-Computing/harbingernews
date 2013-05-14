@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
 
   protected
     def render_404_page
-      render "error_pages/application/some_generic_404.html.erb", status: 404
+      render "static_pages/404.html.erb", status: 404
     end
 
 
