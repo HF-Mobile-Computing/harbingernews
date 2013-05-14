@@ -10,6 +10,12 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to '/', alert: exception.message
   end
+
+  rescue_from ActiveRecord::RecordNotFound do |exception|
+    render "error_pages/users/404.html.erb", status: 404, locals: { exception: exception }
+  end
+
+
 end
 
 
