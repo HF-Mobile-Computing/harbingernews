@@ -1,5 +1,7 @@
 Harbingernews::Application.routes.draw do
 
+
+
   mount Rich::Engine => '/rich', :as => 'rich'
 
   root :to => "home#index"
@@ -35,6 +37,10 @@ Harbingernews::Application.routes.draw do
   get '/about', to: 'static_pages#about'
   get '/get_involved', to: "static_pages#get_involved"
   get '/harbingerteam', to: "static_pages#harbingerteam"
+  get '/error404', to: "static_pages#404"
+  get '/error500', to: "static_pages#500"
+  get '/error422', to: "static_pages#422"
+
 
   # Sports Pages
   get '/sports/:slug',           to: "sports#show" # Show the sports pages by name (slug) not id
@@ -51,6 +57,11 @@ Harbingernews::Application.routes.draw do
   # Bus Server Service
   match '/buses/map', to: "buses#map"
   resources :buses
+
+  # Custom Error Pages
+  unless Rails.application.config.consider_all_requests_local
+    match '*not_found', to: 'errors#error_404'
+  end
   
   # User pages  resources :sessions, only: [:new, :create, :destroy]
 

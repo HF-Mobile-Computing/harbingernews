@@ -16,9 +16,17 @@
 // Imports
 @import 'bourbon';
 @import "compass/layout/sticky-footer";
+@import 'compass/css3/pie';
 @import 'variables';
 @import 'mixins';
 @import 'overrides';
+
+$pie-behavior: url("/assets/PIE.htc");
+$pie-base-class: pie-element;
+
+.pie-element {
+  @include pie-element(relative);
+}
 
 // Includes
 @include sticky-footer(200px, "#footer");

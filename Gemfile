@@ -16,7 +16,7 @@ gem 'rich', :git => 'git://github.com/HF-Mobile-Computing/rich.git'
 gem 'paper_trail'
 gem 'enumerize'
 gem 'twitter-bootstrap-rails'
-
+gem 'compass-rails'
 
 group :development do
   gem 'rspec-rails', '2.9.0'
@@ -28,7 +28,6 @@ group :assets do
   gem 'sass-rails',   '3.2.4'
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'
-  gem 'compass-rails'
 end
 
 group :test do
