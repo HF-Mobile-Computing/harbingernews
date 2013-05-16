@@ -21,8 +21,30 @@
   						  <% if can? :manage, :all %>
                   <li><%= link_to "Admin Interface", "/admin" %></li>
   						    <li class="divider"></li>
+                <% else %>
+                  <% if can? :manage, Club %>
+                    <li><%= link_to "Manage Clubs", "/admin/club" %></li>
+                  <% end %>
+                  <% if can? :manage, Sport %>
+                    <li><%= link_to "Manage Sports", "/admin/sport" %></li>
+                  <% end %>
+                  <% if can? :manage, Announcement %>
+                    <li><%= link_to "Manage Announcements", "/admin/announcement" %></li>
+                  <% end %>
+                  <% if can? :manage, Bus %>
+                    <li><%= link_to "Manage Bus Map", "/admin/bus" %></li>
+                  <% end %>
+                  <% if can? :manage, Memo %>
+                    <li><%= link_to "Edit Memos", "/admin/memo" %></li>
+                  <% end %>
+                  <% if can? :manage, RecentEvent %>
+                    <li><%= link_to "Recent Events", "/admin/recent_event" %></li>
+                  <% end %>
+                  <% if can? :manage, UpcomingEvent %>
+                    <li><%= link_to "Upcoming Events", "/admin/upcoming_event" %></li>
+                  <% end %>
                 <% end %>
-  						  <li><%= link_to "Log out", destroy_user_session_path%></li>
+  						  <li><%= link_to "Log out", destroy_user_session_path %></li>
   						</ul>
 						</li>
 				  <% else %>
