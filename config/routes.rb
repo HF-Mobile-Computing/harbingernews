@@ -2,6 +2,8 @@ Harbingernews::Application.routes.draw do
 
 
 
+  resources :favorites
+
   mount Rich::Engine => '/rich', :as => 'rich'
 
   root :to => "home#index"
