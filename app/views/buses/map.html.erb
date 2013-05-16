@@ -1,4 +1,4 @@
-<head>
+<% content_for :css do %>
   <style type="text/css">
     .container {
       overflow: visible;
@@ -117,6 +117,9 @@
       top: 62px;
     }
   </style>
+<% end %>
+
+<% content_for :js do %>
   <script type="text/javascript">
     $(function() {
       $('.bus').filter(function(index) {
@@ -124,7 +127,8 @@
       }).css('background-color', 'gold').css('border', 'solid 1px black');
     });
   </script>
-</head>
+<% end %>
+
 <div id="wrapper">
   <h1>Bus Map for <%= @created %></h1>
   <div id="map">
