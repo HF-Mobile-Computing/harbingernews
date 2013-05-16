@@ -63,79 +63,504 @@ Harbingernews::Application.routes.draw do
     match '*not_found', to: 'errors#error_404'
   end
   
-  # User pages  resources :sessions, only: [:new, :create, :destroy]
-
-  
-  
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
-
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
-
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
-
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
-
-  # See how all your routes lay out with "rake routes"
-
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
 end
-#== Route Map
-# Generated on 27 Mar 2013 23:38
-#
-#        about        /about(.:format)             static_pages#about
-# get_involved        /get_involved(.:format)      static_pages#get_involved
-#    users_new GET    /users/new(.:format)         users#new
-#                     /sports/:slug(.:format)      sports#show
-#                     /sports/:slug/edit(.:format) sports#edit
-#       sports GET    /sports(.:format)            sports#index
-#              POST   /sports(.:format)            sports#create
-#    new_sport GET    /sports/new(.:format)        sports#new
-#   edit_sport GET    /sports/:id/edit(.:format)   sports#edit
-#        sport GET    /sports/:id(.:format)        sports#show
-#              PUT    /sports/:id(.:format)        sports#update
-#              DELETE /sports/:id(.:format)        sports#destroy
+
+# This was a triumph. 
+# I'm making a note here: 
+# Huge success. 
+# It's hard to overstate 
+# my satisfaction. 
+
+#            Aperture Science.
+#              .,-:;//;:=,
+#           . :H@@@MM@M#H/.,+%;,
+#        ,/X+ +M@@M@MM%=,-%HMMM@X/,
+#      -+@MM; $M@@MH+-,;XMMMM@MMMM@+-
+#     ;@M@@M- XM@X;. -+XXXXXHHH@M@M#@/.
+#   ,%MM@@MH ,@%=            .---=-=:=,.
+#   =@#@@@MX .,              -%HX$$%%%+;
+#  =-./@M@M$                  .;@MMMM@MM:
+#  X@/ -$MM/                    .+MM@@@M$
+# ,@M@H: :@:                    . =X#@@@@-
+# ,@@@MMX, .                    /H- ;@M@M=
+# .H@@@@M@+,                    %MM+..%#$.
+#  /MMMM@MMH/.                  XM@MH; =;
+#   /%+%$XHH@$=              , .H@@@@MX,
+#    .=--------.           -%H.,@@@@@MX,
+#    .%MM@@@HHHXX$$$%+- .:$MMX =M@@MM%.
+#      =XMMM@MM@MM#H;,-+HMM@M+ /MMMX=
+#        =%@M@M#@$-.=$@MM@@@M; %M%=
+#          ,:+$+-,/H#MMMMMMM@= =,
+#                =++%%%%+/:-.
+
+# We do what we must, 
+# because we can.
+# For the good of all of us. 
+
+#              =+$HM####@H%;,
+#           /H###############M$,
+#           ,@################+
+#            .H##############+
+#              X############/
+#               $##########/
+#                %########/
+#                 /X/;;+X/
+ 
+#                  -XHHX-
+#                 ,######,
+# #############X  .M####M.  X#############
+# ##############-   -//-   -##############
+# X##############%,      ,+##############X
+# -##############X        X##############-
+#  %############%          %############%
+#   %##########;            ;##########%
+#    ;#######M=              =M#######;
+#     .+M###@,                ,@###M+.
+#        :XH.                  .HX:
+
+# Except the ones who are dead.
+
+#              .,-:;//;:=,
+#           . :H@@@MM@M#H/.,+%;,
+#        ,/X+ +M@@M@MM%=,-%HMMM@X/,
+#      -+@MM; $M@@MH+-,;XMMMM@MMMM@+-
+#     ;@M@@M- XM@X;. -+XXXXXHHH@M@M#@/.
+#   ,%MM@@MH ,@%=            .---=-=:=,.
+#   =@#@@@MX .,              -%HX$$%%%+;
+#  =-./@M@M$                  .;@MMMM@MM:
+#  X@/ -$MM/                    .+MM@@@M$
+# ,@M@H: :@:                    . =X#@@@@-
+# ,@@@MMX, .                    /H- ;@M@M=
+# .H@@@@M@+,                    %MM+..%#$.
+#  /MMMM@MMH/.                  XM@MH; =;
+#   /%+%$XHH@$=              , .H@@@@MX,
+#    .=--------.           -%H.,@@@@@MX,
+#    .%MM@@@HHHXX$$$%+- .:$MMX =M@@MM%.
+#      =XMMM@MM@MM#H;,-+HMM@M+ /MMMX=
+#        =%@M@M#@$-.=$@MM@@@M; %M%=
+#          ,:+$+-,/H#MMMMMMM@= =,
+#                =++%%%%+/:-.
+
+# But there's no sense crying 
+# over every mistake. 
+# You just keep on trying 
+# till you run out of cake.
+
+#                  =/;;/-
+#                 +:    //
+#                /;      /;
+#               -X        H.
+# .//;;;:;;-,   X=        :+   .-;:=;:;%;.
+# M-       ,=;;;#:,      ,:#;;:=,       ,@
+# :%           :%.=/++++/=.$=           %=
+#  ,%;         %/:+/;,,/++:+/         ;+.
+#    ,+/.    ,;@+,        ,%H;,    ,/+,
+#       ;+;;/= @.  .H##X   -X :///+;
+#       ;+=;;;.@,  .XM@$.  =X.//;=%/.
+#    ,;:      :@%=        =$H:     .+%-
+#  ,%=         %;-///==///-//         =%,
+# ;+           :%-;;;:;;;;-X-           +:
+# @-      .-;;;;M-        =M/;;;-.      -X
+#  :;;::;;-.    %-        :+    ,-;;-;:==
+#               ,X        H.
+#                ;/      %=
+#                 //    +;
+#                  ,////,
+
+# And the science gets done. 
+# And you make a neat gun. 
+
+#              .,-:;//;:=,
+#           . :H@@@MM@M#H/.,+%;,
+#        ,/X+ +M@@M@MM%=,-%HMMM@X/,
+#      -+@MM; $M@@MH+-,;XMMMM@MMMM@+-
+#     ;@M@@M- XM@X;. -+XXXXXHHH@M@M#@/.
+#   ,%MM@@MH ,@%=            .---=-=:=,.
+#   =@#@@@MX .,              -%HX$$%%%+;
+#  =-./@M@M$                  .;@MMMM@MM:
+#  X@/ -$MM/                    .+MM@@@M$
+# ,@M@H: :@:                    . =X#@@@@-
+# ,@@@MMX, .                    /H- ;@M@M=
+# .H@@@@M@+,                    %MM+..%#$.
+#  /MMMM@MMH/.                  XM@MH; =;
+#   /%+%$XHH@$=              , .H@@@@MX,
+#    .=--------.           -%H.,@@@@@MX,
+#    .%MM@@@HHHXX$$$%+- .:$MMX =M@@MM%.
+#      =XMMM@MM@MM#H;,-+HMM@M+ /MMMX=
+#        =%@M@M#@$-.=$@MM@@@M; %M%=
+#          ,:+$+-,/H#MMMMMMM@= =,
+#                =++%%%%+/:-.
+
+
+# For the people who are 
+# still alive. 
+
+# I'm not even angry. 
+# I'm being so sincere right now. 
+
+# Even though you broke my heart. 
+
+#                           .,---.
+#                         ,/XM#MMMX;,
+#                       -%##########M%,
+#                      -@######%  $###@=
+#       .,--,         -H#######$   $###M:
+#    ,;$M###MMX;     .;##########$;HM###X=
+#  ,/@##########H=      ;################+
+# -+#############M/,      %##############+
+# %M###############=      /##############:
+# H################      .M#############;.
+# @###############M      ,@###########M:.
+# X################,      -$=X#######@:
+# /@##################%-     +######$-
+# .;##################X     .X#####+,
+#  .;H################/     -X####+.
+#    ,;X##############,       .MM/
+#       ,:+$H@M#######M#$-    .$$=
+#            .,-=;+$@###X:    ;/=.
+#                   .,/X$;   .::,
+#                       .,    ..
+
+# And killed me.
+
+#             .+
+#              /M;
+#               H#@:              ;,
+#               -###H-          -@/
+#                %####$.  -;  .%#X
+#                 M#####+;#H :M#M.
+# ..          .+/;%#########X###-
+#  -/%H%+;-,    +##############/
+#     .:$M###MH$%+############X  ,--=;-
+#         -/H#####################H+=.
+#            .+#################X.
+#          =%M####################H;.
+#             /@###############+;;/%%;,
+#          -%###################$.
+#        ;H######################M=
+#     ,%#####MH$%;+#####M###-/@####%
+#   :$H%+;=-      -####X.,H#   -+M##@-
+#  .              ,###;    ;      =$##+
+#                 .#H,               :XH,
+#                  +                   .;-
+
+# And tore me to pieces.
+
+#                      -$-
+#                     .H##H,
+#                    +######+
+#                 .+#########H.
+#               -$############@.
+#             =H###############@  -X:
+#           .$##################:  @#@-
+#      ,;  .M###################;  H###;
+#    ;@#:  @###################@  ,#####:
+#  -M###.  M#################@.  ;######H
+#  M####-  +###############$   =@#######X
+#  H####$   -M###########+   :#########M,
+#   /####X-   =########%   :M########@/.
+#     ,;%H@X;   .$###X   :##MM@%+;:-
+#                  ..
+#   -/;:-,.              ,,-==+M########H
+#  -##################@HX%%+%%$%%%+:,,
+#     .-/H%%%+%%$H@###############M@+=:/+:
+# /XHX%:#####MH%=    ,---:;;;;/%%XHM,:###$
+# $@#MX %+;-        
+
+# And threw every piece into a fire.
+# As they burned it hurt because 
+
+#                                      :X-
+#                                   :X###
+#                                 ;@####@
+#                               ;M######X
+#                             -@########$
+#                           .$##########@
+#                          =M############-
+#                         +##############$
+#                       .H############$=.
+#          ,/:         ,M##########M;.
+#       -+@###;       =##########M;
+#    =%M#######;     :#########M/
+# -$M###########;   :#########/
+#  ,;X###########; =########$.
+#      ;H#########+#######M=
+#        ,+##############+
+#           /M#########@-
+#             ;M######%
+#               +####:
+#                ,$M-
+
+# I was so happy for you!
+# Now these points of data 
+# make a beautiful line. 
+# And we're out of beta. 
+# We're releasing on time.
+
+#             .+
+#              /M;
+#               H#@:              ;,
+#               -###H-          -@/
+#                %####$.  -;  .%#X
+#                 M#####+;#H :M#M.
+# ..          .+/;%#########X###-
+#  -/%H%+;-,    +##############/
+#     .:$M###MH$%+############X  ,--=;-
+#         -/H#####################H+=.
+#            .+#################X.
+#          =%M####################H;.
+#             /@###############+;;/%%;,
+#          -%###################$.
+#        ;H######################M=
+#     ,%#####MH$%;+#####M###-/@####%
+#   :$H%+;=-      -####X.,H#   -+M##@-
+#  .              ,###;    ;      =$##+
+#                 .#H,               :XH,
+#                  +                   .;-
+
+# So I'm GLad I got burned. 
+
+#                  =/;;/-
+#                 +:    //
+#                /;      /;
+#               -X        H.
+# .//;;;:;;-,   X=        :+   .-;:=;:;%;.
+# M-       ,=;;;#:,      ,:#;;:=,       ,@
+# :%           :%.=/++++/=.$=           %=
+#  ,%;         %/:+/;,,/++:+/         ;+.
+#    ,+/.    ,;@+,        ,%H;,    ,/+,
+#       ;+;;/= @.  .H##X   -X :///+;
+#       ;+=;;;.@,  .XM@$.  =X.//;=%/.
+#    ,;:      :@%=        =$H:     .+%-
+#  ,%=         %;-///==///-//         =%,
+# ;+           :%-;;;:;;;;-X-           +:
+# @-      .-;;;;M-        =M/;;;-.      -X
+#  :;;::;;-.    %-        :+    ,-;;-;:==
+#               ,X        H.
+#                ;/      %=
+#                 //    +;
+#                  ,////,
+
+# Think of all the things we learned
+
+#              .,-:;//;:=,
+#           . :H@@@MM@M#H/.,+%;,
+#        ,/X+ +M@@M@MM%=,-%HMMM@X/,
+#      -+@MM; $M@@MH+-,;XMMMM@MMMM@+-
+#     ;@M@@M- XM@X;. -+XXXXXHHH@M@M#@/.
+#   ,%MM@@MH ,@%=            .---=-=:=,.
+#   =@#@@@MX .,              -%HX$$%%%+;
+#  =-./@M@M$                  .;@MMMM@MM:
+#  X@/ -$MM/                    .+MM@@@M$
+# ,@M@H: :@:                    . =X#@@@@-
+# ,@@@MMX, .                    /H- ;@M@M=
+# .H@@@@M@+,                    %MM+..%#$.
+#  /MMMM@MMH/.                  XM@MH; =;
+#   /%+%$XHH@$=              , .H@@@@MX,
+#    .=--------.           -%H.,@@@@@MX,
+#    .%MM@@@HHHXX$$$%+- .:$MMX =M@@MM%.
+#      =XMMM@MM@MM#H;,-+HMM@M+ /MMMX=
+#        =%@M@M#@$-.=$@MM@@@M; %M%=
+#          ,:+$+-,/H#MMMMMMM@= =,
+#                =++%%%%+/:-.
+
+# For the people who are still alive.
+
+# Go ahead and leave me. 
+# I think I prefer to stay inside. 
+# Maybe you'll find someone else 
+# to help you. 
+
+#            .-;+$XHHHHHHX$+;-.
+#         ,;X@@X%/;=----=:/%X@@X/,
+#       =$@@%=.              .=+H@X:
+#     -XMX:                      =XMX=
+#    /@@:                          =H@+
+#   %@X,                            .$@$
+#  +@X.                               $@%
+# -@@,                                .@@=
+# %@%                                  +@$
+# H@:                                  :@H
+# H@:         :HHHHHHHHHHHHHHHHHHX,    =@H          
+# %@%         ;@M@@@@@@@@@@@@@@@@@H-   +@$
+# =@@,        :@@@@@@@@@@@@@@@@@@@@@= .@@:
+#  +@X        :@@@@@@@@@@@@@@@M@@@@@@:%@%
+#   $@$,      ;@@@@@@@@@@@@@@@@@M@@@@@@$.
+#    +@@HHHHHHH@@@@@@@@@@@@@@@@@@@@@@@+
+#     =X@@@@@@@@@@@@@@@@@@@@@@@@@@@@X=
+#       :$@@@@@@@@@@@@@@@@@@@M@@@@$:
+#         ,;$@@@@@@@@@@@@@@@@@@X/-
+#            .-;+$XXHHHHHX$+;-.
+
+# Maybe Black Mesa.
+# That was a joke, ha ha, fat chance. 
+
+#             ,:/+/-
+#             /M/              .,-=;//;-
+#        .:/= ;MH/,    ,=/+%$XH@MM#@:
+#       -$##@+$###@H@MMM#######H:.    -/H#
+#  .,H@H@ X######@ -H#####@+-     -+H###@X
+#   .,@##H;      +XM##M/,     =%@###@X;-
+# X%-  :M##########$.    .:%M###@%:
+# M##H,   +H@@@$/-.  ,;$M###@%,          -
+# M####M=,,---,.-%%H####M$:          ,+@##
+# @##################@/.         :%H##@$-
+# M###############H,         ;HM##M$=
+# #################.    .=$M##M$=
+# ################H..;XM##M$=          .:+
+# M###################@%=           =+@MH%
+# @################M/.          =+H#X%=
+# =+M##############M,       -/X#X+;.
+#   .;XM##########H=    ,/X#H+:,
+#      .=+HM######M+/+HM@+=.
+#          ,:/%XM####H/.
+#               ,.:=-.
+
+# Anyway this cake is great. 
+# Its so delicious and moist.
+
+#        #+ @      # #              M#@
+#  .    .X  X.%##@;# #   +@#######X. @#%
+#    ,==.   ,######M+  -#####%M####M-    #
+#   :H##M%:=##+ .M##M,;#####/+#######% ,M#
+#  .M########=  =@#@.=#####M=M#######=  X#
+#  :@@MMM##M.  -##M.,#######M#######. =  M
+#              @##..###:.    .H####. @@ X,
+#    ############: ###,/####;  /##= @#. M
+#            ,M## ;##,@#M;/M#M  @# X#% X#
+# .%=   ######M## ##.M#:   ./#M ,M #M ,#$
+# ##/         $## #+;#: #### ;#/ M M- @# :
+# #+ #M@MM###M-;M #:$#-##$H# .#X @ + $#. #
+#       ######/.: #%=# M#:MM./#.-#  @#: H#
+# +,.=   @###: /@ %#,@  ##@X #,-#@.##% .@#
+# #####+;/##/ @##  @#,+       /#M    . X,
+#    ;###M#@ M###H .#M-     ,##M  ;@@; ###
+#    .M#M##H ;####X ,@#######M/ -M###$  -H
+#     .M###%  X####H  .@@MM@;  ;@#M@
+#       H#M    /@####/      ,++.  / ==-,
+#                ,=/:, .+X@MMH@#H  #####$=
+
+# Look at me still talking 
+
+#              =+$HM####@H%;,
+#           /H###############M$,
+#           ,@################+
+#            .H##############+
+#              X############/
+#               $##########/
+#                %########/
+#                 /X/;;+X/
+ 
+#                  -XHHX-
+#                 ,######,
+# #############X  .M####M.  X#############
+# ##############-   -//-   -##############
+# X##############%,      ,+##############X
+# -##############X        X##############-
+#  %############%          %############%
+#   %##########;            ;##########%
+#    ;#######M=              =M#######;
+#     .+M###@,                ,@###M+.
+#        :XH.                  .HX:
+
+# When there's science to do.
+# When I look out there
+
+#              .,-:;//;:=,
+#           . :H@@@MM@M#H/.,+%;,
+#        ,/X+ +M@@M@MM%=,-%HMMM@X/,
+#      -+@MM; $M@@MH+-,;XMMMM@MMMM@+-
+#     ;@M@@M- XM@X;. -+XXXXXHHH@M@M#@/.
+#   ,%MM@@MH ,@%=            .---=-=:=,.
+#   =@#@@@MX .,              -%HX$$%%%+;
+#  =-./@M@M$                  .;@MMMM@MM:
+#  X@/ -$MM/                    .+MM@@@M$
+# ,@M@H: :@:                    . =X#@@@@-
+# ,@@@MMX, .                    /H- ;@M@M=
+# .H@@@@M@+,                    %MM+..%#$.
+#  /MMMM@MMH/.                  XM@MH; =;
+#   /%+%$XHH@$=              , .H@@@@MX,
+#    .=--------.           -%H.,@@@@@MX,
+#    .%MM@@@HHHXX$$$%+- .:$MMX =M@@MM%.
+#      =XMMM@MM@MM#H;,-+HMM@M+ /MMMX=
+#        =%@M@M#@$-.=$@MM@@@M; %M%=
+#          ,:+$+-,/H#MMMMMMM@= =,
+#                =++%%%%+/:-.
+
+# it makes me GLaD I'm not you. 
+
+#                  =/;;/-
+#                 +:    //
+#                /;      /;
+#               -X        H.
+# .//;;;:;;-,   X=        :+   .-;:=;:;%;.
+# M-       ,=;;;#:,      ,:#;;:=,       ,@
+# :%           :%.=/++++/=.$=           %=
+#  ,%;         %/:+/;,,/++:+/         ;+.
+#    ,+/.    ,;@+,        ,%H;,    ,/+,
+#       ;+;;/= @.  .H##X   -X :///+;
+#       ;+=;;;.@,  .XM@$.  =X.//;=%/.
+#    ,;:      :@%=        =$H:     .+%-
+#  ,%=         %;-///==///-//         =%,
+# ;+           :%-;;;:;;;;-X-           +:
+# @-      .-;;;;M-        =M/;;;-.      -X
+#  :;;::;;-.    %-        :+    ,-;;-;:==
+#               ,X        H.
+#                ;/      %=
+#                 //    +;
+#                  ,////,
+
+# I've experiments to run 
+
+#             .+
+#              /M;
+#               H#@:              ;,
+#               -###H-          -@/
+#                %####$.  -;  .%#X
+#                 M#####+;#H :M#M.
+# ..          .+/;%#########X###-
+#  -/%H%+;-,    +##############/
+#     .:$M###MH$%+############X  ,--=;-
+#         -/H#####################H+=.
+#            .+#################X.
+#          =%M####################H;.
+#             /@###############+;;/%%;,
+#          -%###################$.
+#        ;H######################M=
+#     ,%#####MH$%;+#####M###-/@####%
+#   :$H%+;=-      -####X.,H#   -+M##@-
+#  .              ,###;    ;      =$##+
+#                 .#H,               :XH,
+#                  +                   .;-
+
+# There is research to be done
+
+#              .,-:;//;:=,
+#           . :H@@@MM@M#H/.,+%;,
+#        ,/X+ +M@@M@MM%=,-%HMMM@X/,
+#      -+@MM; $M@@MH+-,;XMMMM@MMMM@+-
+#     ;@M@@M- XM@X;. -+XXXXXHHH@M@M#@/.
+#   ,%MM@@MH ,@%=            .---=-=:=,.
+#   =@#@@@MX .,              -%HX$$%%%+;
+#  =-./@M@M$                  .;@MMMM@MM:
+#  X@/ -$MM/                    .+MM@@@M$
+# ,@M@H: :@:                    . =X#@@@@-
+# ,@@@MMX, .                    /H- ;@M@M=
+# .H@@@@M@+,                    %MM+..%#$.
+#  /MMMM@MMH/.                  XM@MH; =;
+#   /%+%$XHH@$=              , .H@@@@MX,
+#    .=--------.           -%H.,@@@@@MX,
+#    .%MM@@@HHHXX$$$%+- .:$MMX =M@@MM%.
+#      =XMMM@MM@MM#H;,-+HMM@M+ /MMMX=
+#        =%@M@M#@$-.=$@MM@@@M; %M%=
+#          ,:+$+-,/H#MMMMMMM@= =,
+#                =++%%%%+/:-.
+
+# On the people who are still alive.
+# Believe me, I am still alive. 
+# I'm doing science and I'm still alive. 
+# I feel fantastic and I'm still alive. 
+# While you're dying I'll be still alive 
+# and when your dead I will be still alive. 
+# Still alive. 
+# Still alive.
