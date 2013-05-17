@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130506172004) do
+ActiveRecord::Schema.define(:version => 20130516171808) do
 
   create_table "announcements", :force => true do |t|
     t.string   "a_or_b"
@@ -53,6 +53,14 @@ ActiveRecord::Schema.define(:version => 20130506172004) do
     t.text     "content",    :limit => 255
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
+  end
+
+  create_table "favorites", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "favoritable_id"
+    t.string   "favoritable_type"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "games", :force => true do |t|

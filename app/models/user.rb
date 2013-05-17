@@ -2,6 +2,9 @@ require 'rubygems'
 require 'role_model'
 
 class User < ActiveRecord::Base
+
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :avatar, :roles, :roles_mask, :teacher
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
@@ -10,12 +13,14 @@ class User < ActiveRecord::Base
  
   has_paper_trail
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :avatar, :roles, :roles_mask, :teacher
-  # attr_accessible :title, :body
   has_attached_file :avatar,
     :styles => { :medium => '300x300>', :thumb => '100x100>', :header => '18x18>' }, 
     :default_url => '/images/:style/missing.png'
-    
+  
+  has_many :favorites
+  has_many :sports,    :through => :favorites
+  has_many :clubs,     :through => :favorites
+  
   include RoleModel
  
   # optionally set the integer attribute to store the roles in,
@@ -35,8 +40,7 @@ class User < ActiveRecord::Base
   def roles_enum
       [ ["Admin", :admin], ["Editor", :editor], ["Secretary", :secretary] ]
   end
-
-
+  
 end
 # == Schema Information
 #

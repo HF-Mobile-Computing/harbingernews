@@ -4,12 +4,30 @@
     #title { 
       background-image: url( <%= @sport.banner.url(:full) %> );
     }
+    #favorite_button i {
+      margin-top: 9px;
+    }
   </style>
 <% end %>
 <% content_for :js do %>
-  <script type="text/javascript">
+  <script>
     $(function(){
       $('#nav_sports').addClass('active');
+      
+      var fav_id = <%= Sport.find_by_slug(params[:slug]).id %>;
+      
+      $('.not_favorite').click(function() {
+        console.log('Favorite button clicked');
+        $.ajax({
+          type: 'POST',
+          url: '/favorites.json',
+          data: "fav_id=" + fav_id + "&fav_type=sport",
+          dataType: JSON,
+          success: function() {
+            console.log('Favorite executed successfully');
+          }
+        });
+      });
     });
   </script>
 <% end %>
@@ -24,6 +42,9 @@
 		<li class="active"><a href="#info" data-toggle="tab">Information</a></li>
 		<li><a href="#photos" data-toggle="tab">Photos</a></li>
 		<li class="disabled"><a href="#videos" data-toggle="tab">Videos</a></li>
+		<% if signed_in? %>
+		  <li class="pull-right" id="favorite_button"><i class="icon-star icon-white <% if current_user.favorites.find(:all, :conditions => [ 'favoritable_type = ? AND favoritable_id = ?', 'sport', '1' ]).empty? %>not_favorite<% else %>favorite<% end %>"></i></li>
+		<% end %>
 		<li class="pull-right"><a href="#schedule" data-toggle="tab">Schedule</a></li>
 	</ul>
 	<div class="tab-content">

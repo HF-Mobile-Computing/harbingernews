@@ -2,6 +2,8 @@ class Club < ActiveRecord::Base
   attr_accessible :slug, :name, :category, :content
   has_paper_trail
   
+  has_many :favorites, :as => :favoritable
+  
   def to_param
     slug
   end
