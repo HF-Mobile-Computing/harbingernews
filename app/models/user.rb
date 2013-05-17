@@ -12,11 +12,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
  
   has_paper_trail
-  # Setup accessible (or protected) attributes for your model
+  
   has_attached_file :avatar,
     :styles => { :medium => '300x300>', :thumb => '100x100>', :header => '18x18>' }, 
     :default_url => '/images/:style/missing.png'
   
+  # Favorites
   has_many :favorites
   has_many :sports,    :through => :favorites
   has_many :clubs,     :through => :favorites

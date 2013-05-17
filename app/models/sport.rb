@@ -10,8 +10,10 @@ class Sport < ActiveRecord::Base
     slug
   end
   
-  has_many :games, :inverse_of => :sport
-  has_many :favorites, :as => :favoritable
+  has_many :games,       :inverse_of => :sport
+  # Favorites
+  has_many :favorites,   :as => :favoritable
+  has_many :users,       :through => :favorites
   
   before_create :set_slug
   
