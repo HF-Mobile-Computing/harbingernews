@@ -1,5 +1,3 @@
-var sport_id = <%= Sport.find_by_slug(params[:slug]).id %>;
-
 $('#favorite_button').click(function() {
   
   if ($('#favorite_button').hasClass('favorite')) {
