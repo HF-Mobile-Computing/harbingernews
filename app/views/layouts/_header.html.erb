@@ -34,7 +34,6 @@
                 <% end %>
   						  <% if can? :manage, :all %>
                   <li><%= link_to "Admin Interface", "/admin" %></li>
-  						    <li class="divider"></li>
                 <% else %>
                   <% if can? :manage, Club %>
                     <li><%= link_to "Manage Clubs", "/admin/club" %></li>
@@ -58,6 +57,7 @@
                     <li><%= link_to "Upcoming Events", "/admin/upcoming_event" %></li>
                   <% end %>
                 <% end %>
+                <div class="divider"></div>
   						  <li><%= link_to "Log out", destroy_user_session_path %></li>
   						</ul>
 						</li>
