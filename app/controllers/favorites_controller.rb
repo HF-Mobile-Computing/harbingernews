@@ -4,9 +4,9 @@ class FavoritesController < ApplicationController
     @fav = current_user.favorites.create({:favoritable_id => params[:fav_id], :favoritable_type => params[:fav_type]})
     
     if @fav.save
-      render :nothing => true
+      render :json => { :result => 'success' }
     else
-      render :unprocessible_entity, json: favorites.errors
+      render :json => { :result => 'error' }
     end
   end
   
@@ -15,9 +15,9 @@ class FavoritesController < ApplicationController
     @fav = current_user.favorites.find(:last, :conditions => [ 'favoritable_type = ? AND favoritable_id = ?', params[:fav_type], params[:fav_id] ])
     @fav.destroy
     if @fav.destroy
-      render :nothing => true
+      render :json => { :result => 'success' }
     else
-      render :unprocessibly_entity, json: favorites.errors
+      render :json => { :result => 'error' }
     end
   end
 

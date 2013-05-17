@@ -16,36 +16,48 @@
       
       var sport_id = <%= Sport.find_by_slug(params[:slug]).id %>;
       
-      $('.not_favorite').click(function() {
-        console.log('Favorite button clicked');
-        $.ajax({
-          type: 'POST',
-          url: '/favorites.json',
-          data: "fav_id=" + sport_id + "&fav_type=sport",
-          dataType: JSON,
-          success: function(data) {
-            console.log('Favorite executed successfully');
-          },
-          error: function(data) {
-            console.log('Favorite did not execute successfully');
-          }
-        });
-      });
-      
-      $('.favorite').click(function() {
-        console.log('Favorite button clicked');
-        $.ajax({
-          type: 'DELETE',
-          url: '/favorites',
-          data: "fav_id=" + sport_id + "&fav_type=sport",
-          dataType: JSON,
-          success: function(data) {
-            console.log('Favorite executed successfully');
-          },
-          error: function(data) {
-            console.log('Favorite did not execute successfully');
-          }
-        });
+      $('#favorite_button').click(function() {
+        
+        if ($('#favorite_button').hasClass('favorite')) {
+        
+          // Delete the Favorite
+          console.log('Favorite button clicked');
+          $.ajax({
+            type: 'DELETE',
+            url: '/favorites',
+            data: "fav_id=" + sport_id + "&fav_type=sport",
+            dataType: JSON,
+            statusCode: {
+              200: function(data) {
+                     $('#favorite_button').removeClass('favorite');
+                     console.log('Delete Function executed successfully');
+                   },
+              500: function(data) {
+                     console.log('Delete Function executed unsuccessfully');
+                   }
+            }
+          }); 
+
+        } else {
+        
+          // Add the Favorite
+          console.log('Favorite button clicked');
+          $.ajax({
+            type: 'POST',
+            url: '/favorites.json',
+            data: "fav_id=" + sport_id + "&fav_type=sport",
+            dataType: JSON,
+            statusCode: {
+              200: function(data) {
+                     console.log('Post Function executed successfully');
+                     $('#favorite_button').addClass('favorite');
+                   },
+              500: function(data) {
+                     console.log('Post Function executed unsuccessfully');
+                   }
+            }
+          }); 
+        }
       });
     });
   </script>
@@ -62,7 +74,7 @@
 		<li><a href="#photos" data-toggle="tab">Photos</a></li>
 		<li class="disabled"><a href="#videos" data-toggle="tab">Videos</a></li>
 		<% if signed_in? %>
-		  <li class="pull-right" id="favorite_button"><i class="icon-star icon-white <% if current_user.favorites.find(:all, :conditions => [ 'favoritable_type = ? AND favoritable_id = ?', 'sport', '1' ]).empty? %>not_favorite<% else %>favorite<% end %>"></i></li>
+		  <li class="pull-right <% if !current_user.favorites.find(:all, :conditions => [ 'favoritable_type = ? AND favoritable_id = ?', 'sport', '1' ]).empty? %>favorite<% end %>" id="favorite_button"><i class="icon-star icon-white"></i></li>
 		<% end %>
 		<li class="pull-right"><a href="#schedule" data-toggle="tab">Schedule</a></li>
 	</ul>
