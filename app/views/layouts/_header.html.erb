@@ -18,6 +18,20 @@
 						<li class="dropdown">
   						<a class="dropdown-toggle" href="#" data-toggle="dropdown"><%= image_tag current_user.avatar.url(:header), class: 'nav-avatar' %> <%= current_user.name %><b class="caret"></b></a>
   						<ul class="dropdown-menu">
+  						  <% if !current_user.favorites.empty? %>
+    						  <li class="dropdown-submenu">
+                    <a href="#">Favorites</a>
+                    <ul class="dropdown-menu">
+                      <% current_user.favorites.each do |fav| %>
+                        <% if fav.favoritable_type == 'sport' %>
+                          <li><a href="/sports/<%= Sport.find(fav.favoritable_id).slug %>"><%= Sport.find(fav.favoritable_id).title %></a></li>
+                        <% elsif fav.favoritable_type == 'club' %>
+                          <li>Club</li>
+                        <% end %>
+                      <% end %>
+                    </ul>
+                  </li>
+                <% end %>
   						  <% if can? :manage, :all %>
                   <li><%= link_to "Admin Interface", "/admin" %></li>
   						    <li class="divider"></li>
