@@ -14,17 +14,36 @@
     $(function(){
       $('#nav_sports').addClass('active');
       
-      var fav_id = <%= Sport.find_by_slug(params[:slug]).id %>;
+      var sport_id = <%= Sport.find_by_slug(params[:slug]).id %>;
       
       $('.not_favorite').click(function() {
         console.log('Favorite button clicked');
         $.ajax({
           type: 'POST',
           url: '/favorites.json',
-          data: "fav_id=" + fav_id + "&fav_type=sport",
+          data: "fav_id=" + sport_id + "&fav_type=sport",
           dataType: JSON,
-          success: function() {
+          success: function(data) {
             console.log('Favorite executed successfully');
+          },
+          error: function(data) {
+            console.log('Favorite did not execute successfully');
+          }
+        });
+      });
+      
+      $('.favorite').click(function() {
+        console.log('Favorite button clicked');
+        $.ajax({
+          type: 'DELETE',
+          url: '/favorites',
+          data: "fav_id=" + sport_id + "&fav_type=sport",
+          dataType: JSON,
+          success: function(data) {
+            console.log('Favorite executed successfully');
+          },
+          error: function(data) {
+            console.log('Favorite did not execute successfully');
           }
         });
       });

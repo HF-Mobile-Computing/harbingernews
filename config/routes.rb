@@ -61,7 +61,8 @@ Harbingernews::Application.routes.draw do
     match '*not_found', to: 'errors#error_404'
   end
   
-  post '/favorites' => 'favorites#create'
+  post    '/favorites' => 'favorites#create'
+  delete  '/favorites' => 'favorites#destroy'
   
 end
 #== Route Map
