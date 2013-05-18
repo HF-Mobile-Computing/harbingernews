@@ -7,8 +7,12 @@
     #favorite_button i {
       margin-top: 9px;
     }
-    .favorite {
-      background-color: red;
+    .favorite i {
+      color: gold !important;
+      text-shadow: 0px 0px 2px rgba(79,79,79,0.64);
+    }
+    i:hover {
+      text-shadow: 0px 0px 2px black;
     }
   </style>
 <% end %>
@@ -36,7 +40,7 @@
 		<li><a href="#photos" data-toggle="tab">Photos</a></li>
 		<li class="disabled"><a href="#videos" data-toggle="tab">Videos</a></li>
 		<% if signed_in? %>
-		  <li class="pull-right <% if !current_user.favorites.find(:all, :conditions => [ 'favoritable_type = ? AND favoritable_id = ?', 'sport', Sport.find_by_slug(params[:slug]).id ]).empty? %>favorite<% end %>" id="favorite_button"><i class="icon-star icon-white"></i></li>
+		  <li class="pull-right <% if !current_user.favorites.find(:all, :conditions => [ 'favoritable_type = ? AND favoritable_id = ?', 'sport', Sport.find_by_slug(params[:slug]).id ]).empty? %>favorite<% end %>" id="favorite_button"><i class="icon-star"></i></li>
 		<% end %>
 		<li class="pull-right"><a href="#schedule" data-toggle="tab">Schedule</a></li>
 	</ul>
