@@ -20,6 +20,10 @@
   <script>
     $(function(){
       $('#nav_sports').addClass('active');
+      $('i.icon-star').tooltip({
+        title: 'Favorite this Page',
+        delay: { show: 700, hide: 0 },
+      });
     });
     
     var sport_id = <%= Sport.find_by_slug(params[:slug]).id %>;
