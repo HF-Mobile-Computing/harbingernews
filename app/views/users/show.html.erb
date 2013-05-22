@@ -1,0 +1,24 @@
+<div id="wrap" style = "margin-bottom: 15px;"
+	<p id="notice"><%= notice %></p>
+	<div class = "span2" style = "background-color: white;position: static; border-radius: 5px; box-shadow: 0 0 6px 0; margin-bottom: 15px;">
+		<div style = "height: 100px; width: 100px; margin-left: auto; margin-right: auto; margin-top: 10px;">
+			<% if @user.avatar_file_name.nil? %>
+				<%= image_tag "default_pic.png" %>
+			<% else %>
+				
+			<% end %>
+		</div>
+		<div id = "userinfo" style = "margin-left: 15px;">
+			Name: <%= @user.name.titleize %> <br />
+			Age: <%= @user.age.to_s %><br />
+			Birthday: <%= @user.birthday %><br />
+			Hobbies/Interests: <%= @user.interests%><br />
+		</div>
+	</div>
+	<div class = "span9" style = "background-color: #fff; margin-top: 10px; border-radius: 5px; box-shadow: 0 0 6px 0; margin-bottom: 15px;">
+		<div style = "margin: 5px 10px 5px 10px;">
+			<h3><%= @user.name.titleize %>'s Bio</h3>
+			<%= @user.bio %>
+		</div>
+	</div>
+</div>

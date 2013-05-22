@@ -1,0 +1,37 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+  <p>
+    <%= f.label :bio %>
+    <%= f.text_area :bio %>
+  </p>
+  <p>
+    <%= f.label :birthday %>
+    <%= f.date_select :birthday, {:order => [:month, :day, :year],:prompt => true, :start_year => 1995, :end_year => Time.now.year} %>
+
+  </p>
+  <p>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </p>
+  <p>
+    <%= f.label :interests %>
+    <%= f.text_area :interests %>
+  </p>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

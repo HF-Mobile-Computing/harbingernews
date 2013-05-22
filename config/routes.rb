@@ -15,6 +15,10 @@ Harbingernews::Application.routes.draw do
     get "signup" => "devise/registrations#new", :as => :new_user_registration
     get 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session
   end
+  get "/users/:id" => "users#show"
+  get "/users/:id/edit" => "users#edit"
+  put "/users/:id" => "users#update"
+  resources :users
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
