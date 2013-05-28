@@ -1,0 +1,69 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag "jasny-bootstrap" %>
+  <style type="text/css">
+    #box {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 5%;
+    }
+    form {
+      margin-top: 1em;
+      text-align: left;
+    }
+    input[type=file] {
+      line-height: 9px;
+    }
+  </style>
+<% end %>
+<%= content_for :js do %>
+  <%= javascript_include_tag "jasny-bootstrap" %>
+<% end %>
+<div id="box" style="margin-bottom: 5px;">
+  <%= form_for(@user, html: {class: "form-horizontal"}) do |f| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <h2 class = "offset1">Editing <%= @user.name.titleize %></h2>
+
+    <div class="control-group">
+      <%= f.label :bio, class: 'control-label' %>
+      <div class = "controls">
+        <%= f.text_area :bio, style: "height: 100px;" %>
+      </div>
+    </div>
+    <div class = "control-group">
+      <%= f.label :birthday, class: "control-label" %>
+      <div class = "controls">
+        <%= f.date_select :birthday, {:order => [:month, :day, :year],:prompt => true, :start_year => 1995, :end_year => Time.now.year}, style: "width: 75px;" %>
+      </div>
+    </div>
+
+    <div class = "control-group">
+      <%= f.label :age, class: "control-label" %>
+      <div class = "controls">
+        <%= f.number_field :age %>
+      </div>
+    </div>
+
+    <div class = "control-group">
+      <%= f.label :interests, class: "control-label" %>
+      <div class = "controls">
+        <%= f.text_area :interests, style: "height: 100px;" %>
+      </div>
+    </div>
+    
+    <div class="actions">
+      <%= f.submit "Update", class: "btn btn-large btn-primary offset2"%>
+    </div>
+
+  <% end %>
+  </div>

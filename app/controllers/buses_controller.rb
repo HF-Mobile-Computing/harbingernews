@@ -4,6 +4,7 @@ class BusesController < ApplicationController
   # GET /buses.json
   def index
     @buses = Bus.all(:order => "id DESC")
+    authorize! :edit, @bus
 
     respond_to do |format|
       format.html # index.html.erb
@@ -36,6 +37,8 @@ class BusesController < ApplicationController
   # GET /buses/1/edit
   def edit
     @bus = Bus.find(params[:id])
+    @bus = Bus.find(params[:id])
+    authorize! :edit, Bus
   end
 
   # POST /buses
@@ -58,6 +61,7 @@ class BusesController < ApplicationController
   # PUT /buses/1.json
   def update
     @bus = Bus.find(params[:id])
+    authorize! :edit, Bus
 
     respond_to do |format|
       if @bus.update_attributes(params[:bus])

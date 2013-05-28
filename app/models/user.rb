@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
  
   has_paper_trail
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :avatar, :roles, :roles_mask, :teacher
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :avatar, :roles, :roles_mask, :teacher, :bio, :birthday, :interests, :age
   # attr_accessible :title, :body
   has_attached_file :avatar,
     :styles => { :medium => '300x300>', :thumb => '100x100>', :header => '18x18>' }, 
