@@ -1,10 +1,10 @@
 Harbingernews::Application.routes.draw do
 
+  root :to => "home#index"
+  
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   mount Rich::Engine => '/rich', :as => 'rich'
-
-  root :to => "home#index"
 
   devise_for :users, :skip => [:sessions] 
 
@@ -20,16 +20,9 @@ Harbingernews::Application.routes.draw do
   put "/users/:id" => "users#update"
   resources :users
 
-  
-
   resources :upcoming_events
 
   resources :recent_events
-
-  
-
-  # set root path
-  
 
   # Announcements
   resources :announcements
@@ -44,7 +37,6 @@ Harbingernews::Application.routes.draw do
   get '/error404', to: "static_pages#404"
   get '/error500', to: "static_pages#500"
   get '/error422', to: "static_pages#422"
-
 
   # Sports Pages
   get '/sports/:slug',           to: "sports#show" # Show the sports pages by name (slug) not id
