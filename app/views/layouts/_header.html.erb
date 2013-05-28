@@ -22,12 +22,7 @@
     						  <li class="dropdown-submenu">
                     <a href="#">Favorites</a>
                     <ul class="dropdown-menu">
-                      <% if !current_user.favorites.find(:all, :conditions => { :favoritable_type => 'sport' }).empty? %><li class="nav-header">Sport</li><% end %>
-                      <% current_user.favorites.each do |fav| %>
-                        <% if fav.favoritable_type == 'sport' %>
-                          <li><a href="/sports/<%= Sport.find(fav.favoritable_id).slug %>"><%= Sport.find(fav.favoritable_id).title %></a></li>
-                        <% end %>
-                      <% end %>
+                      <% if !current_user.favorites.find(:all, :conditions => { :favoritable_type => 'sport' }).empty? %><li class="nav-header" id="favs_sports_header">Sport</li><% end %>
                       <% if !current_user.favorites.find(:all, :conditions => { :favoritable_type => 'club' }).empty? %><li class="nav-header">Clubs</li><% end %>
                       <% current_user.favorites.each do |fav| %>
                         <% if fav.favoritable_type == 'club' %>

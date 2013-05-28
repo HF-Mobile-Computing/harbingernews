@@ -12,7 +12,7 @@ class Sport < ActiveRecord::Base
   
   has_many :games,       :inverse_of => :sport
   # Favorites
-  has_many :favorites,   :as => :favoritable
+  has_many :favorites,   :as => :favoritable, :dependent => :destroy
   has_many :users,       :through => :favorites
   
   before_create :set_slug

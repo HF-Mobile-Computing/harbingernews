@@ -1,5 +1,7 @@
 Harbingernews::Application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   mount Rich::Engine => '/rich', :as => 'rich'
 
   root :to => "home#index"
@@ -14,7 +16,7 @@ Harbingernews::Application.routes.draw do
     get 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session
   end
 
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  
 
   resources :upcoming_events
 
@@ -63,6 +65,7 @@ Harbingernews::Application.routes.draw do
   
   post    '/favorites' => 'favorites#create'
   delete  '/favorites' => 'favorites#destroy'
+  get     '/favorites' => 'favorites#list'
   
 end
 #== Route Map

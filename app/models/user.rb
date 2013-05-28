@@ -19,8 +19,8 @@ class User < ActiveRecord::Base
   
   # Favorites
   has_many :favorites
-  has_many :sports,    :through => :favorites
-  has_many :clubs,     :through => :favorites
+  has_many :sports,    :through => :favorites, :source => :favoritable, :source_type => "Sport"
+  has_many :clubs,     :through => :favorites, :source => :favoritable, :source_type => "Club"
   
   include RoleModel
  
