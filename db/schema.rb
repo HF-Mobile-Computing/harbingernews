@@ -55,6 +55,14 @@ ActiveRecord::Schema.define(:version => 20130521172150) do
     t.datetime "updated_at",                :null => false
   end
 
+  create_table "favorites", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "favoritable_id"
+    t.string   "favoritable_type"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
   create_table "games", :force => true do |t|
     t.integer  "sport_id"
     t.date     "date"

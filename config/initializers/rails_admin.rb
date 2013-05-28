@@ -27,7 +27,7 @@ RailsAdmin.config do |config|
   # config.default_items_per_page = 20
 
   # Exclude specific models (keep the others):
-  # config.excluded_models = ['Announcement', 'Bus', 'Club', 'Memo', 'RecentEvent', 'Sport', 'UpcomingEvent', 'User']
+  config.excluded_models = ['Favorite']
 
   # Include specific models (exclude the others):
   # config.included_models = ['Announcement', 'Bus', 'Club', 'Memo', 'RecentEvent', 'Sport', 'UpcomingEvent', 'User']
@@ -157,6 +157,11 @@ RailsAdmin.config do |config|
       field :password
       field :password_confirmation
       field :avatar
+    end
+    configure :favorites do
+      hide
+      filterable false
+      searchable false
     end
   end
   

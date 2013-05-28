@@ -52,7 +52,7 @@ $(function() {
       }, 100);
       thePage.counter = thePage.counter + 1;
     }
-    testLog();
+    // testLog();
   });
   $('#reverse').click(function() {
     // console.log("Reverse button clicked");
@@ -62,7 +62,7 @@ $(function() {
       }, 175);
       thePage.counter = thePage.counter - 1;
     }
-    testLog();
+    // testLog();
   });
   
   // Reset slider at breakpoints 
@@ -88,7 +88,7 @@ $(function() {
   })
   
   // Debugging functions
-  
+  /*
   function testLog() {
     console.log("counter = " + thePage.counter);
     console.log("Counter Amt: " + thePage.counterAmt);
@@ -96,6 +96,6 @@ $(function() {
   };
   
   testLog();
-  
+  */
   
 });
