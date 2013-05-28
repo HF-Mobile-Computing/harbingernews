@@ -20,7 +20,7 @@ class Ability
       can :dashboard
     elsif user.has_role? :secretary
       can :read, [Club, Sport, Bus, UpcomingEvent, RecentEvent, Memo, Announcement]
-      can :manage, [Announcement, RecentEvent, UpcomingEvent]
+      can :manage, [Announcement, RecentEvent, UpcomingEvent, Bus]
       can :access, :rails_admin
       can :dashboard
     end
