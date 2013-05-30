@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><% yield :title %><% if content_for? :title do%>|<% end %>Harbinger News Online</title>
+  <title><%= yield :title %><% if content_for?(:title) %> | <% end %>Harbinger News Online</title>
   <%= favicon_link_tag %>
   
   <%= csrf_meta_tags %>
