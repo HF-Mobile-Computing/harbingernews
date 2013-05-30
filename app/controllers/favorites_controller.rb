@@ -31,10 +31,11 @@ class FavoritesController < ApplicationController
     
     @full_favs.each do |fav|
       if fav.favoritable_type == 'sport'
-        hash = { "title" => Sport.find(fav.favoritable_id).title, 'url' => '/sports/' + Sport.find(fav.favoritable_id).slug }
+        hash = { "title" => Sport.find(fav.favoritable_id).title, 'url' => '/sports/' + Sport.find(fav.favoritable_id).slug, "favoritable_type" => "sport" }
         @favs.push(hash)
       elsif fav.favoritable_type == 'club'
-      
+        hash = {"title" => Club.find(fav.favoritable_id).name, "url" => "/clubs/" + Club.find(fav.favoritable_id).slug, "favoritable_type" => "club"}
+        @favs.push(hash)
       end
     end
     

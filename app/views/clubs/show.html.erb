@@ -1,21 +1,42 @@
 <% content_for :css do %>
   <%= stylesheet_link_tag    "clubs", :media => "all" %>
+  <style type="text/css">
+    #favorite_button i {
+      margin-top: 9px;
+    }
+    .favorite i {
+      color: gold !important;
+      text-shadow: 0px 0px 2px rgba(79,79,79,0.64);
+    }
+    i:hover {
+      text-shadow: 0px 0px 2px black;
+    }
+  </style>
 <% end %>
 <% content_for :js do %>
   <script type="text/javascript">
     $(function(){
       $('#nav_clubs').addClass('active');
+      $('i.icon-star').tooltip({
+        title: 'Favorite this Page',
+        delay: { show: 700, hide: 0 },
+      });
     });
+    var club_id = <%= Club.find_by_slug(params[:slug]).id %>;
   </script>
 <% end %>
 <% content_for :above_container do %>
   <%= render 'club_header' %>
 <% end %>
+<% content_for :js_bottom do %>
+  <% javascript_include_tag 'clubs/page' %>
+<% end %>
+
 
 <div class="row">
 	<div class = "offset1 span10" id='announcements'>
-		<h2>About <%= @club.name %></h4>
-		<div class = 'offset1'>
+		<h2 style = "float: left;">About <%= @club.name %></h4><% if signed_in? %><p  style = "font-size: 20px;" class="<% if !current_user.favorites.find(:all, :conditions => [ 'favoritable_type = ? AND favoritable_id = ?', 'club', Club.find_by_slug(params[:slug]).id ]).empty? %>favorite<% end %>" id="favorite_button" style = "position: relative; float: right; margin-top: 10px; margin-top: 10px;"><i class="icon-star"></i></p><% end %>
+		<div class = 'offset1' style = "clear: both;">
 			<%= @club.content %>
 
 		</div>

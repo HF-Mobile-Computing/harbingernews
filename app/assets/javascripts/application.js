@@ -21,8 +21,13 @@ function getFavs() {
       200: function(data) {
              console.log('Get Function executed successfully');
              window.favs = JSON.parse(data.responseText);
+             console.log(favs)
              for (var i = 0; i < window.favs.length; i++) {
-                $('<li class="fav"><a href="' + window.favs[i].url + '">' + window.favs[i].title + '</a></li>').insertAfter('#favs_sports_header');
+                if (favs[i].favoritable_type === "sport") {
+                  $('<li class="fav"><a href="' + window.favs[i].url + '">' + window.favs[i].title + '</a></li>').insertAfter('#favs_sports_header');
+                } else if (favs[i].favoritable_type === "club") {
+                  $('<li class="fav"><a href="' + window.favs[i].url + '">' + window.favs[i].title + '</a></li>').insertAfter('#favs_club_header');
+                }
              }
            },
       500: function(data) {
