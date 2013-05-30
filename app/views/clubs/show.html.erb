@@ -35,7 +35,12 @@
 
 <div class="row">
 	<div class = "offset1 span10" id='announcements'>
-		<h2 style = "float: left;">About <%= @club.name %></h4><% if signed_in? %><p  style = "font-size: 20px;" class="<% if !current_user.favorites.find(:all, :conditions => [ 'favoritable_type = ? AND favoritable_id = ?', 'club', Club.find_by_slug(params[:slug]).id ]).empty? %>favorite<% end %>" id="favorite_button" style = "position: relative; float: right; margin-top: 10px; margin-top: 10px;"><i class="icon-star"></i></p><% end %>
+		<h2 style = "float: left;">About <%= @club.name %></h2>
+    <% if signed_in? %>
+      <div  style = "font-size: 20px;" class="<% if !current_user.favorites.find(:all, :conditions => [ 'favoritable_type = ? AND favoritable_id = ?', 'club', Club.find_by_slug(params[:slug]).id ]).empty? %>favorite<% end %>" id="favorite_button" style = "position: relative; margin-top: 10px; margin-top: 10px;">
+        <i class="icon-star" style = "float: right;"></i>
+      </div>
+    <% end %>
 		<div class = 'offset1' style = "clear: both;">
 			<%= @club.content %>
 
