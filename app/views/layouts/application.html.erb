@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><% yield :title %><% if content_for? :title do%>|<% end %><% end %> Harbinger News Online</title>
+  <title><%= yield :title %><% if content_for?(:title) %> | <% end %>Harbinger News Online</title>
   <%= favicon_link_tag %>
   
   <%= csrf_meta_tags %>
@@ -38,16 +38,8 @@
     <%= render 'layouts/header' %>
     <%= yield :above_container %>
     <div class="container">
-      <div id="myModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true" style = "height: 500px; width: 600px; margin-left: -300px;">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h3 id="myModalLabel">Konami Code!</h3>
-        </div>
-        <div class="modal-body" style = "height: 100% !important;">
-        </div>
-      </div>
       <%= yield %>
-
+      
       <%= debug(params) if Rails.env.development? %>
     </div>
     <div id="footer_spacer"></div>
