@@ -44,7 +44,7 @@
 		<li><a href="#photos" data-toggle="tab">Photos</a></li>
 		<li class="disabled"><a href="#videos" data-toggle="tab">Videos</a></li>
 		<% if signed_in? %>
-		  <!-- Code for favorite button -->
+		  <li class="pull-right <% if !current_user.favorites.find(:all, :conditions => [ 'favoritable_type = ? AND favoritable_id = ?', 'sport', Sport.find_by_slug(params[:slug]).id ]).empty? %>favorite<% end %>" id="favorite_button"><i class="icon-star"></i></li>
 		<% end %>
 		<li class="pull-right"><a href="#schedule" data-toggle="tab">Schedule</a></li>
 	</ul>
