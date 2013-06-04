@@ -17,7 +17,7 @@ function getFavs() {
   $.ajax({
     type: 'GET',
 
-    url: '/favorites',
+    url: '/favorites.json',
     dataType: JSON,
     statusCode: {
       200: function(data) {
