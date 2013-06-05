@@ -2,10 +2,6 @@ Harbingernews::Application.routes.draw do
 
   root :to => "home#index"
   
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
-  mount Rich::Engine => '/rich', :as => 'rich'
-
   devise_for :users, :skip => [:sessions] 
 
   devise_scope :user do
