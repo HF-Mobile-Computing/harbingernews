@@ -25,16 +25,19 @@ class FavoritesController < ApplicationController
   
   # Get the list of a user's favorites
   def list
-    @full_favs = current_user.favorites
+    @full_favs = current_user.favorites # Get the full list of favorites
     
-    @favs = []
+    @favs = [] # Creates an empty array to put the data for each user favorite in
+               # Instead of sending over a bunch of non-important infortmation, 
+               # like the id number and who owns it we just send the title, the type 
+               # (sport, club, whatever), and enough data to create a URL.
     
     @full_favs.each do |fav|
       if fav.favoritable_type == 'sport'
         hash = { "title" => Sport.find(fav.favoritable_id).title, 'url' => '/sports/' + Sport.find(fav.favoritable_id).slug, "favoritable_type" => "sport" }
         @favs.push(hash)
       elsif fav.favoritable_type == 'club'
-        hash = {"title" => Club.find(fav.favoritable_id).name, "url" => "/clubs/" + Club.find(fav.favoritable_id).slug, "favoritable_type" => "club"}
+        hash = { "title" => Club.find(fav.favoritable_id).name,   "url" => "/clubs/" +  Club.find(fav.favoritable_id).slug,  "favoritable_type" => "club"}
         @favs.push(hash)
       end
     end

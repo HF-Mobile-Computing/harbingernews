@@ -46,15 +46,6 @@ function getFavs() {
                   // Actually add the favorite to the list.
                   $('<li class="fav"><a href="' + window.favs[i].url + '">' + window.favs[i].title + '</a></li>').insertAfter('#favs_club_header');
                 }
-
-
-
-
-
-
-
-                // SCREW YOUR HATE OF EXCESSIVE WHITESPACE, ALEX.
-                // I LIKE WHITESPACE.
              }
            },
       500: function(data) {
@@ -63,4 +54,3 @@ function getFavs() {
     }
   });
 }
-// please don't hurt me.

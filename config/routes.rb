@@ -34,9 +34,6 @@ Harbingernews::Application.routes.draw do
   get '/about', to: 'static_pages#about'
   get '/get_involved', to: "static_pages#get_involved"
   get '/harbingerteam', to: "static_pages#harbingerteam"
-  get '/error404', to: "static_pages#404"
-  get '/error500', to: "static_pages#500"
-  get '/error422', to: "static_pages#422"
 
   # Sports Pages
   get '/sports/:slug',           to: "sports#show" # Show the sports pages by name (slug) not id
@@ -54,14 +51,19 @@ Harbingernews::Application.routes.draw do
   match '/buses/map', to: "buses#map"
   resources :buses
 
-  # Custom Error Pages
-  unless Rails.application.config.consider_all_requests_local
-    match '*not_found', to: 'errors#error_404'
-  end
-
   post    '/favorites' => 'favorites#create'
   delete  '/favorites' => 'favorites#destroy'
   get     '/favorites' => 'favorites#list'
+  
+  # Custom Error Pages
+  get '/error404', to: "static_pages#404"
+  get '/error500', to: "static_pages#500"
+  get '/error422', to: "static_pages#422"
+  
+  # MAKE SURE THIS IS ALWAYS THE LAST LINE
+  unless Rails.application.config.consider_all_requests_local
+    match '*not_found', to: 'errors#error_404'
+  end
   
 end
 
