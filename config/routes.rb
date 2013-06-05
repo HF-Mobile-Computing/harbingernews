@@ -1,8 +1,10 @@
 Harbingernews::Application.routes.draw do
 
   root :to => "home#index"
-  
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users, :skip => [:sessions] 
+  ActiveAdmin.routes(self)
 
   devise_scope :user do
     get "login" => "devise/sessions#new"
