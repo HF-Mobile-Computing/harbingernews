@@ -5,7 +5,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Harbingernews"
+  config.site_title = "Harbinger News Online"
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
@@ -207,4 +207,13 @@ ActiveAdmin.setup do |config|
   # config.filters = true
 
 
+end
+
+# Needed for CanCan Integration
+ActiveAdmin::ResourceController.class_eval do
+  protected
+ 
+  def current_ability
+    @current_ability ||= AdminAbility.new(current_user)
+  end
 end
