@@ -28,9 +28,10 @@ ActiveAdmin.register Sport do
     attributes_table do
       row :id
       row :title
-      row :content
       row :season
+      row :content
       row :alert
+      row(:banner_image) { image_tag sport.banner.url(:full) }
     end
     
     panel "Games" do
@@ -42,6 +43,7 @@ ActiveAdmin.register Sport do
         column :is_home
         column :score
         column :status
+        column(:edit) { |g| link_to "Edit", edit_admin_game_path(g) }
       end
     end
   end
