@@ -1,5 +1,7 @@
 ActiveAdmin.register User do
 
+  menu :priority => 2
+
   filter :name
   filter :email
   filter :last_sign_in_at
