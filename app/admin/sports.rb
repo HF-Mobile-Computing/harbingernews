@@ -18,7 +18,6 @@ ActiveAdmin.register Sport do
     selectable_column
     column :id
     column :title
-    column :content
     column :season
     default_actions
   end
@@ -45,6 +44,18 @@ ActiveAdmin.register Sport do
         column :status
         column(:edit) { |g| link_to "Edit", edit_admin_game_path(g) }
       end
+    end
+  end
+  
+  # Custom form
+  form do |f|
+    f.inputs "Details" do
+      f.input :title
+      f.input :season
+    end
+    f.inputs "Content" do
+      f.input :alert, :as => :string
+      f.input :content, :as => :rich, :config => { :width => '76%', :height => '400px' }
     end
   end
   
