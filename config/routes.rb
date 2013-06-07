@@ -26,6 +26,7 @@ Harbingernews::Application.routes.draw do
 
   # Announcements
   resources :announcements
+  resources :club_announcements, only: [:new, :create, :destroy]
   
   # Memos
   resources :memos

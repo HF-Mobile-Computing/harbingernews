@@ -18,11 +18,7 @@
     <h1>Club Announcements</h1>
     
     <div class = "offset1">
-    <% @all.each do |announcement| %>
-    
-      <li> <%= announcement.content %> </li>
-    
-    <% end %>
+      <%=raw @announcements.content %>
     </div>
   </div>
 </div>

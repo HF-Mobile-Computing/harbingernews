@@ -10,7 +10,7 @@ class ClubsController < ApplicationController
     @sciences = Club.where("category = :category", {:category => "sciences"})
     @cultural = Club.where("category = :category", {:category => "cultural"})
     @services = Club.where("category = :category", {:category => "services"})
-    @all = Club.where("category = :category", {:category => "all"})
+    @announcements = ClubAnnouncement.last
     
 
     respond_to do |format|
