@@ -11,7 +11,7 @@ gem 'paperclip', '~> 3.0'
 gem 'aws-sdk'
 gem 'cancan'  ## Authorization / Admin stuff
 gem 'role_model'
-gem 'rails_admin'
+gem 'activeadmin'
 gem 'rich', :git => 'git://github.com/HF-Mobile-Computing/rich.git'
 gem 'paper_trail'
 gem 'enumerize'
