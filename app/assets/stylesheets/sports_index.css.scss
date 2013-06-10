@@ -49,6 +49,8 @@ body {
 		a {
 			color: #aaaaaa !important;
 			text-shadow: 2px 2px 2px #616161;
+			pointer-events: none;
+   			cursor: default;
 		}
 	}
 }
