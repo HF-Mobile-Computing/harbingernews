@@ -18,7 +18,11 @@
   
   <%= javascript_include_tag "application" %>
   <%= yield :js %>
-  
+  <% if signed_in? %>
+  <script type="text/javascript">
+    getFavs();
+  </script>
+  <% end %>
   <!-- Google Analytics -->
   <script type="text/javascript">
 		var _gaq = _gaq || [];

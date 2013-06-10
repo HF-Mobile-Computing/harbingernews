@@ -5,11 +5,6 @@
 //= require breakpoints
 //= require_self
 
-// On Page Load
-$(function() {
-  getFavs();
-});
-
 // Get User Favorites
 function getFavs() {
   $('.fav').remove();
