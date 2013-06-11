@@ -1,5 +1,7 @@
 ActiveAdmin.register Club do
 
+  menu :parent => "Clubs"
+
   controller do
     defaults :finder => :find_by_slug
   end
