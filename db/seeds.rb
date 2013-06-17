@@ -76,4 +76,12 @@ else
 	puts "Recent events already exist"
 end
 
+if ClubAnnouncement.count == 0
+	ClubAnnouncement.create(content: "<ul><li>These are the recent events.</li></ul>")
+	puts "Created club announcement"
+else
+	puts "Club Announcement already exist"
+end
+
 puts "Seed complete!"
+
