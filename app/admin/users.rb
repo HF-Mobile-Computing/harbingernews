@@ -57,6 +57,9 @@ ActiveAdmin.register User do
         row :last_sign_in_ip
       end
     end
+    f.inputs do
+      f.submit
+    end
   end
   
 end

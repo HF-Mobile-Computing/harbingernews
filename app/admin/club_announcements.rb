@@ -22,9 +22,9 @@ ActiveAdmin.register ClubAnnouncement do
   form do |f|
     f.inputs "Content" do
       f.input :content, :as => :rich, :config => { :width => '76%', :height => '400px' }
+    end
 	  f.inputs do
 	  	f.submit
 	  end
-	end
   end
 end
