@@ -4,7 +4,7 @@ class AdminAbility
   def initialize(user)
     user ||= User.new
     
-    if user.role?('admin')
+    if user.has_role?('admin')
       can :manage, :all
     end
   end
