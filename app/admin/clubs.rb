@@ -22,7 +22,7 @@ ActiveAdmin.register Club do
   form do |f|
     f.inputs "Details" do
       f.input :name
-      f.input :category
+      f.input :category, :as => :select, :collection => [["Community Service", "community"], ["Student Services", "services"], ["Sciences", "sciences"], ["Cultural", "cultural"], ["Academic", "academic"], ["Arts", "arts"]]
       f.input :content, :as => :rich, :config => { :width => '76%', :height => '400px' }
     end
     f.inputs do
