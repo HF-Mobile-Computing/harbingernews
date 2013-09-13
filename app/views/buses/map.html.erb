@@ -117,9 +117,18 @@
       left: 20px;
       top: 62px;
     }
+    .bus-left {
+      background-color: green;
+      border: solid 1px black;
+    }
+    .bus-right {
+      background-color: gold;
+      border: solid 1px black;
+    }
   </style>
 <% end %>
 
+<!-- Deleted JS:
 <% content_for :js do %>
   <script type="text/javascript">
     $(function() {
@@ -128,31 +137,33 @@
       }).css('background-color', 'gold').css('border', 'solid 1px black');
     });
   </script>
+
 <% end %>
 
+-->
 <div id="wrapper">
   <h1>Bus Map for <%= @created %></h1>
   <div id="map">
-    <div class="bus" id="one"><%= @bus.one %></div>
-    <div class="bus" id="two"><%= @bus.two %></div>
-    <div class="bus" id="three"><%= @bus.three %></div>
-    <div class="bus" id="four"><%= @bus.four %></div>
-    <div class="bus" id="five"><%= @bus.five %></div>
-    <div class="bus" id="six"><%= @bus.six %></div>
-    <div class="bus" id="seven"><%= @bus.seven %></div>
-    <div class="bus" id="eight"><%= @bus.eight %></div>
-    <div class="bus" id="nine"><%= @bus.nine %></div>
-    <div class="bus" id="ten"><%= @bus.ten %></div>
-    <div class="bus" id="eleven"><%= @bus.eleven %></div>
-    <div class="bus" id="twelve"><%= @bus.twelve %></div>
-    <div class="bus" id="thirteen"><%= @bus.thirteen %></div>
-    <div class="bus" id="fourteen"><%= @bus.fourteen %></div>
-    <div class="bus" id="fifteen"><%= @bus.fifteen %></div>
-    <div class="bus" id="sixteen"><%= @bus.sixteen %></div>
-    <div class="bus" id="seventeen"><%= @bus.seventeen %></div>
-    <div class="bus" id="eighteen"><%= @bus.eighteen %></div>
-    <div class="bus" id="nineteen"><%= @bus.nineteen %></div>
-    <div class="bus" id="twenty"><%= @bus.twenty %></div>
+    <div class="bus bus-right" id="one"><%= @bus.one %></div>
+    <div class="bus bus-right" id="two"><%= @bus.two %></div>
+    <div class="bus bus-right" id="three"><%= @bus.three %></div>
+    <div class="bus bus-right" id="four"><%= @bus.four %></div>
+    <div class="bus bus-right" id="five"><%= @bus.five %></div>
+    <div class="bus bus-right" id="six"><%= @bus.six %></div>
+    <div class="bus bus-right" id="seven"><%= @bus.seven %></div>
+    <div class="bus bus-right" id="eight"><%= @bus.eight %></div>
+    <div class="bus bus-right" id="nine"><%= @bus.nine %></div>
+    <div class="bus bus-right" id="ten"><%= @bus.ten %></div>
+    <div class="bus bus-right" id="eleven"><%= @bus.eleven %></div>
+    <div class="bus bus-right" id="twelve"><%= @bus.twelve %></div>
+    <div class="bus bus-left" id="thirteen"><%= @bus.thirteen %></div>
+    <div class="bus bus-left" id="fourteen"><%= @bus.fourteen %></div>
+    <div class="bus bus-left" id="fifteen"><%= @bus.fifteen %></div>
+    <div class="bus bus-left" id="sixteen"><%= @bus.sixteen %></div>
+    <div class="bus bus-left" id="seventeen"><%= @bus.seventeen %></div>
+    <div class="bus bus-left" id="eighteen"><%= @bus.eighteen %></div>
+    <div class="bus bus-left" id="nineteen"><%= @bus.nineteen %></div>
+    <div class="bus bus-left" id="twenty"><%= @bus.twenty %></div>
   </div>
   <p id="updated">Last updated at: <%= @updated %></p>
 </div>
