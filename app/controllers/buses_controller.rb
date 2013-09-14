@@ -90,7 +90,7 @@ class BusesController < ApplicationController
     @bus = Bus.last
     Time.use_zone('Eastern Time (US & Canada)') do
       @created = @bus.created_at.strftime('%B %d, %Y')
-      @updated = @bus.updated_at.strftime('%H:%M%P')
+      @updated = @bus.updated_at.strftime('%l:%M%P')
     end
   end
   

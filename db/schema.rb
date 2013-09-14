@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130605231637) do
+ActiveRecord::Schema.define(:version => 20130607151335) do
 
   create_table "admin_abilities", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -23,16 +23,6 @@ ActiveRecord::Schema.define(:version => 20130605231637) do
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "articles", :force => true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "slug"
-    t.string   "section"
   end
 
   create_table "buses", :force => true do |t|
@@ -59,6 +49,12 @@ ActiveRecord::Schema.define(:version => 20130605231637) do
     t.string   "eighteen"
     t.string   "nineteen"
     t.string   "twenty"
+  end
+
+  create_table "club_announcements", :force => true do |t|
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "clubs", :force => true do |t|
