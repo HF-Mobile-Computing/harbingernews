@@ -145,8 +145,8 @@
 
 <div id="wrapper">
   <h1>Bus Map for <%= @created %></h1>
-    <h4 style="text-align: center; color: gold;">Buses on the right of the entrance:<%= @bus.one %>,<%= @bus.two %>,<%= @bus.three %>,<%= @bus.four %>,<%= @bus.five %>,<%= @bus.six %>,<%= @bus.seven %>,<%= @bus.eight %>,<%= @bus.nine %>,<%= @bus.ten %>,<%= @bus.eleven %>,<%= @bus.twelve %>,</h4>
-  <h4 style="text-align: center; color: green;">Buses on the left of the entrance:<%= @bus.thirteen %>,<%= @bus.fourteen %>,<%= @bus.fifteen %>,<%= @bus.sixteen %>,<%= @bus.seventeen %>,<%= @bus.eighteen %>,<%= @bus.nineteen %>,<%= @bus.twenty %>,</h4>
+    <h4 style="text-align: center; color: gold;">Buses on the <strong>RIGHT</strong> of the Main Entrance:<%= @bus.one %>,<%= @bus.two %>,<%= @bus.three %>,<%= @bus.four %>,<%= @bus.five %>,<%= @bus.six %>,<%= @bus.seven %>,<%= @bus.eight %>,<%= @bus.nine %>,<%= @bus.ten %>,<%= @bus.eleven %>,<%= @bus.twelve %>,</h4>
+  <h4 style="text-align: center; color: green;">Buses on the <strong>LEFT</strong> of the Main Entrance:<%= @bus.thirteen %>,<%= @bus.fourteen %>,<%= @bus.fifteen %>,<%= @bus.sixteen %>,<%= @bus.seventeen %>,<%= @bus.eighteen %>,<%= @bus.nineteen %>,<%= @bus.twenty %>,</h4>
 
   <div id="map">
     <div class="bus bus-right" id="one"><%= @bus.one %></div>
@@ -172,7 +172,7 @@
     <p id="mainent">Main Entrance</p>
 
   </div>
-  <p style="padding-left:150px">*Starred buses have not arrived yet</p>
+  <p style="padding-left:150px">*Buses may not have arrived yet</p>
   <p id="updated">Last updated at: <%= @updated %></p>
 </div>
     
