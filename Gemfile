@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "1.9.3"
 # Always available
 gem 'rails', '3.2.3'
 gem 'nokogiri'
