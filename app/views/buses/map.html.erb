@@ -130,10 +130,12 @@
     .bus-left {
       background-color: green;
       border: solid 1px black;
+      font-size: 18px
     }
     .bus-right {
       background-color: gold;
       border: solid 1px black;
+      font-size: 18px
     }
   </style>
 <% end %>
@@ -145,8 +147,8 @@
 
 <div id="wrapper">
   <h1>Bus Map for <%= @created %></h1>
-    <h4 style="text-align: center; color: gold;">Buses on the <strong>RIGHT</strong> of the Main Entrance:<%= @bus.one %>,<%= @bus.two %>,<%= @bus.three %>,<%= @bus.four %>,<%= @bus.five %>,<%= @bus.six %>,<%= @bus.seven %>,<%= @bus.eight %>,<%= @bus.nine %>,<%= @bus.ten %>,<%= @bus.eleven %>,<%= @bus.twelve %>,</h4>
-  <h4 style="text-align: center; color: green;">Buses on the <strong>LEFT</strong> of the Main Entrance:<%= @bus.thirteen %>,<%= @bus.fourteen %>,<%= @bus.fifteen %>,<%= @bus.sixteen %>,<%= @bus.seventeen %>,<%= @bus.eighteen %>,<%= @bus.nineteen %>,<%= @bus.twenty %>,</h4>
+    <h4 style="text-align: center; color: gold;">Buses Located on the <strong>RIGHT</strong> of the Main Entrance:<%= @bus.one %>,<%= @bus.two %>,<%= @bus.three %>,<%= @bus.four %>,<%= @bus.five %>,<%= @bus.six %>,<%= @bus.seven %>,<%= @bus.eight %>,<%= @bus.nine %>,<%= @bus.ten %>,<%= @bus.eleven %>,<%= @bus.twelve %>,</h4>
+  <h4 style="text-align: center; color: green;">Buses Located on the <strong>LEFT</strong> of the Main Entrance:<%= @bus.thirteen %>,<%= @bus.fourteen %>,<%= @bus.fifteen %>,<%= @bus.sixteen %>,<%= @bus.seventeen %>,<%= @bus.eighteen %>,<%= @bus.nineteen %>,<%= @bus.twenty %>,</h4>
 
   <div id="map">
     <div class="bus bus-right" id="one"><%= @bus.one %></div>
