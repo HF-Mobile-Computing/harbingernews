@@ -1,6 +1,6 @@
 ActiveAdmin.register Game do
   
-  menu false
+  
   
   filter :date
   filter :time
