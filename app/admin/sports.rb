@@ -37,7 +37,7 @@ ActiveAdmin.register Sport do
       table_for(sport.games) do
         column :id
         column :date
-        column :time
+        #column :time
         column :opponent
         column :is_home
         column :score
@@ -53,11 +53,11 @@ ActiveAdmin.register Sport do
       f.input :title
       f.input :season
     end
-    f.imputs "Banner Image" do
+    f.inputs "Banner Image" do
       f.file_field :banner
     end
-    f.inputs "Content" do
-      f.input :alert, :as => :string
+    f.inputs "Info" do
+      #f.input :alert, :as => :string  Commented out for asthetics; Unfinished feature?
       f.input :content, :as => :rich, :config => { :width => '76%', :height => '400px' }
     end
     f.inputs do
