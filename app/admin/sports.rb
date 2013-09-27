@@ -53,10 +53,12 @@ ActiveAdmin.register Sport do
       f.input :title
       f.input :season
     end
-    f.inputs "Banner" do
+    f.imputs "Banner Image" do
+      f.file_field :banner
+    end
+    f.inputs "Content" do
       f.input :alert, :as => :string
       f.input :content, :as => :rich, :config => { :width => '76%', :height => '400px' }
-      f.file_field :banner
     end
     f.inputs do
       f.submit
