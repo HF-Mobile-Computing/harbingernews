@@ -78,6 +78,7 @@
 			<table class="table">
 				<thead>
 					<tr>
+						<th>JV or Varsity</th>
 						<th>Date</th>
 						<th>Time</th>
 						<th>Opponent</th>
@@ -88,6 +89,7 @@
 				<tbody>
 				  <% @sport.games.each do |game| %>
 				  <tr <% if game.status == "win"%> class="success" <% elsif game.status == "loss" %> class="error" <% end %>>
+				  	<td><% if game.is_varsity == true %>Varsity<% else %>Junior Varsity<% end %>
 				    <td><%= game.date.strftime("%a, %b %d, %Y") %></td>
 				    <td><%= game.time %></td>
 				    <td><%= game.opponent %></td>
