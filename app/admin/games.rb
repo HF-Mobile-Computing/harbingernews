@@ -6,6 +6,7 @@ ActiveAdmin.register Game do
   filter :time
   filter :opponent
   filter :is_home
+  filter :is_varsity
   
   index as: :table do
     selectable_column
@@ -16,6 +17,8 @@ ActiveAdmin.register Game do
     column :is_home
     column :score
     column :status
+    column :is_varsity
+
     default_actions
   end
   
