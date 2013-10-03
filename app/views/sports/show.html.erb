@@ -46,7 +46,14 @@
 		<% if signed_in? %>
 		  <li class="pull-right <% if !current_user.favorites.find(:all, :conditions => [ 'favoritable_type = ? AND favoritable_id = ?', 'sport', Sport.find_by_slug(params[:slug]).id ]).empty? %>favorite<% end %>" id="favorite_button"><i class="icon-star"></i></li>
 		<% end %>
-		<li class="pull-right"><a href="#schedule" data-toggle="tab">Schedule</a></li>
+		<li class="dropdown">  
+          <a class="dropdown-toggle pull-right" data-toggle="dropdown" href="#">Schedule<b class="caret"></b></a>  
+          <ul class="dropdown-menu">
+          	<li><a href="#varsity-games" data-toggle="tab">Varsity</a></li>  
+            <li><a href="#junior-varsity-games" data-toggle="tab">Junior Varsity</a></li>  
+            <li><a href="#schedule" data-toggle="tab">Both</a></li>  
+           </ul>  
+        </li>  
 	</ul>
 	<div class="tab-content">
 		<div class="tab-pane active limited-width" id="info">
@@ -90,6 +97,55 @@
 				  <% @sport.games.each do |game| %>
 				  <tr <% if game.status == "win"%> class="success" <% elsif game.status == "loss" %> class="error" <% end %>>
 				  	<td><% if game.is_varsity == true %>Varsity<% else %>Junior Varsity<% end %>
+				    <td><%= game.date.strftime("%a, %b %d, %Y") %></td>
+				    <td><%= game.time %></td>
+				    <td><%= game.opponent %></td>
+				    <td><% if game.is_home %>Home<% else %>Away<% end %></td>
+				    <td><%= game.score %></td>
+				  </tr>
+				  <% end %>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="tab-pane limited-width" id="varsity-games">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Time</th>
+						<th>Opponent</th>
+						<th>Home/Away?</th>
+						<th>Score</th>
+					</tr>
+				</thead>
+				<tbody>
+				  <% @sport.games.each do |game| %>
+				  <tr <% if game.status == "win"%> class="success" <% elsif game.status == "loss" %> class="error" <% end %>>
+				    <td><%= game.date.strftime("%a, %b %d, %Y") %></td>
+				    <td><%= game.time %></td>
+				    <td><%= game.opponent %></td>
+				    <td><% if game.is_home %>Home<% else %>Away<% end %></td>
+				    <td><%= game.score %></td>
+				  </tr>
+				  <% end %>
+				</tbody>
+			</table>
+		</div>
+		<div class="tab-pane limited-width" id="junior-varsity-games">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Time</th>
+						<th>Opponent</th>
+						<th>Home/Away?</th>
+						<th>Score</th>
+					</tr>
+				</thead>
+				<tbody>
+				  <% @sport.games.each do |game| %>
+				  <tr <% if game.status == "win"%> class="success" <% elsif game.status == "loss" %> class="error" <% end %>>
 				    <td><%= game.date.strftime("%a, %b %d, %Y") %></td>
 				    <td><%= game.time %></td>
 				    <td><%= game.opponent %></td>
