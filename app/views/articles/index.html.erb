@@ -1,5 +1,9 @@
+<% content_for :js do %>
+  <%= javascript_include_tag "articles" %>
+<% end %>
+
 <div class="container" id="articleview">
-	<h1>Index For Articles</h1>
+	<h1 style="text-align:center;">Tornado News Articles</h1>
 	<% @articles.each do |article| %>
 		<h2>
 			<%= link_to article.title, article %>
