@@ -148,8 +148,7 @@
 
 <div id="wrapper">
   <h1>Bus Map for <%= @created %></h1>
-    <h4 style="text-align: center; color: gold;">Buses Located on the <strong>RIGHT</strong> of the Main Entrance:<%= @bus.one %>,<%= @bus.two %>,<%= @bus.three %>,<%= @bus.four %>,<%= @bus.five %>,<%= @bus.six %>,<%= @bus.seven %>,<%= @bus.eight %>,<%= @bus.nine %>,<%= @bus.ten %>,<%= @bus.eleven %>,<%= @bus.twelve %>,</h4>
-  <h4 style="text-align: center; color: green;">Buses Located on the <strong>LEFT</strong> of the Main Entrance:<%= @bus.thirteen %>,<%= @bus.fourteen %>,<%= @bus.fifteen %>,<%= @bus.sixteen %>,<%= @bus.seventeen %>,<%= @bus.eighteen %>,<%= @bus.nineteen %>,<%= @bus.twenty %>,</h4>
+    <h4 style="text-align:center;">Last updated at: <%= @updated %></h4>
 
   <div id="map">
     <div class="bus bus-right" id="one"><%= @bus.one %></div>
@@ -175,7 +174,8 @@
     <p id="mainent">Main Entrance</p>
 
   </div>
-  <p style="padding-left:150px">*Buses may not have arrived yet</p>
-  <p id="updated">Last updated at: <%= @updated %></p>
+  <p style="text-align: center; color: gold; font-size:20px;">Buses Located on the <strong>RIGHT</strong> of the Main Entrance:<%= @bus.one %>,<%= @bus.two %>,<%= @bus.three %>,<%= @bus.four %>,<%= @bus.five %>,<%= @bus.six %>,<%= @bus.seven %>,<%= @bus.eight %>,<%= @bus.nine %>,<%= @bus.ten %>,<%= @bus.eleven %>,<%= @bus.twelve %>,</p>
+  <p style="text-align: center; color: green; font-size:20px;">Buses Located on the <strong>LEFT</strong> of the Main Entrance:<%= @bus.thirteen %>,<%= @bus.fourteen %>,<%= @bus.fifteen %>,<%= @bus.sixteen %>,<%= @bus.seventeen %>,<%= @bus.eighteen %>,<%= @bus.nineteen %>,<%= @bus.twenty %>
+  
 </div>
     
