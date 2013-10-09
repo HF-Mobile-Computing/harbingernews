@@ -56,6 +56,8 @@ Harbingernews::Application.routes.draw do
   get '/error404', to: "static_pages#404"
   get '/error500', to: "static_pages#500"
   get '/error422', to: "static_pages#422"
+
+  resources :articles
   
   # MAKE SURE THIS IS ALWAYS THE LAST LINE
   unless Rails.application.config.consider_all_requests_local

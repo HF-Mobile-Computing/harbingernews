@@ -1,6 +1,7 @@
 ActiveAdmin.register Game do
   
   
+  menu :parent => "Sports"
   
   filter :date
   filter :time

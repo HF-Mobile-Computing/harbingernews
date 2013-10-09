@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131001195906) do
+ActiveRecord::Schema.define(:version => 20131009214532) do
 
   create_table "admin_abilities", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(:version => 20131001195906) do
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "articles", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "author"
+    t.string   "description"
   end
 
   create_table "buses", :force => true do |t|
@@ -129,7 +138,6 @@ ActiveRecord::Schema.define(:version => 20131001195906) do
     t.string   "banner_content_type"
     t.integer  "banner_file_size"
     t.datetime "banner_updated_at"
-    t.boolean  "varsity"
   end
 
   create_table "upcoming_events", :force => true do |t|
