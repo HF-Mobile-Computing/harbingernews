@@ -1,5 +1,8 @@
 ActiveAdmin.register Sport do
 
+  menu :parent => "Sports"
+
+
   # Custom Active Admin contoller stuff
   controller do
   

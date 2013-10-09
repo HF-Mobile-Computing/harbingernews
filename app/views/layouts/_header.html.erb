@@ -10,9 +10,10 @@
   			<div class="nav-collapse">
   				<ul class="nav">
   					<li id="nav_home"><%= link_to "Home", root_path %></li>
+            <li id="nav_news"><%= link_to "News" , articles_path %> </li>
   					<li id="nav_sports"><%= link_to "Sports", sports_path %></li>
   					<li id="nav_clubs"><%= link_to "Clubs", clubs_path %></li>
-            <li id="nav_news"><%= link_to "News" , articles_path %> </li>
+
   				</ul>
   				<ul class="nav pull-right visible-desktop">
 					<% if signed_in? %>

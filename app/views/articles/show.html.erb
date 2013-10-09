@@ -1,4 +1,14 @@
+<script type="text/javascript">
+
+$(function() {
+  // Add "active" to nav bar
+  $('#nav_news').addClass('active');
+
+});
+
+</script>
+
 <div class="container" id="articleview">
-	<h1 style="text-align:center;"><%= @article.title %></h1>
+	<h1 style="text-align:center;"><%= @article.title %> by <%= @article.author %></h1>
 	<p><%= @article.body %></p>
 </div>
