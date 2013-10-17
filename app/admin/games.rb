@@ -11,6 +11,7 @@ ActiveAdmin.register Game do
   index as: :table do
     selectable_column
     column :id
+    column :sport
     column :date
     column :opponent
     column :time
