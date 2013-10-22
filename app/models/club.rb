@@ -1,5 +1,5 @@
 class Club < ActiveRecord::Base
-  attr_accessible :slug, :name, :category, :content
+  attr_accessible :slug, :name, :category, :content, :photosfield
   has_paper_trail
   
   has_many :favorites, :as => :favoritable
