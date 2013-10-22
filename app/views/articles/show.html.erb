@@ -10,5 +10,5 @@ $(function() {
 
 <div class="container" id="articleview">
 	<h1 style="text-align:center;"><%= @article.title %> by <%= @article.author %></h1>
-	<p><%= @article.body %></p>
+	<p><%=raw @article.body %></p>
 </div>

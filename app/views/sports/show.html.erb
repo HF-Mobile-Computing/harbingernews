@@ -94,7 +94,7 @@
 					</tr>
 				</thead>
 				<tbody>
-				  <% @sport.games.each do |game| %>
+				  <% @sport.games.order('date').each do |game| %>
 				  <tr <% if game.status == "win"%> class="success" <% elsif game.status == "loss" %> class="error" <% end %>>
 				  	<td><% if game.is_varsity == true %><span class="label label-success">Varsity</span><% else %><span class="label">Junior Varsity</span><% end %>
 				    <td><%= game.date.strftime("%a, %b %d, %Y") %></td>
@@ -120,7 +120,7 @@
 					</tr>
 				</thead>
 				<tbody>
-				  <% @sport.games.each do |game| %>
+				  <% @sport.games.order('date').each do |game| %>
 					  <% if game.is_varsity %>
 						  <tr <% if game.status == "win"%> class="success" <% elsif game.status == "loss" %> class="error" <% end %>>
 						    <td><%= game.date.strftime("%a, %b %d, %Y") %></td>
@@ -147,7 +147,7 @@
 					</tr>
 				</thead>
 				<tbody>
-				  <% @sport.games.each do |game| %>
+				  <% @sport.games.order('date').each do |game| %>
 					  <% if game.is_varsity %>
 						  
 					  <% else %>
