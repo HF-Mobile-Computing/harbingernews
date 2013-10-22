@@ -48,9 +48,11 @@ $(function() {
     // console.log("Advance button clicked");
     if (thePage.counter < thePage.counterAmt) {
       $('#slider').animate({
-        right: '+=' + thePage.slideAmt,
+        right: "+=" + thePage.slideAmt,
       }, 100);
-      thePage.counter = thePage.counter + 1;
+      thePage.counter += 1;
+      console.log("Advanced Slider");
+      console.log(thePage.counter);
     }
     // testLog();
   });
@@ -58,9 +60,11 @@ $(function() {
     // console.log("Reverse button clicked");
     if (thePage.counter > 0) {
       $('#slider').animate({
-        right: '-=' + thePage.slideAmt,
+        right: "-=" + thePage.slideAmt,
       }, 175);
-      thePage.counter = thePage.counter - 1;
+      thePage.counter -= 1;
+      console.log("Reversed Slider");
+    console.log(thePage.counter);
     }
     // testLog();
   });
@@ -69,9 +73,11 @@ $(function() {
   
   function resetSlider() {
     $('#slider').animate({
-      right: '0',
-    }, 200);
+     right: '0',
+  }, 200);
     thePage.counter = 0;
+    console.log("resetSlider");
+    console.log(thePage.counter);
   }
   
   $(window).bind('enterBreakpoint980', function() {
