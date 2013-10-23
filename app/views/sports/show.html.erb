@@ -42,7 +42,7 @@
 	<ul class="nav nav-tabs limited-width">
 		<li class="active"><a href="#info" data-toggle="tab">Information</a></li>
 		<li><a href="#photos" data-toggle="tab">Photos</a></li>
-		<li class="disabled"><a href="#videos" data-toggle="tab">Videos</a></li>
+		<li><a href="#videos" data-toggle="tab">Videos</a></li>
 		<% if signed_in? %>
 		  <li class="pull-right <% if !current_user.favorites.find(:all, :conditions => [ 'favoritable_type = ? AND favoritable_id = ?', 'sport', Sport.find_by_slug(params[:slug]).id ]).empty? %>favorite<% end %>" id="favorite_button"><i class="icon-star"></i></li>
 		<% end %>
@@ -77,9 +77,9 @@
 			</div>
 		</div>
 		<div class="tab-pane limited-width" id="videos">
-			<div class="well empty-section">
-				<h2>Nothing Available</h2>
-			</div>
+			<h2 style="text-align:center;">
+				<a href="http://www.youtube.com/user/HFTornadoNews">Visit our YouTube Channel</a>
+			</h2>
 		</div>
 		<div class="tab-pane limited-width" id="schedule">
 			<table class="table">

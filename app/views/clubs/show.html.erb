@@ -45,6 +45,7 @@
     <ul class="nav nav-tabs" style="text-align:center;">
       <li class="active"><a href="#info" data-toggle="tab">Info</a></li>
       <li><a href="#photos" data-toggle="tab">Pictures</a></li>
+      <li><a href="#meetings" data-toggle="tab">Meetings</a></li>
     </ul>
     <div class="tab-content">
       <div class="tab-pane active limited-width" id="info">
@@ -54,6 +55,24 @@
       </div>
       <div class="tab-pane limited-width" id="photos">
           <%=raw @club.photosfield %>
+      </div>
+      <div class="tab-pane limited-width" id="meetings">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Information</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @club.meetings.order('date').each do |meeting| %>
+            <tr>
+              <td><%= meeting.date.strftime("%a, %b %d, %Y") %></td>
+              <td><%= meeting.info %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
