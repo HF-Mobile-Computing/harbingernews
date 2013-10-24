@@ -5,5 +5,7 @@ class HomeController < ApplicationController
     @announcement = Announcement.last
     @recent = RecentEvent.last
     @upcoming = UpcomingEvent.last
+    @slide1 = Slide1.last
+    @slide2 = Slide2.last
   end
 end

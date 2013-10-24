@@ -32,17 +32,17 @@
       </div>
     </div>
     <div class="item">
-      <img src="http://placehold.it/940x338">
+      <img src="<%=raw @slide1.try(:imgurl) %>">
       <div class="carousel-caption">
-      <h4>Slide 2</h4>
-      <p>Hello World</p>
+      <h4><%=raw @slide1.try(:title) %></h4>
+      <p><%=raw @slide1.try(:caption) %></p>
       </div>    
     </div>
     <div class="item">
-      <img src="http://placehold.it/940x338">
+      <img src="<%=raw @slide2.try(:imgurl) %>">
       <div class="carousel-caption">
-      <h4>Slide 3</h4>
-      <p>Hello World</p>
+      <h4><%=raw @slide2.try(:title) %></h4>
+      <p><%=raw @slide2.try(:caption) %></p>
       </div> 
     </div>
   </div>

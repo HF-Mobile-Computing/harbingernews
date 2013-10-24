@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131023002227) do
+ActiveRecord::Schema.define(:version => 20131023210953) do
 
   create_table "admin_abilities", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -133,6 +133,22 @@ ActiveRecord::Schema.define(:version => 20131023002227) do
     t.integer  "owner_id"
     t.text     "uri_cache"
     t.string   "simplified_type",        :default => "file"
+  end
+
+  create_table "slide1s", :force => true do |t|
+    t.string   "title"
+    t.text     "caption"
+    t.text     "imgurl"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "slide2s", :force => true do |t|
+    t.string   "title"
+    t.text     "caption"
+    t.text     "imgurl"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "sports", :force => true do |t|
