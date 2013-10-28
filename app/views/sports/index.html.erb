@@ -30,7 +30,7 @@
 	<div class="row-fluid">
 		<div class="span8">
 			<div class="tab-content">
-				<div class="tab-pane" id="fall">
+				<div class="tab-pane active" id="fall">
 					<% @fall.each do |sport| %>
 					<div class="sport" style="background-image: url( <%= image_path sport.banner.url(:full) %> );">
 						<div class="inner">
@@ -44,7 +44,7 @@
 					</div>
 					<% end %>
 				</div>
-				<div class="tab-pane active" id="winter">
+				<div class="tab-pane" id="winter">
 					<% @winter.each do |sport| %>
 					<div class="sport" style="background-image: url( <%= image_path sport.banner.url(:full) %> );">
 						<div class="inner">
