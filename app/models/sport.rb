@@ -1,5 +1,5 @@
 class Sport < ActiveRecord::Base
-  attr_accessible :content, :photo_path, :season, :slug, :title, :banner
+  attr_accessible :content, :photo_path, :season, :slug, :title, :banner, :photolink
   has_paper_trail
   
   has_attached_file :banner, 

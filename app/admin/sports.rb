@@ -22,6 +22,7 @@ ActiveAdmin.register Sport do
     column :id
     column :title
     column :season
+    column :photolink
     default_actions
   end
   
@@ -31,6 +32,7 @@ ActiveAdmin.register Sport do
       row :id
       row :title
       row :season
+      row :photolink
       row :content
       row :alert
       row(:banner_image) { image_tag sport.banner.url(:full) }
@@ -58,6 +60,9 @@ ActiveAdmin.register Sport do
     end
     f.inputs "Banner Image" do
       f.file_field :banner
+    end
+    f.inputs "Google Drive Photo Link" do
+      f.input :photolink
     end
     f.inputs "Info" do
       #f.input :alert, :as => :string  Commented out for asthetics; Unfinished feature?
