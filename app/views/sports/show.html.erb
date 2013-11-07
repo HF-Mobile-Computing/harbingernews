@@ -62,7 +62,12 @@
 		</div>
 		<div class="tab-pane limited-width" id="photos">
 			<div class="row-fluid">
-				<h2><a href="http://www.goo.gl/HdSzt0"> Click Here to View Photos</a></h2>
+			<% if !@sport.photolink.nil? %>
+				<h2><a href="<%= @sport.photolink%> " style="text-align: center;">Click Here to View Photos</a>
+			<% else %>
+				<p>Come back soon for photos!</p>
+			<% end %>
+				</h2>
 			</div>
 		</div>
 		<div class="tab-pane limited-width" id="videos">
