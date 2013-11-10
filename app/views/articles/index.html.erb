@@ -9,8 +9,8 @@ $(function() {
 </script>
 
 <div class="container" id="articleview">
-	<h1 style="text-align:center;">Tornado News Articles</h1>
-	<table class="table">
+	
+	<!--<table class="table">
 				<thead>
 					<tr>
 						<th>Title</th>
@@ -29,5 +29,17 @@ $(function() {
 					</tr>
 				  <% end %>
 				</tbody>
-	</table>
+	</table>-->
+	<div class="span6 offset3">
+		<h1 style="text-align:center;">Tornado News Articles</h1>
+		<% @articles.each do |article| %>
+		<div class="well">
+		    <h2 style="text-align: center;">
+		      <%= article.title %>
+		    </h2>
+		    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
+		      <%=raw article.body %>
+		<% end %>
+		</div>
+  	</div>
 </div>
