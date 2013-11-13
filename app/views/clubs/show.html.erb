@@ -54,7 +54,11 @@
         </div>
       </div>
       <div class="tab-pane limited-width" id="photos">
-          <%=raw @club.photosfield %>
+          <% if !@club.photolink.nil? %>
+            <h2><a href="<%= @club.photolink%> " style="text-align: center;">Click Here to View Photos</a>
+          <% else %>
+            <p>Come back soon for photos!</p>
+          <% end %>
       </div>
       <div class="tab-pane limited-width" id="meetings">
         <table class="table">

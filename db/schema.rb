@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131110201242) do
+ActiveRecord::Schema.define(:version => 20131112174624) do
 
   create_table "admin_abilities", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -70,10 +70,10 @@ ActiveRecord::Schema.define(:version => 20131110201242) do
     t.string   "slug"
     t.string   "name"
     t.string   "category"
-    t.text     "content",     :limit => 255
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
-    t.text     "photosfield"
+    t.text     "content",    :limit => 255
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.string   "photolink"
   end
 
   create_table "favorites", :force => true do |t|
