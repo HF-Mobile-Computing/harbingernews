@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131112174624) do
+ActiveRecord::Schema.define(:version => 20131113182238) do
 
   create_table "admin_abilities", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -117,9 +117,9 @@ ActiveRecord::Schema.define(:version => 20131112174624) do
   end
 
   create_table "recent_events", :force => true do |t|
-    t.text     "content",    :limit => 255
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "rich_rich_files", :force => true do |t|
@@ -167,7 +167,7 @@ ActiveRecord::Schema.define(:version => 20131112174624) do
   end
 
   create_table "upcoming_events", :force => true do |t|
-    t.string   "content"
+    t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
