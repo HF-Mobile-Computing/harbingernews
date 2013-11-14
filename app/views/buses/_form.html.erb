@@ -1,3 +1,23 @@
+<% content_for :css do %>
+  <style type="text/css">
+  .style1 {
+    color: black;
+  }
+    .style2 {
+    color: red;
+  }
+    .style3 {
+    color: green;
+  }
+    .style4 {
+    color: purple;
+  }
+    .style5 {
+    color: blue;
+  }
+  </style>
+<% end %>
+
 <%= form_for(@bus) do |f| %>
   <% if @bus.errors.any? %>
     <div id="error_explanation">
@@ -11,34 +31,34 @@
     </div>
   <% end %>
   <div class="row">
-    <div class="span3"><%= f.label :one %><%= f.text_field :one %></div>
-    <div class="span3"><%= f.label :two %><%= f.text_field :two %></div>
-    <div class="span3"><%= f.label :three %><%= f.text_field :three %></div>
-    <div class="span3"><%= f.label :four %><%= f.text_field :four %></div>
+    <div class="span3"><%= f.label "Extra", class: "style1"%><%= f.text_field :one %></div>
+    <div class="span3"><%= f.label :two, class: "style1"%><%= f.text_field :two %></div>
+    <div class="span3"><%= f.label :three, class: "style1"%><%= f.text_field :three %></div>
+    <div class="span3"><%= f.label :four, class: "style1"%><%= f.text_field :four %></div>
+    </div>
+  <div class="row">
+    <div class="span3"><%= f.label :five, class: "style1"%><%= f.text_field :five %></div>
+    <div class="span3"><%= f.label :six, class: "style1"%><%= f.text_field :six %></div>
+    <div class="span3"><%= f.label :seven, class: "style1"%><%= f.text_field :seven %></div>
+    <div class="span3"><%= f.label :eight, class: "style1"%><%= f.text_field :eight %></div>
   </div>
    <div class="row">
-    <div class="span3"><%= f.label :five %><%= f.text_field :five %></div>
-    <div class="span3"><%= f.label :six %><%= f.text_field :six %></div>
-    <div class="span3"><%= f.label :seven %><%= f.text_field :seven %></div>
-    <div class="span3"><%= f.label :eight %><%= f.text_field :eight %></div>
+    <div class="span3"><%= f.label :nine, class: "style1"%><%= f.text_field :nine %></div>
+    <div class="span3"><%= f.label :ten, class: "style2"%><%= f.text_field :ten %></div>
+    <div class="span3"><%= f.label :eleven, class: "style2"%><%= f.text_field :eleven %></div>
+    <div class="span3"><%= f.label :twelve, class: "style2"%><%= f.text_field :twelve %></div>
   </div>
    <div class="row">
-    <div class="span3"><%= f.label :nine %><%= f.text_field :nine %></div>
-    <div class="span3"><%= f.label :ten %><%= f.text_field :ten %></div>
-    <div class="span3"><%= f.label :eleven %><%= f.text_field :eleven %></div>
-    <div class="span3"><%= f.label :twelve %><%= f.text_field :twelve %></div>
+    <div class="span3"><%= f.label :thirteen, class: "style3"%><%= f.text_field :thirteen %></div>
+    <div class="span3"><%= f.label :fourteen, class: "style3"%><%= f.text_field :fourteen %></div>
+    <div class="span3"><%= f.label :fifteen, class: "style4"%><%= f.text_field :fifteen %></div>
+    <div class="span3"><%= f.label :sixteen, class: "style4"%><%= f.text_field :sixteen %></div>
   </div>
    <div class="row">
-    <div class="span3"><%= f.label :thirteen %><%= f.text_field :thirteen %></div>
-    <div class="span3"><%= f.label :fourteen %><%= f.text_field :fourteen %></div>
-    <div class="span3"><%= f.label :fifteen %><%= f.text_field :fifteen %></div>
-    <div class="span3"><%= f.label :sixteen %><%= f.text_field :sixteen %></div>
-  </div>
-   <div class="row">
-    <div class="span3"><%= f.label :seventeen %><%= f.text_field :seventeen %></div>
-    <div class="span3"><%= f.label :eighteen %><%= f.text_field :eighteen %></div>
-    <div class="span3"><%= f.label :nineteen %><%= f.text_field :nineteen %></div>
-    <div class="span3"><%= f.label :twenty %><%= f.text_field :twenty %></div>
+    <div class="span3"><%= f.label :seventeen, class: "style4"%><%= f.text_field :seventeen %></div>
+    <div class="span3"><%= f.label :eighteen, class: "style4"%><%= f.text_field :eighteen %></div>
+    <div class="span3"><%= f.label :nineteen, class: "style5" %><%= f.text_field :nineteen %></div>
+    <div class="span3"><%= f.label :twenty, class: "style5" %><%= f.text_field :twenty %></div>
   </div>
 
   <div class="actions">
