@@ -33,8 +33,9 @@ $(function() {
 	<div class="span2"> <!--Space for categories sidebar-->
 		<ul class="nav nav-pills nav-stacked">
 			<li class="active"><a href="#all" data-toggle="tab">All Articles</a></li>
-			<li><a href="#reviews" data-toggle="tab">Reviews</a></li>
-			<li><a href="#loremipsum" data-toggle="tab">Lorem Ipsum</a></li>
+			<li><a href="#reviews" data-toggle="tab"> Product Reviews</a></li>
+			<li><a href="#sports" data-toggle="tab">Sport News</a></li>
+			<li><a href="#clubs" data-toggle="tab">Club News</a></li>
 		</ul>
 	</div>
 	<div class="span9 offset">
@@ -61,8 +62,32 @@ $(function() {
 						    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
 						      <%=raw article.body %>
 						</div>
-					<% else %>
-						<h2>No Reviews availible at this time</h2>
+					<% end %>
+				<% end %>
+			</div>
+			<div class="tab-pane limited-width" id="sports">
+				<% @articles.each do |article| %>
+					<% if article.category == "sports"%>
+						<div class="well">
+						    <h2 style="text-align: center;">
+						      <%= article.title %>
+						    </h2>
+						    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
+						      <%=raw article.body %>
+						</div>
+					<% end %>
+				<% end %>
+			</div>
+			<div class="tab-pane limited-width" id="clubs">
+				<% @articles.each do |article| %>
+					<% if article.category == "clubs"%>
+						<div class="well">
+						    <h2 style="text-align: center;">
+						      <%= article.title %>
+						    </h2>
+						    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
+						      <%=raw article.body %>
+						</div>
 					<% end %>
 				<% end %>
 			</div>
