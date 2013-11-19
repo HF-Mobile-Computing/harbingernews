@@ -22,6 +22,8 @@ Harbingernews::Application.routes.draw do
 
   resources :recent_events
 
+  resources :days
+
   # Announcements
   resources :announcements
   resources :club_announcements, only: [:new, :create, :destroy]

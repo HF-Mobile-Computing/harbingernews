@@ -25,7 +25,8 @@
                 <%= current_user.name %><b class="caret"></b>
               </a>
   						<ul class="dropdown-menu">
-                <li><%= link_to "Your Profile", user_path(current_user.id) %></li>
+                <!--<li><%= link_to "Your Profile", user_path(current_user.id) %></li>-->
+                <li><a>User ID: <%= current_user.id %></a></li>
                 <div id="beforeFavs">
                   <!-- This is the beginning of the delete thingy.-->
                 </div>
@@ -47,7 +48,7 @@
                     <li><%= link_to "Manage Announcements", "/admin/announcement" %></li>
                   <% end %>
                   <% if can? :manage, Bus %>
-                    <li><%= link_to "Manage Bus Map", "/admin/bus" %></li>
+                    <li><%= link_to "Manage Bus Map", "/buses" %></li>
                   <% end %>
                   <% if can? :manage, Memo %>
                     <li><%= link_to "Edit Memos", "/admin/memo" %></li>

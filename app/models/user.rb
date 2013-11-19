@@ -35,13 +35,13 @@ class User < ActiveRecord::Base
   # The authorization system we are using uses something called a "bitmask" to store multiple roles.
   # As far as I know, it takes the position of the item in the list (Admin is 1) and "converts" it to a binary type form by adding a 0 for each space.
   # It then adds them together and stores them as an integer.
-  roles :admin, :editor, :secretary
+  roles :admin, :editor, :busrunner
   # bin:   1       10       100      1000     10000    100000     Continues as # of roles grows
   # mask:  1        2        4         8       16        32
   # Therefore, Editor + Student would be 10, Secretary + teacher would be 36, etc.
 
   def roles_enum
-      [ ["Admin", :admin], ["Editor", :editor], ["Secretary", :secretary] ]
+      [ ["Admin", :admin], ["Editor", :editor], ["Bus Runner", :busrunner]]
   end
   
 end

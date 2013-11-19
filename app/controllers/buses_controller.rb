@@ -4,7 +4,7 @@ class BusesController < ApplicationController
   # GET /buses.json
   def index
     @buses = Bus.all(:order => "id DESC")
-    authorize! :edit, @bus
+    
 
     respond_to do |format|
       format.html # index.html.erb
@@ -91,6 +91,10 @@ class BusesController < ApplicationController
     Time.use_zone('Eastern Time (US & Canada)') do
       @created = @bus.created_at.strftime('%B %d, %Y')
       @updated = @bus.updated_at.strftime('%l:%M%P')
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @bus }
+      end
     end
   end
   

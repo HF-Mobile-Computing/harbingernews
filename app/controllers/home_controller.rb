@@ -7,5 +7,6 @@ class HomeController < ApplicationController
     @upcoming = UpcomingEvent.last
     @slide1 = Slide1.last
     @slide2 = Slide2.last
+    @day = Day.last
   end
 end

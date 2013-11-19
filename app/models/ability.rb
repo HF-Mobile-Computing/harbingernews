@@ -20,12 +20,12 @@ class Ability
       can :access, active_admin
       can :dashboard
       
-    # Secretary
-    elsif user.has_role? :secretary
+    # Secretary (Spoon)
+    elsif user.has_role? :busrunner
       can :read, [Club, Sport, Bus, UpcomingEvent, RecentEvent, Memo, Announcement]
-      can :manage, [Announcement, RecentEvent, UpcomingEvent, Bus]
-      can :access_active_admin
-      can :dashboard
+      can :manage, [Bus]
+    
+      
       
     end
   end

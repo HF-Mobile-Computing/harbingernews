@@ -30,16 +30,42 @@ $(function() {
 				  <% end %>
 				</tbody>
 	</table>-->
-	<div class="span6 offset3">
-		<h1 style="text-align:center;">Tornado News Articles</h1>
-		<% @articles.each do |article| %>
-			<div class="well">
-			    <h2 style="text-align: center;">
-			      <%= article.title %>
-			    </h2>
-			    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
-			      <%=raw article.body %>
+	<div class="span2"> <!--Space for categories sidebar-->
+		<ul class="nav nav-pills nav-stacked">
+			<li class="active"><a href="#all" data-toggle="tab">All Articles</a></li>
+			<li><a href="#reviews" data-toggle="tab">Reviews</a></li>
+			<li><a href="#loremipsum" data-toggle="tab">Lorem Ipsum</a></li>
+		</ul>
+	</div>
+	<div class="span9 offset">
+		<div class="tab-content">
+			<h1 style="text-align:center;">Tornado News Articles</h1>
+			<div class="tab-pane limited-width active" id="all">
+				<% @articles.each do |article| %>
+					<div class="well">
+					    <h2 style="text-align: center;">
+					      <%= article.title %>
+					    </h2>
+					    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
+					      <%=raw article.body %>
+					</div>
+				<% end %>
 			</div>
-		<% end %>
+			<div class="tab-pane limited-width" id="reviews">
+				<% @articles.each do |article| %>
+					<% if article.category == "review"%>
+						<div class="well">
+						    <h2 style="text-align: center;">
+						      <%= article.title %>
+						    </h2>
+						    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
+						      <%=raw article.body %>
+						</div>
+					<% else %>
+						<h2>No Reviews availible at this time</h2>
+					<% end %>
+				<% end %>
+			</div>
+		</div>
   	</div>
 </div>
