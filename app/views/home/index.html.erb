@@ -24,21 +24,21 @@
   </ol>
   <!-- Carousel items -->
   <div class="carousel-inner">
-    <div class="active item">
+    <div class="active item CarouselImg">
       <img src="<%= image_path('entrance.png') %>">
       <div class="carousel-caption">
       <h4>Welcome to Harbinger News!</h4>
       <p>The official website of the Harborfields News Team</p>
       </div>
     </div>
-    <div class="item">
+    <div class="item CarouselImg">
       <img src="<%=raw @slide1.try(:imgurl) %>">
       <div class="carousel-caption">
       <h4><%=raw @slide1.try(:title) %></h4>
       <p><%=raw @slide1.try(:caption) %></p>
       </div>    
     </div>
-    <div class="item">
+    <div class="item CarouselImg">
       <img src="<%=raw @slide2.try(:imgurl) %>">
       <div class="carousel-caption">
       <h4><%=raw @slide2.try(:title) %></h4>
