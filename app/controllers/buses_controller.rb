@@ -9,6 +9,7 @@ class BusesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @buses }
+      format.xml {render xml: @buses }
     end
   end
 
@@ -94,6 +95,7 @@ class BusesController < ApplicationController
       respond_to do |format|
         format.html # index.html.erb
         format.json { render json: @bus }
+        format.xml {render xml: @bus }
       end
     end
   end
