@@ -4,7 +4,7 @@ class DaysController < ApplicationController
 		respond_to do |format|
 	        format.html # index.html.erb
 	        format.json { render json: @day }
-	        format.xml {render xml: @day }
+	        format.xml 
       	end
 	end
 end
