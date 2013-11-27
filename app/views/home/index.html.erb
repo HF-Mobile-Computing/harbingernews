@@ -63,14 +63,14 @@
   		</div>
       <div class="span4">
         
-        <% if @day.aorb == "a" %>
+        <% if @day.aorb == "A" %>
           <h3>Today is an</h3>
           <h1 style="text-align: center;"> A Day</h1>
-        <% elsif @day.aorb == "b" %>
+        <% elsif @day.aorb == "B" %>
           <h3>Today is a</h3>
           <h1 style="text-align: center;"> B Day</h1>
-        <% else %>
-          <h3>The day has not been set</h3>
+        <% elsif @day.aorb == "There is No School Today" %>
+          <h3>There is no school today</h3>
         <% end %>
       </div>
   		<div class="span4">

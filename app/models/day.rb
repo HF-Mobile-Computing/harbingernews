@@ -1,3 +1,3 @@
 class Day < ActiveRecord::Base
-	attr_accessible :day
+	attr_accessible :aorb
 end
