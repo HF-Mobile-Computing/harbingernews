@@ -4,7 +4,7 @@ ActiveAdmin.register Day do
 	form do |f|
     f.inputs "(Date is automatically populated)" do
       
-      f.input  :aorb, :as => :select, :label => "Choose Day", :collection => [["A day", "A"], ["B day", "B"], ["No School", "There is No School Today"]]
+      f.input  :aorb, :as => :select, :label => "Choose Day", :collection => [["A day", "A"], ["B day", "B"], ["No School", "none"]]
       
     end
     f.inputs do
