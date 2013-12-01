@@ -2,7 +2,7 @@ xml.instruct!
   
 xml.day do  
   
-	xml.aorb(@day.aorb) 
+	
 	if @day.aorb == "A"
 		xml.aorb("Today is an A Day") 
 	elsif @day.aorb == "B"
