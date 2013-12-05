@@ -17,6 +17,8 @@ gem 'paper_trail'
 gem 'enumerize'
 gem 'twitter-bootstrap-rails'
 gem 'compass-rails'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development do
   gem 'rspec-rails', '2.9.0'

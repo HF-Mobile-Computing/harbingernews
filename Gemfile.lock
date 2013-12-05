@@ -63,6 +63,8 @@ GEM
       uuidtools (~> 2.1)
     bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
+    bootstrap-will_paginate (0.0.10)
+      will_paginate
     bourbon (3.1.6)
       sass (>= 3.2.0)
       thor
@@ -241,6 +243,7 @@ GEM
     warden (1.2.1)
       rack (>= 1.0)
     websocket (1.0.7)
+    will_paginate (3.0.5)
     xpath (1.0.0)
       nokogiri (~> 1.3)
 
@@ -253,6 +256,7 @@ DEPENDENCIES
   annotate (~> 2.4.1.beta)
   aws-sdk
   bcrypt-ruby (= 3.0.1)
+  bootstrap-will_paginate
   bourbon
   cancan
   capybara (= 2.0.0)
@@ -276,3 +280,4 @@ DEPENDENCIES
   therubyracer
   twitter-bootstrap-rails
   uglifier (= 1.2.3)
+  will_paginate

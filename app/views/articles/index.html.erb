@@ -42,7 +42,8 @@ $(function() {
 		<div class="tab-content">
 			<h1 style="text-align:center;">Tornado News Articles</h1>
 			<div class="tab-pane limited-width active" id="all">
-				<% @articles.each do |article| %>
+				<%= will_paginate @paginated_articles, style: "text-align: right;"  %>
+				<% @paginated_articles.each do |article| %>
 					<div class="well">
 					    <h2 style="text-align: center;">
 					      <%= article.title %>
@@ -51,10 +52,12 @@ $(function() {
 					      <%=raw article.body %>
 					</div>
 				<% end %>
+				<%= will_paginate @paginated_articles, style: "text-align: right;"  %>
 			</div>
 			<div class="tab-pane limited-width" id="reviews">
-				<% @articles.each do |article| %>
-					<% if article.category == "review"%>
+				<%= will_paginate @paginated_reviews, style: "text-align: right;"  %>
+				<% @paginated_reviews.each do |article| %>
+					
 						<div class="well">
 						    <h2 style="text-align: center;">
 						      <%= article.title %>
@@ -62,12 +65,13 @@ $(function() {
 						    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
 						      <%=raw article.body %>
 						</div>
-					<% end %>
 				<% end %>
+				<%= will_paginate @paginated_reviews, style: "text-align: right;"  %>
 			</div>
 			<div class="tab-pane limited-width" id="sports">
-				<% @articles.each do |article| %>
-					<% if article.category == "sports"%>
+				<%= will_paginate @paginated_sports, style: "text-align: right;"  %>
+				<% @paginated_sports.each do |article| %>
+					
 						<div class="well">
 						    <h2 style="text-align: center;">
 						      <%= article.title %>
@@ -75,12 +79,14 @@ $(function() {
 						    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
 						      <%=raw article.body %>
 						</div>
-					<% end %>
+					
 				<% end %>
+				<%= will_paginate @paginated_sports, style: "text-align: right;"  %>
 			</div>
 			<div class="tab-pane limited-width" id="clubs">
-				<% @articles.each do |article| %>
-					<% if article.category == "clubs"%>
+				<%= will_paginate @paginated_clubs, style: "text-align: right;"  %>
+				<% @paginated_clubs.each do |article| %>
+					
 						<div class="well">
 						    <h2 style="text-align: center;">
 						      <%= article.title %>
@@ -88,8 +94,9 @@ $(function() {
 						    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
 						      <%=raw article.body %>
 						</div>
-					<% end %>
+					
 				<% end %>
+				<%= will_paginate @paginated_clubs, style: "text-align: right;"  %>
 			</div>
 		</div>
   	</div>
