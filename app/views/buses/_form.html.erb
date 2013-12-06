@@ -60,6 +60,11 @@
     <div class="span3"><%= f.label :nineteen, class: "style5" %><%= f.text_field :nineteen %></div>
     <div class="span3"><%= f.label :twenty, class: "style5" %><%= f.text_field :twenty %></div>
   </div>
+  <div class="row">
+    <%= f.label "No Map", class: 'control-label' %>
+    <%= f.check_box :outofservice, class: "checkbox" %>
+    
+  </div>
 
   <div class="actions">
     <%= f.submit %>
