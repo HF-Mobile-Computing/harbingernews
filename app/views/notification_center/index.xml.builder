@@ -1,11 +1,10 @@
 xml.instruct!  
-  
-	@notifications.each do |game| 
-	    xml.item do
+xml.notifications do  
+	@notifications.each do |notification|
+	      xml.notification do
 	        xml.content notification.content
-	        xml.date notification.created_at
-			
-	    end
+	        xml.time notification.created_at.strftime('%B %d, %Y at %l:%M%P')	        
+	      end
 	end
+end	
 
-#There is an issue with this Builder Template. Using default render for now

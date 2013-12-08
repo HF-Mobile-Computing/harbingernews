@@ -3,7 +3,7 @@ class NotificationCenterController < ApplicationController
 		@notifications = Notification.all(:order => "id DESC")
 		respond_to do |format|
 	       format.json { render json: @notifications}
-	        format.xml { render xml: @notifications}
+	        format.xml 
 	    end
 	end
 end
