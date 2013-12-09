@@ -1,5 +1,5 @@
 class Bus < ActiveRecord::Base
-  attr_accessible :created_at, :one, :two, :three, :four, :five, :six, :seven, :eight, :nine, :ten, :eleven, :twelve, :thirteen, :fourteen, :fifteen, :sixteen, :seventeen, :eighteen, :nineteen, :twenty, :outofservice
+  attr_accessible :created_at, :one, :two, :three, :four, :five, :six, :seven, :eight, :nine, :ten, :eleven, :twelve, :thirteen, :fourteen, :fifteen, :sixteen, :seventeen, :eighteen, :nineteen, :twenty, :outofservice, :date
   has_paper_trail
 end
 # == Schema Information
