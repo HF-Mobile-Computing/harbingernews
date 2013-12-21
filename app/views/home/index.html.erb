@@ -7,15 +7,6 @@
 
 <div id="all">
   <div class="container-fluid" id="stuff">
-
-    
-    <% flash.each do |type, message| %>
-      <div class="alert <%= bootstrap_class_for(type) %> fade in">
-        <button class="close" data-dismiss="alert">×</button>
-        <%= message %>
-      </div>
-    <% end %>
-  	
   <div id="myCarousel" class="carousel slide">
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -50,6 +41,12 @@
   <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
   <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
+<% flash.each do |type, message| %>
+      <div class="alert <%= bootstrap_class_for(type) %> fade in">
+        <button class="close" data-dismiss="alert">×</button>
+        <%= message %>
+      </div>
+    <% end %>
     <div class="row-fluid" id="announcements">
       <h3><a href="https://sites.google.com/site/harborfieldshs/">Today's Announcements</a></h3>
        <p><%=raw @announcement.content %></p>
