@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Always available
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.16'
 gem 'nokogiri'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '3.0.1'
@@ -15,7 +15,6 @@ gem 'activeadmin'
 gem 'rich', :git => 'git://github.com/HF-Mobile-Computing/rich.git'
 gem 'paper_trail'
 gem 'enumerize'
-gem 'twitter-bootstrap-rails'
 gem 'compass-rails'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
