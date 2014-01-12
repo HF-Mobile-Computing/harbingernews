@@ -124,6 +124,9 @@ GEM
     inherited_resources (1.4.1)
       has_scope (~> 0.6.0.rc)
       responders (~> 1.0.0.rc)
+    jbuilder (1.5.3)
+      activesupport (>= 3.0.0)
+      multi_json (>= 1.2.0)
     journey (1.0.4)
     jquery-rails (2.3.0)
       railties (>= 3.0, < 5.0)
@@ -260,6 +263,7 @@ DEPENDENCIES
   enumerize
   execjs
   factory_girl_rails (= 1.4.0)
+  jbuilder
   jquery-rails
   nokogiri
   paper_trail

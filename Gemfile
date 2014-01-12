@@ -18,6 +18,7 @@ gem 'enumerize'
 gem 'compass-rails'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'jbuilder'
 
 group :development do
   gem 'rspec-rails', '2.9.0'
