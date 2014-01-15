@@ -36,6 +36,7 @@ $(function() {
 			<li><a href="#reviews" data-toggle="tab">Reviews</a></li>
 			<li><a href="#sports" data-toggle="tab">Sport News</a></li>
 			<li><a href="#clubs" data-toggle="tab">Club News</a></li>
+			<li><a href="#print" data-toggle="tab">Print Issues</a></li>
 		</ul>
 	</div>
 	<div class="span9 offset">
@@ -97,6 +98,27 @@ $(function() {
 					
 				<% end %>
 				<%= will_paginate @paginated_clubs, style: "text-align: right;"  %>
+			</div>
+			<div class="tab-pane limited-width" id="print">
+				<%= will_paginate @paginated_print_issues, style: "text-align: right;" %>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th>Issue</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% @paginated_print_issues.each do |issue| %>
+							<tr>
+							<td><%= issue.pubdate.strftime('%B %d, %Y') %></td>
+							<td><a href="<%= issue.link %>"><%= issue.title %></a></td>
+							<td><%= issue.description %></td>
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
 			</div>
 		</div>
   	</div>
