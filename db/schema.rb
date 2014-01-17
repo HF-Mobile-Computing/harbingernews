@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140114172134) do
+ActiveRecord::Schema.define(:version => 20140117175111) do
 
   create_table "admin_abilities", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -132,7 +132,7 @@ ActiveRecord::Schema.define(:version => 20140114172134) do
 
   create_table "print_issues", :force => true do |t|
     t.string   "link"
-    t.datetime "pubdate"
+    t.date     "pubdate"
     t.text     "description"
     t.string   "title"
     t.datetime "created_at",  :null => false
