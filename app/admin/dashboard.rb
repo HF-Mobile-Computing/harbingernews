@@ -7,10 +7,12 @@ ActiveAdmin.register_page "Dashboard" do
     # Announcements
     columns do
       column do
-        panel "Todays Announcements" do
-          table_for Announcement.order('id desc').limit(1) do
+        panel "Site History" do
+          table_for Version.order('id desc') do
+            column :whodunnit 
+            column :item_type
+            column :event
             column :created_at
-            column(:content) { |c| raw(c.content) }
           end
         end
       end
