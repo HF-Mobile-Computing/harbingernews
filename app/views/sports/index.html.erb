@@ -74,6 +74,20 @@
 				</div>
 		  </div><!-- end "tab-content" -->
 		</div>
+		<div class="span4 hidden-phone" id="recent_events">
+			<div class="well">
+			  <h3>Live Stream</h3>
+
+			  <% unless @next_event.nil? %>
+			  	<h5><%= @next_event.title %></h5>
+			  	<iframe src="http://www.highschoolcube.com/embed/<%= @next_event.stream_id %>" width="300" height="250" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe><div></div>
+
+			  <% else %>
+			    <h4>The live player is unavailable. Please check back later.</h4>
+			  <% end %>
+
+			</div>
+	  </div>
 	  </div>
   </div>
 </div>

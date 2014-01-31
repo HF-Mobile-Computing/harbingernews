@@ -7,6 +7,7 @@ class SportsController < ApplicationController
     @fall = Sport.where("season = :season", { :season => "fall"})
     @spring = Sport.where("season = :season", { :season => "spring"})
     @winter = Sport.where("season = :season", { :season => "winter"})
+    @next_event = Stream.last
 
     respond_to do |format|
       format.html # index.html.erb
