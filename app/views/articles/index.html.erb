@@ -51,7 +51,10 @@ $(function() {
 					    </h2>
 					    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
 					      <%=raw article.body %>
-					      <%= image_tag article.image.url %>
+					      <% unless article.image_file_name.nil? %>
+					      	<%= image_tag article.image.url %>
+					      <% else %>
+					      <% end %>
 					</div>
 				<% end %>
 				<%= will_paginate @paginated_articles, style: "text-align: right;"  %>
@@ -66,6 +69,10 @@ $(function() {
 						    </h2>
 						    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
 						      <%=raw article.body %>
+						      <% unless article.image.url.nil? %>
+						      	<%= image_tag article.image.url %>
+						      <% else %>
+						      <% end %>
 						</div>
 				<% end %>
 				<%= will_paginate @paginated_reviews, style: "text-align: right;"  %>
@@ -80,7 +87,10 @@ $(function() {
 						    </h2>
 						    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
 						      <%=raw article.body %>
-						      <%= image_tag article.image.url %>
+						      <% unless article.image.url.nil? %>
+						      	<%= image_tag article.image.url %>
+						      <% else %>
+						      <% end %>
 						</div>
 					
 				<% end %>
@@ -96,7 +106,10 @@ $(function() {
 						    </h2>
 						    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
 						      <%=raw article.body %>
-						      <%= image_tag article.image.url %>
+						      <% unless article.image.url.nil? %>
+						      	<%= image_tag article.image.url %>
+						      <% else %>
+						      <% end %>
 						</div>
 					
 				<% end %>
