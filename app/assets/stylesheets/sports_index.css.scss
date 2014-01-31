@@ -207,3 +207,16 @@ body {
   position: relative;
   z-index: 2;
 }
+
+body .nextmodal {
+    /* new custom width */
+    width: 700px;
+    /* must be half of the width, minus scrollbar on the left (30px) */
+    margin-left: -350px;
+    height: 500px;
+}
+
+.largen {
+	margin-bottom: 10px;
+}
+

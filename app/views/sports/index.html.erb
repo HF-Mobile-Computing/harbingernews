@@ -1,6 +1,7 @@
 <% content_for :title do %>Sports<% end %>
 <% content_for :css do %>
   <%= stylesheet_link_tag "sports_index", :media => "all" %>
+
 <% end %>
 <% content_for :js do %>
   <script type="text/javascript">
@@ -17,6 +18,7 @@
     		$(this).find('h2').removeClass("faded_text", $time);
     	});
     	$('#nav_sports').addClass('active');
+    	$('#nexteventModal').appendTo("body").modal('hide');
     });
   </script>
 <% end %>
@@ -81,6 +83,18 @@
 			  <% unless @next_event.nil? %>
 			  	<h5><%= @next_event.title %></h5>
 			  	<iframe src="http://www.highschoolcube.com/embed/<%= @next_event.stream_id %>" width="300" height="250" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe><div></div>
+			  	<a href="#nexteventModal" role="button" class="btn largen" data-toggle="modal">View Larger</a>
+
+			  	<div id="nexteventModal" class="modal hide fade nextmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-header">
+				    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				    <h3 id="myModalLabel"><%= @next_event.title %></h3>
+				  </div>
+				  <div class="modal-body">
+				    <iframe src="http://www.highschoolcube.com/embed/<%= @next_event.stream_id %>" width="640" height="460" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
+				  </div>
+				  
+				</div>
 
 			  <% else %>
 			    <h4>The live player is unavailable. Please check back later.</h4>
