@@ -69,7 +69,7 @@ $(function() {
 						    </h2>
 						    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
 						      <%=raw article.body %>
-						      <% unless article.image.url.nil? %>
+						      <% unless article.image_file_name.nil? %>
 						      	<%= image_tag article.image.url %>
 						      <% else %>
 						      <% end %>
@@ -87,7 +87,7 @@ $(function() {
 						    </h2>
 						    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
 						      <%=raw article.body %>
-						      <% unless article.image.url.nil? %>
+						      <% unless article.image_file_name.nil? %>
 						      	<%= image_tag article.image.url %>
 						      <% else %>
 						      <% end %>
@@ -106,7 +106,7 @@ $(function() {
 						    </h2>
 						    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
 						      <%=raw article.body %>
-						      <% unless article.image.url.nil? %>
+						      <% unless article.image_file_name.nil? %>
 						      	<%= image_tag article.image.url %>
 						      <% else %>
 						      <% end %>
