@@ -51,6 +51,7 @@ $(function() {
 					    </h2>
 					    <h4>By <%= article.author %><div style="text-align: right;">Published <%= article.created_at.strftime('%B %d, %Y')%></div></h4>
 					      <%=raw article.body %>
+					      <%= image_tag article.image.url %>
 					</div>
 				<% end %>
 				<%= will_paginate @paginated_articles, style: "text-align: right;"  %>
