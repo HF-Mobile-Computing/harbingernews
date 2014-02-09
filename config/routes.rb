@@ -26,6 +26,8 @@ Harbingernews::Application.routes.draw do
 
   resources :notification_center
 
+  resources :notifications
+
   # Announcements
   resources :announcements
   resources :club_announcements, only: [:new, :create, :destroy]
