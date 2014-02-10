@@ -124,6 +124,10 @@ GEM
     inherited_resources (1.4.1)
       has_scope (~> 0.6.0.rc)
       responders (~> 1.0.0.rc)
+    iron_core (1.0.3)
+      rest (>= 2.6.4)
+    iron_mq (4.1.0)
+      iron_core (>= 0.5.1)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -147,6 +151,8 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.5.2)
     multi_json (1.8.2)
+    net-http-persistent (2.9.1)
+    netrc (0.7.7)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
@@ -158,6 +164,10 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    parse-ruby-client (0.2.0)
+      iron_mq
+      patron
+    patron (0.4.18)
     pg (0.15.0)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
@@ -192,6 +202,11 @@ GEM
     ref (1.0.5)
     responders (1.0.0)
       railties (>= 3.2, < 5)
+    rest (2.7.1)
+      net-http-persistent (>= 2.9.1)
+      rest_client (>= 1.7.1)
+    rest_client (1.7.2)
+      netrc (~> 0.7.7)
     role_model (0.8.1)
     rspec (2.9.0)
       rspec-core (~> 2.9.0)
@@ -268,6 +283,7 @@ DEPENDENCIES
   nokogiri
   paper_trail
   paperclip (~> 3.0)
+  parse-ruby-client
   pg (= 0.15)
   rails (= 3.2.16)
   rich!
