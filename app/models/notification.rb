@@ -5,7 +5,10 @@ class Notification < ActiveRecord::Base
 
    def push
 	   	data = { :alert => "#{content}" }
-	push = Parse::Push.new(data)
+	push = Parse::Push.new(data, "")
+	push.type = "ios"
+	push.save
+	push.type = "android"
 	push.save
    end
 end
