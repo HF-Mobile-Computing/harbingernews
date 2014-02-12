@@ -20,6 +20,7 @@
   <tr>
     <td><%= notification.created_at%></td>
     <td><%= notification.content%></td>
+    <td><%= link_to "Delete", notification, :method => :delete, :confirm => "Are you sure you want to delete this notification from the Notification Center?" %></td>
    </tr>
 <% end %>
 </table>
