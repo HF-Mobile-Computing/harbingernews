@@ -1,5 +1,7 @@
 Harbingernews::Application.routes.draw do
 
+  
+
   root :to => "home#index"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -39,6 +41,7 @@ Harbingernews::Application.routes.draw do
   get '/about', to: 'static_pages#about'
   get '/get_involved', to: "static_pages#get_involved"
   get '/harbingerteam', to: "static_pages#harbingerteam"
+  get '/livestreams', to: "livestreams#index"
 
   # Sports Pages
   get '/sports/:slug',           to: "sports#show" # Show the sports pages by name (slug) not id

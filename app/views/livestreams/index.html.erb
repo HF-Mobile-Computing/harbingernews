@@ -1,0 +1,25 @@
+<% content_for :js do %>
+<script type="text/javascript">
+
+$(function() {
+  // Add "active" to nav bar
+  $('#nav_stream').addClass('active');
+
+});
+
+</script>
+<% end -%>
+
+<div class="container well" style="margin-top: 20px">
+	<div class="" style="text-align: center;">
+		<h1 id="streamtitle"><%= @current_stream.title %></h1>
+		<iframe src="http://www.highschoolcube.com/embed/<%= @current_stream.stream_id %>" width="600" height="400" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
+	</div>
+	<!--<div class="span3 well">
+		<h3 style="text-align: center;">All Events</h3>
+		<button>Set text content for all p elements</button>
+		<% @all_streams.reverse.each do |stream| %>
+			<a href="#"><%= stream.title %></a>
+		<% end -%>
+	</div>-->
+</div>
