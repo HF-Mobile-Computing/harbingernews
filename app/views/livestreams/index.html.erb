@@ -1,4 +1,4 @@
-<% content_for :js do %>
+
 <script type="text/javascript">
 
 $(function() {
@@ -8,18 +8,28 @@ $(function() {
 });
 
 </script>
-<% end -%>
+
 
 <div class="container well" style="margin-top: 20px">
-	<div class="" style="text-align: center;">
-		<h1 id="streamtitle"><%= @current_stream.title %></h1>
-		<iframe src="http://www.highschoolcube.com/embed/<%= @current_stream.stream_id %>" width="600" height="400" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
+	<div class="span8" style="text-align: center;">
+		<div class="tab-content">
+			<div class="tab-pane active">
+				<h2>Choose a stream on the right to watch</h2>
+			</div>
+			<% @all_streams.each do |stream| %>
+				<div class="tab-pane" id="<%= stream.id %>">
+					<h1 id="streamtitle"><%= stream.title %></h1>
+					<iframe src="http://www.highschoolcube.com/embed/<%= stream.stream_id %>" width="600" height="400" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
+				</div>
+			<% end -%>
+		</div>
 	</div>
-	<!--<div class="span3 well">
+	<div class="span3 well">
 		<h3 style="text-align: center;">All Events</h3>
-		<button>Set text content for all p elements</button>
+		<ul class="nav nav-pills nav-stacked">
 		<% @all_streams.reverse.each do |stream| %>
-			<a href="#"><%= stream.title %></a>
+			<li><a href="#<%= stream.id %>" data-toggle="tab"><%= stream.title %></a></li>
 		<% end -%>
-	</div>-->
+		</ul>
+	</div>
 </div>
