@@ -53,6 +53,7 @@ $(function() {
 					      <%=raw article.body %>
 					      <% unless article.image_file_name.nil? %>
 					      	<%= image_tag article.image.url %>
+					      	<i><%= article.caption %></i>
 					      <% else %>
 					      <% end %>
 					</div>
@@ -71,6 +72,7 @@ $(function() {
 						      <%=raw article.body %>
 						      <% unless article.image_file_name.nil? %>
 						      	<%= image_tag article.image.url %>
+						      	<i><%= article.caption %></i>
 						      <% else %>
 						      <% end %>
 						</div>
@@ -89,6 +91,7 @@ $(function() {
 						      <%=raw article.body %>
 						      <% unless article.image_file_name.nil? %>
 						      	<%= image_tag article.image.url %>
+						      	<i><%= article.caption %></i>
 						      <% else %>
 						      <% end %>
 						</div>
@@ -108,6 +111,7 @@ $(function() {
 						      <%=raw article.body %>
 						      <% unless article.image_file_name.nil? %>
 						      	<%= image_tag article.image.url %>
+						      	<i><%= article.caption %></i>
 						      <% else %>
 						      <% end %>
 						</div>

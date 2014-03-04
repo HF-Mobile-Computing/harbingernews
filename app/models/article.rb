@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-  attr_accessible :body, :title, :author, :description, :category, :image
+  attr_accessible :body, :title, :author, :description, :category, :image, :caption
   has_paper_trail
   has_attached_file :image, 
     :styles => { :full => "850x400" }, 

@@ -22,6 +22,9 @@ form do |f|
     end
     f.inputs "Image" do
       f.file_field :image
+    end 
+    f.inputs "Caption" do
+      f.input :caption
     end
     f.inputs do
       f.submit
