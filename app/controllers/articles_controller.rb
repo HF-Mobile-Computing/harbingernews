@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
 
 		respond_to do |format|
 	        format.html # index.html.erb
-	        format.json { render json: @articles }
+	        format.json 
 	        format.rss
 	        format.xml {render xml: @articles }
       	end
