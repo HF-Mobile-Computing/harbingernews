@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   
+  
   def index
     @memos = Memo.limit(12).reverse_order
     @announcement = Announcement.last
@@ -8,5 +9,9 @@ class HomeController < ApplicationController
     @slide1 = Slide1.last
     @slide2 = Slide2.last
     @day = Day.last
+    respond_to do |format|
+	       format.json 
+	       format.html
+	end
   end
 end
