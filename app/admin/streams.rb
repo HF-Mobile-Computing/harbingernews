@@ -1,5 +1,7 @@
 ActiveAdmin.register Stream do
 
+menu :parent => "Videos"
+
   form do |f|
     f.inputs "Stream" do
       f.input :title

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140304174316) do
+ActiveRecord::Schema.define(:version => 20140305173344) do
 
   create_table "admin_abilities", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -251,5 +251,13 @@ ActiveRecord::Schema.define(:version => 20140304174316) do
   end
 
   add_index "versions", ["item_type", "item_id"], :name => "index_versions_on_item_type_and_item_id"
+
+  create_table "videos", :force => true do |t|
+    t.string   "video_id"
+    t.string   "video_type"
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

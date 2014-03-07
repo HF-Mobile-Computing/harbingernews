@@ -3,7 +3,7 @@
 
 $(function() {
   // Add "active" to nav bar
-  $('#nav_stream').addClass('active');
+  $('#nav_video').addClass('active');
 
 });
 
@@ -14,22 +14,43 @@ $(function() {
 	<div class="span8" style="text-align: center;">
 		<div class="tab-content">
 			<div class="tab-pane active">
-				<h2>Choose a stream on the right to watch</h2>
+				<h2>Choose a video on the right to watch</h2>
 			</div>
 			<% @all_streams.each do |stream| %>
-				<div class="tab-pane" id="<%= stream.id %>">
+				<div class="tab-pane" id="<%= stream.stream_id %>">
 					<h1 id="streamtitle"><%= stream.title %></h1>
 					<iframe src="http://www.highschoolcube.com/embed/<%= stream.stream_id %>" width="600" height="400" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
+				</div>
+			<% end -%>
+			<% @all_videos.each do |video| %>
+				<div class="tab-pane" id="<%= video.video_id %>">
+					<h1 id="streamtitle"><%= video.title %></h1>
+					<% if video.video_type == "hsc" %>
+						<iframe src="http://www.highschoolcube.com/embed/<%= video.video_id %>" width="600" height="400" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
+					<% elsif video.video_type == "yt" %>
+						<iframe width="600" height="400" src="http://www.youtube.com/embed/<%= video.video_id %>" frameborder="0" allowfullscreen></iframe>
+					<% end -%>
 				</div>
 			<% end -%>
 		</div>
 	</div>
 	<div class="span3 well">
 		<h3 style="text-align: center;">All Events</h3>
-		<ul class="nav nav-pills nav-stacked">
-		<% @all_streams.reverse.each do |stream| %>
-			<li><a href="#<%= stream.id %>" data-toggle="tab"><%= stream.title %></a></li>
-		<% end -%>
+		<ul class="nav nav-pills">
+			<li><a href="#stream" data-toggle="tab">Live Streams</a></li>
+			<li><a href="#video" data-toggle="tab">Videos</a></li>
 		</ul>
+		<div class="tab-content">
+		<div class="tab-pane" id="stream">
+			<% @all_streams.reverse.each do |stream| %>
+				<li><a href="#<%= stream.stream_id %>" data-toggle="tab"><%= stream.title %></a></li>
+			<% end -%>
+		</div>
+		<div class="tab-pane" id="video">
+			<% @all_videos.reverse.each do |video| %>
+				<li><a href="#<%= video.video_id %>" data-toggle="tab"><%= video.title %></a></li>
+			<% end -%>
+		</div>
+		</div>
 	</div>
 </div>
