@@ -16,7 +16,7 @@
             <li id="nav_video"><%= link_to "Videos", livestreams_path %></li>
             <div class="visible-phone">
             <% if signed_in? %>
-              <% if current_user.superuser = true %>
+              <% if current_user.superuser == true %>
                       <div class="nav"><li><%= link_to "Manage Bus Map", "/buses" %></li></div>
               <% end %>
               <div class="nav"><li><%= link_to "Sign Out", destroy_user_session_path %></li></div>
@@ -46,7 +46,7 @@
                 <div id="afterFavs">
                   <!-- This is where the JQuery deletes to. It will fill the space between "before" and "after" with favorites, assuming the user has favorites. -->
                 </div>
-                <% if current_user.superuser = true %>
+                <% if current_user.superuser == true %>
                     <li><%= link_to "Manage Bus Map", "/buses" %></li>
                 <% end %>
   						  <% if can? :manage, :all %>
