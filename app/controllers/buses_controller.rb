@@ -1,7 +1,20 @@
 class BusesController < ApplicationController
-  load_and_authorize_resource :except => :map 
   # GET /buses
   # GET /buses.json
+  before_filter :check_signed_in
+  before_filter :check_for_superuser
+
+  def check_signed_in
+    unless current_user.present? 
+      redirect_to user_session_path, :flash => { :error => "You must be a Superuser to access this page!" }
+    end
+  end
+  def check_for_superuser
+    unless current_user.superuser == true 
+      redirect_to root_path, :flash => { :error => "You must be a Superuser to access this page!" }
+    end
+
+  end
   def index
     @buses = Bus.all(:order => "id DESC")
     
