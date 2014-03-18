@@ -31,6 +31,7 @@ class ClubsController < ApplicationController
     @cultural = Club.where("category = :category", {:category => "cultural"})
     @services = Club.where("category = :category", {:category => "services"})
     @all = Club.where("category = :category", {:category => "all"})
+    @photos = ClubPhoto.all
     
     
     respond_to do |format|

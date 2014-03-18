@@ -19,7 +19,8 @@ gem 'compass-rails'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'jbuilder'
-gem "parse-ruby-client"
+gem 'parse-ruby-client'
+gem 'hermitage'
 
 group :development do
   gem 'rspec-rails', '2.9.0'

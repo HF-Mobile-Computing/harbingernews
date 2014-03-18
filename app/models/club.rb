@@ -1,10 +1,11 @@
 class Club < ActiveRecord::Base
-  attr_accessible :slug, :name, :category, :content, :photolink
+  attr_accessible :slug, :name, :category, :content, :photolink, :native_photos
   has_paper_trail
   
   has_many :favorites, :as => :favoritable
   has_many :users, :through => :favorites
   has_many :meetings,       :inverse_of => :club
+  has_many :club_photos
 
   
   def to_param
