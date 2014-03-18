@@ -1,8 +1,8 @@
 class BusesController < ApplicationController
   # GET /buses
   # GET /buses.json
-  before_filter :check_signed_in
-  before_filter :check_for_superuser
+  before_filter :check_signed_in, :except => [:map]
+  before_filter :check_for_superuser, :except => [:map]
 
   def check_signed_in
     unless current_user.present? 
