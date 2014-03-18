@@ -1,4 +1,5 @@
 //= require jquery
+//= require hermitage
 //= require jquery_ujs
 //= require bootstrap.min
 //= require rich

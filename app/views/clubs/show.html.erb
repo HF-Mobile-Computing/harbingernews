@@ -54,7 +54,9 @@
         </div>
       </div>
       <div class="tab-pane limited-width" id="photos">
-          <% if !@club.photolink.nil? %>
+          <% if @club.native_photos? %>
+            <%= render_gallery_for @photos, original: 'photo(:original)', thumbnail: 'photo(:original)' %>
+          <% elsif !@club.photolink.nil? %>
             <h2><a href="<%= @club.photolink%> " style="text-align: center;">Click Here to View Photos</a>
           <% else %>
             <p>Come back soon for photos!</p>

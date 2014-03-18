@@ -24,6 +24,7 @@ ActiveAdmin.register Club do
       f.input :name
       f.input :category, :as => :select, :collection => [["Community Service", "community"], ["Student Services", "services"], ["Sciences", "sciences"], ["Cultural", "cultural"], ["Academic", "academic"], ["Arts", "arts"]]
       f.input :photolink
+      f.input :native_photos
       f.input :content, :as => :rich, :config => { :width => '76%', :height => '400px' }
 
     end
