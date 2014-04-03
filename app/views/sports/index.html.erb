@@ -26,8 +26,8 @@
 	<ul class="nav nav-tabs affix-top container" data-spy="affix" data-offset-top="60" id="seasonsswitcher">
 		<li id="firsttab"><a></a></li>
 		<li><a href="#fall" data-toggle="tab">Fall</a></li>
-		<li class="active"><a href="#winter" data-toggle="tab">Winter</a></li>
-		<li><a href="#spring" data-toggle="tab">Spring</a></li>
+		<li><a href="#winter" data-toggle="tab">Winter</a></li>
+		<li class="active"><a href="#spring" data-toggle="tab">Spring</a></li>
 	</ul>
 	<div class="row-fluid">
 		<div class="span8">
@@ -46,7 +46,7 @@
 					</div>
 					<% end %>
 				</div>
-				<div class="tab-pane active" id="winter">
+				<div class="tab-pane" id="winter">
 					<% @winter.each do |sport| %>
 					<div class="sport" style="background-image: url( <%= image_path sport.banner.url(:full) %> );">
 						<div class="inner">
@@ -60,7 +60,7 @@
 					</div>
 					<% end %>
 				</div>
-				<div class="tab-pane" id="spring">
+				<div class="tab-pane spring" id="spring">
 					<% @spring.each do |sport| %>
 					<div class="sport" style="background-image: url( <%= image_path sport.banner.url(:full) %> );">
 						<div class="inner">
