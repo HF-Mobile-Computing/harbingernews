@@ -4,4 +4,10 @@ class StaticPagesController < ApplicationController
 
   def get_involved
   end
+
+  def student_of_the_month
+  end
+
+  def graduation
+  end
 end
