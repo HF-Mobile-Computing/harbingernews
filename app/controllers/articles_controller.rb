@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
 		@paginated_reviews = Article.where(:category => 'review').paginate(:page => params[:page], :per_page => 3)
 		@paginated_clubs = Article.where(:category => 'clubs').paginate(:page => params[:page], :per_page => 3)
 		@paginated_sports = Article.where(:category => 'sports').paginate(:page => params[:page], :per_page => 3)
-		@paginated_print_issues = PrintIssue.all(:order => "pubdate").paginate(:page => params[:page], :per_page => 5)
+		@paginated_print_issues = PrintIssue.all(:order => "pubdate DESC").paginate(:page => params[:page], :per_page => 5)
 
 		respond_to do |format|
 	        format.html # index.html.erb
