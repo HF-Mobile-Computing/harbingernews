@@ -53,6 +53,20 @@ else
 	puts "Sports already exist"
 end
 
+# Classes
+if AcademicClass.count == 0
+	AcademicClass.create(name: "Journalism", category: "arts_and_music", content: "Content for Journalsim", slug: "journalism")
+else
+	puts "Classes already exists"
+end
+
+# Class Announcements
+if ClassAnnouncement.count == 0
+	ClassAnnouncement.create(content: "This is a club announcement")
+else
+	puts "Class Announcements already exists"
+end
+
 # Buses
 if Bus.count == 0
 	Bus.create(one: '1', two: '2', three: '3', four: '4', five: '5', six: '6', seven: '7', eight: '8', nine: '9', ten: '10', eleven: '11', twelve: '12', thirteen: '13', fourteen: '14', fifteen: '15', sixteen: '16', seventeen: '17', eighteen: '18', nineteen: '19', twenty: '20')

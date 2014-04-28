@@ -1,6 +1,5 @@
 Harbingernews::Application.routes.draw do
 
-  
 
   root :to => "home#index"
   get "/home/index"
@@ -55,6 +54,10 @@ Harbingernews::Application.routes.draw do
   get '/clubs/:slug',            to: 'clubs#show'
   put '/clubs/:slug',            to: 'clubs#update'
   resources :clubs,  only: [:index, :new, :create, :destroy]
+
+  # Classes Pages
+  get '/classes/:slug',          to: 'classes#show'
+  get 'classes',                 to: 'classes#index'                                 
   
   # Bus Server Service
   match '/buses/map', to: "buses#map"

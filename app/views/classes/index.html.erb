@@ -1,0 +1,26 @@
+<% content_for :title do %>HF Clubs<% end %>
+
+<% content_for :css do %>
+  <%= stylesheet_link_tag    "clubs", :media => "all" %>
+<% end %>
+<% content_for :js do %>
+  <script type="text/javascript">
+    $(function(){
+      $('#nav_classes').addClass('active');
+    });
+  </script>
+<% end %>
+<% content_for :above_container do %>
+  <%= render 'classes_header' %>
+<% end %>
+
+<div class="row">
+  <div id = "announcements" class = "span10 offset1" style = "border-radius: 5px; margin-bottom: 5px;">
+  
+    <h1>Class Announcements</h1>
+    
+    <div class = "offset1">
+      <%=raw @class_announcement.content %>
+    </div>
+  </div>
+</div>

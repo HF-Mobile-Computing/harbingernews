@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140319180532) do
+ActiveRecord::Schema.define(:version => 20140425162734) do
+
+  create_table "academic_classes", :force => true do |t|
+    t.string   "slug"
+    t.string   "category"
+    t.string   "name"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "admin_abilities", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -65,6 +74,12 @@ ActiveRecord::Schema.define(:version => 20140319180532) do
     t.string   "nineteen"
     t.string   "twenty"
     t.boolean  "outofservice"
+  end
+
+  create_table "class_announcements", :force => true do |t|
+    t.string   "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "club_announcements", :force => true do |t|
