@@ -22,7 +22,7 @@ ActiveAdmin.register AcademicClass do
   form do |f|
     f.inputs "Details" do
       f.input :name
-      f.input :category, :as => :select, :collection => [["Science", "science"], ["Math", "math"], ["English", "english"], ["Social Studies", "social_studies"], ["Foreign Language", "foreign_language"], ["Arts and Music", "arts_and_music"]]
+      f.input :category, :as => :select, :collection => [["Science", "science"], ["Math", "math"], ["English", "english"], ["Social Studies", "social_studies"], ["Foreign Language", "foreign_language"], ["Arts and Music", "arts_and_music"],["Grades", "grades"]]
       f.input :content, :as => :rich, :config => { :width => '76%', :height => '400px' }
 
     end

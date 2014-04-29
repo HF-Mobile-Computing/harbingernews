@@ -7,6 +7,7 @@ class ClassesController < ApplicationController
   	@math = AcademicClass.where(:category => "math")
   	@foreign_language = AcademicClass.where(:category => "foreign_language")
   	@arts_and_music = AcademicClass.where(:category => "arts_and_music")
+    @grades = AcademicClass.where(:category => "grades")
 
     @class_announcement = ClassAnnouncement.last
   end

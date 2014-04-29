@@ -92,6 +92,21 @@
             <% end %>
           </ul>
         </li><!--Ends dropdown menu-->
+        <li class="dropdown" id="menu1"><!-- Starts the "Arts" dropdown menu-->
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Arts and Music
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+            <% if @grades.present? %>
+            <% @grades.each do |a_class| %> 
+                <li><a href="/classes/<%= a_class.slug %>"><%= a_class.name %></a></li>
+              <% end %>
+            <% else %>
+               <li class=""><a href="#">Check back soon for content!</a></li>
+            <% end %>
+          </ul>
+        </li><!--Ends dropdown menu-->
 
       </ul>
     </div>
