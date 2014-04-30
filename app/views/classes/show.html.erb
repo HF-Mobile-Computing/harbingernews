@@ -39,6 +39,9 @@
           <%=raw @class.content %>
         </div>
       </div>
+      <div class="tab-pane limited-width" id="photos">
+         <%= render_gallery_for @photos, original: 'photo(:original)', thumbnail: 'photo(:thumbnail)' %>
+      </div>
       
     </div>
   </div>
