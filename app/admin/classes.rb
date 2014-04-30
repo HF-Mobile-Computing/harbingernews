@@ -1,4 +1,5 @@
 ActiveAdmin.register AcademicClass do
+  menu :parent => "Classes"
 
   
 
