@@ -10,4 +10,7 @@ class StaticPagesController < ApplicationController
 
   def graduation
   end
+
+  def college_acceptances
+  end
 end
