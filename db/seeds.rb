@@ -62,7 +62,7 @@ end
 
 # Class Announcements
 if ClassAnnouncement.count == 0
-	ClassAnnouncement.create(content: "This is a club announcement")
+	ClassAnnouncement.create(content: "This is a class announcement")
 else
 	puts "Class Announcements already exists"
 end
