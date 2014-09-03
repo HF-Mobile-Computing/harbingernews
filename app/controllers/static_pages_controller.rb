@@ -13,4 +13,8 @@ class StaticPagesController < ApplicationController
 
   def college_acceptances
   end
+
+  def calendar
+    send_file 'public/cal.png', type: 'image/png', disposition: 'inline'
+  end
 end
