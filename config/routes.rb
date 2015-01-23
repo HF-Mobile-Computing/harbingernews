@@ -46,6 +46,7 @@ Harbingernews::Application.routes.draw do
   get '/graduation', to: "static_pages#graduation"
   get '/college_choices', to: 'static_pages#college_acceptances' 
   get '/calendar', to: 'static_pages#calendar'
+  get '/teacher_directory', to: 'static_pages#teacher_directory'
 
   # Sports Pages
   get '/sports/:slug',           to: "sports#show" # Show the sports pages by name (slug) not id

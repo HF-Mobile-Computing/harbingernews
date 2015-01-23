@@ -17,4 +17,8 @@ class StaticPagesController < ApplicationController
   def calendar
     send_file 'public/cal.png', type: 'image/png', disposition: 'inline'
   end
+
+  def teacher_directory
+    send_file 'public/teacher_directory.json', disposition: 'inline'
+  end
 end
