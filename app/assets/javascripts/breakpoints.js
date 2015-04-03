@@ -185,14 +185,14 @@ var scrollhelper = (function () {
   }
 })();
 
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1; //January is 0!
-var yyyy = today.getFullYear()
+// var today = new Date();
+// var dd = today.getDate();
+// var mm = today.getMonth()+1; //January is 0!
+// var yyyy = today.getFullYear()
 
-if (dd >= 1 && mm >= 4 && yyyy >= 2015) {
-	scrollhelper(5);
-}
+// if (dd >= 1 && mm >= 4 && yyyy >= 2015) {
+// 	scrollhelper(5);
+// }
 
 var Konami = function(callback) {
 	var konami= {
