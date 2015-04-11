@@ -21,4 +21,7 @@ class StaticPagesController < ApplicationController
   def teacher_directory
     send_file 'public/teacher_directory.json', disposition: 'inline'
   end
+
+  def morning_announcements
+  end
 end
