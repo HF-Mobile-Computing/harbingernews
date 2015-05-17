@@ -16,7 +16,7 @@
     <div class="parallax"><%= image_tag "entrance.png" %><div>
     </div>
   </div>
-</div> <!-- These divs were needed I dont know, nor do i want to know why -->
+</div> <!-- These divs were needed. I dont know, nor do i want to know why -->
   
 
 
@@ -31,8 +31,25 @@
           <div class="card">
             <div class="card-content">
               <div class="icon-block">
+                <% if @day.aorb == "A" %>
+
                 <h2 class="center">A</h2>
                 <h5 class="center">Today is an A Day</h5>
+
+                <% elsif @day.aorb == "B" %>
+
+                <h2 class="center">B</h2>
+                <h5 class="center">Today is a B Day</h5>
+
+                <% elsif @day.aorb == "none" %>
+
+                <h2 class="center">-</h2>
+                <h5 class="center">No School Today</h5>
+
+                <% end %>
+
+
+
 
               </div>
             </div>
