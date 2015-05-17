@@ -1,4 +1,4 @@
-  <div class="navbar navbar-static-top">
+<!--   <div class="navbar navbar-static-top">
   	<div class="navbar-inner">
     	<div class="container">
   			<a type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -37,15 +37,15 @@
                 <%= current_user.name %><b class="caret"></b>
               </a>
   						<ul class="dropdown-menu">
-                <!--<li><%= link_to "Your Profile", user_path(current_user.id) %></li>-->
+                <li><%= link_to "Your Profile", user_path(current_user.id) %></li>
                 <li><a>User ID: <%= current_user.id %></a></li>
                 <div id="beforeFavs">
-                  <!-- This is the beginning of the delete thingy.-->
+                  This is the beginning of the delete thingy.
                 </div>
                 
-                <!-- This is where it adds in favorties, everything in here will be deleted on run of the function.-->
+                 This is where it adds in favorties, everything in here will be deleted on run of the function.
                 <div id="afterFavs">
-                  <!-- This is where the JQuery deletes to. It will fill the space between "before" and "after" with favorites, assuming the user has favorites. -->
+                  This is where the JQuery deletes to. It will fill the space between "before" and "after" with favorites, assuming the user has favorites. 
                 </div>
                 <% if current_user.superuser == true %>
                     <li><%= link_to "Manage Bus Map", "/buses" %></li>
@@ -99,7 +99,7 @@
                   </div>
                 </div>
                 <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
-              <% end %><!-- end of form -->             
+              <% end %> end of form              
               <div class = "link">
                 <p>New user? <%= link_to "Sign up now!", new_user_registration_path %></p>
               </div>
@@ -111,3 +111,24 @@
   		</div>
   	</div>
   </div>
+ -->
+<nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="index.html" class="brand-logo"><%= image_tag "logo.webp", :style => 'height: 1.2em; margin-bottom: -.2em; padding-right: .2em' %>Harbinger</a>
+      <ul class="right hide-on-med-and-down">
+        <li class="waves-effect waves-green"><a href="news.html">News</a></li>
+        <li class="waves-effect waves-green"><a href="#">Clubs</a></li>
+        <li class="waves-effect waves-green"><a href="#">Sports</a></li>
+        <li class="waves-effect waves-green"><a href="#">Morning Announcements</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="#">Clubs</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Morning Announcements</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </div>
+</nav>

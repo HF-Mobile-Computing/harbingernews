@@ -11,6 +11,9 @@
 	<link rel="apple-touch-icon" href="img/Apple-Icon.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="img/Apple-Icon-Retina.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="theme-color" content="#466843">
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
   
   <%= stylesheet_link_tag "application", :media => "all" %>
@@ -18,11 +21,7 @@
   
   <%= javascript_include_tag "application" %>
   <%= yield :js %>
-  <% if signed_in? %>
-  <script type="text/javascript">
-    getFavs();
-  </script>
-  <% end %>
+  
   <!-- Google Analytics -->
   <script type="text/javascript">
 		var _gaq = _gaq || [];
@@ -42,14 +41,7 @@
     <%= render 'layouts/header' %>
     <%= yield :above_container %>
     <div class="container">
-    <div id="myModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true" style = "height: 500px; width: 600px; margin-left: -300px;">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h3 id="myModalLabel">Konami Code!</h3>
-        </div>
-        <div class="modal-body" style = "height: 100% !important;">
-        </div>
-      </div>
+    
 
       
       <%= yield %>
@@ -58,10 +50,14 @@
       
       <%= debug(params) if Rails.env.development? %>
     </div>
-    <div id="footer_spacer"></div>
+    
 	</div><!-- end "content"-->
 	 
 	<%= render 'layouts/footer' %>
-	<%= yield :js_bottom %>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	<%= javascript_include_tag "material" %>
+  <%= javascript_include_tag "init" %>
+
 </body>
 </html>
