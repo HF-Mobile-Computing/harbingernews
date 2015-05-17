@@ -1,0 +1,114 @@
+<!--   <div class="navbar navbar-static-top">
+  	<div class="navbar-inner">
+    	<div class="container">
+  			<a type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+  				<span class="icon-bar"></span>
+  				<span class="icon-bar"></span>
+  				<span class="icon-bar"></span>
+  			</a>
+  			<a class="brand" href="/">The Harbinger Online</a>
+  			<div class="nav-collapse">
+  				<ul class="nav">
+  					<li id="nav_home"><%= link_to "Home", root_path %></li>
+            <li id="nav_news"><%= link_to "News" , articles_path %> </li>
+            <li id="nav_classes"><%= link_to "Classes", classes_path %> </li>
+  					<li id="nav_sports"><%= link_to "Sports", sports_path %></li>
+  					<li id="nav_clubs"><%= link_to "Clubs", clubs_path %></li>
+            <li id="nav_anounce"><a href="/morning_announcements">Morning Announcements</a></li>
+            <div class="visible-phone">
+            <% if signed_in? %>
+              <% if current_user.superuser == true %>
+                      <div class="nav"><li><%= link_to "Manage Bus Map", "/buses" %></li></div>
+              <% end %>
+              <div class="nav"><li><%= link_to "Sign Out", destroy_user_session_path %></li></div>
+              <% else %>
+                <div class="nav"><li><%= link_to "Sign In", login_path %></li></div>
+            <% end -%>
+            </div>
+
+  				</ul>
+  				<ul class="nav pull-right visible-desktop">
+					<% if signed_in? %>
+						<li class="dropdown">
+  						<a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                <% if !current_user.avatar_file_name.nil? %>
+                  <%= image_tag current_user.avatar.url(:header), class: 'nav-avatar' %>
+                <% end %> 
+                <%= current_user.name %><b class="caret"></b>
+              </a>
+  						<ul class="dropdown-menu">
+                <li><%= link_to "Your Profile", user_path(current_user.id) %></li>
+                <li><a>User ID: <%= current_user.id %></a></li>
+                <div id="beforeFavs">
+                  This is the beginning of the delete thingy.
+                </div>
+                
+                 This is where it adds in favorties, everything in here will be deleted on run of the function.
+                <div id="afterFavs">
+                  This is where the JQuery deletes to. It will fill the space between "before" and "after" with favorites, assuming the user has favorites. 
+                </div>
+                <% if current_user.superuser == true %>
+                    <li><%= link_to "Manage Bus Map", "/buses" %></li>
+                <% end %>
+  						  <% if can? :manage, :all %>
+                  <li><%= link_to "Admin Interface", "/admin" %></li>
+                <% else %>
+                  <% if can? :manage, Club %>
+                    <li><%= link_to "Manage Clubs", "/admin/club" %></li>
+                  <% end %>
+                  <% if can? :manage, Sport %>
+                    <li><%= link_to "Manage Sports", "/admin/sport" %></li>
+                  <% end %>
+                  <% if can? :manage, Announcement %>
+                    <li><%= link_to "Manage Announcements", "/admin/announcement" %></li>
+                  <% end %>
+                  <% if can? :manage, Bus %>
+                    <li><%= link_to "Manage Bus Map", "/buses" %></li>
+                  <% end %>
+
+                  <% if can? :manage, Memo %>
+                    <li><%= link_to "Edit Memos", "/admin/memo" %></li>
+                  <% end %>
+                  <% if can? :manage, RecentEvent %>
+                    <li><%= link_to "Recent Events", "/admin/recent_event" %></li>
+                  <% end %>
+                  <% if can? :manage, UpcomingEvent %>
+                    <li><%= link_to "Upcoming Events", "/admin/upcoming_event" %></li>
+                  <% end %>
+                <% end %>
+                <li class="divider"></li>
+  						  <li><%= link_to "Log out", destroy_user_session_path %></li>
+  						</ul>
+						</li>
+				  <% else %>
+				  	<li class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Log In<b class="caret"></b></a>
+						<div class="dropdown-menu" id="user-nav-box" style="position: absolute;">
+              <h3 style="text-align: center">Sign In</h1>
+              <%= form_for(:user, :as => :user, :url => session_path(:user), html: { class: 'form-horizontal' }) do |f| %>
+                <div class="control-group">
+                  <%= f.label :email, class: 'control-label' %>
+                  <div class="controls">
+                    <%= f.text_field :email, placeholder: 'Email Address' %>
+                  </div>
+                </div>
+                <div class="control-group">
+                  <%= f.label :password, class: 'control-label' %>
+                  <div class="controls">
+                    <%= f.password_field :password, placeholder: 'Password' %>
+                  </div>
+                </div>
+                <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+              <% end %> end of form              
+              <div class = "link">
+                <p>New user? <%= link_to "Sign up now!", new_user_registration_path %></p>
+              </div>
+						</div>
+						</li>
+				  <% end %>
+				  </ul>
+  		  </div>
+  		</div>
+  	</div>
+  </div>
+ -->

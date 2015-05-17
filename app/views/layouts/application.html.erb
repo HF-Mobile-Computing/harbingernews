@@ -7,20 +7,14 @@
   <%= csrf_meta_tags %>
   
   <!-- Mobile Display Meta Tags -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-	<link rel="apple-touch-icon" href="img/Apple-Icon.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="img/Apple-Icon-Retina.png" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <meta name="theme-color" content="#466843">
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
   
-  <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= yield :css %>
+  <%= stylesheet_link_tag "material" %>
+  <%= stylesheet_link_tag "material_style" %>
   
-  <%= javascript_include_tag "application" %>
-  <%= yield :js %>
   
   <!-- Google Analytics -->
   <script type="text/javascript">
@@ -37,26 +31,24 @@
 </head>
 <body>
 
-  <div id="content">
+  
     <%= render 'layouts/header' %>
-    <%= yield :above_container %>
-    <div class="container">
-    
+   
 
       
       <%= yield %>
       
       
       
-      <%= debug(params) if Rails.env.development? %>
-    </div>
+      
+    <!-- Dev Hash if needed  <%= debug(params) if Rails.env.development? %> -->
     
-	</div><!-- end "content"-->
-	 
+    
+		 
 	<%= render 'layouts/footer' %>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-	<%= javascript_include_tag "material" %>
+	<%= javascript_include_tag "materialize" %>
   <%= javascript_include_tag "init" %>
 
 </body>
