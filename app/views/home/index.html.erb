@@ -5,6 +5,12 @@
         <h1 class="header center text-lighten-2">Welcome to The Harbinger</h1>
         <div class="row center">
           <h5 class="header col s12 light">The official website of the Tornado News Team</h5>
+          <% flash.each do |type, message| %>
+            
+              <h5 class="header col s12 yellow"><%= message %></h5>
+            
+          <% end %>
+
         </div>
         <!-- <div class="row center">
           <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light hf-green lighten-1">Get Started</a>
@@ -57,16 +63,32 @@
         </div>
         <div class="col s12 m8">
           <div class="icon-block center">
-            <h3 class="center">Harbinger Bulletin:</h3>
-            <p>Lorem ipsum dolor sit amet...</p><hr>
-            <p>Lorem ipsum dolor sit amet...</p><hr>
-            <p>Lorem ipsum dolor sit amet...</p><hr>
-            <p>Lorem ipsum dolor sit amet...</p><hr>
-            <p>Lorem ipsum dolor sit amet...</p>
-            
+            <h5 class="center">Harbinger Bulletin:</h5>
+            <%=raw @announcement.content %>            
           </div>
         </div>
+      </div> <!-- End Row --><hr>
+
+      <div class="row">
+        <div class="col s12 m5">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title" style="color: black;">Recent Events</span>
+              <%=raw @recent.content %>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 offset-m2 m5">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title" style="color: black;">Upcoming Events</span>
+             <%=raw @upcoming.content %>
+            </div>
+          </div>
+        </div>
+
       </div>
+
 
 
 
@@ -98,7 +120,7 @@
                 I am convenient because I require little markup to use effectively.</p>
               </div>
               <div class="card-action">
-                <a href="#" class="text-hf-green">Read More</a>
+                <a href="#" class="text-hf-green waves-effect waves-green btn-flat">Read More</a>
               </div>
             </div>
             <div class="card col l4">
@@ -107,7 +129,7 @@
                 I am convenient because I require little markup to use effectively.</p>
               </div>
               <div class="card-action">
-                <a href="#" class="text-hf-green">Read More</a>
+                <a href="#" class="text-hf-green waves-effect waves-green btn-flat">Read More</a>
               </div>
             </div>
             <div class="card col l4">
@@ -116,7 +138,7 @@
                 I am convenient because I require little markup to use effectively.</p>
               </div>
               <div class="card-action">
-                <a href="#" class="text-hf-green">Read More</a>
+                <a href="#" class="text-hf-green waves-effect waves-green btn-flat">Read More</a>
               </div>
             </div>
           </div>

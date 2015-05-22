@@ -1,5 +1,5 @@
 
-<!-- <div id="all">
+<div id="all">
   <div class="container-fluid span11" id="stuff">
   <div id="myCarousel" class="carousel slide">
   <ol class="carousel-indicators">
@@ -8,7 +8,7 @@
     <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
   <!-- Carousel items -->
-  <!-- <div class="carousel-inner">
+  <div class="carousel-inner">
     <div class="active item CarouselImg">
       <img src="<%= image_path('entrance.png') %>">
       <div class="carousel-caption">
@@ -31,8 +31,8 @@
       </div> 
     </div>
   </div>
- -->  <!-- Carousel nav -->
-<!--   <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
   <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
 <% flash.each do |type, message| %>
@@ -74,6 +74,6 @@
       </div>
     </div>
   </div>
-</div> -->
+</div> 
 
-<!-- This is a test -->
+<!-- This is a test
